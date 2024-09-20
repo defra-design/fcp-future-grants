@@ -1,0 +1,42 @@
+{
+  "termName": "Equipment number",
+  "sectionNumber": "000",
+  "itemCode": "0",
+  "title": "Example FETF equipment item 0",
+  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "category": ["Arable", "Forestry", "General", "Horticulture", "Livestock", "Resource and energy management", "Water and irrigation"],
+  "grantValue": "0,000.00",
+  "grantPercentage": "00",
+  "averageValue": "0,000.00",
+  "score": 00,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "Cras mollis urna nec quam mollis pharetra",
+    "eligibleBullet02": "Mauris vel nulla faucibus orci porta rutrum",
+    "eligibleBullet03": "Vivamus aliquet luctus nisl ac venenatis",
+    "eligibleBullet04": "Maecenas feugiat dictum accumsan",
+    "eligibleBullet05": "Nunc sit amet mattis diam",
+    "eligibleBullet06": "Cras mollis urna nec quam mollis pharetra",
+    "eligibleBullet07": "Mauris vel nulla faucibus orci porta rutrum",
+    "eligibleBullet08": "Vivamus aliquet luctus nisl ac venenatis",
+    "eligibleBullet09": "Maecenas feugiat dictum accumsan",
+    "eligibleBullet10": "Nunc sit amet mattis diam",
+    "eligibleText01": "Maecenas feugiat dictum accumsan",
+    "eligibleText02": "Nunc sit amet mattis diam",
+    "eligibleText03": "Maecenas feugiat dictum accumsan",
+    "eligibleText04": "Nunc sit amet mattis diam",
+    "eligibleText05": "Maecenas feugiat dictum accumsan"
+  },
+  "notEligible": {
+    "notEligibleBullet01": "Cras mollis urna nec quam mollis pharetra",
+    "notEligibleBullet02": "Mauris vel nulla faucibus orci porta rutrum",
+    "notEligibleBullet03": "Vivamus aliquet luctus nisl ac venenatis",
+    "notEligibleBullet04": "Maecenas feugiat dictum accumsan",
+    "notEligibleBullet05": "Nunc sit amet mattis diam",
+    "notEligibleBullet06": "Cras mollis urna nec quam mollis pharetra",
+    "notEligibleBullet07": "Mauris vel nulla faucibus orci porta rutrum",
+    "notEligibleBullet08": "Vivamus aliquet luctus nisl ac venenatis",
+    "notEligibleBullet09": "Maecenas feugiat dictum accumsan",
+    "notEligibleBullet10": "Nunc sit amet mattis diam"
+  }
+}

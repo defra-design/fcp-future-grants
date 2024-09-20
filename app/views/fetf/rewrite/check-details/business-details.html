@@ -1,0 +1,118 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-your-business-details" method="post">
+
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Confirm your business details</h1>
+
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Business name
+          </label>
+            <input class="govuk-input govuk-input--width-20" id="bName" name="busName" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['busName'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Business phone number
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="bNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['bNumber'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Single Business Identifier (SBI)
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="sbi" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['sbi'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            VAT number
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="vatNo" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['vatNo'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Companies house number
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="chNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['vatNo'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Certificate of incorporation reference number
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="cIncNo" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['cIncNo'] }}">
+        </div>
+       
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Business legal status
+          </label>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="legalStatus" name="legalStatus" type="radio" value="Sole trader" {{ checked("legalStatus", "Limited company") }}>
+                  <label class="govuk-label govuk-radios__label" for="legalStatus">
+                    Limited company
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="legalStatus-2" name="legalStatus" type="radio" value="Sole trader" {{ checked("legalStatus", "Sole trader") }}>
+                  <label class="govuk-label govuk-radios__label" for="legalStatus-2">
+                    Sole trader
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="legalStatus-3" name="legalStatus" type="radio" value="Limited liability partnership" {{ checked("legalStatus", "Limited liability partnership") }}>
+                  <label class="govuk-label govuk-radios__label" for="legalStatus-3">
+                    Limited liability partnership
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

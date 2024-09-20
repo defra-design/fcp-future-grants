@@ -1,0 +1,219 @@
+<li>
+
+    {% if (data['agree'] == "01") %}  <!-- Agreement Scenario 1 -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Read agreement</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="agreement-1-status">
+          Cannot start yet
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Read terms and conditions</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="agreement-2-status">
+          Cannot start yet
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Sign and accept agreement</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="agreement-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['agree'] == "02a") %}  <!-- Agreement Scenario 2a -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../agreement/v2-0/what-you-need-to-do" aria-describedby="agreement-1-status">Read agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-1-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-2-status">Read terms and conditions</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-2-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Sign and accept agreement</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="agreement-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['agree'] == "02b") %}  <!-- Agreement Scenario 2b -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-1-status">Read agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-1-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../agreement/v2-0/review-terms-and-conditions" aria-describedby="agreement-2-status">Read terms and conditions</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-2-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Sign and accept agreement</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="agreement-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['agree'] == "02c") %}  <!-- Agreement Scenario 2c -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-1-status">Read agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-1-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-2-status">Read terms and conditions</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-2-status">
+          <strong class="govuk-tag govuk-tag--light-blue">
+            In progress
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Sign and accept agreement</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="agreement-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['agree'] == "02d") %}  <!-- Agreement Scenario 2d -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-1-status">Read agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-1-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-2-status">Read terms and conditions</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-2-status">
+            Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../agreement/v2-0/accept-grant-funding-agreement" aria-describedby="agreement-3-status">Sign and accept agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-3-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['agree'] == "03") %}  <!-- Agreement Scenario 3 -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
+    </h2>
+
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-1-status">Read agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-1-status">
+            Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-2-status">Read terms and conditions</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-2-status">
+            Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="agreement-3-status">Sign and accept agreement</a>
+        </div>
+        <div class="govuk-task-list__status" id="agreement-3-status">
+            Completed
+        </div>
+      </li>
+    </ul>
+
+    {% endif %}
+      
+  </li>

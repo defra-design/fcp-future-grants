@@ -1,0 +1,20 @@
+{
+  "termName": "Solar pump",
+  "sectionNumber": "413",
+  "itemCode": "413",
+  "title": "Solar-powered water pump",
+  "summary": "Solar-powered water pump, capable of pumping at least 3,500L per day to a height of 30m at 30PSI or greater.",
+  "category": ["Livestock"],
+  "grantValue": "3,000.00",
+  "grantPercentage": "60",
+  "averageValue": "5,000.00",
+  "score": 58,
+  "eligible": {
+    "eligibleBullet01": "be a solar powered water pump",
+    "eligibleBullet02": "be a self-contained system in a lockable steel box",
+    "eligibleBullet03": "have a self-priming water pump capable of pumping at least 3,500L per day to a height of 30m at 30PSI or greater - items that can pump over 10m³ per day are not eligible",
+    "eligibleBullet04": "have a solar panel, inverter and battery",
+    "eligibleBullet05": "include 5m of inlet pipe with filter",
+    "eligibleBullet06": "have automatic shut off for the pump when water flow is not required"
+  }
+}

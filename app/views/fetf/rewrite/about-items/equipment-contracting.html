@@ -1,0 +1,57 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will the items be used for contracting? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf/fetf-items-contracting1" method="post">
+
+    <div class="govuk-form-group">
+      <span class="govuk-caption-l">Apply</span>
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          Will the items be used for contracting? 
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="willYouUseForContracting" name="forContracting" type="radio" value="Yes">
+            <label class="govuk-label govuk-radios__label" for="willYouUseForContracting">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="willYouUseForContracting-2" name="forContracting" type="radio" value="No">
+            <label class="govuk-label govuk-radios__label" for="willYouUseForContracting-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+  </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

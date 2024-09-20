@@ -1,0 +1,132 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Invoices </h1>
+
+      <p class="govuk-body-l">We’ll ask you to upload your invoices and tell us which items are on each invoice.</p>
+
+      <h1 class="govuk-heading-l" style="margin-bottom: 20px;">
+        Invoice rules</h1>
+
+      <p class="govuk-body-m">Invoices must:</p>
+        
+
+        <ul class="govuk-list govuk-list--bullet">
+         <li>show the item cost </li> 
+        <li>include the manufacturer’s make and model</li>
+        <li>quote the FETF 2024 item code from the item and specification list</li>
+        <li>be addressed to <strong>Christopher Hart</strong> or <strong>Plumpton Farm</strong></li>
+        <li>show the supplier’s name, address, VAT number and date</li>
+        <li>be marked by your supplier to show you used a refundable deposit to buy the item, if applicable</li>
+       
+      </ul>
+        <p class="govuk-body-m">
+          If the invoice includes items not in your grant funding agreement, clearly show which items you’re claiming for</p>
+
+          <h1 class="govuk-heading-l" style="margin-bottom: 20px;">
+            Supplier account</h1>
+
+            <p class="govuk-body-m">
+              If you have a supplier account and you’ve used it to pay more than one invoice, upload copies of all the invoices included in the payment.</p>
+
+    </div>
+  </div>
+
+<br><br>
+
+
+
+
+     <a href="invoice-1.html">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+
+
+  
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,397 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+
+#main-content{
+  padding-top: 0px;
+}
+
+.govuk-main-wrapper{
+  padding-top: 20px;
+}
+
+.govuk-button{
+ margin-bottom: 64px; 
+}
+
+.sbi-number{
+  color: govuk-colour("dark-grey") ;}
+
+.download-thumbnail{
+  padding: 0 20px 20px 0;
+  float: left;
+}
+
+.content-section{
+  display: block;
+  @include govuk-media-query($from: tablet) {
+  margin-bottom: 40px;
+  }
+}
+
+.section-break{
+  margin: 40px 0;
+}
+
+.withdraw-link{
+  padding-top: 40px;
+}
+
+.selected-items-panel{
+  background-color: #f3f2f1;
+  display: block;
+  border: solid 1px #b1b4b6;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-box{
+  border: solid 1px #b1b4b6;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.activity-list-accordion li{
+  list-style-type: none;
+}
+
+
+
+
+// Selected items 
+
+#selected-item {
+  text-align: right;
+}
+
+#selected-item-left {
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+#selected-item {
+  border-bottom:none;
+  text-align: left;
+}
+
+#selected-item-bold {
+  border-bottom:none;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+
+#selected-item-left {
+  border-bottom:none;
+}
+
+.govuk-table__header {
+  display: none;
+}
+
+
+
+#selected-items__row {
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+#mobile-hide {
+  display: none;
+}
+
+
+
+.add-item::before {
+  content: "Item: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+.add-code::before {
+  content: "Code: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-quantity::before {
+  content: "Quantity: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-grant::before {
+  content: "Grant amount: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-total-grant::before {
+  content: "Total requested grant amount: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-score::before {
+  content: "Score: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-total-score::before {
+  content: "Total score: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-hr::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #b1b4b6; /* Customize the color and style of the horizontal rule */
+  margin-top: 8px; /* Adjust the spacing as needed */
+}
+}
+
+
+
+
+
+
+
+
+
+// Task list pattern
+
+.govuk-prototype-kit-task-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include govuk-media-query($from: tablet) {
+      min-width: 550px;
+    }
+  }
+  
+  .govuk-prototype-kit-task-list__section {
+    display: table;
+    @include govuk-font($size:24, $weight: bold);
+  }
+  
+  .govuk-prototype-kit-task-list__section-number {
+    display: table-cell;
+  
+    @include govuk-media-query($from: tablet) {
+      min-width: govuk-spacing(6);
+      padding-right: 0;
+    }
+  }
+  
+  .govuk-prototype-kit-task-list__items {
+    @include govuk-font($size: 19);
+    @include govuk-responsive-margin(9, "bottom");
+    list-style: none;
+    padding-left: 0;
+    @include govuk-media-query($from: tablet) {
+      padding-left: govuk-spacing(6);
+    }
+  }
+  
+  .govuk-prototype-kit-task-list__item {
+    border-bottom: 1px solid $govuk-border-colour;
+    margin-bottom: 0 !important;
+    padding-top: govuk-spacing(2);
+    padding-bottom: govuk-spacing(2);
+    @include govuk-clearfix;
+  }
+  
+  .govuk-prototype-kit-task-list__item:first-child {
+    border-top: 1px solid $govuk-border-colour;
+  }
+  
+  .govuk-prototype-kit-task-list__task-name {
+    display: block;
+    @include govuk-media-query($from: 450px) {
+      float: left;
+    }
+  }
+  
+  // The `govuk-prototype-kit-task-list__task-completed` class was previously used on the task
+  // list for the completed tag (changed in 86c90ec) – it's still included here to
+  // avoid breaking task lists in existing prototypes.
+  .govuk-prototype-kit-task-list__tag,
+  .govuk-prototype-kit-task-list__task-completed {
+    margin-top: govuk-spacing(2);
+    margin-bottom: govuk-spacing(1);
+  
+    @include govuk-media-query($from: 450px) {
+      float: right;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+
+  // Print button
+
+  .gem-c-print-link {
+    display: none
+}
+
+.gem-c-print-link.gem-c-print-link--show-without-js {
+    display: block
+}
+
+.js-enabled .gem-c-print-link {
+    display: block
+}
+
+.gem-c-print-link__link,.gem-c-print-link__button {
+    background: url(https://www.gov.uk/assets/government-frontend/govuk_publishing_components/icon-print-2x-6661abfcb4d537563f5c4ae06a8ddf7623de6ec39b860ca84169b68f5de775c1.png) no-repeat 10px 50%;
+    background-size: 16px 18px;
+    padding: 10px 10px 10px 36px;
+    text-decoration: none
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx) {
+    .gem-c-print-link__link,.gem-c-print-link__button {
+        background-image:url(https://www.gov.uk/assets/government-frontend/govuk_publishing_components/icon-print-2x-6661abfcb4d537563f5c4ae06a8ddf7623de6ec39b860ca84169b68f5de775c1.png)
+    }
+}
+
+.gem-c-print-link__link:hover,.gem-c-print-link__button:hover {
+    background-color: #f3f2f1
+}
+
+.gem-c-print-link__link {
+    box-shadow: inset 0 0 0 1px #505a5f
+}
+
+.gem-c-print-link__link:focus {
+    border: 0;
+    box-shadow: 0 3px #0b0c0c
+}
+
+.gem-c-print-link__button {
+    border: 1px solid #505a5f;
+    color: #1d70b8;
+    cursor: pointer;
+    margin: 0
+}
+
+.gem-c-print-link__button:focus {
+    outline: 3px solid rgba(0,0,0,0);
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-color: #fd0;
+    border-color: rgba(0,0,0,0)
+}
+
+@media (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+
+.app-contact-panel {
+  @include govuk-responsive-margin(9, "top");
+  padding-top: govuk-spacing(3);
+  border-top: 2px solid govuk-colour("blue");
+}
+
+.app-contact-panel__heading,
+.app-contact-panel__body,
+.app-contact-panel__link {
+  max-width: 100%;
+}
+
+.app-contact-panel__heading {
+  @extend %govuk-heading-m;
+  padding-top: 10px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.app-contact-panel__body:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .app-prose-scope h3, .app-contact-panel__heading, .govuk-heading-m {
+      margin-bottom: 20px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .app-prose-scope h3, .app-contact-panel__heading, .govuk-heading-m {
+      font-size: 1.5rem;
+      line-height: 1.25;
+  }
+}
+
+
+//images style
+
+.photo-guide-photos {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.photo-guide-photos ul {
+  display: flex;
+  overflow: hidden;
+  margin-left: -8px;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.photo-guide-photos ul li {
+  flex: 1;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: em(20);
+  padding-left: 8px;
+}
+
+.photo-guide-photos img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.photo-guide-photos .result {
+  font-size: 12px;
+  width: 100%;
+  color: #0b0c0c;
+}
+
+.photo-guide-photos .result .approved {
+  background-image: url(/public/images/icon-thick-tick.svg);
+}
+
+.photo-guide-photos .result .approved, .photo-guide-photos .result .failed {
+  margin: 0;
+  padding: 4px 0 4px 30px;
+  background-repeat: no-repeat;
+  background-position: left 0 top 6px;
+  background-size: 20px;
+}
+
+.photo-guide-photos .result .failed {
+  background-image: url(/public/images/icon-thick-cross.svg);
+}
+
+
+
+.thumbnail {
+  width: 60px;
+  height: auto; /* This will maintain the aspect ratio */
+  border: 1px solid #b1b4b6;
+  margin-right: 10px;
+}
+
+
+

@@ -1,0 +1,57 @@
+{% set grantTotal = 0 %}
+{% set scoreTotal = 0 %}
+{% for item in data['selected-items'] %}
+  {% set grantTotal = grantTotal + item.grantTotal %}
+  {% set scoreTotal = scoreTotal + item.score %}
+{% endfor %}
+
+
+
+
+<div class="govuk-inset-text">
+  Submit your claim by 11:59pm on <strong>10 December 2024</strong>.
+</div>
+
+
+
+
+
+<span class="content-section">
+  <p class="govuk-body">This table is pre-populated from your grant funding agreement.</p>
+
+
+<p class="govuk-body">You were awarded a grant of <strong>{{ grantTotal | currency }}</strong> for the items:</p>
+
+<!-- TABLE CONTENT -->
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Items</th>
+      <th scope="col" class="govuk-table__header">Code</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Quantity</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Grant amount</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    {% for item in data['selected-items'] %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">{{ item.title or "N/A" }}</td>
+        <td class="govuk-table__cell">FETF{{ item.itemCode or "N/A" }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity or "N/A"}}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
+      </tr>
+    {% endfor %}
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell"><strong>Total</strong></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><strong>{{ grantTotal | currency  or "N/A"}}</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+
+
+</span>

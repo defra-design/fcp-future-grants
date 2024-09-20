@@ -1,0 +1,172 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+  Upload evidence
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Claim for a FETF Grant</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Upload claim evidence
+      </h1>
+ 
+       <p class="govuk-body">Add evidence for each item.</p>
+
+
+      <div class="govuk-inset-text">
+        The RPA aims to pay complete claims within 30 days.
+      </div>
+
+ 
+
+     
+
+      <br>
+
+
+
+      <ol class="govuk-prototype-kit-task-list">
+        
+        <li style="list-style: none; margin: 0; padding: 0;">
+          <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
+
+
+      <p class="govuk-body"><strong>Item description</strong></p>
+
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Paper pot transplanter (FETF4)</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+      </div>
+      </li>
+
+
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester (FETF8)</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+      </div>
+      </li>
+
+ 
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head (FETF13)</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+      </div>
+      </li>
+
+
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators (FETF27)</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+      </div>
+      </li>
+
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m (FETF37)</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+      </div>
+      </li>
+
+
+
+
+
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar (FETF46)</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+      </div>
+      </li>
+
+
+<br>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive"></span>
+              Make sure to verify the accuracy of your evidence, as it directly impacts funding eligibility.
+            </strong>
+          </div>
+
+          </ul>
+      </ol>
+
+
+      <a href="summary">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+  {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+  <br><br>
+
+    </div>
+  </div>
+
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{
+      "termName": "Comb weeder",
+      "sectionNumber": "321",
+      "title": "Comb weeder",
+      "summary": "Central tyre inflation system to regulate the pressure of all tyres on a vehicle.",
+      "category": ["General"],
+      "value": "450.00",
+      "score": 40,
+      "description": {
+        "descriptionText01": "A fixed-blade machine that exploits the physical differences between flexible crops and thicker stemmed weeds.",
+        "descriptionBullet01": "6m minimum working width."
+      }
+}

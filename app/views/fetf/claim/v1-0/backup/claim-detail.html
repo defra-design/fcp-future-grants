@@ -1,0 +1,42 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Accept grant funding agreement
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="review-terms-and-conditions">
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+        <h1 class="govuk-heading-xl">Your grant funding agreement</h1>
+
+        {% include "../../_includes/body-content_agreement-detail-main-block.html" %}
+
+
+
+          {{govukButton({
+              text: "Continue to terms and conditions"
+          })}}
+        
+        </form>
+
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

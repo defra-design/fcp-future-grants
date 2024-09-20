@@ -1,0 +1,77 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Select item quantity {% endblock %}
+
+{% block beforeContent %}
+{% include "fetf/_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-add-to-changed-items" method="post">
+      <input type="hidden" name="termName" value="{{ item.termName }}">
+
+    <span class="govuk-caption-l">{{ item.title }} (FETF{{ item.itemCode }})</span>
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="quantity">
+      How many do you need?
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    Maximum quantity: 3
+  </div>
+  <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false">
+    <div class="govuk-input__suffix" aria-hidden="true">item quantity</div>
+  </div>
+</div>
+
+
+<div class="govuk-button-group">
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+<br>
+
+</form>
+
+
+
+  
+</div>
+
+
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    {% include "fetf/_includes/selected-items-panel.html" %}
+  </div>
+
+
+</div>
+
+
+
+</main>
+
+{% endblock %}
+
+
+
+
+
+

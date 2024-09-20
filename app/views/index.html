@@ -1,0 +1,548 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <span class="govuk-caption-xl">Farming and Countryside Programme</span>
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    <p class="govuk-body-l">The Future Grants service brings together two types of one-off competitive capital grants available to farmers.</p>
+<p class="govuk-body">Farming Transformation Fund (FTF) provides grants towards large capital items to help businesses improve productivity, profitability and environmental sustainability. These grants are between £25,000 and £500,000.</p>
+
+<p class="govuk-body">Farming Equipment and Technology Fund (FETF) provides farmers with grants for equipment or technology. These grants are between £1,000 and £25,000.</p>
+
+<!-- 
+<hr style="margin: 40px 0;"> -->
+
+<h3 class="govuk-heading-m">Contents</h3>
+
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#end-to-end">End-to-end testing</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#high-fidelity-design">High-fidelity design</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#low-fidelity-design">Low-fidelity design</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#service-design">Service design</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#EE-FETF">EE reworking of FETF</a>
+      </li>
+    </ul>
+
+
+<hr id="end-to-end" style="margin: 40px 0;">
+
+<h2 class="govuk-heading-l">End-to-end testing</h2>
+
+<h3 class="govuk-heading-m">FTF scenarios (February 2024)</h3>
+<p class="govuk-body">Prototype: <a class="govuk-link" href="/ftf/">FTF scenarios landing page</a></p>
+
+
+<h3 class="govuk-heading-m">FETF scenarios (May 2024)</h3>
+<p class="govuk-body">Prototype: <a class="govuk-link" href="/fetf/">FETF scenarios landing page</a></p>
+
+
+
+<hr id="high-fidelity-design" style="margin: 40px 0;">
+
+    <h2 class="govuk-heading-l">High-fidelity design</h2>
+
+    <span class="content-section">  
+
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                FTF activity list scenarios
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class="govuk-body">EOI:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/activity-list/v3-0/index?status=01a&eoi=01&apply=01&agree=01&claim-01=01&claim-02=0&claim-03=0" target="_blank">EOI in progress</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=01b&eoi=03a&apply=01&agree=01&claim-01=01&claim-02=0&claim-03=0" target="_blank">EOI under review</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=01c&eoi=03c&apply=0&agree=0&claim-01=0&claim-02=0&claim-03=0" target="_blank">EOI not accepted</a></li>
+            </ul>
+    
+            <p class="govuk-body">Application:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/activity-list/v3-0/index?status=02a&eoi=03b&apply=02a&agree=01&claim-01=01&claim-02=0&claim-03=0" target="_blank">You can start application (EOI accepted)</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=02b&eoi=03b&apply=02c&agree=01&claim-01=01&claim-02=0&claim-03=0" target="_blank">Application in progress</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=02c&eoi=03b&apply=03a&agree=01&claim-01=01&claim-02=0&claim-03=0" target="_blank">Application under review</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=02d&eoi=03b&apply=03c&agree=0&claim-01=0&claim-02=0&claim-03=0" target="_blank">Application unsuccessful</a></li>
+            </ul>
+    
+            <p class="govuk-body">Agreement:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/activity-list/v3-0/index?status=03&eoi=03b&apply=03b&agree=02a&claim-01=01&claim-02=0&claim-03=0" target="_blank">Read and sign your grant funding agreement</a></li>
+            </ul>
+    
+            <p class="govuk-body">Claim:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/activity-list/v3-0/index?status=04&eoi=03b&apply=03b&agree=03&claim-01=02a&claim-02=01&claim-03=01" target="_blank">You can submit your first claim</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=05&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=02a&claim-03=01" target="_blank">You can submit your second claim</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=06&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=02a" target="_blank">You can submit your third claim</a></li>
+            </ul>
+    
+            <p class="govuk-body">Monitoring:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/activity-list/v3-0/index?status=07a&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=03&monitoring-01=02a" target="_blank">You can submit your year 1 reporting</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=07b&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=03&monitoring-01=03&monitoring-02=02a" target="_blank">You can submit your year 2 reporting</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=07c&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=03&monitoring-01=03&monitoring-02=03&monitoring-03=02a" target="_blank">You can submit your year 3 reporting</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=07d&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=03&monitoring-01=03&monitoring-02=03&monitoring-03=03&monitoring-04=02a" target="_blank">You can submit your year 4 reporting</a></li>
+              <li><a href="/ftf/activity-list/v3-0/index?status=07e&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=03&monitoring-01=03&monitoring-02=03&monitoring-03=03&monitoring-04=03&monitoring-05=02a" target="_blank">You can submit your year 5 reporting</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                FTF outcome screens
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <p class="govuk-body">EOI:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/eoi/v2-0/outcome-accepted" target="_blank">EOI accepted</a></li>
+              <li><a href="/ftf/eoi/v2-0/outcome-not-accepted" target="_blank">EOI not accepted</a></li>
+            </ul>
+            <p class="govuk-body">Application:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/ftf/application/v3-0/outcome-successful" target="_blank">Application successful</a></li>
+              <li><a href="/ftf/application/v3-0/outcome-unsuccessful" target="_blank">Application unsuccessful</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                FETF activity list scenarios
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <p class="govuk-body">Application:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/fetf/activity-list/v2-0/?fetf-status=01a&fetf-apply=01&fetf-agree=01&fetf-claim=01" target="_blank">Application ready to start</a></li>
+              <li><a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02a&fetf-agree=01&fetf-claim=01" target="_blank">Application in progress</a></li>
+              <li><a href="/fetf/activity-list/v2-0/?fetf-status=01c&fetf-apply=03a&fetf-agree=01&fetf-claim=01" target="_blank">Application under review</a></li>
+              <li><a href="/fetf/activity-list/v2-0/?fetf-status=01d&fetf-apply=03c&fetf-agree=0&fetf-claim=0" target="_blank">Application unsuccessful</a></li>
+            </ul>
+          
+            <p class="govuk-body">Agreement:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/fetf/activity-list/v2-0/?fetf-status=02&fetf-apply=03b&fetf-agree=02a&fetf-claim=01" target="_blank">Read and sign your grant funding agreement</a></li>
+            </ul>
+          
+            <p class="govuk-body">Claim:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="/fetf/activity-list/v2-0/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02a" target="_blank">You can submit your claim</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+
+
+  <hr style="margin: 40px 0;">
+  
+  
+  </span>
+    <span class="content-section">    
+    <h3 class="govuk-heading-m">Expression of Interest</h3>
+
+
+    <h4 class="govuk-heading-s">User Research - Round 2 (TBD 2024)</h4>
+    <p class="govuk-body">Prototype (Heroku):</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/ftf/eoi/v2-0/" target="_blank">EOI prototype (opens in new tab)</a></li>
+      </ul>
+
+<br><br>
+
+    <h4 class="govuk-heading-s">User Research - Round 1 (September 2023)</h4>
+<p class="govuk-body">Prototype (Figma):</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://www.figma.com/proto/Z1i53yz6r8Eijed6ATBwze/Future-Grants---Transactional-journey-designs?page-id=1264%3A86086&type=design&node-id=1448-79466&viewport=479%2C386%2C0.06&t=NChslwdzbEfB3QFx-8&scaling=min-zoom&starting-point-node-id=1448%3A79466&hotspot-hints=0&hide-ui=1" target="_blank">EOI prototype (opens in new tab)</a></li>
+  </ul>
+<br>
+
+
+<hr style="margin: 40px 0;">
+
+
+
+
+
+</span>
+
+
+    <span class="content-section">
+    <h3 class="govuk-heading-m">Application</h3>
+
+
+    <h4 class="govuk-heading-s">User Research - Round 3 (TBD 2024)</h4>
+<p class="govuk-body">Prototype (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/ftf/application/v3-0/index" target="_blank">V3.0: Application journey (opens in a new tab)</a></li>
+  </ul><br>
+</p>
+
+
+    <h4 class="govuk-heading-s">User Research - Round 2 (November 2023)</h4>
+<p class="govuk-body">Prototype (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/ftf/application/v2-1/index" target="_blank">V2.1: Application journey (opens in a new tab)</a></li>
+  </ul><br>
+</p>
+    
+    <h4 class="govuk-heading-s">User Research - Round 1 (August 2023)</h4>
+<p class="govuk-body">Prototype (Figma):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://www.figma.com/proto/Z1i53yz6r8Eijed6ATBwze/Future-Grants---Transactional-journey-designs?page-id=1264%3A86087&type=design&node-id=2284-132338&viewport=836%2C3368%2C0.07&t=dc8R74EyqfwsLOZr-1&scaling=min-zoom&starting-point-node-id=2284%3A132338&show-proto-sidebar=1&mode=design" target="_blank">FTF Application v1 (opens in new tab)</a></li>
+  </ul><br>
+</p>
+    
+
+
+    </span>
+
+
+    <hr style="margin: 40px 0;">
+
+
+
+
+
+  <span class="content-section"> 
+    <h3 class="govuk-heading-m">Grant Funding Agreement</h3>
+
+<!-- <p class="govuk-body-l">Prototype links:</p>
+<p>Prototype links:</p> -->
+
+
+<h4 class="govuk-heading-s">User Research - Round 3 (TBD 2024)</h4>
+<p class="govuk-body">Prototypes (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/ftf/agreement/v2-0/" target="_blank">FTF v2.0: Online agreement (opens in new tab)</a></li>
+  </ul><br>
+</p>
+
+
+
+<h4 class="govuk-heading-s">User Research - Round 2 (September 2023)</h4>
+<p class="govuk-body">Prototypes (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/ftf/agreement/v1-1/?03-02=ready" target="_blank">FTF v1.1: Downloadable agreement (opens in new tab)</a></li>
+    <li><a href="/ftf/agreement/v1-2/?03-02=ready" target="_blank">FTF v1.2: Online agreement - multiple screens (opens in new tab)</a></li>
+    <li><a href="/ftf/agreement/v1-3/?03-02=ready" target="_blank">FTF v1.3: Online agreement - single screens (opens in new tab)</a></li>
+    <li><a href="/fetf/agreement/v1-2/?03-02=ready" target="_blank">FETF v1.2: Online agreement - multiple screens (opens in new tab)</a></li>
+  </ul><br>
+</p>
+
+<br>
+
+<h4 class="govuk-heading-s">User Research - Round 1 (August 2023)</h4>
+<p class="govuk-body">Prototype (Figma):</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://www.figma.com/proto/Z1i53yz6r8Eijed6ATBwze/Future-Grants---Transactional-journey-designs?page-id=941%3A80336&type=design&node-id=2975-80643&viewport=749%2C283%2C0.14&t=6JWuK5oP9fZN4RPx-8&scaling=min-zoom&starting-point-node-id=950%3A80338&hotspot-hints=0&hide-ui=1" target="_blank">Agreement prototype (opens in new tab)</a></li>
+  </ul>
+  <br>
+</span>
+
+
+
+<hr style="margin: 40px 0;">
+
+
+<h3 class="govuk-heading-m">Claim</h3>
+
+
+<h4 class="govuk-heading-s">User Research - Round 4 (September 2024)</h4>
+<p class="govuk-body">Prototype (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/fetf/claim/v1-1/start-claim" target="_blank">FETF Claim v1.1 (opens in new tab)</a></li>
+    <li><a href="/fetf/claim/v1-2/start-claim" target="_blank">FETF Claim v1.2 (opens in new tab)</a></li>
+  </ul><br>
+</p>
+
+
+<h4 class="govuk-heading-s">User Research - Round 3 (December 2023)</h4>
+<p class="govuk-body">Prototype (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/ftf/claim/v3-0/" target="_blank">FTF Claim v3: Results of R2 (opens in new tab)</a></li>
+  </ul><br>
+</p>
+
+
+
+<h4 class="govuk-heading-s">User Research - Round 2 (October 2023)</h4>
+<p class="govuk-body">Prototypes (Heroku):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="/ftf/claim/v2-0/" target="_blank">FTF Claim v2.1: Types of evidence (opens in new tab)</a></li>
+    <li><a href="/ftf/claim/v2-2/" target="_blank">FTF Claim v2.2: Proof of evidence (opens in new tab)</a></li>
+    <li><a href="/ftf/claim/v2-3/" target="_blank">FTF Claim v2.3: Pages of evidence (opens in new tab)</a></li>
+  </ul><br>
+</p>
+
+
+<h4 class="govuk-heading-s">User Research - Round 1 (August 2023)</h4>
+<p class="govuk-body">Prototype (Figma):<br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://www.figma.com/proto/Z1i53yz6r8Eijed6ATBwze/Future-Grants---Transactional-journey-designs?page-id=747%3A37394&type=design&node-id=1713-113946&viewport=378%2C1431%2C0.03&t=TjYeQEiFgssaGyhI-1&scaling=min-zoom&starting-point-node-id=1713%3A113946&show-proto-sidebar=1&mode=design" target="_blank">FTF Claim v1 (opens in new tab)</a></li>
+  </ul><br>
+</p>
+
+
+<hr id="low-fidelity-design" style="margin: 40px 0;">
+
+
+
+
+
+<h3 class="govuk-heading-m">Error messages</h3>
+
+
+
+
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+          FTF E2E
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        EOI, Application, Agreement, Claim.
+      </div>
+    </div>
+    
+    
+    
+    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content">
+      
+      <h3 class="govuk-heading-s">1. EOI (for reference only)</h3>
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/q1-farmer-type">Q1 - Who are you?</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/q2-project">Q2 - Is the planned project in England?</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/q4-eligible">Q4 - What eligible items do you need for your project?</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/q8-crops">Q8 - What main crops will be irrigated?</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/p-details">Project details</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/b-details">Business details</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/eoi/v2-0/errors/submit">Submit expression of interest</a>
+        </li>
+      </ul>
+
+
+      <h3 class="govuk-heading-s">2. Application</h3>
+
+      <ul class="govuk-list">
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/download2">Download application forms (experimental)</a>
+        </li>
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/upload">Upload evidence</a>
+        </li>
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/form1">Application form and appendix 1 (no files uploaded)</a>
+        </li>
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/form2">Application form and appendix 2 (wrong file type)</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/form3">Application form and appendix 3 (file too big & upload failure)</a>
+      </li>
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/financial1">Financial accounts 1</a>
+        </li>
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/financial3a">Financial accounts 3a</a>
+        </li>
+        <li>
+            <a class="govuk-link" target="_blank" href="/ftf/application/v3-0/errors/submit">Submit application</a>
+        </li>
+    </ul>
+    
+
+
+    <h3 class="govuk-heading-s">3. Agreement</h3>
+
+    <ul class="govuk-list">
+      <li>
+          <a class="govuk-link" target="_blank" href="/ftf/agreement/v2-0/errors/review-terms-and-conditions">Review terms and conditions</a>
+      </li>
+      <li>
+          <a class="govuk-link" target="_blank" href="/ftf/agreement/v2-0/errors/accept-grant-funding-agreement">Accept grant funding agreement</a>
+      </li>
+  </ul>
+
+
+
+  <h3 class="govuk-heading-s">4. Claim</h3>
+
+  <ul class="govuk-list">
+    <li>
+        <a class="govuk-link" target="_blank" href="/ftf/claim/v3-0/errors/download">Download claim form (experimental)</a>
+    </li>
+    <li>
+        <a class="govuk-link" target="_blank" href="/ftf/claim/v3-0/errors/upload4">Upload claim form and evidence</a>
+    </li>
+    <li>
+        <a class="govuk-link" target="_blank" href="/ftf/claim/v3-0/errors/submit">Submit claim</a>
+    </li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+          FETF E2E
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+        Application, Agreement, Claim.
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content">
+  
+
+
+      <h3 class="govuk-heading-s">1. Application</h3>
+      <p class="govuk-body">(Work in progress)</p>
+
+
+
+      <h3 class="govuk-heading-s">2. Agreement</h3>
+      <p class="govuk-body">Check the FTF E2E section above for references</p>
+
+
+
+      <h3 class="govuk-heading-s">3. Claim</h3>
+
+      <ul class="govuk-list">
+        <li>
+            <a class="govuk-link" target="_blank" href="/fetf/claim/v1-0/errors/upload">Upload claim evidence</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/fetf/claim/v1-0/errors/paper-pot">Item details 1 (Input errors)</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/fetf/claim/v1-0/errors/paper-pot2a">Item details 2 (File type and size errors)</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/fetf/claim/v1-0/errors/paper-pot2b">Item details 3 (Evidence upload error)</a>
+        </li>
+        <li>
+          <a class="govuk-link" target="_blank" href="/fetf/claim/v1-0/errors/submit">Submit claim</a>
+        </li>
+      
+    </ul>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+<hr id="low-fidelity-design" style="margin: 40px 0;">
+
+
+
+
+
+<h2 class="govuk-heading-l">Low-fidelity design</h2>
+
+<span class="content-section">
+<p class="govuk-body">Prototype: <a href="https://www.figma.com/proto/k39fi8BCn0S1i9rVFihmuw/Future-Grants---Transactional-E2E-low-fidelity-prototype?page-id=0%3A1&type=design&node-id=6-416&viewport=484%2C192%2C0.06&scaling=min-zoom&starting-point-node-id=6%3A416" target="_blank">Low-fidelity prototype - Figma (opens in new tab)</a></p>
+<p class="govuk-body">Research findings: <a href="https://defra.sharepoint.com/:p:/s/MSTDefraFSGServiceLineBoard/EY8TJ6uJIc5HoU_gmaxdYHIBJCSbTp_30zYrO0ZvhIFDKA?e=W1awA3" target="_blank">Low-fidelity Research Insights - Powerpoint (opens in new tab)</a></p>
+<p class="govuk-body">E2E flow diagram: <a href="https://app.mural.co/t/1010defra0589/m/1010defra0589/1682675098512/bad82167914a454cbcf8a9378b175be62b00ca51?wid=7-1682675140064" target="_blank">E2E flow v1.0 - Mural (opens in new tab)</a></p>
+</span>
+
+<hr id="service-design" style="margin: 40px 0;">
+
+<h2 class="govuk-heading-l">Service design</h2>
+
+<span class="content-section">
+<p class="govuk-body">Visual service blueprint: <a href="https://app.mural.co/t/dcx6016/m/dcx6016/1680772774235/818de9cbf49a0707a8fe625bbf1ce9bdaaac6440?sender=u6609daa1d6d5f14bc3eb0833" target="_blank">Mural board (opens in new tab)</a></p>
+</span>
+
+<hr id="EE-FETF" style="margin: 40px 0;">
+
+<h2 class="govuk-heading-l">EE reworking of FETF</h2>
+
+<span class="content-section">
+<p class="govuk-body">Initial draft of EE's FETF rework (just apply section of journey): <a href="fetf/rewrite/how-to-apply-for-a-farming-equipment-and-technology-fund-fetf-2024-grant" target="_blank">guidance page start</a></p>
+</span>
+
+
+
+  </div>
+</div>
+
+</main>
+
+{% endblock %}

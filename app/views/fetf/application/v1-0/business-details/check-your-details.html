@@ -1,0 +1,134 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-check-business-details" method="post">
+      <span class="govuk-caption-l">Apply</span>
+    <h1 class="govuk-heading-l">Check your details</h1>
+
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+
+    <h2 class="govuk-heading-m">Business structure</h2>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="/fetf/application/v1-0/business-details/business-structure">Change<span class="govuk-visually-hidden"> business structure</span></a>
+    </p>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who is applying?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['structure'] }} 
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of employees
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['employeesNumber'] }}
+
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Land details</h2>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> land details</span></a>
+    </p>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Agriculture - area of farm in hectares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agricultureHectares'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Horticulture - area of nursery in hectares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['horticultureHectares'] }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Forestry - area of woodland in hectares
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['forestryHectares'] }}
+        </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Land parcel ID for forestry
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['landParcelId']  or "Not applicable" }}
+        </dd>
+      </div>
+    </dl>
+
+
+
+
+    <h2 class="govuk-heading-m" >Farm assurance schemes</h2>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> farm assurance schemes</span></a>
+    </p>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which farm assurance schemes do you belong to?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['assurance-scheme'] }}
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <h2 class="govuk-heading-m">Livestock health schemes</h2>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> livestock health schemes</span></a>
+    </p>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which livestock health or disease prevention schemes do you belong to?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['livestockSchemes'] }}
+        </dd>
+      </div>
+    </dl>
+
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../check-your-business-type" method="post">
+
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Business structure</h1>
+
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-structure-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Who is applying?
+              </h2>
+            </legend>
+            <div id="business-structure-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="structure" name="structure" type="checkbox" value="Landowner" {{ checked("structure", "Landowner") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="structure">
+                  Landowner
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="structure-2" name="structure" type="checkbox" value="Tenant farmer" {{ checked("structure", "Tenant farmer") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="structure-2">
+                  Tenant farmer
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="structure-3" name="structure" type="checkbox" value="Contractor" {{ checked("structure", "Contractor") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="structure-3">
+                  Contractor
+                </label>
+              </div>
+              
+            </div>
+          </fieldset>
+
+<br><br>
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="employees-number">
+            Number of employees
+          </label>
+        </h2>
+        <div id="employees-number-hint" class="govuk-hint">
+          Full-time employees, including the owner
+        </div>
+        <input class="govuk-input govuk-input--width-5" id="employees-number" name="employeesNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['employeesNumber'] }}">
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

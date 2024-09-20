@@ -1,0 +1,105 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Error
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  
+
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#check">Select the box to agree and continue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="../../activity-list/v3-0/index?status=03&eoi=03b&apply=03b&agree=02d&claim-01=01&claim-02=0&claim-03=0">
+
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+        <h1 class="govuk-heading-xl">Review terms and conditions</h1>
+
+        {% include "../../../_includes/body-content_terms-and-conditions-main-block.html" %}
+
+
+    
+
+
+
+
+
+
+
+        <style>
+          /* CSS to change the color of the checkbox border */
+          .govuk-checkboxes__input + .govuk-checkboxes__label::before {
+            border-color: #d4351c;
+          }
+        </style>
+        </head>
+        <body>
+        <br>
+        <div class="govuk-form-group govuk-form-group--error">
+          <p id="whoAreYou-error" class="govuk-error-message">Select the box to agree and continue</p>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="check">
+            I confirm that I have read, understood and agree to the terms and conditions
+          </label>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+          {{govukButton({
+              text: "Save and continue"
+          })}}
+        
+          <span class="content-section">
+            <h2 class="govuk-heading-m">Withdrawing your agreement</h2>
+            <p class="govuk-body">If you do not want to accept your agreement, you should <a href="/_common/not-testing.html">withdraw your application</a>.</p>
+          </span>
+
+        </form>
+
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

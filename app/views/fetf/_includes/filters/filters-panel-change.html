@@ -1,0 +1,82 @@
+<div class="filter-box">
+
+  
+<h2 class="govuk-heading-m govuk-!-margin-bottom-3">Filter by</h2>
+
+     <form  method="post" novalidate action="/fetf/change-request/equipment-list/apply-filters">
+
+      {{ govukInput({
+        id: 'keywords',
+        name: 'keywords',
+        label: {
+          text: 'Search for items',
+          classes: 'govuk-label--s'
+        }
+      }) }}
+       {{ govukCheckboxes({
+        idPrefix: 'category',
+        name: 'category',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Category',
+            classes: 'govuk-fieldset__legend--s'
+          }
+        },
+        items: [
+          {
+            value: 'Arable',
+            text: 'Arable',
+            checked:  checked("category", "Arable")
+          },
+          {
+            value: 'Forestry',
+            text: 'Forestry',
+            checked:  checked("category", "Forestry")
+          },
+          {
+            value: 'General',
+            text: 'General',
+            checked:  checked("category", "General")
+          },
+          {
+            value: 'Horticulture',
+            text: 'Horticulture',
+            checked:  checked("category", "Horticulture")
+          },
+          {
+            value: 'Livestock',
+            text: 'Livestock',
+            checked:  checked("category", "Livestock")
+          },
+          {
+            value: 'Resource and energy management',
+            text: 'Resource and energy management',
+            checked:  checked("category", "Resource and energy management")
+          },
+          {
+            value: 'Water and irrigation management',
+            text: 'Water and irrigation management',
+            checked:  checked("category", "Water and irrigation management")
+          }
+        ]
+      }) }}
+
+
+       <div class="govuk-button-group">
+           {{ govukButton({
+         text: "Apply filters"
+       }) }}
+
+       {{ govukButton({
+           text: "Clear filters",
+           classes: "govuk-button--secondary",
+           name: "clearFilters",
+           value: "true"
+         }) }}
+
+         </div>
+
+</form>
+
+</div>

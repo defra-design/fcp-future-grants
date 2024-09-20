@@ -1,0 +1,92 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Submit" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-submit-application" method="post">
+    
+
+    <!-- <span class="govuk-caption-xl">Apply for a Water Management Grant</span> -->
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit application</h1>
+    <span class="govuk-body">Read and agree to submit your application.</span>
+
+<br><br><br>
+
+
+    <h2 class="govuk-heading-l">Submit application </h2>
+
+    <p class="govuk-body">By submitting this application, you confirm that you understand and agree with the following statements:<br>
+
+     
+      <ul class="govuk-list govuk-list--bullet">
+        <li>I have read, understood and accept the <a href="">terms and conditions (opens in a new window)</a> and the <a href="">privacy policy (opens in a new window)</a> </li>
+        <li>the information I have provided is true and correct to the best of my knowledge</li>
+        <li>my information and details might be audited and reviewed, and shared with others to prevent and detect fraud</li>
+        <li>I will tell the Rural Payments Agency (RPA) if my circumstances change</li>
+        <li>I have permission from my landlord (if applicable) to apply </li>
+      </ul>
+
+
+      <div class="govuk-form-group">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I understand and agree with the above statements
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit application
+      </button>
+      <br>
+      
+      </form>
+      
+      
+      
+        <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02f&fetf-agree=01&fetf-claim=01" class="govuk-link">
+          Cancel
+        
+        </a>
+      </div>
+    
+
+
+   
+
+    
+
+</main>
+
+{% endblock %}

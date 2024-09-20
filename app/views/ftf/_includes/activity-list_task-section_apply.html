@@ -1,0 +1,439 @@
+  <li>
+
+      {% if (data['apply'] == "01") %}  <!-- Application Scenario 1 -->
+      <h2 class="govuk-prototype-kit-task-list__section">
+        <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+      </h2>
+
+      <p class="govuk-hint">You will be notified if you are approved to start the full application.</p>
+      <ul class="govuk-task-list">
+    
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Download application forms</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-1-status">
+          Cannot start yet
+        </div>
+      </li>
+    
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Upload application forms and evidence</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-2-status">
+          Cannot start yet
+        </div>
+      </li>
+    
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Check your details</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit application</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-4-status">
+          Cannot start yet
+        </div>
+      </li>
+    
+    </ul>
+
+
+      {% elif (data['apply'] == "02a") %}  <!-- Application Scenario 2a -->
+      <h2 class="govuk-prototype-kit-task-list__section">
+        <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+      </h2>
+
+      <ul class="govuk-task-list">
+
+        <li class="govuk-task-list__item govuk-task-list__item--with-link">
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="../../application/v3-0/download2" aria-describedby="application-1-status">Download application forms</a>
+          </div>
+          <div class="govuk-task-list__status" id="application-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+              Not yet started
+            </strong>
+          </div>
+        </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Upload application forms and evidence</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-2-status">
+          Cannot start yet
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Check your details</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-3-status">
+          Cannot start yet
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit application</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-4-status">
+          Cannot start yet
+        </div>
+      </li>
+      
+    </ul>
+
+    {% elif (data['apply'] == "02b") %}  <!-- Application Scenario 2b -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+    </h2>
+
+    <ul class="govuk-task-list">
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-1-status">
+            Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../application/v3-0/upload?01=n&02=n&03=n&04=n&05=n&06=n&07=n&08=n&09=n&10=n" aria-describedby="application-2-status">Upload application forms and evidence</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-2-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Check your details</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-3-status">
+        Cannot start yet
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Submit application</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-4-status">
+        Cannot start yet
+      </div>
+    </li>
+    
+  </ul>
+
+  {% elif (data['apply'] == "02c") %}  <!-- Application Scenario 2c -->
+  <h2 class="govuk-prototype-kit-task-list__section">
+    <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+  </h2>
+
+  <ul class="govuk-task-list">
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-1-status">
+          Completed
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-2-status">Upload application forms and evidence</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-2-status">
+        <strong class="govuk-tag govuk-tag--light-blue">
+          In progress
+        </strong>
+      </div>
+    </li>
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <div>Check your details</div>
+    </div>
+    <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-3-status">
+      Cannot start yet
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <div>Submit application</div>
+    </div>
+    <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-4-status">
+      Cannot start yet
+    </div>
+  </li>
+  
+</ul>
+
+  {% elif (data['apply'] == "02d") %}  <!-- Application Scenario 2d -->
+  <h2 class="govuk-prototype-kit-task-list__section">
+    <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+  </h2>
+
+  <ul class="govuk-task-list">
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-1-status">
+          Completed
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-2-status">Upload application forms and evidence</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-2-status">
+          Completed
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="../../application/v3-0/check" aria-describedby="application-3-status">Check your details</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-3-status">
+        <strong class="govuk-tag govuk-tag--blue">
+          Not yet started
+        </strong>
+      </div>
+    </li>
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <div>Submit application</div>
+    </div>
+    <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-4-status">
+      Cannot start yet
+    </div>
+  </li>
+  
+</ul>
+
+{% elif (data['apply'] == "02e") %}  <!-- Application Scenario 2e -->
+<h2 class="govuk-prototype-kit-task-list__section">
+  <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+</h2>
+
+<ul class="govuk-task-list">
+
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-1-status">
+        Completed
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-2-status">Upload application forms and evidence</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-2-status">
+        Completed
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-3-status">Check your details</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-3-status">
+        Completed
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="../../application/v3-0/submit" aria-describedby="application-4-status">Submit application</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-4-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Not yet started
+      </strong>
+    </div>
+  </li>
+
+</ul>
+
+{% elif (data['apply'] == "03a") %}  <!-- Application Scenario 3a -->
+<h2 class="govuk-prototype-kit-task-list__section">
+  <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+</h2>
+
+<ul class="govuk-task-list">
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-1-status">
+      Completed
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-2-status">Upload application forms and evidence</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-2-status">
+      Completed
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-3-status">Check your details</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-3-status">
+      Completed
+    </div>
+  </li>
+
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-4-status">Submit application</a>
+    </div>
+    <div class="govuk-task-list__status" id="application-4-status">
+      Completed
+    </div>
+  </li>
+
+</ul>
+
+{% elif (data['apply'] == "03b") %}  <!-- Application Scenario 3b -->
+<h2 class="govuk-prototype-kit-task-list__section">
+  <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+</h2>
+
+    <ul class="govuk-task-list">
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-1-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-2-status">Upload application forms and evidence</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-2-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-3-status">Check your details</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-3-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-4-status">Submit application</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-4-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../application/v3-0/outcome-successful.html" aria-describedby="application-5-status">Application outcome</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-5-status">
+          Successful
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['apply'] == "03c") %}  <!-- Application Scenario 3c -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
+    </h2>
+
+    <ul class="govuk-task-list">
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-1-status">Download application forms</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-1-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-2-status">Upload application forms and evidence</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-2-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-3-status">Check your details</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-3-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-4-status">Submit application</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-4-status">
+          Completed
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../application/v3-0/outcome-unsuccessful.html" aria-describedby="application-5-status">Application outcome</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-5-status">
+          Unsuccessful
+        </div>
+      </li>
+    </ul>
+
+  {% endif %}
+
+
+</li>

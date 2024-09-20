@@ -1,0 +1,114 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Business details" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#number">Enter the number of employees</a>
+        </li>
+        <li>
+          <a href="#turn">Enter the business turnover</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-l">Expression of interest</span>
+        <h1 class="govuk-heading-l">Employee and turnover details</h1>
+      <p class="govuk-body">Business details for Imaginary Farms Ltd</p>
+      
+
+  <div class="govuk-form-group govuk-form-group--error">
+    <label class="govuk-label" for="full-name-input">
+      Number of employees
+    </label>
+    <div id="event-name-hint" class="govuk-hint">Full-time employees, including the owner</div>
+
+    <p id="full-name-input-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter the number of employees
+    </p>
+  
+    <input class="govuk-input govuk-input--width-5 govuk-input--error" id="number" name="width5" type="text">
+
+  
+  </div>
+
+<br>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="full-name-input">
+    Business turnover (£)
+  </label>
+  <div id="event-name-hint" class="govuk-hint">Full-time employees, including the owner</div>
+
+  <p id="full-name-input-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter the business turnover
+  </p>
+
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-5 govuk-input--error" id="turn" name="cost" type="text" spellcheck="false">
+  </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+          <a href="check">
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Continue
+          </button>
+          </a>
+      
+
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

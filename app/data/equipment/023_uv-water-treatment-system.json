@@ -1,0 +1,20 @@
+{
+  "termName": "Water treatment",
+  "sectionNumber": "023",
+  "itemCode": "23",
+  "title": "UV Water treatment system",
+  "summary": "UV water system used to treat water for feeding livestock or to irrigate horticultural crops.",
+  "category": ["Water and irrigation management"],
+  "grantValue": "341.00",
+  "grantPercentage": "50",
+  "averageValue": "682.00",
+  "score": 47,
+  "eligible": {
+    "eligibleBullet01": "be a UV water system used to treat water for feeding livestock or to irrigate horticultural crops",
+    "eligibleBullet02": "have a single bulb in-line UV filter",
+    "eligibleBullet03": "have automatic shut off of the water supply when power or bulb failure occurs",
+    "eligibleBullet04": "treat at least 30L per minute at 30mJ/cm2 (for example 55 watt power consumption)",
+    "eligibleBullet05": "be Water Regulations Advisory Scheme (WRAS) approved",
+    "eligibleText01": "You can apply for up to 10 UV water treatment system items per application."
+  }
+}

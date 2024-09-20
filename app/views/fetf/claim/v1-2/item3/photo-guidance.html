@@ -1,0 +1,163 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Photos </h1>
+
+      <p class="govuk-body-l">We’ll ask you to upload photos of the item. </p>
+
+      <h1 class="govuk-heading-l" style="margin-bottom: 20px;">
+        Photo rules</h1>
+
+      <p class="govuk-body-m">Show the whole item on site without packaging</p>
+
+      
+
+      <div class="photo-guide-photos" aria-hidden="true">
+        <ul>
+            <li>
+                <img src="/public/images/FETF2024_good_example_1.JPG" alt="">
+                <div class="result">
+                    <p class="approved govuk-body-s">Show the whole item</p>
+                </div>
+            </li>
+            <li>
+                <img src="/public/images/FETF2024_bad_example_1.JPG" alt="">
+                <div class="result">
+                    <p class="failed govuk-body-s">The whole item can't be seen</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+      
+      <h3 class="govuk-heading-m" style="margin-bottom: 20px;">
+        Clear, in focus and in colour </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>No black and white photos</li>
+      </ul>
+
+      <h3 class="govuk-heading-m" style="margin-bottom: 20px;">
+        No objects in front of the item</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Check whole item can be clearly seen</li>
+      </ul>
+
+      <h3 class="govuk-heading-m" style="margin-bottom: 20px;">
+        Show each part of system (if item has multiple parts)</h3>
+        <br>
+
+      <h3 class="govuk-heading-m" style="margin-bottom: 20px;">
+        No people in the photo</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Do not include any people in the photo</li>
+      </ul>
+
+      <h3 class="govuk-heading-m" style="margin-bottom: 20px;">
+        Shows make, model and serial number</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Use the manufacturer’s plate or operating manual</li>
+      </ul>
+
+
+        
+    </div>
+  </div>
+
+<br><br>
+
+
+
+
+     <a href="photo">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+
+
+  
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

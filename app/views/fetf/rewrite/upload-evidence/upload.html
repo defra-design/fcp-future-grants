@@ -1,0 +1,154 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+Upload2
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-l">Upload finanacial evidence</span>
+      <h1 class="govuk-heading-l">
+        Upload bank or building society email or letter
+      </h1>
+
+      <p class="govuk-body">The letter must include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the full business name and name of applicant</li>
+      <li>the full address of the bank or building society</li>
+      <li>be dated within tyhe last three months (after June 2024)</li>
+      <li>show how the total cost of £35,000 will be covered</li>
+    </ul>
+
+
+    </div>
+  </div>
+
+
+
+
+<script>
+function showFilesAddedSection() {
+  const filesAddedContainer = document.getElementById('filesAddedContainer');
+  filesAddedContainer.style.display = 'block';
+}
+
+function showVisualEvidenceSection() {
+  const visualEvidenceContainer = document.getElementById('visualEvidenceContainer');
+  visualEvidenceContainer.style.display = 'block';
+}
+</script>
+
+
+
+<body>
+  <form action="evidence-add" method="post">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  
+  <p class="govuk-body">Files must be:</p>
+  <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-4">
+      <li>a PDF, jpg, doc or docx file</li>
+      <li>no more than 20MB</li>
+    </ul>
+
+
+  <div id="filesAddedContainer" style="display: none;">
+      <p class="govuk-label govuk-label--s">Files added</p><br>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Financial evidence 1.pdf</a> , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+  </div>
+
+  <br> 
+
+  <p class="govuk-label govuk-label--s">Upload a file</p>
+  <div class="container">
+      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+        <button type="submit" class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+Upload2
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Salad leaf harvester (FETF8)</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        What is the serial number for this item?
+      </h1>
+
+      
+
+
+   
+
+
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-20">
+          20 character width
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+      </div>
+
+
+<body>
+
+
+
+
+  
+
+
+
+
+     <a href="salad-invoices">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

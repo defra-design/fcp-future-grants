@@ -1,0 +1,33 @@
+{
+  "termName": "Direct drill",
+  "sectionNumber": "205",
+  "itemCode": "205",
+  "title": "Direct drill 4m",
+  "summary": "Seed drill for sowing crops at minimum 4m width.",
+  "category": ["Arable"],
+  "grantValue": "17,845.00",
+  "grantPercentage": "50",
+  "averageValue": "35,690.00",
+  "score": 59,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a direct drill",
+    "eligibleBullet02": "use either tines or discs to produce the seeding slot",
+    "eligibleBullet03": "have a 3.9m minimum drilling width",
+    "eligibleBullet04": "have no fertiliser placement mechanism in front of the seeding slot",
+    "eligibleBullet05": "place the seed in the seeding slot",
+    "eligibleBullet06": "drill through an established growing cover crop of at least 15cm",
+    "eligibleBullet07": "have a seed hopper with a capacity of at least 1,000L",
+    "eligibleBullet08": "have precision metering",
+    "eligibleBullet09": "drill the full range of arable and cover crops including cereals"
+  },
+  "notEligible": {
+    "notEligibleBullet01": "drills with cultivation, seed bed preparation, or fertiliser placement equipment in front of the seeding slot",
+    "notEligibleBullet02": "cultivators with over-seeders",
+    "notEligibleBullet03": "cultivators with broadcasters",
+    "notEligibleBullet04": "minimum till drills",
+    "notEligibleBullet05": "strip till drills",
+    "notEligibleBullet06": "grassland over-seeders",
+    "notEligibleBullet07": "grassland broadcasters"
+  }
+}

@@ -1,0 +1,219 @@
+<li>
+
+    {% if (data['eoi'] == "01") %}  <!-- EOI Scenario 1 -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
+    </h2>
+
+    <ul class="govuk-task-list">
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-1-status">Check eligibility and scoring</a>
+      </div>
+      <div class="govuk-task-list__status" id="expression-of-interest-1-status">
+        Completed
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="../../eoi/v2-0/p-details.html" aria-describedby="expression-of-interest-2-status">Check your details</a>
+      </div>
+      <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+        <strong class="govuk-tag govuk-tag--blue">
+          Not yet started
+        </strong>
+      </div>
+    </li>
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Register your interest</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="expression-of-interest-3-status">
+        Cannot start yet
+      </div>
+    </li>
+  </ul>
+
+  {% elif (data['eoi'] == "02a") %}  <!-- EOI Scenario 2 -->
+  <h2 class="govuk-prototype-kit-task-list__section">
+    <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
+  </h2>
+
+  <ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-1-status">Check eligibility and scoring</a>
+    </div>
+    <div class="govuk-task-list__status" id="expression-of-interest-1-status">
+      Completed
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-2-status">Check your details</a>
+    </div>
+    <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+      <strong class="govuk-tag govuk-tag--light-blue">
+        In progress
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item">
+    <div class="govuk-task-list__name-and-hint">
+      <div>Register your interest</div>
+    </div>
+    <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="expression-of-interest-3-status">
+      Cannot start yet
+    </div>
+  </li>
+</ul>
+
+{% elif (data['eoi'] == "02b") %}
+<h2 class="govuk-prototype-kit-task-list__section">
+  <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
+</h2>
+
+<ul class="govuk-task-list">
+<li class="govuk-task-list__item govuk-task-list__item--with-link">
+  <div class="govuk-task-list__name-and-hint">
+    <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-1-status">Check eligibility and scoring</a>
+  </div>
+  <div class="govuk-task-list__status" id="expression-of-interest-1-status">
+    Completed
+  </div>
+</li>
+<li class="govuk-task-list__item govuk-task-list__item--with-link">
+  <div class="govuk-task-list__name-and-hint">
+    <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-2-status">Check your details</a>
+  </div>
+  <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+      Completed
+  </div>
+</li>
+<li class="govuk-task-list__item govuk-task-list__item--with-link">
+  <div class="govuk-task-list__name-and-hint">
+    <a class="govuk-link govuk-task-list__link" href="../../eoi/v2-0/submit.html" aria-describedby="expression-of-interest-2-status">Register your interest</a>
+  </div>
+  <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+    <strong class="govuk-tag govuk-tag--blue">
+      Not yet started
+    </strong>
+  </div>
+</li>
+</ul>
+
+      {% elif (data['eoi'] == "03a") %}  <!-- EOI Scenario 3a -->
+      <h2 class="govuk-prototype-kit-task-list__section">
+        <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
+      </h2>
+
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-1-status">Check eligibility and scoring</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-1-status">
+          Completed
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-2-status">Check your details</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+          Completed
+        </div>
+      </li>
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-3-status">Register your interest</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-3-status">
+          Completed
+        </div>
+      </li>
+    </ul>
+
+      {% elif (data['eoi'] == "03b") %}  <!-- EOI Scenario 3b -->
+      <h2 class="govuk-prototype-kit-task-list__section">
+        <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
+      </h2>
+      
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-1-status">Check eligibility and scoring</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-1-status">
+          Completed
+        </div>
+      </li>
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-2-status">Check your details</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+          Completed
+        </div>
+      </li>
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-3-status">Register your interest</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-3-status">
+          Completed
+        </div>
+      </li>
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../eoi/v2-0/outcome-accepted.html" aria-describedby="expression-of-interest-4-status">Expression of interest outcome</a>
+        </div>
+        <div class="govuk-task-list__status" id="expression-of-interest-4-status">
+          Accepted
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['eoi'] == "03c") %}  <!-- EOI Scenario 3c -->
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
+    </h2>
+    
+    <ul class="govuk-task-list">
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-1-status">Check eligibility and scoring</a>
+      </div>
+      <div class="govuk-task-list__status" id="expression-of-interest-1-status">
+        Completed
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-2-status">Check your details</a>
+      </div>
+      <div class="govuk-task-list__status" id="expression-of-interest-2-status">
+        Completed
+      </div>
+    </li>
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="expression-of-interest-3-status">Register your interest</a>
+      </div>
+      <div class="govuk-task-list__status" id="expression-of-interest-3-status">
+        Completed
+      </div>
+    </li>
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="../../eoi/v2-0/outcome-not-accepted.html" aria-describedby="expression-of-interest-4-status">Expression of interest outcome</a>
+      </div>
+      <div class="govuk-task-list__status" id="expression-of-interest-4-status">
+        Not accepted
+      </div>
+    </li>
+  </ul>
+
+      {% endif %}
+
+  </li>

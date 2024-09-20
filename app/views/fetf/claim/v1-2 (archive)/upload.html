@@ -1,0 +1,205 @@
+
+
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+  Upload evidence
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/fetf/feedback-question">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <span class="govuk-caption-xl">Submit claim</span>
+              <h1 class="govuk-heading-xl">Upload claim evidence</h1>
+              <h2 class="govuk-heading-m">Item description</h2>
+              <ul class="govuk-task-list">
+                
+                
+                  
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                  <div class="govuk-task-list__name-and-hint">
+
+                    <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-1/salad2" aria-describedby="before-you-start-1-status">
+                      Salad leaf harvester&nbsp;(FETF8)
+                    </a>
+                    
+                   
+                  </div>
+                  
+                  {% if item.status == "Completed" %}
+
+                  <div class="govuk-task-list__status" id="before-you-start-1-status">
+                    Completed
+                  </div>
+
+                  {% else %}
+
+                  <div class="govuk-task-list__status" id="application-details-4-status">
+                    <strong class="govuk-tag govuk-tag--blue">
+                      Not yet started
+                    </strong>
+                </div>
+                {% endif %}
+
+            
+
+                <!-- <div class="govuk-task-list__status" id="application-details-4-status">
+                  <strong class="govuk-tag govuk-tag--light-blue">
+                    In progress
+                  </strong>
+              </div> -->
+             
+                
+                
+              
+
+
+              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                <div class="govuk-task-list__name-and-hint">
+
+                  <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-1/ram-pumps2" aria-describedby="before-you-start-1-status">
+                    Hydralic ram pumps&nbsp;(FETF24)
+                  </a>
+                  
+                 
+                </div>
+                
+                {% if item.status == "Completed" %}
+
+                <div class="govuk-task-list__status" id="before-you-start-1-status">
+                  Completed
+                </div>
+
+                {% else %}
+
+                <div class="govuk-task-list__status" id="application-details-4-status">
+                  <strong class="govuk-tag govuk-tag--blue">
+                    Not yet started
+                  </strong>
+              </div>
+              {% endif %}
+
+          
+
+              <!-- <div class="govuk-task-list__status" id="application-details-4-status">
+                <strong class="govuk-tag govuk-tag--light-blue">
+                  In progress
+                </strong>
+            </div> -->
+           
+              
+              
+           
+
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+
+                <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-1/solar-pump2" aria-describedby="before-you-start-1-status">
+                  Solar-powered water pump&nbsp;(FETF413)
+                </a>
+                
+               
+              </div>
+              
+              {% if item.status == "Completed" %}
+
+              <div class="govuk-task-list__status" id="before-you-start-1-status">
+                Completed
+              </div>
+
+              {% else %}
+
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Not yet started
+                </strong>
+            </div>
+            {% endif %}
+
+        
+
+          </ul>
+            
+         
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-visually-hidden">Warning</span>
+                  Mistakes can be seen as fraud so check your documents carefully before submitting.
+                </strong>
+              </div>
+             
+              <a href="summary">
+                <button class="govuk-button">
+                  Save and continue
+                </button>
+              </a>
+
+
+            </div>
+          </div>
+        </main>
+      </div>
+
+
+      
+      
+
+ 
+
+
+
+
+
+
+
+      
+
+
+  {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+  <br><br>
+
+<!-- <a href="/fetf/claim/v1-0/upload">Option A</a>
+
+<a href="/fetf/claim/v1-0/upload-b">Option B</a>
+
+<a href="/fetf/claim/v1-0/upload-c">Option C</a>
+<br><br> -->
+
+    </div>
+  </div>
+
+
+
+</main>
+
+
+
+{% endblock %}

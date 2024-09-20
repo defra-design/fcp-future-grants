@@ -1,0 +1,16 @@
+{
+  "termName": "Equipment number",
+  "sectionNumber": "371",
+  "title": "Fibre optic networking equipment",
+  "summary": "Fibre optic networking cable.",
+  "category": ["General"],
+  "value": "120.00",
+  "score": 50,
+  "description": {
+    "descriptionText01": "Fibre optic networking cable."
+  },
+  "eligibility": {
+    "eligibiltyBullet01": "Minimum 50m lengths.",
+    "eligibiltyBullet02": "Minimum two media convertors to enable devices to connect for agricultural use."
+  }
+}

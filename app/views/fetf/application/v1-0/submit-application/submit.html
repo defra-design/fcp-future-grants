@@ -1,0 +1,99 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Submit" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-submit-application" method="post">
+    
+
+    <!-- <span class="govuk-caption-xl">Apply for a Water Management Grant</span> -->
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit application</h1>
+    <span class="govuk-body">Read and agree to submit your application.</span>
+
+<br><br><br>
+
+
+    <h2 class="govuk-heading-l">Declaration</h2>
+
+    <p class="govuk-body">By submitting and/or agreeing to the submission of this application form I agree to the following declaration:<br>
+
+    <span class="content-section">      
+      <ul class="govuk-list govuk-list--bullet">
+        <li>I confirm that, to the best of my knowledge and belief, all of the information contained in this application is true and correct and I accept full responsibility for it.</li>
+        <li>I understand that if I knowingly make a false representation to obtain grant aid for myself or anyone else I risk prosecution, the recovery or withholding of all grant payments, and exclusion from other schemes operated by the RPA.</li>
+        <li>I understand that my information may also be shared with other government departments and agencies for the purpose of fraud prevention and detection, and that the application and evaluation of grant funding is also subject to audit and reviews by internal auditors who may need to access the information I submit in my application.</li>
+        <li>I understand that in the event this application is successful I will be required to submit further information, as set out in the Farming Equipment and Technology Fund Round 1 Manual in support of my claim. If there is any change to the information I have provided I will notify Rural Payments Agency without delay.</li>
+        <li>I confirm that I am an eligible applicant as detailed in the Farming Equipment and Technology Fund Round 1 Manual.</li>
+        <li>I declare that I have read, understood and complied with all of the relevant guidance information referred to in the Farming Equipment and Technology Fund Round 1 Manual.</li>
+        <li>I understand that if my application is successful, payment of any grant funding will be conditional on compliance with the terms and conditions set out in Annexes 1 and 2 of the Farming Equipment and Technology Fund Round 1 Manual.</li>
+        <li>I understand that my business may be inspected and I agree to give access and to provide such assistance as may be required.</li>
+        <li>I recognise that, where relevant, it is my responsibility to obtain any necessary permissions from my landlord and in submitting this application confirm that I have done so.</li>
+        <li>I understand that if an agent submits this application on my behalf, it will not limit my responsibility to comply with the terms and conditions set out in Annexes 1 and 2 of the Farming Equipment and Technology Fund Round 1 Manual, nor does it affect my personal responsibility to ensure the accuracy of the information provided in this application.</li>
+        <li>I understand that any information I supply may be used by public bodies or their appointed agents in connection with the Future Farming and Countryside Programme, and that I may be contacted by Defra and RPA (or a third party on their behalf) about the application.</li>
+        <li>For information on how we handle personal data, go to <a href="#">Rural Payments Agency personal information charter (opens in new tab)</a>.</li>
+        <li>This declaration must be submitted by an individual empowered on the Rural Payments system to make legal changes or full permissions relating to this business.</li>
+      </ul>
+    </span>
+
+    <span class="content-section">
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          I understand and agree with the above statements
+        </label>
+      </div>
+    </div>
+    </span>
+
+
+
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit application
+      </button>
+      <br>
+      
+      </form>
+      
+      
+      
+        <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02f&fetf-agree=01&fetf-claim=01" class="govuk-link">
+          Cancel
+        
+        </a>
+      </div>
+    
+
+
+   
+
+    
+
+</main>
+
+{% endblock %}

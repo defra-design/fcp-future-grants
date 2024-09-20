@@ -1,0 +1,58 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+    
+<br>
+
+
+      
+      
+      
+      
+      
+      
+       
+          <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds-from-desktop">
+                <h1 class="govuk-heading-l">Thank you</h1>
+                <p>RPA should complete the review and get in touch with you by 13 August 2024.</p>
+                
+      
+      <br><br><br>
+      
+      
+                <a href="submitted-email">Go to email </a>
+      
+      
+      
+      
+     
+
+
+
+
+</main>
+
+{% endblock %}

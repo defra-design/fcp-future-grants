@@ -1,0 +1,125 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Login" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Sign in</h2>
+      
+      
+      
+      
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-body">Customer reference number (CRN)</label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">The 10 digit number emailed to you when you registered with the Rural Payments service</div>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+
+          <script>
+            document.getElementById('width-10').addEventListener('click', function() {
+              this.value = '0123456789';
+            });
+          </script>
+
+
+
+
+
+
+<br><br>
+
+
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-body">Password</label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">This is your Rural Payments service password</div>
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+
+        <script>
+          document.getElementById('width-20').addEventListener('click', function() {
+            this.value = '••••••••••••••••••';
+          });
+        </script>
+
+        </div>
+
+
+        </div>
+      </div>
+
+
+      <br>
+
+
+      <a href="../../../activity-list/v2-0/index?fetf-status=02&fetf-apply=03b&fetf-agree=02a&fetf-claim=01">
+        <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+          Continue
+        </button>
+        </a>
+
+          <!-- <a href="activity">
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Continue
+          </button>
+          </a> -->
+      
+        <p class="govuk-body"><a href="/_common/not-testing.html">I have forgotten my password</a></p>
+        
+        <br>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help signing in
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Contact the Rural Payments Agency by email or phone if:<br><br>
+            <li>you have forgotten your CRN</li>
+            <li>you have lost your CRN</li>
+            <li>your CRN is not recognised</li>
+            <br>
+            Email: <a href="/_common/not-testing.html">ruralpayments@defra.gov.uk</a><br>
+            <br>
+            Telephone: 03000 200 301<br>
+            Monday to Friday, 8:30am to 5pm, except bank holidays<br>
+            <a href="/_common/not-testing.html">Find out about call charges (opens in new tab)</a><br>
+            <br>
+            <a href="/_common/not-testing.html">Register for the Rural Payments service</a> if you do not have an account.
+          </div>
+        </details>
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

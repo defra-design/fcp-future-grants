@@ -1,0 +1,163 @@
+{% extends "layouts/main-end-to-end.html" %}
+
+{% block pageTitle %}
+Water Management Grant - Round 3
+{% endblock %}
+
+
+{% block content %}
+
+
+{% include "../../_includes/sub-header_business-applicant-details.html" %}
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+<span class="govuk-caption-xl">{{ data['ftf-project-name'] }} ({{ data['ftf-project-reference'] }})</span>
+<h1 class="govuk-heading-xl">{{ data['ftf-grant-name'] }}</h1>
+
+
+<span class="content-section">
+{% include "../../_includes/activity-list_status-block.html" %}
+</span>
+
+
+<ol class="govuk-prototype-kit-task-list">
+
+  {% include "../../_includes/activity-list_task-section_eoi.html" %}
+  {% include "../../_includes/activity-list_task-section_apply.html" %}
+  {% include "../../_includes/activity-list_task-section_agreement.html" %}
+  {% include "../../_includes/activity-list_task-section_claim-01.html" %}
+  {% if (data['status'] == "04") or (data['status'] == "05") or (data['status'] == "06") or (data['status'] == "07a") or (data['status'] == "07b") or (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %}
+  {% include "../../_includes/activity-list_task-section_claim-02.html" %}
+  {% include "../../_includes/activity-list_task-section_claim-03.html" %}
+  {% endif %}
+
+  {% if (data['status'] == "07a") or (data['status'] == "07b") or (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-01.html" %}
+  {% endif %}
+  {% if (data['status'] == "07b") or (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-02.html" %}
+  {% endif %}
+  {% if (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-03.html" %}
+  {% endif %}
+  {% if (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-04.html" %}
+  {% endif %}
+  {% if (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-05.html" %}
+  {% endif %}
+  
+</ol>
+
+
+
+{% if (data['status'] == "01b") or (data['status'] == "02a") or (data['status'] == "02b") or (data['status'] == "02c") or (data['status'] == "03") or (data['status'] == "04") %}
+<p class="govuk-body withdraw-link"><a href="../../../_common/not-testing">Withdraw grant application</a></p>
+{% endif %}
+
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+
+  <p class="govuk-body app-contact-panel__body">
+    <a class="govuk-link" href="../../change-request/help-triage">Contact the team</a> if you need help, want to report a problem or want to make a change to your Grant Funding Agreement.
+  </p>
+</div>
+
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}
+
+
+
+<!-- FOOTER BLOCK WITH EXTRA LINKS FOR THE END OF EACH JOURNEY-->
+
+{% block footer %}
+{% if (data['status'] == "01b") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../eoi/v2-0/email_eoi-submitted.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+ {% elif (data['status'] == "02c") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../application/v3-0/email3.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+
+ {% elif (data['status'] == "04") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../agreement/v2-0/email-agreement-accepted.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+
+ {% elif (data['status'] == "05") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../claim/v3-0/email-claim-submitted.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+ {% else %}
+
+ {{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      },
+      {
+        href: "/ftf/change-request/approved-email",
+        text: "Emails"
+      }
+      
+    ],
+    visuallyHiddenTitle: "Footer links"
+  }
+}) }}
+
+ {% endif %}
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Help" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+   
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+    {% set grantTotal = 0 %}
+    {% set scoreTotal = 0 %}
+    {% for item in data['selected-items'] %}
+      {% set grantTotal = grantTotal + item.grantTotal %}
+      {% set scoreTotal = scoreTotal + item.score %}
+    {% endfor %}
+
+    
+
+  
+  
+
+
+  
+
+   
+    <h1 class="govuk-heading-l">What do you want to change?</h1>
+    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
+<table class="govuk-table">
+
+
+  <caption class="govuk-table__caption govuk-table__caption--m add-hr" >Items summary</caption>
+  <thead class="govuk-table__head">
+    <tr class=".govuk-table-row-selected-item">
+      <th scope="col" class="govuk-table__header">Item</th>
+      <th scope="col" class="govuk-table__header"id="selected-item" >Code</th>
+      <th scope="col" class="govuk-table__header" id="selected-item">Quantity</th>
+      <th scope="col" class="govuk-table__header" id="selected-item" >Grant amount</th>
+      <th scope="col" class="govuk-table__header" id="selected-item" >Score</th>
+      <th scope="col" class="govuk-table__header" ></th>
+    </tr>
+  </thead>
+    <tbody class="govuk-table__body" >
+
+ <!-- Dummy row -->
+      
+      <tr class="govuk-table__row" id="selected-items__row">
+        <td class="govuk-table__cell add-item" id="selected-item-bold">Electronic tray filling machine</td>
+        <td class="govuk-table__cell add-code" id="selected-item" >FETF1</td>
+        <td class="govuk-table__cell add-quantity" id="selected-item">3&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+        <td class="govuk-table__cell add-grant" id="selected-item">£22,266.00</td>
+        <td class="govuk-table__cell add-score" id="selected-item">65</td>
+        <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+      </tr>
+      <tr class="govuk-table__row" id="selected-items__row">
+        <td class="govuk-table__cell add-item" id="selected-item-bold">Liquid fertiliser applicator for seed drills/planters 6m</td>
+        <td class="govuk-table__cell add-code" id="selected-item" >FETF212</td>
+        <td class="govuk-table__cell add-quantity" id="selected-item">3&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+        <td class="govuk-table__cell add-grant" id="selected-item">£33,093.00</td>
+        <td class="govuk-table__cell add-score" id="selected-item">71</td>
+        <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+      </tr>
+      
+
+<!-- End of dummy row -->
+
+
+
+
+
+
+
+      
+   
+      <tr class="govuk-table__row" id="selected-items__row">
+        <th scope="row" class="govuk-table__cell" id="mobile-hide"><strong>Total requested grant amount</strong></th>
+        <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> £22,266.00</strong></td>
+        <td class="govuk-table__cell add-total-score" id="selected-item"><strong>65</strong></td>
+      <td class="govuk-table__cell" id="mobile-hide"></td>
+      </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+ 
+
+
+
+
+
+
+  
+
+<div class="govuk-button-group">
+  <a class="govuk-button" href="upload-evidence" >
+    Apply for these items
+  </a>
+  <a class="govuk-button govuk-button--secondary" href="/fetf/change-request/equipment-list">
+    Select more items
+  </a>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</main>
+
+
+
+
+
+
+{% endblock %}

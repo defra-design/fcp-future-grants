@@ -1,0 +1,28 @@
+{
+  "termName": "Weather station",
+  "sectionNumber": "118",
+  "itemCode": "118",
+  "title": "Digital weather station",
+  "summary": "Wirelessly links to a computer to measure and record weather.",
+  "category": ["Water and irrigation management"],
+  "grantValue": "902.00",
+  "grantPercentage": "50",
+  "averageValue": "1,804.00",
+  "score": 67,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "barometric pressure",
+    "eligibleBullet02": "temperature",
+    "eligibleBullet03": "humidity",
+    "eligibleBullet04": "rainfall",
+    "eligibleBullet05": "wind speed and direction",
+    "eligibleBullet06": "UV levels",
+    "eligibleBullet07": "soil moisture",
+    "eligibleBullet08": "soil temperature"
+  },
+  "notEligible": {
+    "notEligibleBullet01": "installation costs",
+    "notEligibleBullet02": "service costs",
+    "notEligibleBullet03": "annual licence fee for software and calibration"
+  }
+}

@@ -1,0 +1,177 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Water Management Grant - Round 3
+{% endblock %}
+
+
+{% block content %}
+
+
+{% include "../../_includes/sub-header_business-applicant-details.html" %}
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+<span class="govuk-caption-xl">{{ data['ftf-project-name'] }} ({{ data['ftf-project-reference'] }})</span>
+<h1 class="govuk-heading-xl">{{ data['ftf-grant-name'] }}</h1>
+
+
+<span class="content-section">
+{% include "../../_includes/activity-list_status-block.html" %}
+</span>
+
+
+
+{% if (data['scenario'] == "application") %} <!-- Application section in progress, no other sections shown -->
+
+<span class="content-section">
+  <h2 class="govuk-heading-l">Application</h2>
+  <ol class="govuk-prototype-kit-task-list">
+    {% include "../../_includes/activity-list_task-section_eoi.html" %}
+    {% include "../../_includes/activity-list_task-section_apply.html" %}
+    {% include "../../_includes/activity-list_task-section_agreement.html" %}
+  </ol>
+  </span>
+
+<br><br>
+
+
+{% elif (data['scenario'] == "claim") %} <!-- Claim section ready to start, Application section moved down the screen -->
+
+<span class="content-section">
+  <h2 class="govuk-heading-l">Claim</h2>
+  <ol class="govuk-prototype-kit-task-list">
+    {% include "../../_includes/activity-list_task-section_claim-01.html" %}
+    {% include "../../_includes/activity-list_task-section_claim-02.html" %}
+    {% include "../../_includes/activity-list_task-section_claim-03.html" %}
+  </ol>
+</span>
+
+<br><br>
+
+<div class="govuk-accordion activity-list-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Application <span style="font-weight: normal; font-size: 1.2rem; color: #505a5f;">completed</span>
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      {% include "../../_includes/activity-list_task-section_eoi.html" %}
+      {% include "../../_includes/activity-list_task-section_apply.html" %}
+      {% include "../../_includes/activity-list_task-section_agreement.html" %}
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+{% elif (data['scenario'] == "monitoring") %} <!-- Monitoring ready to start, Application and Claim sections moved down the screen -->
+
+<h2 class="govuk-heading-l">Monitoring</h2>
+<ol class="govuk-prototype-kit-task-list">
+  {% include "../../_includes/activity-list_task-section_monitoring-01.html" %}
+  {% include "../../_includes/activity-list_task-section_monitoring-02.html" %}
+  {% include "../../_includes/activity-list_task-section_monitoring-03.html" %}
+  {% include "../../_includes/activity-list_task-section_monitoring-04.html" %}
+  {% include "../../_includes/activity-list_task-section_monitoring-05.html" %}
+</ol>
+
+<br><br>
+
+<div class="govuk-accordion activity-list-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Application <span style="font-weight: normal; font-size: 1.2rem; color: #505a5f;">completed</span>
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      {% include "../../_includes/activity-list_task-section_eoi.html" %}
+      {% include "../../_includes/activity-list_task-section_apply.html" %}
+      {% include "../../_includes/activity-list_task-section_agreement.html" %}
+    </div>
+  </div>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Claim <span style="font-weight: normal; font-size: 1.2rem; color: #505a5f;">completed</span>
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      {% include "../../_includes/activity-list_task-section_claim-01.html" %}
+      {% include "../../_includes/activity-list_task-section_claim-02.html" %}
+      {% include "../../_includes/activity-list_task-section_claim-03.html" %}
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}
+
+
+<!-- FOOTER BLOCK WITH EXTRA LINKS FOR THE END OF EACH JOURNEY-->
+
+{% block footer %}
+{% if (data['scenario'] == "application") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "?scenario=claim&status=04&eoi=03b&apply=03b&agree=03&claim-01=02a&claim-02=01&claim-03=01",
+         text: "Move forward"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+
+ {% elif (data['scenario'] == "claim") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "?scenario=monitoring&status=07a&eoi=03b&apply=03b&agree=03&claim-01=03&claim-02=03&claim-03=03&monitoring-01=02a&monitoring-02=01&monitoring-03=01&monitoring-04=01&monitoring-05=01",
+         text: "Move forward"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+ {% else %}
+
+ {{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ],
+    visuallyHiddenTitle: "Footer links"
+  }
+}) }}
+
+ {% endif %}
+{% endblock %}

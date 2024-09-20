@@ -1,0 +1,117 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+{{ data['fetf-grant-type'] }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{% include "../_includes/sub-header_business-applicant-details.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+<span class="govuk-caption-xl">{{ data['fetf-grant-type'] }}
+  {% if (data['fetf-status'] == "01c") or (data['fetf-status'] == "01d") or (data['fetf-status'] == "02") or (data['fetf-status'] == "03") %} ({{ data['fetf-project-reference'] }}){% endif %}
+</span>
+<h1 class="govuk-heading-xl">{{ data['fetf-grant-title'] }}</h1>
+
+
+<span class="content-section">
+{% include "../_includes/activity-list_status-block.html" %}
+</span>
+
+
+
+    <h2 class="govuk-prototype-kit-task-list__section">
+      Apply
+    </h2>
+
+    <ul class="govuk-task-list">
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+
+
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="check-details/check-your-details-mini" aria-describedby="application-details-2-status">Check your details</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+
+    </li>
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div><a class="govuk-link govuk-task-list__link" href="check-details/check-your-personal-details" aria-describedby="application-details-2-status">About your farm</a></div>
+      </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+        </div>
+    </li>
+  
+
+
+    <li class="govuk-task-list__item ">
+      <div class="govuk-task-list__name-and-hint">
+        <div><a class="govuk-link govuk-task-list__link" href="select-items/which-item-types" aria-describedby="application-details-2-status">Select your items</a></div>
+      </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+
+            Completed
+
+        </div>
+    </li>
+  
+    <li class="govuk-task-list__item ">
+      <div class="govuk-task-list__name-and-hint">
+        <div><a class="govuk-link govuk-task-list__link" href="select-items/which-item-types" aria-describedby="application-details-2-status">Upload evidence</a></div>
+      </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+    </li>
+  
+    
+  
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Submit application</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+        Cannot start yet
+      </div>
+    </li>
+  
+</ul>
+
+
+
+
+<br><br>
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+  <p class="govuk-body app-contact-panel__body">
+    <a class="govuk-link" href="/fetf/change-request/help-triage">Contact the team</a> if you need help, want to report a problem or want to make a change to your Grant Funding Agreement.
+  </p>
+</div>
+
+</div>
+
+</div>
+</main>
+
+
+
+{% endblock %}

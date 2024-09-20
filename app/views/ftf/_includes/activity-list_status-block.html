@@ -1,0 +1,137 @@
+{% if (data['status'] == "01a")  %}
+
+<h3 class="govuk-heading-m">Expression of interest in progress</h3>
+<div class="govuk-inset-text">
+    Expression of interest closes 11:59pm on <strong>31 January 2024</strong>.
+</div>
+
+{% elif (data['status'] == "01b") %}
+
+<h3 class="govuk-heading-m">Expression of interest under review</h3>
+<div class="govuk-inset-text">
+    RPA should complete the review by <strong>24 February 2024</strong>.
+</div>
+
+
+{% elif (data['status'] == "01c") %}
+
+<h3 class="govuk-heading-m">Expression of interest not accepted</h3>
+<p class="govuk-body">You have not been invited to submit a full application.</p>
+
+
+{% elif (data['status'] == "02a") %}
+<!-- EOI approved, application ready to start -->
+
+<h3 class="govuk-heading-m">You can start your application</h3>
+<div class="govuk-inset-text">
+    Application deadline is 11:59pm on <strong>7 July 2024</strong>.
+</div>
+
+
+{% elif (data['status'] == "02b") %}
+<!-- Application in progress after downloading forms -->
+
+<h3 class="govuk-heading-m">Application in progess</h3>
+<div class="govuk-inset-text">
+    Application deadline is 11:59pm on <strong>7 July 2024</strong>.
+</div>
+
+
+
+{% elif (data['status'] == "02c") %}
+<!-- Application under review -->
+
+<h3 class="govuk-heading-m">Application under review</h3>
+<div class="govuk-inset-text">
+    RPA should complete the review by <strong>4 August 2024</strong>.
+</div>
+
+
+{% elif (data['status'] == "02d") %}
+<!-- Application under review -->
+
+<h3 class="govuk-heading-m">Application unsuccessful</h3>
+<!-- <p class="govuk-body">Your <a href="">application outcome</a> explains why your project was not successful.</p> -->
+
+
+{% elif (data['status'] == "03") %}
+<!-- Application successful, agreement ready to read and sign -->
+
+<h3 class="govuk-heading-m">Read and sign your grant funding agreement</h3>
+<div class="govuk-inset-text">
+    Your agreement offer will expire at 11:59pm on <strong>13 September 2024</strong>.
+</div>
+
+
+
+{% elif (data['status'] == "04") %}
+<!-- First claim window open -->
+
+<h3 class="govuk-heading-m">You can submit your first claim</h3>
+<div class="govuk-inset-text">
+    Your claim is due by 11:59pm on <strong>29 November 2024</strong>.
+</div>
+
+
+{% elif (data['status'] == "05") %}
+<!-- Second claim window open -->
+
+<h3 class="govuk-heading-m">You can submit your second claim</h3>
+<div class="govuk-inset-text">
+    Your claim is due by 11:59pm on <strong>30 January 2025</strong>.
+</div>
+
+
+{% elif (data['status'] == "06") %}
+<!-- Third claim window open -->
+
+<h3 class="govuk-heading-m">You can submit your third claim</h3>
+<div class="govuk-inset-text">
+    Your claim is due by 11:59pm on <strong>30 March 2025</strong>.
+</div>
+
+
+{% elif (data['status'] == "07a") %}
+
+<h3 class="govuk-heading-m">You can submit your year 1 reporting</h3>
+<div class="govuk-inset-text">
+    Your reporting is due by 11:59pm on <strong>30 March 2026</strong>.
+</div>
+
+{% elif (data['status'] == "07b") %}
+
+<h3 class="govuk-heading-m">You can submit your year 2 reporting</h3>
+<div class="govuk-inset-text">
+    Your reporting is due by 11:59pm on <strong>30 March 2027</strong>.
+</div>
+
+{% elif (data['status'] == "07c") %}
+
+<h3 class="govuk-heading-m">You can submit your year 3 reporting</h3>
+<div class="govuk-inset-text">
+    Your reporting is due by 11:59pm on <strong>30 March 2028</strong>.
+</div>
+
+{% elif (data['status'] == "07d") %}
+
+<h3 class="govuk-heading-m">You can submit your year 4 reporting</h3>
+<div class="govuk-inset-text">
+    Your reporting is due by 11:59pm on <strong>30 March 2029</strong>.
+</div>
+
+{% elif (data['status'] == "07e") %}
+
+<h3 class="govuk-heading-m">You can submit your year 5 reporting</h3>
+<div class="govuk-inset-text">
+    Your reporting is due by 11:59pm on <strong>30 March 2030</strong>.
+</div>
+
+{% elif (data['status'] == "08") %}
+<!-- Status after change request -->
+
+<h3 class="govuk-heading-m">Grant funding agreement change request under review</h3>
+<div class="govuk-inset-text">
+    RPA should complete the review by <strong>13 August 2024</strong>.
+</div>
+
+{% endif %}

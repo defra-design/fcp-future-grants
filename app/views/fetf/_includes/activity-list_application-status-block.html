@@ -1,0 +1,13 @@
+{% if (data['03-02'] == "complete") %}
+<h3 class="govuk-heading-m">Grant claim window is open</h3>
+<!-- <p>Your grant funding agreement is ready to read and sign.</p> -->
+<div class="govuk-inset-text">
+    Submit your claim by 11:59pm on <strong>31 July 2024</strong>
+  </div>
+{% else %}
+<h3 class="govuk-heading-m">Read and sign your grant funding agreement</h3>
+<!-- <p>Your grant funding agreement is ready to read and sign.</p> -->
+<div class="govuk-inset-text">
+    Your agreement offer will expire at 11:59pm on <strong>31 May 2024</strong>
+  </div>
+{% endif %}

@@ -1,0 +1,135 @@
+{% extends "layouts/main-claim-round-2.html" %}
+
+{% set pageName="Error" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<a href="#" class="govuk-back-link">Back</a>
+
+
+
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#check">Select the box to register your interest</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Expression of interest</span>
+    <h1 class="govuk-heading-l" style="margin-bottom: 20px;">Register your interest</h1>
+
+<br>
+
+
+    <h2 class="govuk-body-l">I confirm that, to the best of my knowledge, the details I have provided are correct.</h2>
+    <h2 class="govuk-body">I understand the project’s eligibility and score is based on the answers I provided.</h2>
+
+    <p class="govuk-body">I am aware that the information I submit will be:<br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>checked by the RPA</li>
+        <li>shared with the Environment Agency so that they can check the details of my planned project</li>
+      </ul>
+    </p>
+
+
+    <p class="govuk-body">I am happy to be contacted by Defra and RPA (or a third-party on their behalf) about my expression of interest.</p>
+
+
+      <br>
+
+
+ <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive"></span>
+    You can only submit your expression of interest once.
+  </strong>
+</div>
+
+
+
+ 
+
+
+
+
+
+
+<style>
+  /* CSS to change the color of the checkbox border */
+  .govuk-checkboxes__input + .govuk-checkboxes__label::before {
+    border-color: #d4351c;
+  }
+</style>
+</head>
+<body>
+
+<div class="govuk-form-group govuk-form-group--error">
+  <p id="whoAreYou-error" class="govuk-error-message">Select the box to agree and register your interest</p>
+
+<div class="govuk-checkboxes__item">
+  <input class="govuk-checkboxes__input" id="check" name="waste" type="checkbox" value="carcasses">
+  <label class="govuk-label govuk-checkboxes__label" for="check">
+    I understand and agree with the above statements
+  </label>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<br>
+
+<a href="#">
+  <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+    Register your interest
+  </button>
+</a>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Cancel
+</button>
+
+
+
+</main>
+
+{% endblock %}

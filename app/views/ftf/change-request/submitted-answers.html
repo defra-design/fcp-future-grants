@@ -1,0 +1,120 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+    
+<br>
+
+
+      
+      
+      
+      
+      
+      
+       
+          <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds-from-desktop">
+                
+                <h1 class="govuk-heading-l">Your request for change</h1>
+                
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What do you need help with?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Request a change to my Grant Funding Agreement
+                      
+                    </dd>
+                    
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What do you want to change?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['whatDoYouWantToChange'] }}
+                    </dd>
+                    
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Explain why you need the change
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['explainChange'] }}
+                    </dd>
+                    
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Describe the changes in detail
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['moreDetail'] }}
+                    </dd>
+                    
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Uploaded evidence
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      file-name.jpg
+                    </dd>
+                    
+                  </div>
+                  
+                </dl>
+                
+                
+              </div>
+            </div>
+
+            <a href="../../ftf/activity-list/v3-0/index?status=08&eoi=03b&apply=03b&agree=02a&claim-01=01&claim-02=0&claim-03=0" class="govuk-link">Go to your task list</a>
+          </main>
+        </div>
+      
+           
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
+
+
+
+
+</main>
+
+{% endblock %}

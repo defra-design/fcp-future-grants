@@ -1,0 +1,103 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Login" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<br><br>
+
+
+    
+        
+
+        
+    
+
+    
+    
+        
+<div class="govuk-width-container ">
+        
+    
+        
+  
+
+
+
+  
+
+  
+
+
+
+
+
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    
+
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+          
+<h1  class="govuk-heading-l" data-page="help">
+Help
+</h1>
+
+
+
+
+<p>You can call the Rural Payments Agency on:</p>
+<p>
+  Telephone: 0300 020 0301<br>
+</p>
+
+<p>
+  Monday to Friday, 8:30am to 5pm (except public holidays)<br>
+  <a id="url-call-charges" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+</p>
+<p>You can also email the Rural Payments Agency at:<br>
+  <a class="govuk-link" href="#">ruralpayments@defra.gov.uk</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+<div data-module="hmpo-close" data-button="          <button type=&quot;button&quot; class=&quot;govuk-button&quot; data-module=&quot;govuk-button&quot;>  Close</button>">          <button type="button" class="govuk-button" data-module="govuk-button">  Close</button></div>
+
+
+      </div>
+  </div>
+
+
+
+
+
+
+  </main>
+</div>
+    
+{% endblock %}

@@ -1,0 +1,187 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-xl">Check bank statements</h1>
+        <h2 class="govuk-heading-m">Uploaded bank statement 1</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              File
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">statement-1.pdf</a>, 2 MB
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which items do you want to use this bank statements for?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Bracken roller (FETF414) <br>
+              Grassland pasture aerator (FETF411)
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+            </dd>
+          </div>
+          </dl>
+        <h2 class="govuk-heading-m">Uploaded bank statements 2</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              File
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">statement-2.pdf</a>, 2 MB
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which items do you want to use this bank statements for?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Bracken roller (FETF414) <br>
+              Grassland pasture aerator (FETF411) 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+            </dd>
+          </div>
+        </dl>
+        <h2 class="govuk-heading-m">Uploaded bank statements 3</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              File
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">statement-3.pdf</a>, 2 MB
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which items do you want to use this bank statements for?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Variable rate controller for seed drills, sprayers and fertiliser spreaders (FETF50) 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+            </dd>
+          </div>
+        </dl>
+
+        
+        
+        <!-- <form action="/form-handler" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true"> -->
+          <a href="/fetf/claim/v1-2/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=01d">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Save and Continue
+          </button>
+          </a>
+        <!-- </form> -->
+        
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+      
+
+  
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

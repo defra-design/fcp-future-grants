@@ -68,7 +68,7 @@ class Checkboxes extends GOVUKFrontendComponent {
       return;
     }
     const $target = document.getElementById(targetId);
-    if ($target && $target.classList.contains('govuk-checkboxes__conditional')) {
+    if ($target != null && $target.classList.contains('govuk-checkboxes__conditional')) {
       const inputIsChecked = $input.checked;
       $input.setAttribute('aria-expanded', inputIsChecked.toString());
       $target.classList.toggle('govuk-checkboxes__conditional--hidden', !inputIsChecked);

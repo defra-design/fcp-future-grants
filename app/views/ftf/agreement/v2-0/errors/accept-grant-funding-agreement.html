@@ -1,0 +1,92 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Error
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+
+
+
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#check">Select the box to accept and continue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+
+
+        <h1 class="govuk-heading-xl">Accept grant funding agreement</h1>
+   
+
+        {% include "../../../_includes/body-content_accept-agreement-main-block.html" %}
+
+
+
+        <style>
+          /* CSS to change the color of the checkbox border */
+          .govuk-checkboxes__input + .govuk-checkboxes__label::before {
+            border-color: #d4351c;
+          }
+        </style>
+        </head>
+        <body>
+        <br>
+        <div class="govuk-form-group govuk-form-group--error">
+          <p id="whoAreYou-error" class="govuk-error-message">Select the box to accept and continue</p>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="check">
+            I confirm
+          </label>
+        </div>
+        </div>
+
+
+
+<br>
+
+
+      
+  
+        <a href="#">
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and continue
+          </button>
+        </a>
+        
+   
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

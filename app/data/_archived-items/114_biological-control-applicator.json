@@ -1,0 +1,13 @@
+{
+      "termName": "Biological Control",
+      "sectionNumber": "114",
+      "title": "Biological Control Applicator",
+      "summary": "A fan-powered applicator.",
+      "category": ["General"],
+      "value": "906.00",
+      "score": 70,
+      "description": {
+        "descriptionText01": "A fan-powered applicator.",
+        "descriptionBullet01": "Should give an even distribution of up to 3m or more"
+      }
+}

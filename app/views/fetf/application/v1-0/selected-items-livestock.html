@@ -1,0 +1,119 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Selected items {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <span class="govuk-caption-l">Apply</span>
+    <h1 class="govuk-heading-l">Selected items</h1>
+    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Items summary</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Item</th>
+      <th scope="col" class="govuk-table__header">Code</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;">Quantity</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;">Grant amount</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;">Score</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;"></th>
+    </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+      {% set grantTotal = 0 %}
+      {% set scoreTotal = 0 %}
+      {% for item in data['selected-items'] %}
+        {% set grantTotal = grantTotal + item.grantTotal %}
+        {% set scoreTotal = scoreTotal + item.score %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" >{{ item.title }}</td>
+          <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
+          <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+          <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
+          <td class="govuk-table__cell" style="text-align: right;">{{ item.score }}</td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+        </tr>
+      {% endfor %}
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Total requested grant amount</th>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell" style="text-align: right;"></td>
+        <td class="govuk-table__header" style="text-align: right;"> {{ grantTotal | currency }}</td>
+        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length}}</td>
+      <td class="govuk-table__cell"></td>
+      </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+ 
+
+
+
+
+<h2 class="govuk-heading-m">Livestock information</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total number of bovine animals
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['bovineAnimals']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#" class="govuk-body-s" style="text-align: right;">Change</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          County parish holding number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['accountNumber1']}}/{{data['accountNumber2']}}/{{data['accountNumber3']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="#" class="govuk-body-s" style="text-align: right;">Change</a>
+        </dd>
+      </div>
+    </dl>
+  
+  </div>
+</div>
+
+
+  
+
+<div class="govuk-button-group">
+  <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01" method="post">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+    Apply for these items
+    </button>
+  </a>
+  <a href="items/equipment-list">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    Select more items
+    </button>
+  </a>
+</div>
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}

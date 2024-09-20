@@ -1,0 +1,56 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Accept grant funding agreement
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="agreement-accepted">
+
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+        <h1 class="govuk-heading-xl">Accept grant funding agreement</h1>
+
+        {% include "../../_includes/body-content_accept-agreement-main-block.html" %}
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="agreement" name="agreement" type="checkbox" value="agreementConfirmed">
+                <label class="govuk-label govuk-checkboxes__label" for="countries">
+                  I confirm
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+          {{govukButton({
+              text: "Accept and send"
+          })}}
+        
+        </form>
+      
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

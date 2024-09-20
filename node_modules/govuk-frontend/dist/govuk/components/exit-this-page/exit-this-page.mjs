@@ -1,4 +1,4 @@
-import { mergeConfigs, extractConfigByNamespace } from '../../common/index.mjs';
+import { mergeConfigs } from '../../common/index.mjs';
 import { normaliseDataset } from '../../common/normalise-dataset.mjs';
 import { ElementError } from '../../errors/index.mjs';
 import { GOVUKFrontendComponent } from '../../govuk-frontend-component.mjs';
@@ -45,8 +45,8 @@ class ExitThisPage extends GOVUKFrontendComponent {
         identifier: 'Button (`.govuk-exit-this-page__button`)'
       });
     }
-    this.config = mergeConfigs(ExitThisPage.defaults, config, normaliseDataset($module.dataset));
-    this.i18n = new I18n(extractConfigByNamespace(this.config, 'i18n'));
+    this.config = mergeConfigs(ExitThisPage.defaults, config, normaliseDataset(ExitThisPage, $module.dataset));
+    this.i18n = new I18n(this.config.i18n);
     this.$module = $module;
     this.$button = $button;
     const $skiplinkButton = document.querySelector('.govuk-js-exit-this-page-skiplink');
@@ -116,7 +116,7 @@ class ExitThisPage extends GOVUKFrontendComponent {
     if (!this.$updateSpan) {
       return;
     }
-    if ((event.key === 'Shift' || event.keyCode === 16 || event.which === 16) && !this.lastKeyWasModified) {
+    if (event.key === 'Shift' && !this.lastKeyWasModified) {
       this.keypressCounter += 1;
       this.updateIndicator();
       if (this.timeoutMessageId) {
@@ -210,6 +210,10 @@ class ExitThisPage extends GOVUKFrontendComponent {
  * @property {string} [pressOneMoreTime] - Screen reader announcement informing
  *   the user they must press the activation key one more time.
  */
+
+/**
+ * @typedef {import('../../common/index.mjs').Schema} Schema
+ */
 ExitThisPage.moduleName = 'govuk-exit-this-page';
 ExitThisPage.defaults = Object.freeze({
   i18n: {
@@ -217,6 +221,13 @@ ExitThisPage.defaults = Object.freeze({
     timedOut: 'Exit this page expired.',
     pressTwoMoreTimes: 'Shift, press 2 more times to exit.',
     pressOneMoreTime: 'Shift, press 1 more time to exit.'
+  }
+});
+ExitThisPage.schema = Object.freeze({
+  properties: {
+    i18n: {
+      type: 'object'
+    }
   }
 });
 

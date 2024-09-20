@@ -1,0 +1,199 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+      
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">2 files added</h1>
+
+    <!-- <form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data"> -->
+
+      <div class="moj-multi-file-upload">
+        
+        <div class="moj-multi-file__uploaded-files ">
+          
+          <h2 class="govuk-heading-m">Files added</h2>
+          <div class="govuk-summary-list moj-multi-file-upload__list">
+
+           
+            
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  File 1
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="#">statement-1.pdf</a>, 2 MB
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  File 1
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="#">statement-2.pdf</a>, 2 MB
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> name</span></a>
+                </dd>
+              </div>
+
+
+
+          </div>
+        </div>
+
+        
+      </div>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to add another invoice for the grassland pasture aerator?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="item2InvoiceCheck" name="item2InvoiceCheck" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="item2InvoiceCheck">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="item2InvoiceCheck-2" name="item2InvoiceCheck" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="item2InvoiceCheck-2">
+                No
+              </label>
+            </div>
+            
+          </div>
+        </fieldset>
+      </div>
+             
+     
+
+    <!-- </form> -->
+  </div>
+</div>
+
+      
+
+        
+  
+          
+
+
+
+
+     
+      
+
+      
+
+  
+
+<br><br>
+
+
+
+
+   
+
+
+
+
+      <div class="govuk-button-group">
+        <a href="upload-method-photos">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </a>
+      <a href="#">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return later
+        </button>
+      </a>
+      </div>
+
+  
+
+
+    </body>
+
+   
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

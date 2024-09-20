@@ -1,0 +1,124 @@
+{% extends "layouts/main-claim-v1-1.html" %}
+
+{% set pageName="Status" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<form action="/fetf/claim/v1-2/item2/check-statement" method="post">
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Which statements do you want to use for the grassland pasture aerator?
+              </h1>
+            </legend>
+            <!-- <div id="waste-hint" class="govuk-hint">
+              Select all that apply.
+            </div> -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  <img src="/public/images/statement1.jpg" alt="" class="thumbnail" >
+                  statement-1.pdf, 2MB
+                </label>
+              </div>
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  <img src="/public/images/statement2.jpg" alt="" class="thumbnail" >
+                  statement-2.pdf, 2MB
+                </label>
+              </div>
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  <img src="/public/images/statement3.jpg" alt="" class="thumbnail" >
+                  statement-3.pdf, 2MB
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+
+
+        
+      
+      
+      
+      
+      
+      
+        
+      
+      
+  
+      
+      
+       
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Save and continue
+          </button>
+        
+      
+      </form>
+      
+      </div>
+     
+      
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    
+
+    <div class="govuk-grid-row">
+      
+
+
+
+      <div class="govuk-grid-column-two-thirds">
+      
+      
+        <form class="form" action="/fetf-another-change" method="post">
+      
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            name: "anotherChange",
+            fieldset: {
+              legend: {
+                text: "Do you want to make another change?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+      
+      
+        
+         
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Save and continue
+          </button>
+        </form>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </div>
+     
+      
+
+
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

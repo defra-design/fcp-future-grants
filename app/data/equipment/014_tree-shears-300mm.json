@@ -1,0 +1,19 @@
+{
+  "termName": "Tree shears",
+  "sectionNumber": "014",
+  "itemCode": "14",
+  "title": "Tree shears capacity to fell 300mm diameter trees",
+  "summary": "Grip and hold shear harvester head for trees minimum of 300mm.",
+  "category": ["Forestry"],
+  "grantValue": "2,255.50",
+  "grantPercentage": "50",
+  "averageValue": "4,511.00",
+  "score": 59,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be tree shears",
+    "eligibleBullet02": "grip and hold trees of at least 300mm in diameter",
+    "eligibleBullet03": "shear cut trees of at least 300mm in diameter",
+    "eligibleText01": "Tree shears which use saw blades to cut the tree are not eligible under this item."
+  }
+}

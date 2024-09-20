@@ -51,7 +51,15 @@
    * Schema for component config
    *
    * @typedef {object} Schema
+   * @property {{ [field: string]: SchemaProperty | undefined }} properties - Schema properties
    * @property {SchemaCondition[]} [anyOf] - List of schema conditions
+   */
+
+  /**
+   * Schema property for component config
+   *
+   * @typedef {object} SchemaProperty
+   * @property {'string' | 'boolean' | 'number' | 'object'} type - Property type
    */
 
   /**
@@ -140,7 +148,7 @@
         return;
       }
       const $target = document.getElementById(targetId);
-      if ($target && $target.classList.contains('govuk-checkboxes__conditional')) {
+      if ($target != null && $target.classList.contains('govuk-checkboxes__conditional')) {
         const inputIsChecked = $input.checked;
         $input.setAttribute('aria-expanded', inputIsChecked.toString());
         $target.classList.toggle('govuk-checkboxes__conditional--hidden', !inputIsChecked);

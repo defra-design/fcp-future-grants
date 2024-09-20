@@ -1,0 +1,121 @@
+{% extends "layouts/main-claim-v1-1.html" %}
+
+{% set pageName="Status" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<form action="statement-file-added" method="post">
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          Check grassland pasture aerator statement
+        </h1>
+
+        <div class="photo-guide-photos" aria-hidden="true">
+          <ul>
+              <li>
+                  <img src="/public/images/statement2.jpg" alt="">
+                  
+              </li>
+              
+          </ul>
+      </div>
+      <p class="govuk-body">statement-2.jpg, 2MB</p>
+
+        
+<br><br><br>
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to use this file?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="item2InvoiceCheck" name="item2InvoiceCheck" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="item2InvoiceCheck">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="item2InvoiceCheck-2" name="item2InvoiceCheck" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="item2InvoiceCheck-2">
+                No
+              </label>
+            </div>
+            
+          </div>
+        </fieldset>
+      </div>
+      
+      
+      
+      
+      
+      
+        
+      
+      
+  
+      
+      
+       
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Save and continue
+          </button>
+        
+      
+      </form>
+      
+      </div>
+     
+      
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

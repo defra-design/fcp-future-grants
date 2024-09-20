@@ -1,0 +1,26 @@
+{
+  "termName": "Fertiliser applicator6",
+  "sectionNumber": "212",
+  "itemCode": "212",
+  "title": "Liquid fertiliser applicator for seed drills/planters 6m",
+  "summary": "Liquid fertiliser applicator for seed drills, with minimum 6m drilling or planting width.",
+  "category": ["Arable"],
+  "grantValue": "11,031.00",
+  "grantPercentage": "60",
+  "averageValue": "18,385.00",
+  "score": 71,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a liquid fertiliser applicator for seed drills",
+    "eligibleBullet02": "incorporate the solution into the soil as part of the drilling or planting process",
+    "eligibleBullet03": "have a minimum 6m drilling or planting width",
+    "eligibleBullet04": "have a fill tank",
+    "eligibleBullet05": "have a hydraulic powered pump",
+    "eligibleBullet06": "have a drill mounted liquid distribution manifold",
+    "eligibleBullet07": "have pressure regulation",
+    "eligibleBullet08": "have a nozzle and pump flush system",
+    "eligibleBullet09": "apply the solution at different rates using built in calibration",
+    "eligibleBullet10": "have a system to prevent nozzles from blocking or a liquid blockage monitoring system",
+    "eligibleText01": "Applicators that use surface application of liquid fertiliser or liquid chemicals such as herbicides and fungicides are not eligible."
+  }
+}

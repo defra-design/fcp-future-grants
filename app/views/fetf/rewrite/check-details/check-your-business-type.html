@@ -1,0 +1,197 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-your-details-mini" method="post">
+      <span class="govuk-caption-l">Apply</span>
+    <h1 class="govuk-heading-l">Confirm your business activity details</h1>
+
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+
+    <h2 class="govuk-heading-m">Business structure</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who is applying?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['structure'] }} 
+          
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/business-structure">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of employees
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['employeesNumber'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/business-structure">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Land details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Agriculture - area of farm in hectares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agricultureHectares'] | default('0') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/land-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Horticulture - area of nursery in hectares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['horticultureHectares'] | default('0') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/land-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {%  if (data.forestryHectares == '') %} 
+
+      {%  else %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Forestry - area of woodland in hectares
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['forestryHectares'] | default('0') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/land-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {%  endif %}
+      {%  if (data['landParcelId']) %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Land parcel ID for forestry
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['landParcelId']  or "Not applicable" }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/land-detail">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {%  endif %}
+    </dl>
+
+
+
+
+    <h2 class="govuk-heading-m" >Farm assurance schemes</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which farm assurance schemes do you belong to?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['assuranceScheme'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/farm-assurance">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+        <h2 class="govuk-heading-m">Livestock on farm</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you have any livestock?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['animals'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/livestock-information">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total number of animals
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['animalsNo'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/livestock-information">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+            <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          County parish holding number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['accountNumber1'] }} / {{ data['accountNumber2'] }} / {{ data['accountNumber3'] }} 
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/livestock-information">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <h2 class="govuk-heading-m">Livestock health schemes</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-3">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Which livestock health or disease prevention schemes do you belong to?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['livestockSchemes'] }}
+        </dd>
+                <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="business-type/livestock-schemes">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+      <p class="govuk-!-margin-bottom-7"><a href="business-type/livestock-schemes-add">Add or remove livestock schemes</a></p>
+
+
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

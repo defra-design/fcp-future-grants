@@ -1,5 +1,5 @@
 import { closestAttributeValue } from '../../common/closest-attribute-value.mjs';
-import { mergeConfigs, validateConfig, extractConfigByNamespace } from '../../common/index.mjs';
+import { mergeConfigs, validateConfig } from '../../common/index.mjs';
 import { normaliseDataset } from '../../common/normalise-dataset.mjs';
 import { ElementError, ConfigError } from '../../errors/index.mjs';
 import { GOVUKFrontendComponent } from '../../govuk-frontend-component.mjs';
@@ -51,7 +51,7 @@ class CharacterCount extends GOVUKFrontendComponent {
         identifier: 'Form field (`.govuk-js-character-count`)'
       });
     }
-    const datasetConfig = normaliseDataset($module.dataset);
+    const datasetConfig = normaliseDataset(CharacterCount, $module.dataset);
     let configOverrides = {};
     if ('maxwords' in datasetConfig || 'maxlength' in datasetConfig) {
       configOverrides = {
@@ -64,7 +64,7 @@ class CharacterCount extends GOVUKFrontendComponent {
     if (errors[0]) {
       throw new ConfigError(`Character count: ${errors[0]}`);
     }
-    this.i18n = new I18n(extractConfigByNamespace(this.config, 'i18n'), {
+    this.i18n = new I18n(this.config.i18n, {
       locale: closestAttributeValue($module, 'lang')
     });
     this.maxLength = (_ref = (_this$config$maxwords = this.config.maxwords) != null ? _this$config$maxwords : this.config.maxlength) != null ? _ref : Infinity;
@@ -277,6 +277,20 @@ CharacterCount.defaults = Object.freeze({
   }
 });
 CharacterCount.schema = Object.freeze({
+  properties: {
+    i18n: {
+      type: 'object'
+    },
+    maxwords: {
+      type: 'number'
+    },
+    maxlength: {
+      type: 'number'
+    },
+    threshold: {
+      type: 'number'
+    }
+  },
   anyOf: [{
     required: ['maxwords'],
     errorMessage: 'Either "maxlength" or "maxwords" must be provided'

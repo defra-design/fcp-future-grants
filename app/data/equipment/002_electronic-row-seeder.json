@@ -1,0 +1,22 @@
+{
+  "termName": "Row seeder",
+  "sectionNumber": "002",
+  "itemCode": "2",
+  "title": "Electronic row seeder",
+  "summary": "Electronic row seeder processing 2,000 rows of seed per hour, conveyor compatible.",
+  "category": ["Horticulture"],
+  "grantValue": "13,088.00",
+  "grantPercentage": "50",
+  "averageValue": "26,176.00",
+  "score": 55,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be an electronic row seeder",
+    "eligibleBullet02": "be able to handle small batches of trays",
+    "eligibleBullet03": "have a row bar dibbling and seeding unit - drum seeders are not eligible",
+    "eligibleBullet04": "have a vibrating covering unit",
+    "eligibleBullet05": "be able to process 2,000 rows of seed per hour",
+    "eligibleBullet06": "be able to handle 600mm x 400mm trays",
+    "eligibleBullet07": "be compatible with a conveyor belt system to allow for incorporation into a fully automated seeding line"
+  }
+}

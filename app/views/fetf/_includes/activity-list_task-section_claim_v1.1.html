@@ -1,0 +1,501 @@
+<li>
+
+    {% if (data['fetf-claim'] == "01") %}
+    <h2 class="govuk-heading-m">Check before you start</h2>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Upload claim evidence</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Add serial numbers</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+  
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Add invoices</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+  
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Add bank statements</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+  
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Add photos</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+  
+    
+    {% elif (data['fetf-claim'] == "01a") %}
+
+    <!-- <h2 class="govuk-prototype-kit-task-list__section">
+      Submit claim
+    </h2> -->
+    <h2 class="govuk-heading-m">Check before you start</h2>
+   
+    <ul class="govuk-task-list">
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Upload claim evidence</h2>
+    <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/serial-number/serial-number-guidance" aria-describedby="application-details-2-status">Add serial numbers</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/invoice/invoice-guidance" aria-describedby="application-details-2-status">Add invoices</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/statement/guidance" aria-describedby="application-details-2-status">Add bank statements</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Add photos</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+     
+    <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+
+    {% elif (data['fetf-claim'] == "01b") %}
+
+    <!-- <h2 class="govuk-prototype-kit-task-list__section">
+     Submit claim
+    </h2> -->
+    <h2 class="govuk-heading-m">Check before you start</h2>
+    <ul class="govuk-task-list">
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Upload claim evidence</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/serial-number/serial-number-guidance" aria-describedby="application-details-2-status">Add serial numbers</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/invoice/invoice-guidance" aria-describedby="application-details-2-status">Add invoices</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/statement/guidance" aria-describedby="application-details-2-status">Add bank statements</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/photos/guidance" aria-describedby="application-details-2-status">Add photos</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+
+
+    {% elif (data['fetf-claim'] == "01c") %}
+
+    <h2 class="govuk-heading-m">Check before you start</h2>
+    <ul class="govuk-task-list">
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Upload claim evidence</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/serial-number/serial-number-guidance" aria-describedby="application-details-2-status">Add serial numbers</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/invoice/invoice-guidance" aria-describedby="application-details-2-status">Add invoices</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/statement/guidance" aria-describedby="application-details-2-status">Add bank statements</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/photos/guidance" aria-describedby="application-details-2-status">Add photos</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+
+    {% elif (data['fetf-claim'] == "01d") %}
+
+    <h2 class="govuk-heading-m">Check before you start</h2>
+    <ul class="govuk-task-list">
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Upload claim evidence</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/serial-number/serial-number-guidance" aria-describedby="application-details-2-status">Add serial numbers</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/invoice/invoice-guidance" aria-describedby="application-details-2-status">Add invoices</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/statement/guidance" aria-describedby="application-details-2-status">Add bank statements</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/photos/guidance" aria-describedby="application-details-2-status">Add photos</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <div>Submit</div>
+        </div>
+        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+          Cannot start yet
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['fetf-claim'] == "01e") %}
+
+    <h2 class="govuk-heading-m">Check before you start</h2>
+    <ul class="govuk-task-list">
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Upload claim evidence</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/serial-number/serial-number-guidance" aria-describedby="application-details-2-status">Add serial numbers</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/invoice/invoice-guidance" aria-describedby="application-details-2-status">Add invoices</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/statement/guidance" aria-describedby="application-details-2-status">Add bank statements</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/photos/guidance" aria-describedby="application-details-2-status">Add photos</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/submit" aria-describedby="application-details-2-status">Submit</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+      </li>
+    </ul>
+
+    {% elif (data['fetf-claim'] == "01f") %}
+
+    <h2 class="govuk-heading-m">Check before you start</h2>
+    <ul class="govuk-task-list">
+      
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/claim-detail" aria-describedby="application-details-2-status">Items you're claiming</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Upload claim evidence</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/serial-number/serial-number-guidance" aria-describedby="application-details-2-status">Add serial numbers</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/invoice/invoice-guidance" aria-describedby="application-details-2-status">Add invoices</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/statement/guidance" aria-describedby="application-details-2-status">Add bank statements</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-task-list__item--with-link">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="../../claim/v1-1/photos/guidance" aria-describedby="application-details-2-status">Add photos</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+
+      <h2 class="govuk-heading-m">Submit</h2>
+      <ul class="govuk-task-list">
+      <li class="govuk-task-list__item">
+        <div class="govuk-task-list__name-and-hint">
+          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Submit</a>
+        </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+      </li>
+    </ul>
+    
+    {% endif %}
+
+  </li>
