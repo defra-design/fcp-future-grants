@@ -1,0 +1,80 @@
+
+{% set showPanel = false %}
+{% for item in data['selected-items'] %}
+    {% if item.quantity > 0 %}
+        {% set showPanel = true %}
+    {% endif %}
+{% endfor %}
+
+{% if showPanel %}
+<div class="full-panel">
+<div class="selected-items-panel">
+    <h3 class="govuk-heading-s">Your selected items</h3>
+    {% set grantTotal = 0 %}
+    {% set scoreTotal = 0 %}
+    {% for item in data['selected-items'] %}
+        {% if item.quantity > 0 %}
+            {% set grantTotal = grantTotal + item.grantTotal %}
+            {% set scoreTotal = scoreTotal + item.score %}
+        
+            <p>{{ item.quantity }} × {{ item.termName }}
+                
+                <!-- (£{{ item.grantValue}}) -->
+                <a href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-body-s">Edit</a>
+            </p>
+        {% endif %}
+    {% endfor %}
+    <hr>
+    <p>Total amount: <b>{{ grantTotal | currency }}</b></p>
+</div>
+<p class="govuk-body-s">The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.</p>
+</div>
+
+
+{% endif %}
+
+
+<!-- <div class="selected-items-panel">
+
+
+
+    
+    <h3 class="govuk-heading-s">Your selected items</h3>
+        {% set grantTotal = 0 %}
+        {% set scoreTotal = 0 %}
+        {% for item in data['selected-items'] %}
+          {% set grantTotal = grantTotal + item.grantTotal %}
+          {% set scoreTotal = scoreTotal + item.score %}
+       
+            
+            <p>{{ item.quantity }}&nbsp; × {{ item.termName }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ item.grantTotal | currency }}
+                 <a href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" method="get" class="govuk-body-s">Edit</a>
+
+            </p>        
+          
+           
+        {% endfor %}
+        <hr>
+        <p>Total amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b >{{ grantTotal | currency }}</b></p>
+    
+           
+</div>
+
+
+ -->
+
+
+
+
+<!-- Gareth's code
+    
+    <div class="selected-items-panel">
+    <h3 class="govuk-heading-s">Your selected items</h3>
+    {% if (data['items'] == "exist") %}
+    <a href="">View all items</a>
+    {% else %}
+    <p>No items selected</p>
+    {% endif %}
+</div> 
+
+-->

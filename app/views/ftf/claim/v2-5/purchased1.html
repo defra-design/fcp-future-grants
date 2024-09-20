@@ -1,0 +1,64 @@
+{% extends "layouts/main-claim-round-2.html" %}
+
+{% set pageName="Upload 1" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<a href="#" class="govuk-back-link">Back</a>
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <span class="govuk-caption-xl">Upload evidence</span>
+    <h1 class="govuk-heading-xl">Proof items have been purchased</h1>
+    <h2 class="govuk-body" style="margin-top: -20px;">For example, invoices</h2>
+  
+    <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, MP4 or JPG. Maximum file size is 20MB.</p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        You must add evidence for each item you are claiming for.
+      </strong>
+    </div>
+
+   
+<div style="width: 630px; height: 202px; position: relative">
+  <div style="width: 357px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 700; line-height: 30px; word-wrap: break-word">Upload a file</div>
+  <div style="width: 224px; left: 18px; top: 107px; position: absolute; color: black; font-size: 18px; font-family: Arial, Helvetica; font-weight: 300; line-height: 30px; word-wrap: break-word">Drag and drop files here or</div>
+  <div style="width: 630px; height: 164px; left: 0px; top: 38px; position: absolute; border: 3px black dotted"></div>
+  <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+
+    <a href="purchased2.html">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Choose file
+      </button>
+    </a>
+
+</main>
+
+<br>
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+{% endblock %}

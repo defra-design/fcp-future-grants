@@ -1,0 +1,97 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Status" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<form action="/fetf/claim/v1-1/grassland-invoice-answer" method="post">
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+
+
+
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Choose how to upload the grassland pasture aerator invoice</h2> 
+      
+      
+      
+      
+      
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+    
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grasslandUpload" name="grasslandUpload" type="radio" value="reuse">
+                <label class="govuk-label govuk-radios__label" for="grasslandUpload">
+                  Use previously uploaded file
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grasslandUpload-2" name="grasslandUpload" type="radio" value="new">
+                <label class="govuk-label govuk-radios__label" for="grasslandUpload-2">
+                  Upload new files
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+      
+      <br>
+      
+      
+  
+      
+      
+       
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Continue
+          </button>
+        
+      
+      </form>
+      
+      </div>
+     
+      
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

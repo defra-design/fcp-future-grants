@@ -1,0 +1,24 @@
+{
+  "termName": "Trailers small",
+  "sectionNumber": "018",
+  "itemCode": "18",
+  "title": "Forestry/timber trailers – small",
+  "summary": "Forestry/timber trailers specifically designed for use in forests and woodland to extract felled timber causing minimal disturbance to soil, flora and fauna.",
+  "category": ["Forestry"],
+  "grantValue": "4,281.50",
+  "grantPercentage": "50",
+  "averageValue": "8,563.00",
+  "score": 36,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a forestry/timber trailer.",
+    "eligibleBullet02": "be designed for use in forests and woodland to extract felled timber.",
+    "eligibleBullet03": "have no floor or sides.",
+    "eligibleBullet04": "have a permanent headboard.",
+    "eligibleBullet05": "have at least 6 permanent bolsters.",
+    "eligibleBullet06": "have low ground pressure tyres, floatation tyres or an automatic inflation and deflation system for tyres.",
+    "eligibleBullet07": "have a timber carrying capacity of at least 9,000kg.",
+    "eligibleBullet08": "use trailer hitch eyes to attach to a towing vehicle.",
+    "eligibleText01": "Trailers using ball hitches for towing are not eligible."
+  }
+}

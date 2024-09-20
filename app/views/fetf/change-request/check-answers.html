@@ -1,0 +1,243 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+
+
+
+      <h2 class="govuk-heading-m">Change to claim date</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+        {
+          key: {
+            text: "Change type"
+          },
+          value: {
+            text: "Change to claim date"
+          },
+          actions: {
+            items: [
+              {
+                href: "select-reason",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Explain why you need the change"
+          },
+          value: {
+            text: data['explainChange'] or "Supplier delays"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        
+        {
+            key: {
+              text: "When do you want to make your claim?"
+            },
+            value: {
+              text: data['claim-date'] or "27 3 2025"
+            },
+            actions: {
+              items: [
+                {
+                  href: "claim-date",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          }
+          
+
+        ]
+      }) }}
+
+      
+
+      <h2 class="govuk-heading-m">Change to items</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+        {
+          key: {
+            text: "Change type"
+          },
+          value: {
+            text: "Change to items"
+          },
+          actions: {
+            items: [
+              {
+                href: "select-reason",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Explain why you need the change"
+          },
+          value: {
+            text: data['explainChange'] or "Supplier out of stock on previous item"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        
+        {
+            key: {
+              text: "What do you want to change?"
+            },
+            value: {
+              text: "Tray filler, fertiliser applicator"
+            },
+            actions: {
+              items: [
+                {
+                  href: "claim-date",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+        
+          {
+              key: {
+                text: "Uploaded evidence (optional)"
+              },
+              value: {
+                text: "file.jpeg"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "upload-evidence",
+                    text: "Change",
+                    visuallyHiddenText: "uploaded evidence"
+                  }
+                ]
+              }
+            }
+          
+
+        ]
+      }) }}
+
+
+
+      <h2 class="govuk-heading-m">Other changes</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+        {
+          key: {
+            text: "Change type"
+          },
+          value: {
+            text: "Other"
+          },
+          actions: {
+            items: [
+              {
+                href: "select-reason",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Explain why you need the change"
+          },
+          value: {
+            text: data['explainChange'] or "Supplier delays"
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        
+          }
+          
+
+        ]
+      }) }}
+
+
+      <h2 class="govuk-heading-m">Now send your help request</h2>
+
+      <p class="govuk-body">The RPA will review your request and let you know the outcomes. You cannot request another change until this request is resolved.</p>
+
+      <form action="thank-you" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Send request"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+

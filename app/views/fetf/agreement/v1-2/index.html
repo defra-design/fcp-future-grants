@@ -1,0 +1,136 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Water Management Grant - Round 3
+{% endblock %}
+
+
+{% block content %}
+
+
+{% include "../../_includes/sub-header_business-applicant-details.html" %}
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+<span class="govuk-caption-xl">{{ data['fetf-project-reference'] }}</span>
+<h1 class="govuk-heading-xl">{{ data['fetf-grant-name'] }}</h1>
+
+
+{% include "../../_includes/activity-list_application-status-block.html" %}
+
+
+
+<ol class="govuk-prototype-kit-task-list">
+
+  <li>
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Apply
+    </h2>
+    <ul class="govuk-prototype-kit-task-list__items">
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="../../../_common/not-testing" aria-describedby="download-application-form-status">
+            Select your equipment
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="download-application-form-status">Completed</strong>
+      </li>
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="../../../_common/not-testing" aria-describedby="upload-application-form-status">
+            About your equipment
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="upload-application-form-status">Completed</strong>
+      </li>
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="../../../_common/not-testing" aria-describedby="check-business-details-status">
+            Check business details
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="check-business-details-status">Completed</strong>
+      </li>
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="../../../_common/not-testing" aria-describedby="submit-application-status">
+          Submit application
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="submit-application-status">Completed</strong>
+      </li>
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="../../../_common/not-testing" aria-describedby="submit-application-status">
+          Your application outcome
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--green govuk-prototype-kit-task-list__tag" id="application-outcome-status">Successful</strong>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">2. </span> Sign agreement
+    </h2>
+    <ul class="govuk-prototype-kit-task-list__items">
+      {% if (data['03-02'] == "ready") %}
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="what-you-need-to-do" aria-describedby="read-and-sign-agreement">
+          Read and sign agreement
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="submit-pay-status">Ready to start</strong>
+      </li>
+      {% elif (data['03-02'] == "complete") %}
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          <a href="agreement-accepted" aria-describedby="read-and-sign-agreement">
+          Read and sign agreement
+          </a>
+        </span>
+        <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="submit-pay-status">Completed</strong>
+      </li>
+      {% endif %}
+    </ul>
+  </li>
+
+  <li>
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Submit claim
+    </h2>
+    <ul class="govuk-prototype-kit-task-list__items">
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          Upload claim evidence
+        </span>
+        <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="upload-claim-form">Cannot start yet</strong>
+      </li>
+      <li class="govuk-prototype-kit-task-list__item">
+        <span class="govuk-prototype-kit-task-list__task-name">
+          Submit claim
+        </span>
+        <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="submit-claim">Cannot start yet</strong>
+      </li>
+    </ul>
+  </li>
+
+</ol>
+
+
+<p class="govuk-body"><a href="../../../_common/not-testing">Withdraw grant application</a></p>
+
+
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}

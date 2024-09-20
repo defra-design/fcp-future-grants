@@ -1,0 +1,64 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Do you have a County Parish Holding (CPH) number? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+<a href="equipment-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Do you have a County Parish Holding (CPH) number?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="countyParishHolding" name="countyParishHolding" type="radio" value="yes" data-aria-controls="county-parish-holding">
+            <label class="govuk-label govuk-radios__label" for="countyParishHolding">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="county-parish-holding">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="county-parish-holding-number">
+                County Parish Holding number
+              </label>
+              <div id="contact-hint" class="govuk-hint">
+                For example, 08 / 123 / 4567
+              </div>
+              <input class="govuk-input govuk-!-width-one-third" id="county-parish-holding-number" name="countyParishHoldingNumber">
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="countyParishHolding-2" name="countyParishHolding" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="countyParishHolding-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

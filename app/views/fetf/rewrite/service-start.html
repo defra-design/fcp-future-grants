@@ -1,0 +1,55 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="login" method="post">
+    
+
+    <h1 class="govuk-heading-l">Apply for a grant to improve productivity</h1>
+
+
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+
+    
+    <p class="govuk-body">Use this service to apply for a Farming Equipment and Technology grant to improve productivity. </p>
+    <p>Your business must be based and registered in England to apply.</p>
+
+    <h1 class="govuk-heading-m">What you’ll need</h1>
+
+    <p>You’ll need: </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the names of the items you want to apply for - check the specifications list</li>
+      <li>• financial and business evidence like bank statements and tax returns if you apply for more than £25,000 </li>
+    </ul>
+    <p class="govuk-body">To use this service, you’ll need an account with the Rural Payments service.</p>
+
+    <p>You can apply for someone else if they've given you permission through the Rural Payments service.
+    </p>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Start now
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

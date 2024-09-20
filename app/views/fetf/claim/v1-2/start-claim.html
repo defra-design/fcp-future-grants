@@ -1,0 +1,73 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% set pageName="Check your claim" %}
+
+{% block content %}
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+ 
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Claim money for a farming grant</h1>
+      <p class="govuk-body">Use this service to claim money for items funded by a farming grant.</p>
+      <h2 class="govuk-heading-l">What you need to claim</h2>
+      <p class="govuk-body">You must have an approved grant funding agreement to claim.</p>
+      <p class="govuk-body">You’ll need to sign in using your Rural Payments service customer reference number and password.</p>
+      <p class="govuk-body">To claim money from your grant you’ll need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>item serial numbers</li>
+        <li>invoices for each item</li>
+        <li>bank, building society or credit card statements to show how you paid for the items - these must be from your business account or credit card</li>
+        <li>photos of each item</li>
+      </ul>
+      <a href="login" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Claim
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+        </svg>
+      </a>
+      <h2 class="govuk-heading-l">Before you claim</h2>
+      <p class="govuk-body">Before you claim, check what you need to include in the <a href="https://www.gov.uk/government/publications/farming-equipment-and-technology-fund-2024/claim-your-farming-equipment-and-technology-fund-fetf-2024-grant-payment">invoices and bank statements</a>, and <a href="https://www.gov.uk/government/publications/farming-equipment-and-technology-fund-2024/claim-your-farming-equipment-and-technology-fund-fetf-2024-grant-payment">how to take item photos</a>.</p>
+      <p class="govuk-body">You cannot use the following to pay for grant-funded items:</p>  
+      <ul class="govuk-list govuk-list--bullet">
+        <li>cash or your personal account</li>
+        <li>lease or hire purchase</li>
+        <li>part exchange</li>
+      </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+{% endblock %}

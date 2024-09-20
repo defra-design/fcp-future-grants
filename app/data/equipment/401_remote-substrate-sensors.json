@@ -1,0 +1,23 @@
+{
+  "termName": "Substrate sensors",
+  "sectionNumber": "401",
+  "itemCode": "401",
+  "title": "Remote substrate sensors with datalogger",
+  "summary": "Remote substrate sensors with datalogger to measure moisture in real time.",
+  "category": ["Horticulture"],
+  "grantValue": "399.00",
+  "grantPercentage": "50",
+  "averageValue": "798.00",
+  "score": 60,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a remote substrate sensors with datalogger",
+    "eligibleBullet02": "measure in real time",
+    "eligibleBullet03": "collect and upload data to a computer, mobile phone, or tablet for real-time analysis",
+    "eligibleBullet04": "provide alerts when the growing medium is too dry",
+    "eligibleBullet05": "measure moisture content in all growing mediums between 0 to 0.7m³/m³ in increments of 0.01m³/m³ with an accuracy of plus or minus 0.01m³/m³",
+    "eligibleBullet06": "measure temperature between -20°C to 60°C in increments of 0.1°C with an accuracy of plus or minus 0.5°C",
+    "eligibleBullet07": "measure electrical conductivity of the soil between 0 to 20dS/m in increments of 0.01dS/m with an accuracy of plus or 0.05dS/m",
+    "eligibleBullet08": "be IP 65 rated or better"
+  }
+}

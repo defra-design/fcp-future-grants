@@ -1,0 +1,135 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Login" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<br><br><br><br>
+
+
+    
+        
+
+        
+    
+
+    
+    
+        
+            
+
+        
+    
+
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          
+    
+    
+    
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                
+        
+
+
+  
+  
+
+  <div class="govuk-notification-banner" role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title" >
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">We can’t reply to individual queries or assist with your application.</p></div>
+</div>
+
+        <p><a href="/fetf/help" id="help">Contact us</a> if you have a question about your application.<p></p>
+
+    
+                    <h1 class="govuk-heading-l" data-page="submitFeedback">Feedback</h1>
+                    
+                        
+                        
+        
+
+                    
+                
+    
+
+    <form action="/fetf/feedback-thank-you" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+        <p>Don’t include any personal or financial information.<p>
+
+        
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-visually-hidden" id="feedback-message-label" for="feedback-message">
+    Tell us what you think of the online service
+  </label>
+
+
+  <textarea class="govuk-textarea govuk-!-width-three-quarters" id="feedback-message" name="feedback-message" rows="7" maxlength="500"></textarea>
+</div>
+
+
+
+
+        
+    <div class="govuk-hint hmpo-chars-left"
+        aria-live="polite"
+        data-module="hmpo-chars-left"
+        data-chars-left-input="feedback-message"
+        data-chars-left-template="{count} character{s} remaining"
+        data-chars-left-default="{max} characters maximum"></div>
+
+
+        
+  
+
+
+  
+    
+  
+
+<button data-prevent-double-click="true" class="govuk-button button" data-module="govuk-button">
+  Submit feedback
+</button>
+
+
+    
+            <input type="hidden" name="x-csrf-token" value="F1qmktHS-Ym858bDY0A0poCRSiyj9DEYo6Xw" />
+    </form>
+
+
+
+            </div>
+        </div>
+    
+
+
+    
+
+
+        </main>
+      </div>
+    
+{% endblock %}

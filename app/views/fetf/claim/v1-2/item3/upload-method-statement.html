@@ -1,0 +1,108 @@
+{% extends "layouts/main-claim-v1-1.html" %}
+
+{% set pageName="Status" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<form action="/fetf/claim/v1-2/item3/statement" method="post">
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+
+
+
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Choose how to upload variable rate controller statements</h2> 
+      
+      
+      
+      
+      
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+    
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="item2StatementMethod" name="item2StatementMethod" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="item2StatementMethod">
+                  Use previously uploaded file
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="item2StatementMethod-2" name="item2StatementMethod" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="item2StatementMethod-2">
+                  Upload new files
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      
+      
+      <br>
+      
+      
+  
+      
+      <div class="govuk-button-group">
+       
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Save and continue
+          </button>
+        
+
+
+
+          
+            
+          
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Save and return later
+            </button>
+          
+          </div>
+      
+      </form>
+      
+      </div>
+     
+      
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="index?03-02=complete">
+
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Agreement accepted
+            </h1>
+            <div class="govuk-panel__body">
+              Your reference number<br><strong>{{ data['ftf-project-reference'] }}</strong>
+            </div>
+          </div>
+
+          <p class="govuk-body">We have sent you a confirmation email.</p>
+          
+          <span class="content-section">
+          <h2 class="govuk-heading-m">What happens next</h2>
+          <p class="govuk-body">You may now start your project.</p>
+          <p class="govuk-body">Your first claim schedule window is now open and can be completed within this service.</p>
+          <p class="govuk-body">You should read <a href="#" target="_blank">Managing a successful Farming Transformation Fund project (opens in new tab)</a>  on GOV.UK. It explains the steps you must follow to comply with the funding rules for your grant.</p>
+          <p class="govuk-body">Download copies of your agreement documents:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/public/downloads/ftf/FTF-Water-Management-Grant-Agreement-Example.pdf" target="_blank">Your grant funding agreement, including Annexes A to C</a></li>
+            <li><a href="/public/downloads/ftf/FTF-GFA-Terms-and-Conditions.pdf" target="_blank">FTF terms and conditions</a></li>
+          </ul>
+        </span>
+          
+        {% include "../../_includes/body-content_agreement-accepted-main-block.html" %}
+
+          <br>
+        <p class="govuk-body"><a href="index?03-02=complete">Go back to grant task list</a></p>
+
+        
+        </form>
+      
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

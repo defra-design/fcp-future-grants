@@ -1,0 +1,157 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/ftf-select-reason" method="post">
+       
+       
+      
+       
+       
+          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          name: "whatDoYouWantToChange",
+          fieldset: {
+            legend: {
+              text: "What do you want to change?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "change claim schedule",
+              text: "Change claim schedule"
+            },
+            {
+              value: "change claim dates",
+              text: "Change claim dates"
+            },
+            {
+              value: "change an item",
+              text: "Change an item"
+            },
+            {
+              value: "change to match funding",
+              text: "Change to match funding"
+            },
+            {
+              value: "change to specification",
+              text: "Change to specification"
+            },
+            {
+              value: "change to outputs",
+              text: "Change to outputs"
+            },
+            {
+              value: "delay to outputs",
+              text: "Delay to outputs or project completion"
+            },
+            {
+              value: "decrease grant amount",
+              text: "Decrease grant amount"
+            },
+            {
+              value: "other",
+              text: "Other"
+            }
+          ]
+        }) }}
+
+
+
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+          {{ govukTextarea({
+            name: "explainChange",
+            id: "explain-change",
+            label: {
+              text: "Explain why you need the change",
+              classes: "govuk-label--m",
+              isPageHeading: true
+            }
+          }) }}
+          
+        
+       
+      
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </div>
+    </div>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+        
+        
+        
+        
+        
+           
+            </form>
+        
+          </div>
+        
+        </div>
+        
+        
+        
+        </main>
+        
+        {% endblock %}

@@ -1,0 +1,23 @@
+{
+  "termName": "Tyre inflation",
+  "sectionNumber": "109",
+  "itemCode": "109",
+  "title": "Central tyre inflation system",
+  "summary": "Central tyre inflation system to regulate the pressure of all tyres on a vehicle.",
+  "category": ["General"],
+  "grantValue": "4,159.80",
+  "grantPercentage": "60",
+  "averageValue": "6,933.00",
+  "score": 61,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a central tyre inflation system to regulate the tyre pressure of all tyres on the vehicle - inflate or deflate tyres from the cab to suit ground conditions.",
+    "eligibleBullet02": "maintain air pressure in a tyre if there is a slow leak until the vehicle can be moved to a safe place.",
+    "eligibleBullet03": "have a pneumatic control unit.",
+    "eligibleBullet04": "have an operator control panel.",
+    "eligibleBullet05": "have wheel valves and a pressure switch.",
+    "eligibleBullet06": "only be fitted to agricultural and forestry machines.",
+    "eligibleText01": "You can buy a central tyre inflation system as a factory fitted option to new machines.",
+    "eligibleText02": "Central tyre inflation systems for cars, 4x4s, vans and commercial vehicles are not eligible."
+  }
+}

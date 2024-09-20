@@ -1,0 +1,36 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+
+{% block header %}
+{{ govukHeader({
+  useTudorCrown: true,
+  serviceName: "Claim money for farming grant",
+  serviceUrl: "/fetf/claim/v1-1/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=01a"
+}) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../_includes/sub-header_business-applicant-details.html" %}
+{% endblock %}
+
+
+
+{% block footer %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+{% endblock %}

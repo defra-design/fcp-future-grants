@@ -1,0 +1,210 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+Upload2
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Item details</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Salad leaf harvester (FETF8)
+      </h1>
+
+      <p class="govuk-body">Upload evidence to show the item has been bought and paid in full, and is in place.</p>
+
+
+
+    </div>
+  </div>
+
+<br><br>
+
+
+<script>
+function showFilesAddedSection() {
+  const filesAddedContainer = document.getElementById('filesAddedContainer');
+  filesAddedContainer.style.display = 'block';
+}
+
+function showVisualEvidenceSection() {
+  const visualEvidenceContainer = document.getElementById('visualEvidenceContainer');
+  visualEvidenceContainer.style.display = 'block';
+}
+</script>
+
+
+
+<body>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  <p class="govuk-label govuk-label--m">Financial evidence</p>
+  <p class="govuk-body">For example, invoices, receipts and bank statements (you can cross out other transactions)</p>
+  <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
+
+
+  <div id="filesAddedContainer" style="display: none;">
+      <p class="govuk-label govuk-label--s">Files added</p><br>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 1.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 2.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 3.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <br>
+  </div>
+
+  <p class="govuk-label govuk-label--s">Upload a file</p>
+  <div class="container">
+      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
+  </div>
+</div>
+</div>
+<br><br>
+<hr style="border: 0.5px solid #000; margin: 10px 0;" class="govuk-grid-column-two-thirds">
+
+<br><br><br>
+
+
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+<p class="govuk-label govuk-label--m">Visual evidence</p>
+<p class="govuk-body">For example, photos and videos showing the item</p>
+<p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+
+
+<div id="visualEvidenceContainer" style="display: none;">
+  <p class="govuk-label govuk-label--s">Files added</p><br>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 1.jpg , 2MB</p>
+      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+  </div>
+  <hr style="margin: 20px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 2.png , 1.5MB</p>
+      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+  </div>
+  <hr style="margin: 20px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 3.mp4 , 17MB</p>
+      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+  </div>
+  <hr style="margin: 20px 0;">
+  <br>
+</div>
+
+
+
+<p class="govuk-label govuk-label--s">Upload a file</p>
+<div class="container">
+  <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+  <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showVisualEvidenceSection()">Choose file</button>
+</div>
+</div>
+
+</div>
+
+
+
+<br><br><br><br>
+
+
+
+
+
+     <a href="upload?01=c&02=c&03=n&04=n&05=n&06=n">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

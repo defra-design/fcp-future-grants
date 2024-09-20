@@ -1,0 +1,175 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+      
+     
+
+
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+        
+            <h1 class="govuk-heading-xl">Upload braken roller statements</h1>
+        
+            <!-- <form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data"> -->
+              <p><a href="statement-guidance" class="govuk-link">How to upload your bank statement</a></p>
+
+              <div class="moj-multi-file-upload">
+                <p class="govuk-body">Your files must be:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>a PDF, doc or docx file</li>
+                  <li>no more than 20MB</li>
+                </ul>
+                <br>
+                <div class="moj-multi-file__uploaded-files ">
+                  
+                  <h2 class="govuk-heading-m">Files added</h2>
+                  <div class="govuk-summary-list moj-multi-file-upload__list">
+
+                    
+        
+                  </div>
+                </div>
+        
+                <div class="moj-multi-file-upload__upload">
+        
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="documents">
+                      Upload a file
+                    </label>
+        
+                    <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+        
+                  </div>
+        
+                  <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+                    Upload file
+                  </button>
+        
+                </div>
+              </div>
+        
+             
+              <div class="govuk-button-group">
+                <a href="photo-guidance">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                  Save and continue
+                </button>
+              </a>
+              <a href="#">
+                <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Save and return later
+                </button>
+              </a>
+              </div>
+        
+            <!-- </form> -->
+          </div>
+        </div>
+        
+      
+
+        
+  
+          
+
+
+       
+
+
+     
+      
+
+      
+
+  
+
+<br><br>
+
+
+
+
+   
+
+
+
+
+      
+
+  
+
+
+    </body>
+
+   
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

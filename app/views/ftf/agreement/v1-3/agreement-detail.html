@@ -1,0 +1,71 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+Accept grant funding agreement
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="review-terms-and-conditions">
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+        <h1 class="govuk-heading-xl">Your grant funding agreement</h1>
+
+        <p class="govuk-body-l">Your application for the Farming Transformation Fund Water Resource Management grant has been approved.</p>
+
+        <p class="govuk-body">Contents</p>
+        <ul class="govuk-list">
+          <li>— &nbsp;<a class="govuk-link" href="#agreement-details">Agreement details</a></li>
+          <li>— &nbsp;<a class="govuk-link" href="#annex-a">Annex A – Eligible expenditure and claim submission</a></li>
+          <li>— &nbsp;<a class="govuk-link" href="#annex-b">Annex B – Outputs</a></li>
+          <li>— &nbsp;<a class="govuk-link" href="#annex-c">Annex C – Project-specific conditions</a></li>
+        </ul>
+
+        <hr id="agreement-details" class="section-break">
+
+        <h2 class="govuk-heading-l">Agreement details</h2>
+
+        {% include "../../_includes/body-content_agreement-detail-main-block.html" %}
+
+        <hr id="annex-a" class="section-break">
+        
+        <h2 class="govuk-heading-l">Annex A – Eligible expenditure and claim submission</h2>
+        {% include "../../_includes/body-content_annex-a-main-block.html" %}
+
+        <hr id="annex-b" class="section-break">
+
+        <h2 class="govuk-heading-l">Annex B – Project outputs</h2>
+        {% include "../../_includes/body-content_annex-b-main-block.html" %}
+
+        <hr id="annex-c" class="section-break">
+        
+        <h2 class="govuk-heading-l">Annex C – project-specific conditions</h2>
+        {% include "../../_includes/body-content_annex-c-main-block.html" %}
+
+
+
+          {{govukButton({
+              text: "Continue to terms and conditions"
+          })}}
+        
+        </form>
+
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+Claim outcome successful
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="agreement-detail">
+
+        <span class="govuk-caption-xl">Browns Hill Farm reservoir (WM-VMA-1234)</span>
+        <h1 class="govuk-heading-xl">HDJ2123F</h1>
+        <h2 class="govuk-heading-m">Your claim has been approved.</h2>
+        <br>
+        {% include "../../_includes/details-block_claim-questions-contact.html" %}
+      
+      </div>
+     </div>
+  </main>
+
+</div>
+
+{% endblock %}

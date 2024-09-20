@@ -1,0 +1,27 @@
+{
+  "termName": "Equipment number",
+  "sectionNumber": "000",
+  "title": "Example FETF equipment item 0",
+  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "category": ["Forestry", "General", "Horticultural", "Livestock", "Precision and analysis", "Resource management"],
+  "value": "0,000.00",
+  "description": {
+    "descriptionText01": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis a justo ut dignissim. In quis posuere felis. Aenean id ante dui. Suspendisse potenti. Integer quis diam ex. Curabitur erat ante, mollis vel mi et, fringilla vehicula leo. Donec eu blandit ipsum, euismod pulvinar lectus.",
+    "descriptionText02": "Nullam at risus et justo porttitor vehicula. Pellentesque congue laoreet lorem vitae malesuada. Nullam interdum ante vel risus blandit laoreet. Aliquam eget rhoncus libero, ut lacinia felis.",
+    "descriptionText03": "data",
+    "descriptionText04": "data",
+    "descriptionText05": "data",
+    "descriptionBullet01": "data ",
+    "descriptionBullet02": "data",
+    "descriptionBullet03": "data",
+    "descriptionBullet04": "data",
+    "descriptionBullet05": "data"
+  },
+  "eligibility": {
+    "eligibiltyBullet01": "Cras mollis urna nec quam mollis pharetra",
+    "eligibiltyBullet02": "Mauris vel nulla faucibus orci porta rutrum",
+    "eligibiltyBullet03": "Vivamus aliquet luctus nisl ac venenatis",
+    "eligibiltyBullet04": "Maecenas feugiat dictum accumsan",
+    "eligibiltyBullet05": "Nunc sit amet mattis diam"
+  }
+}

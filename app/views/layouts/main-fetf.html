@@ -1,0 +1,36 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+
+{% block header %}
+{{ govukHeader({
+  useTudorCrown: true,
+  serviceName: "Apply for a Farming Equipment and Technology Fund: Productivity grant",
+  serviceUrl: "/fetf/index"
+}) }}
+{% endblock %}
+
+{% block content %}
+{% include "../../_includes/sub-header_business-applicant-details.html" %}
+{% endblock %}
+
+
+
+{% block footer %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "/manage-prototype/clear-data",
+         text: "Clear data"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+{% endblock %}

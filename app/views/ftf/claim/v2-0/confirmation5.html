@@ -1,0 +1,95 @@
+{% extends "layouts/main-claim-round-2.html" %}
+
+{% set pageName="Confirmation" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<br>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+      
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <a href="confirmation.html" style="text-decoration: none; color: inherit;">
+            <h1 class="govuk-panel__title" style="margin-bottom: 20px;">
+              First claim submitted
+            </h1>
+          </a>
+          <p class="govuk-body-l" style="color: white; margin-bottom: 5px;">by John Smith</p>
+          <p class="govuk-body-l" style="color: white; margin-bottom: 5px;">for Imaginary Farms Ltd</p>
+          <p class="govuk-body-l" style="color: white; margin-bottom: 5px;">on 24 September 2023</p>
+          <p class="govuk-body-l" style="color: white;">Project: WM-VMA-1234</p>
+          
+
+          <div class="govuk-panel__body">
+            Your reference number<br><strong>HDJ2123F</strong>
+          </div>
+        </div>
+        
+   
+
+
+
+
+        
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin: 0;">We have sent you a confirmation email.</p>
+        
+          <a href="javascript:void(0);" onclick="window.print();" style="text-decoration: none;">
+            <div style="width: 141px; height: 40px; position: relative;">
+              <div style="width: 141px; height: 40px; left: 0px; top: 0px; position: absolute; background: white; border: 1px #BCBDBF solid;"></div>
+              <div style="width: 141px; right: 0; top: 8px; position: absolute; text-align: center; color: #1D70B8; font-size: 19px; font-family: Arial, Helvetica; font-weight: 300; line-height: 25px; word-wrap: break-word;">Print this page</div>
+            </div>
+          </a>
+          
+        </div>
+        
+        <br><br>
+        
+        
+        
+        
+        
+        
+        
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          We will assess your claim and let you know if we need any further information.<br><br>
+          We aim to process claims within 30 working days.<br><br>
+          You will get a notification when your claim is approved and paid.<br>
+        </p>
+
+        <br>
+
+        {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+       <br>
+
+
+
+       <p class="govuk-body">
+        <a href="activity4.html">Go back to the grant task list</a></p>
+       </p>
+
+       
+ 
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the items at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="equipment-contracting" method="post">
+
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Where will the items be stored?</h1>
+
+      <p class="govuk-body">You can add up to 3 postcodes.</p>
+       
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Main postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="itemsPostcode" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['itemsPostcode'] }}">
+        </div>
+        <a href="#" class="govuk-link">Add another</a>
+        <br><br><br>
+        
+
+
+       
+
+
+       
+
+
+
+
+        
+
+        
+      </div>
+    </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

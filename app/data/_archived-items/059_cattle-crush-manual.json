@@ -1,0 +1,19 @@
+{
+  "termName": "Cattle crush",
+  "sectionNumber": "059",
+  "title": "Cattle crush (manual)",
+  "summary": "Cattle crush to reduce stress by making sure cattle stay focused on the exit.",
+  "category": ["Livestock"],
+  "value": "4,950.00",
+  "score": 65,
+  "description": {
+    "descriptionText01": "Cattle crush to reduce stress by making sure cattle stay focused on the exit."
+  },
+  "eligibility": {
+    "eligibiltyBullet01": "Must have a manually operated full-length head yoke.",
+    "eligibiltyBullet02": "Must have an internal width of at least 720mm.",
+    "eligibiltyBullet03": "The sides of the crush must be able to open to give complete access to both sides of the animal.",
+    "eligibiltyBullet04": "Must have an anti-backing facility at the rear of the crush operated from outside the race. This can either be a U-shaped rotating rump bar operated from a wheel outside of the crush or a sliding gate operated from outside the crush.",
+    "eligibiltyBullet05": "All ferrous metal parts of the crush must be fully galvanised, or powder coated. Painted crushes are not eligible."
+  }
+}

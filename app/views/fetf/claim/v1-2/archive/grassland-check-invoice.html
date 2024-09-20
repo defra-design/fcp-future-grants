@@ -1,0 +1,175 @@
+{% extends "layouts/main-claim.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+            Check the grassland pasture aerator invoice
+          </label>
+        </h1>
+        
+
+
+        <h1 class="govuk-heading-xl">Check receipt</h1>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <img src="/assets/images/FTF_claim_form.png" alt="test" width="100%">
+          </div>
+        </div>
+        
+        <p class="govuk-body">receipt.jpg, 2MB</p>
+        
+        <div class="govuk-form-group">
+        
+          <fieldset class="govuk-fieldset">
+        
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        
+              Is this file correct?
+        
+            </legend>
+        
+            <div class="govuk-radios" data-module="govuk-radios">
+        
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="correct" name="correct" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="correct">
+                  Yes, add this file
+                </label>
+        
+              </div>
+        
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="correct-2" name="correct" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="correct-2">
+                  No, I want to choose a different file
+                </label>
+        
+              </div>
+        
+            </div>
+        
+          </fieldset>
+        
+        </div>
+        
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        
+
+
+
+
+
+
+      </div>
+      
+
+    </div>
+  </div>
+
+<br><br>
+
+
+
+
+   
+
+
+
+
+      <div class="govuk-button-group">
+        <a href="variable-serial">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </a>
+      <a href="#">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return later
+        </button>
+      </a>
+      </div>
+
+  
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

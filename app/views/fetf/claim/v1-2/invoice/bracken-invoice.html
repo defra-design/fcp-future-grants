@@ -1,0 +1,198 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+
+<script>if(typeof MOJFrontend.MultiFileUpload !== 'undefined') {
+  new MOJFrontend.MultiFileUpload({
+    container: document.querySelector('.moj-multi-file-upload'),
+    uploadUrl: '/ajax-upload-url',
+    deleteUrl: '/ajax-delete-url'
+  });
+}
+</script>
+
+ 
+      
+      
+      
+
+     
+
+      
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+        
+            <h1 class="govuk-heading-xl">Upload bracken roller invoice</h1>
+
+            <p class="govuk-body-l">Your files must be:
+              a PDF, doc or docx file
+              no more than 20MB</p>
+        
+            <form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data">
+        
+              <div class="moj-multi-file-upload">
+                <div class="moj-multi-file__uploaded-files ">
+                  <h2 class="govuk-heading-m">Files added</h2>
+                  <div class="govuk-summary-list moj-multi-file-upload__list">
+        
+                  </div>
+                </div>
+        
+                <div class="moj-multi-file-upload__upload">
+        
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="documents">
+                      Upload a file
+                    </label>
+        
+                    <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+        
+                  </div>
+        
+                  <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+                    Upload file
+                  </button>
+        
+                </div>
+              </div>
+        
+              
+        
+            </form>
+          </div>
+        </div>
+        
+      
+
+        
+  
+          
+
+
+          <!-- <h3 class="govuk-heading-m">Financial evidence</h3>
+          <p class="govuk-body">For example, invoices, receipts and bank statements (you can cross out other transactions)</p>
+          
+          <div style="width: 630px; height: 202px; position: relative">
+            <div style="width: 357px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 700; line-height: 30px; word-wrap: break-word">Upload a file</div>
+            <div style="width: 224px; left: 18px; top: 107px; position: absolute; color: black; font-size: 18px; font-family: Arial, Helvetica; font-weight: 300; line-height: 30px; word-wrap: break-word">Drag and drop files here or</div>
+            <div style="width: 630px; height: 164px; left: 0px; top: 38px; position: absolute; border: 3px black dashed"></div>
+            <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+              
+              <a href="bracken-invoice-files">
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Choose file
+                </button>
+          </a>
+          
+          </div> -->
+        
+  
+       
+
+
+     
+      
+
+      
+
+  
+
+<br><br>
+
+
+
+
+   
+
+
+
+
+      <div class="govuk-button-group">
+        <a href="bracken-invoice-files">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </a>
+      <a href="#">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return later
+        </button>
+      </a>
+      </div>
+
+  
+
+
+    </body>
+
+   
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

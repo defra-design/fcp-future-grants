@@ -1,0 +1,51 @@
+{% extends "layouts/main-agreement-round-2.html" %}
+
+{% block pageTitle %}
+What you need to do
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="agreement-detail">
+
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+        <h1 class="govuk-heading-xl">What you need to do</h1>
+
+        {% include "../../_includes/body-content_what-you-need-to-do-main-block.html" %}
+
+
+
+          {{govukButton({
+              text: "Continue to agreement"
+          })}}
+        
+        </form>
+
+
+        <span class="content-section">
+          <h2 class="govuk-heading-m">Withdrawing your agreement</h2>
+          <p class="govuk-body">If you do not want to accept your agreement, you should <a href="#">withdraw your application</a>.</p>
+        </span>
+
+        {% include "../../_includes/details-block_agreement-questions-contact.html" %}
+      
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

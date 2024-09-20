@@ -1,0 +1,49 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+Check claim details
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="/fetf/claim/v1-0/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02b">
+
+        <span class="govuk-caption-xl">Submit claim</span>
+        <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check approved grant funding</h1>
+
+        {% include "../../_includes/body-content_claim-detail-main-block.html" %}
+        
+
+        {{govukButton({
+          text: "Continue"
+      })}}
+
+
+          {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+
+        </form>
+
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

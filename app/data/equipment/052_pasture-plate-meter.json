@@ -1,0 +1,22 @@
+{
+  "termName": "Pasture plate",
+  "sectionNumber": "052",
+  "itemCode": "52",
+  "title": "Pasture plate meter – handheld",
+  "summary": "A handheld device to measure grass cover.",
+  "category": ["Livestock"],
+  "grantValue": "290.00",
+  "grantPercentage": "50",
+  "averageValue": "580.00",
+  "score": 51,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a pasture plate meter (handheld)",
+    "eligibleBullet02": "be a handheld device",
+    "eligibleBullet03": "assess grass cover by measuring total height and the number of measurements taken",
+    "eligibleBullet04": "electronically store measurements from separate paddocks",
+    "eligibleBullet05": "download the data collected to a computer or mobile device",
+    "eligibleText01": "Plate meters that are not able to store data electronically for later electronic transfer are not eligible.",
+    "eligibleText02": "You can only apply for 2 handheld pasture plate meters per application."
+  }
+}

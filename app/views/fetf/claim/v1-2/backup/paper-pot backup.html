@@ -1,0 +1,205 @@
+{% extends "layouts/main-claim-round-2.html" %}
+
+{% block pageTitle %}
+  Task list – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link">Back</a>
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Item details</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Paper pot transplanter
+      </h1>
+
+      <p class="govuk-body">Upload evidence to support your claim for his item.</p>
+
+    </div>
+  </div>
+
+<br>
+
+
+
+<script>
+  function showFilesAddedSection() {
+      const filesAddedContainer = document.getElementById('filesAddedContainer');
+      filesAddedContainer.style.display = 'block';
+  }
+</script>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  <p class="govuk-label govuk-label--m">Financial evidence</p>
+  <p class="govuk-body">For example, invoices, receipts, and bank statements (you can cross out other transactions)</p><br>
+
+  <div id="filesAddedContainer" style="display: none;">
+      <p class="govuk-label govuk-label--s">Files added</p><br>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial accounts year 1.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial accounts year 2.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial accounts year 3.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <br>
+  </div>
+
+  <p class="govuk-label govuk-label--s">Upload a file</p>
+  <div class="container">
+      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
+  </div>
+</div>
+</div>
+
+
+
+<br><br><br><br>
+
+
+
+
+
+
+<style>
+  .container {
+    width: 585px;
+    height: 110px;
+    position: relative;
+    border: 3px dashed black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .text {
+    text-align: left;
+    margin-top: 40px;
+  }
+  .button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: -30px;
+    margin-left: 230px;
+  }
+</style>
+
+
+
+
+
+</main>
+
+     <a href="/ftf/application/v3-0/letters/upload10?10=complete">
+        <button class="govuk-button">
+          Continue
+        </button>
+      </a>
+
+{% endblock %}
+
+
+
+
+
+
+below the 'financial evidence' section, add a new 'Visual evidence' section that works exactly the same
+
+<script>
+  function showFilesAddedSection() {
+      const filesAddedContainer = document.getElementById('filesAddedContainer');
+      filesAddedContainer.style.display = 'block';
+  }
+</script>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+  <p class="govuk-label govuk-label--m">Financial evidence</p>
+  <p class="govuk-body">For example, invoices, receipts, and bank statements (you can cross out other transactions)</p><br>
+
+  <div id="filesAddedContainer" style="display: none;">
+      <p class="govuk-label govuk-label--s">Files added</p><br>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial accounts year 1.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial accounts year 2.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;">Financial accounts year 3.pdf , 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <br>
+  </div>
+
+  <p class="govuk-label govuk-label--s">Upload a file</p>
+  <div class="container">
+      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
+  </div>
+</div>
+</div>
+
+<br><br><br><br>
+
+<style>
+  .container {
+    width: 585px;
+    height: 110px;
+    position: relative;
+    border: 3px dashed black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .text {
+    text-align: left;
+    margin-top: 40px;
+  }
+  .button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: -30px;
+    margin-left: 230px;
+  }
+</style>

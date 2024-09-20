@@ -1,0 +1,175 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Check your claim" %}
+
+{% block content %}
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a href="#" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your business details</h1>
+
+    <!--
+    <span class="govuk-body">Review and confirm the information below is correct.</span>
+-->
+
+<br><br>
+
+<h2 class="govuk-heading-l">Rural Payment Service details</h2>
+    
+<dl class="govuk-summary-list">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2 class="govuk-heading-m" style="margin: 0;">Applicant details</h2>
+    <a href="#" style="margin-left: auto;">Change</a>
+  </div>
+  
+</dl>
+
+<dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Business name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Imaginary farms Ltd 
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Single Business Identifier (SBI)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              987654321
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Business address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Address line 1<br>
+              Address line 2<br>
+              Region
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              john.smith@gmail.com
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Mobile phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              07701234567
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Business phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              08001234567
+            </dd>
+
+          </div>
+</dl>
+
+
+<br><br><br>
+
+
+<dl class="govuk-summary-list">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2 class="govuk-heading-m" style="margin: 0;">Business details</h2>
+    <a href="#" style="margin-left: auto;">Change</a>
+  </div>
+  
+</dl>
+
+<dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Business legal status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Limited company 
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Business activity
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Farming crops
+            </dd>
+ 
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Certificate of incorporation reference number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              01234567
+            </dd>
+
+          </div>
+
+</dl>
+
+
+
+
+<br><br>
+
+      <a href="activity3">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </a>
+
+
+      {% include "../../_includes/details-block_application-questions-contact.html" %}
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{
+  "termName": "Tray filler",
+  "sectionNumber": "001",
+  "itemCode": "1",
+  "title": "Electronic tray filling machine",
+  "summary": "Electronic tray filling machine filling 500 trays per hour, conveyor compatible.",
+  "category": ["Horticulture"],
+  "grantValue": "7,422.00",
+  "grantPercentage": "50",
+  "averageValue": "14,844.00",
+  "score": 65,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be an electronic tray filling machine",
+    "eligibleBullet02": "fill polystyrene trays, plug trays, shuttle trays and pots in trays",
+    "eligibleBullet03": "fill 500 trays per hour",
+    "eligibleBullet04": "be able to change filling density to achieve optimal compaction for different seeding requirements",
+    "eligibleBullet05": "be able of handling 600mm x 400mm trays",
+    "eligibleBullet06": "be compatible with a conveyor belt system to allow incorporation into a fully automated seeding line or transplanting line"
+  }
+}

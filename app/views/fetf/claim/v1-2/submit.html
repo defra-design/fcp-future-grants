@@ -1,0 +1,78 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+{% set pageName="Submit" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf/claim/v1-2/confirmation" method="post">
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit claim</h1>
+    <p class="govuk-body">By submitting this claim, you confirm that you understand and agree with the following statements:<br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>I have read, understood and accept the <a href="#">terms and conditions</a> and the <a href="">privacy policy</a></li>
+        <li>the information I have provided is true and correct to the best of my knowledge</li>
+        <li>I will not receive money for my claim if I break the terms of my grant funding agreement</li>
+        <li>my information and details might be audited and reviewed, and shared with others to prevent and detect fraud</li>
+      </ul>
+      <br>
+
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive"></span>
+          You could face prosecution, be banned from applying for other grants or have to return grant payments if you provide false or misleading information in this claim.</strong>
+        </div>
+
+
+
+
+
+
+<div class="govuk-button-group">
+ 
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Accept and submit
+  </button>
+
+  <br>
+  
+  </form>
+  
+  
+  
+    
+  </div>
+
+
+
+
+  
+
+
+
+
+</main>
+
+{% endblock %}

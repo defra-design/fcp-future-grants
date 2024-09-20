@@ -1,0 +1,115 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Submit" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<a href="#" class="govuk-back-link">Back</a>
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit application</h1>
+    <span class="govuk-body">Read and agree to submit your application.</span>
+
+<br><br><br>
+
+
+    <h2 class="govuk-heading-l">Declaration</h2>
+
+    <p class="govuk-body">By submitting and/or agreeing to the submission of this application form I agree to the following declaration:<br>
+
+    <p class="govuk-body">I confirm that, to the best of my knowledge and belief, all of the information contained in this application is true and correct and I accept full responsibility for it.<br>
+
+      <p class="govuk-body">I understand that should this application be successful, I will be required to supply additional information.<br>
+      <p class="govuk-body">If there is any change to the information I have provided, I will notify the Rural Payments Agency straight away.<br>
+      <p class="govuk-body">I understand that any information I supply may be used by public bodies or their appointed agents in connection with the Farming Transformation Fund and that I may be contacted from time to time, whether or not my application is successful.<br>
+      <p class="govuk-body">If applicable, I confirm that I am an eligible applicant as detailed in the Farming Transformation Fund Water Management Manual.<br>
+      <p class="govuk-body">I am aware of the conditions that apply to this application and have complied with them.<br>
+      <p class="govuk-body">I declare that I have read, understood and complied with all of the relevant guidance information relating to the Farming Transformation Fund.<br>
+      <p class="govuk-body">I understand that my business may be inspected and I agree to give access, co-operate and provide any help needed.<br>
+      <p class="govuk-body">I confirm that I have disclosed details of all business interests held by any members of this business.<br>
+      <p class="govuk-body">I understand that if my application is successful, I will be required to enter into a grant funding agreement, and payment of any grant funding will be conditional on compliance with the terms of that agreement.<br>
+      <p class="govuk-body">I understand that use of an agent will not limit my responsibility to comply with the terms of that agreement, nor does it affect my personal responsibility to make sure the information provided in this application is accurate. I authorise the person(s) list at section 2 in the application form to liaise with RPA regarding this application and to be copied in on any correspondence relating to this application.<br>
+
+      <br>
+
+
+
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          I understand and agree with the above statements
+        </label>
+      </div>
+
+
+<br>
+
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You must not start the project
+        </strong>
+      </div>
+
+
+
+
+
+
+
+<p class="govuk-body">Starting the project or committing to any costs (such as placing orders) before you receive a funding agreement will invalidate your application.<br>
+
+
+  <p class="govuk-body">Before you start the project, you can:<br>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>get quotes from suppliers</li>
+      <li>apply for planning permission or an abstraction licence</li>
+     </ul>
+  </p>
+
+
+  <br><br>
+
+
+
+
+
+
+
+<a href="confirmation.html">
+  <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+    Submit application
+  </button>
+</a>
+<br>
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Cancel
+</button>
+
+
+
+</main>
+
+{% endblock %}

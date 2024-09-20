@@ -1,0 +1,137 @@
+{% extends "layouts/main-claim-v1-2.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Bracken roller serial numbers </h1>
+
+      <p class="govuk-body-l">Enter the serial number of each bracken roller</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Item 1 serial number
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Item 2 serial number
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Item 3 serial number
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+      </div>
+
+      
+
+    </div>
+  </div>
+
+<br><br>
+
+
+
+
+   
+
+
+
+
+      <div class="govuk-button-group">
+        <a href="invoice-guidance">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </a>
+      <a href="#">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return later
+        </button>
+      </a>
+      </div>
+
+  
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

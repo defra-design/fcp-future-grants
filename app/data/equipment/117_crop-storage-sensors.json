@@ -1,0 +1,22 @@
+{
+  "termName": "Crop sensors",
+  "sectionNumber": "117",
+  "itemCode": "117",
+  "title": "Crop storage sensor system",
+  "summary": "Wireless sensors designed to transmit temperature, CO2 and relative humidity information to a mobile, tablet or PC.",
+  "category": ["General"],
+  "grantValue": "2,409.00",
+  "grantPercentage": "50",
+  "averageValue": "4,818.00",
+  "score": 55,
+  "eligible": {
+    "eligibleBullet01": "be a crop storage sensor system.",
+    "eligibleBullet02": "a system control unit able to send information to mobile phone, tablet or computer.",
+    "eligibleBullet03": "an alert function when temperature or humidity fall outside the permitted range.",
+    "eligibleBullet04": "sensor to measure internal store temperature.",
+    "eligibleBullet05": "sensor to measure external temperature.",
+    "eligibleBullet06": "2 sensors to measure CO2 levels.",
+    "eligibleBullet07": "sensor to measure internal store humidity.",
+    "eligibleBullet08": "sensor to measure external humidity."
+  }
+}

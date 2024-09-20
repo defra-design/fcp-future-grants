@@ -1,0 +1,143 @@
+{% extends "layouts/main-claim-v1-1.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+      
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+        
+            <h1 class="govuk-heading-xl">Upload photo 5</h1>
+
+           
+
+
+              <p class="govuk-body">Your files must be:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>a PDF, doc or docx file</li>
+  <li>no more than 20MB</li>
+</ul>
+        
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="file-upload-1">
+                  Upload a file
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+              </div>
+          </div>
+        </div>
+        
+      
+
+        
+  
+          
+
+
+       
+
+
+     
+      
+
+      
+
+  
+
+<br><br>
+
+
+
+
+   
+
+
+
+
+      <div class="govuk-button-group">
+        <a href="select-items5">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </a>
+      <a href="#">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return later
+        </button>
+      </a>
+      </div>
+
+  
+
+
+    </body>
+
+   
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+

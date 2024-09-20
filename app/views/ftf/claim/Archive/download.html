@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Download claim form
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-xl">Sign agreement</span>
+        <h1 class="govuk-heading-xl">Download grant funding agreement</h1>
+
+        <p class="govuk-body-l">Download and read your grant funding agreement and terms and conditions.</p>
+
+        <img src="/public/images/grant-funding-agreement-thumbnail.png" alt="Small screenshot showing page one of the grant funding agreement." class="download-thumbnail">
+        <h3 class="govuk-heading-m"><a href="/public/downloads/ftf/FTF-Water-Management-Grant-Agreement-Example.pdf" target="_blank">Grant funding agreement</a></h3>
+        <p class="govuk-body-s sbi-number">DOCX, 74kb, 7 pages.</p>
+
+        <hr style="display: block; clear: both; margin: 24px 0;">
+
+        <img src="/public/images/ftf-terms-and-conditions-thumbnail.png" alt="Small screenshot showing page one of the FTF terms and conditions." class="download-thumbnail">
+        <span style="float: left;">
+        <h3 class="govuk-heading-m"><a href="/public/downloads/ftf/FTF-GFA-Terms-and-Conditions.pdf" target="_blank">Terms and conditions</a></h3>
+        <p class="govuk-body-s sbi-number">PDF, 257kb, 19 pages.</p>
+      </span>
+
+        <hr style="display: block; clear: both; margin: 24px 0;">
+
+        {% include "../../ftf/_includes/details-block_request-accessible-format.html" %}
+      
+        <span class="content-section">
+        <h2 class="govuk-heading-m">What you need to do</h2>
+        <p class="govuk-body">Download the grant funding agreement and terms and conditions.</p>
+        <p class="govuk-body">When you have read both documents, you can sign your agreement and start your project.</p>
+        </span>
+      
+        <form method="post" action="index?03-01=complete">
+
+          {{govukButton({
+              text: "Continue"
+          })}}
+        
+        </form>
+        
+        
+        {% include "../../_includes/details-block_agreement-questions-contact.html" %}
+      
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+{% endblock %}

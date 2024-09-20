@@ -1,0 +1,318 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+  Upload1
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+   
+                
+                 
+      
+      <span class="govuk-caption-xl">Submit claim</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        {{ item.title }} (FETF{{ item.itemCode }})
+      </h1>
+
+
+  
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-body">Number of items</label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">For example, 1 or 100</div>
+        <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+      
+        <script>
+          document.getElementById('width-10').addEventListener('click', function() {
+            this.value = '4';
+          });
+        </script>
+
+<br><br><br>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-body">Make and model</label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">For example, Suzuki or ABC123</div>
+  <input class="govuk-input govuk-input--width-20" id="make" name="make" type="text">
+
+  <script>
+    document.getElementById('make').addEventListener('focus', function() {
+      if (this.value === '') {
+        this.value = 'Neversink Farm - The Subversive';
+      }
+    });
+  </script>
+</div>
+
+
+
+{% if (data['sn'] == "yes") %}
+
+
+<div id="serial-number-container">
+  <!-- Initial Serial Number Module -->
+  <div class="govuk-form-group serial-number-module">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-body">Serial number (for each item)</label>
+    </h1>
+    <div id="event-name-hint" class="govuk-hint">For example, ABC123</div>
+    <input class="govuk-input govuk-input--width-20" type="text" onfocus="showPlaceholderText(this)" onblur="hidePlaceholderText(this)">
+    <br><br>
+    <p class="govuk-link add-serial-number"><a href="#" onclick="addNewModule(this)">Add another serial number</a></p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Counter for generating unique IDs
+    let serialNumberCounter = 1;
+
+    // Function to duplicate the serial number module
+    function duplicateSerialNumber(originalModule) {
+      const newModule = originalModule.cloneNode(true);
+
+      // Remove the 'add-serial-number' link from the new module
+      const linkToRemove = newModule.querySelector('.add-serial-number');
+      if (linkToRemove) {
+        linkToRemove.remove();
+      }
+
+      // Generate a unique ID for the new module
+      const newId = `width-10-${serialNumberCounter}`;
+      serialNumberCounter++;
+
+      // Update input ID and value
+      const newInput = newModule.querySelector('.govuk-input');
+      newInput.id = newId;
+      newInput.value = '';
+      newInput.addEventListener('focus', function() {
+        showPlaceholderText(this);
+      });
+      newInput.addEventListener('blur', function() {
+        hidePlaceholderText(this);
+      });
+
+      // Add a "Remove" link
+      const removeLink = document.createElement('p');
+      removeLink.classList.add('govuk-link', 'remove-serial-number');
+      removeLink.innerHTML = '<a href="#" onclick="removeMe(this)">Remove</a>';
+      newModule.appendChild(removeLink);
+
+      // Add a line break
+      const lineBreak = document.createElement('br');
+      newModule.appendChild(lineBreak);
+
+      // Append the new module below the original module
+      originalModule.parentNode.insertBefore(newModule, originalModule.nextSibling);
+    }
+
+    // Function to add a new module below the clicked module
+    function addNewModule(link) {
+      const clickedModule = link.parentNode.parentNode;
+      duplicateSerialNumber(clickedModule);
+    }
+
+    // Event listener for the "Add another serial number" link
+    document.querySelector('.add-serial-number').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the link from navigating
+      addNewModule(this);
+    });
+  });
+
+  function showPlaceholderText(input) {
+    if (input.value === '') {
+      input.value = 'ABC123';
+    }
+  }
+
+  function hidePlaceholderText(input) {
+    // Only update the placeholder text if the input is empty
+    if (input.value === '') {
+      input.value = 'ABC123';
+    }
+  }
+
+  function removeMe(link) {
+    const moduleToRemove = link.parentNode.parentNode;
+    moduleToRemove.remove();
+  }
+</script>
+
+{% elif (data['sn'] == "no") %}
+
+{% endif %}
+
+
+
+<br>
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-body">Invoice number</label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">For example, 02 or 123</div>
+  <input class="govuk-input govuk-input--width-10" id="invoice" name="width10" type="text">
+
+  <script>
+    document.getElementById('invoice').addEventListener('focus', function() {
+      if (this.value === '') {
+        this.value = '01';
+      }
+    });
+  </script>
+</div>
+
+
+<br>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Date delivered
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 13 4 2024
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" onfocus="showDefaultValue(this, '2')">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" onfocus="showDefaultValue(this, '5')">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" onfocus="showDefaultValue(this, '2024')">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<script>
+  function showDefaultValue(input, value) {
+    input.value = value;
+  }
+</script>
+
+
+<br>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Date payment is shown on the bank statement
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 3 2024
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" onfocus="showDefaultValue(this, '15')">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" onfocus="showDefaultValue(this, '4')">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" onfocus="showDefaultValue(this, '2024')">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<script>
+  function showDefaultValue(input, value) {
+    input.value = value;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
+
+      <a href="claim-item-detail2.html">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+  {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+  <br><br>
+
+    </div>
+  </div>
+
+</main>
+
+
+
+{% endblock %}

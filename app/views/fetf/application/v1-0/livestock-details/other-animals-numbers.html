@@ -1,0 +1,72 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} How many other animals do you keep? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+<a href="equipment-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            How many other animals do you keep?
+          </h1>
+        </legend>
+        <div id="event-name-hint" class="govuk-hint">
+          Approximate number of animals at time of application
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sheep-goats">
+            Sheep and goats
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="sheep-goats" name="sheepGoats" type="text" autocomplete="sheep-goats">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="pigs-breeding-sows">
+            Pigs (breeding sows over 50kg)
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="pigs-breeding-sows" name="pigsBreedingSows" type="text" autocomplete="pigs-breeding-sows">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="pigs-other">
+            Pigs (other)
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="pigs-other" name="pigsOther" type="text" autocomplete="pigs-other">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="poultry-laying-hens">
+            Poultry (laying hens)
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="poultry-laying-hens" name="poultryLayingHens" type="text" autocomplete="poultry-laying-hens">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="poultry-other">
+            Poultry (other)
+          </label>
+          <input class="govuk-input govuk-input--width-4" id="poultry-other" name="poultryOther" type="text" autocomplete="poultry-other">
+        </div>
+      </fieldset>
+
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

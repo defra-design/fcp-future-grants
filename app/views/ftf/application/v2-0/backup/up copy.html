@@ -1,0 +1,220 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% block pageTitle %}
+  Task list – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
+      <h1 class="govuk-heading-xl">
+        Upload application forms and evidence
+      </h1>
+
+      <div class="govuk-inset-text">
+        The RPA must receive your full application and supporting documents by 11:59pm on<strong> 31 July 2024</strong>.
+      </div>
+
+
+      <p class="govuk-body">You should <a href="/_common/not-testing.html">check the grant manual (opens in a new tab)</a>  to confirm what evidence you need to provide.</p>
+
+
+
+      <br><br>
+
+
+
+
+      <ol class="govuk-prototype-kit-task-list">
+        
+        <li style="list-style: none; margin: 0; padding: 0;">
+          <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
+                  
+            {% if (data['01'] == "ready") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form_appendix/form5" aria-describedby="eligibility-status">
+                  Application form and appendix
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status-01">Not started</strong>
+            </li>
+            {% elif (data['01'] == "progress") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form_appendix/form5" aria-describedby="eligibility-status">
+                  Application form and appendix
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status-01">In progress</strong>
+            </li>
+            {% elif (data['01'] == "complete") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form_appendix/form5" aria-describedby="eligibility-status">
+                  Application form and appendix
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            {% endif %}
+          
+
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form_appendix/form5" aria-describedby="eligibility-status">
+                  Hello
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status-01">In progress</strong>
+            </li>
+          </ul>
+
+
+
+      </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ol class="govuk-prototype-kit-task-list">
+        <li style="list-style: none; margin: 0; padding: 0;">
+            <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
+                <!-- Task 1 -->
+                <li class="govuk-prototype-kit-task-list__item" id="task-01">
+                    <span class="govuk-prototype-kit-task-list__task-name">
+                        <a href="/ftf/application/v2-0/form_appendix/form5" aria-describedby="eligibility-status">
+                            Application form and appendix
+                        </a>
+                    </span>
+                    <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status-01">Not started</strong>
+                </li>
+            </ul>
+        </li>
+    </ol>
+    
+    <!-- Include JavaScript here -->
+    <script>
+        // Function to change tag state
+        function changeTagState(taskNumber) {
+            const tag = document.getElementById(`list-convictions-status-${taskNumber}`);
+            const currentState = tag.textContent.trim();
+    
+            // Define your logic to change the state
+            if (currentState === "Not started") {
+                tag.textContent = "In progress";
+            } else if (currentState === "In progress") {
+                tag.textContent = "Completed";
+            } else if (currentState === "Completed") {
+                tag.textContent = "Not started";
+            }
+    
+            // Store the state in memory (e.g., using localStorage)
+            localStorage.setItem(`task-${taskNumber}-status`, tag.textContent);
+        }
+    
+        // Retrieve and apply saved states
+        for (let i = 1; i <= 1; i++) {
+            const savedState = localStorage.getItem(`task-${i}-status`);
+            if (savedState) {
+                const tag = document.getElementById(`list-convictions-status-${i}`);
+                tag.textContent = savedState;
+            }
+        }
+    </script>
+
+
+
+
+
+    
+
+     
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <a href="activity">
+        <button class="govuk-button">
+          Continue
+        </button>
+      </a>
+
+  {% include "../../_includes/details-block_application-questions-contact.html" %}
+
+  <br><br><br>
+
+    </div>
+  </div>
+
+</main>
+
+
+
+{% endblock %}

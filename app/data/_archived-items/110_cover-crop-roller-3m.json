@@ -1,0 +1,18 @@
+{
+      "termName": "Crop roller3",
+      "sectionNumber": "110",
+      "title": "Cover crop roller 3m",
+      "summary": "Front tractor-mounted roller system to terminate and/or bruise cover crops ahead of direct drill.",
+      "category": ["General"],
+      "value": "1,952.00",
+      "score": 60,
+      "description": {
+        "descriptionText01": "Front tractor-mounted roller system to terminate and/or bruise cover crops ahead of direct drill."
+      },
+      "eligibility": {
+        "eligibiltyBullet01": "Minimum of 3m width.",
+        "eligibiltyBullet02": "Roller must have an uneven or ridged surface to aid the crimping or bruising of the cover crop to destroy it.",
+        "eligibiltyBullet03": "Roller must completely crimp or bruise the crop across the full working width of the roller.",
+        "eligibiltyBullet04": "Flat rolls and ring rolls are not eligible."
+      }
+}

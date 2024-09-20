@@ -1,0 +1,219 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Check your claim" %}
+
+{% block content %}
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+
+
+    <span class="govuk-caption-xl">Submit claim</span>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your claim evidence</h1>
+    {% if (data['progress'] == "submitted") %}
+    <span class="govuk-body">Evidence submitted as part of your claim.</span><br>
+    {% else %}
+    {% endif %}
+
+<br><br>
+
+
+                {% for item in data['selected-items'] %}
+                 
+
+
+
+    <!--<h2 class="govuk-heading-l" id="evidence">Evidence</h2>  -->
+   
+   
+    <h3 class="govuk-heading-l">{{ item.title }}&nbsp;(FETF{{ item.itemCode }})</h3>
+
+        <dl class="govuk-summary-list">
+          
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Number of items
+            </dt>
+
+            <dd class="govuk-summary-list__value">
+              {{ item.quantity }}
+            </dd>
+            {% if (data['progress'] == "submitted") %}{% else %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/_common/not-testing.html">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+            {% endif %}
+          </div>
+               
+          
+           
+
+
+          {% if item.serialNumber %}
+          
+          
+        
+
+         
+       
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Serial number
+                </dt>
+    
+                <dd class="govuk-summary-list__value">
+                
+                  {{ data['serial-number-item'] or "1239879834" }}
+                
+    
+                </dd>
+
+
+
+                
+
+                {% if (data['progress'] == "submitted") %}{% else %}
+
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/_common/not-testing.html">
+                    Change<span class="govuk-visually-hidden"> address</span>
+                  </a>
+                </dd>
+                {% endif %}
+              </div>
+
+
+              {% endif %}
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Invoices
+            </dt>
+       
+            <dd class="govuk-summary-list__value">
+              Invoices 1.pdf , 3MB<br>
+              Invoices 2.pdf , 3MB<br>
+              Invoices 3.pdf , 3MB
+            </dd>
+            {% if (data['progress'] == "submitted") %}{% else %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/_common/not-testing.html">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+            {% endif %}
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Payments
+            </dt>
+       
+            <dd class="govuk-summary-list__value">
+              Payments 1.pdf , 3MB<br>
+              Payments 2.pdf , 3MB<br>
+              Payments 3.pdf , 3MB
+            </dd>
+            {% if (data['progress'] == "submitted") %}{% else %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/_common/not-testing.html">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+            {% endif %}
+          </div>
+
+          
+       
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Visual evidence
+          </dt>
+     
+          <dd class="govuk-summary-list__value">
+            Visual evidence 1.jpg , 2MB<br>
+            Visual evidence 2.png , 1.5MB<br>
+            Visual evidence 3.mp4 , 17MB
+          </dd>
+          {% if (data['progress'] == "submitted") %}{% else %}
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/_common/not-testing.html">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+          {% endif %}
+        </div>
+
+
+
+      </dl>
+
+
+<br><br><br>
+
+
+
+
+
+
+
+{% endfor %}
+
+
+
+<br><br><br>
+
+      <a href="index?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02d">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+          
+        </button>
+      </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+{% endblock %}

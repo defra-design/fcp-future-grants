@@ -1,0 +1,178 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Error" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+<a href="#" class="govuk-back-link">Back</a>
+
+
+
+
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#doc1">Download the application form to continue</a>
+        </li>
+        <li>
+          <a href="#doc2">Download the application appendix to continue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners to the doc1 and doc2 links
+    document.querySelector('a[href="#doc1"]').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      // Scroll to the application form link and focus on it
+      document.querySelector('a[href="/public/downloads/ftf/Application form - Water Management grant - FTF.docx"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector('a[href="/public/downloads/ftf/Application form - Water Management grant - FTF.docx"]').focus();
+    });
+    
+    document.querySelector('a[href="#doc2"]').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      // Scroll to the application appendix link and focus on it
+      document.querySelector('a[href="/public/downloads/ftf/Application appendix - Water Management grant - FTF.xlsx"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector('a[href="/public/downloads/ftf/Application appendix - Water Management grant - FTF.xlsx"]').focus();
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">Apply</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Download application forms</h1>
+   
+<br><br>
+
+<h3 class="govuk-heading-m">What you need to do</h3>
+<span class="govuk-body">Download and complete the Word application form and Excel appendix.</span>
+ <br><br>
+
+
+ <p class="govuk-body">Before you fill in the full application, you need to:<br>
+  <ul class="govuk-list govuk-list--bullet" style="margin-left: 0px;">
+    <li>check what evidence you must provide in the <a href="/_common/not-testing.html" target="_blank">Water Management grant manual (opens in a new tab)</a></li>
+    <li style="margin-top: 12px;">read <a href="/_common/not-testing.html" target="_blank">How to submit a Water Management grant full application (opens in a new tab)</a></li>
+  </ul>
+</p>
+
+<br>
+
+<p class="govuk-body">When you are ready, you can upload your application forms and evidence and submit your application.</p>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    
+    Do not upload handwritten and scanned copies or PDFs of these forms.
+  </strong>
+</div>
+
+  <hr style="margin: 40px 0;">
+
+  <h3 class="govuk-heading-m">Documents</h3>
+  <br>
+
+
+
+
+    <div class="govuk-form-group govuk-form-group--error" style="display: flex; align-items: flex-start;">
+      <img src="/public/images/FTF_application_form.png" alt="Small screenshot showing page one of the grant funding agreement." class="download-thumbnail" style="margin-right: 10px;">
+      <div>
+        <a href="/public/downloads/ftf/Application form - Water Management grant - FTF.docx" download="Application form - Water Management grant - FTF.docx" style="font-size: 24px; display: block;">Application form: Water Management grant</a><br>
+        <p id="whoAreYou-error" class="govuk-error-message">Download the application form to continue</p>
+        <p class="govuk-body-s sbi-number">DOCX, 235 KB, 16 pages</p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="govuk-form-group govuk-form-group--error" style="display: flex; align-items: flex-start;">
+      <img src="/public/images/FTF_application_appendix.png" alt="Small screenshot showing page one of the application form." class="download-thumbnail" style="margin-right: 10px;">
+      <div>
+        <a href="/public/downloads/ftf/Application appendix - Water Management grant - FTF.xlsx" download="Application form - Water Management grant - FTF.docx" style="font-size: 24px; display: block;">Application appendix: Water Management grant</a><br>
+        <p id="whoAreYou-error" class="govuk-error-message">Download the application appendix to continue</p>
+        <p class="govuk-body-s sbi-number">XLSX, 204 KB, 6 tabs</p>
+      </div>
+    </div>
+
+
+    
+    {% include "../../../_includes/details-block_request-accessible-format.html" %}
+
+
+    <hr style="margin: 50px 0;">
+  
+
+      <h3 class="govuk-heading-m">Evidence you need to apply</h3>
+         <p class="govuk-body">You need to check what evidence you must provide in the <a href="/_common/not-testing.html">Water Management grant manual (opens in a new tab) </a>.</p>
+         <p class="govuk-body">Evidence could include:<br>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>financial accounts</li>
+            <li>linked businesses and their accounts</li>
+            <li>licences and permissions</li>
+            <li>project funding</li>
+            <li>quotes and tenders</li>
+            <li>VAT in project costs</li>
+            <li>plans and drawings</li>
+            <li>third-party agreements</li>
+            <li>letters of support</li>
+          </ul>
+        </p>
+    
+<br><br>
+
+
+      <a href="#">
+        <button class="govuk-button">
+          Continue
+        </button>
+      </a>
+
+    {% include "../../../_includes/details-block_application-questions-contact.html" %}
+
+</main>
+
+{% endblock %}

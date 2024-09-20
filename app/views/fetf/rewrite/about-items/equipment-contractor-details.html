@@ -1,0 +1,102 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the items at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="equipment-summary" method="post">
+
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Contractor details</h1>
+
+      <div class="govuk-form-group">
+
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="contracting-work">
+            What type of contracting work will you use these items for?
+          </label>
+        </h2>
+        
+        <textarea class="govuk-textarea" id="contracting-work" name="contractingWork" rows="3" aria-describedby="contracting-work-hint"></textarea>
+
+
+
+        
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" for="contracting-professional-organisation">
+              <h1 class="govuk-fieldset__heading">
+                Are you are a member of a professional organisation for contractors?
+              </h1>
+            </legend>
+           
+            <div class="govuk-radios" data-module="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contract" type="radio" value="Yes" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Name of professional organisation
+                  </label>
+                  <input class="govuk-input govuk-input--width-100" id="contracting-professional-organisation" name="contractingProfessionalOrganisation" type="text" value="{{ data['contractingProfessionalOrganisation'] }}"> 
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="contract" type="radio" value="No" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                
+              </div>
+              
+              
+              
+              
+            </div>
+          </fieldset>
+        </div>
+
+
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% set grantTotal = 0 %}
+{% set scoreTotal = 0 %}
+{% for item in data['selected-items'] %}
+  {% set grantTotal = grantTotal + item.grantTotal %}
+  {% set scoreTotal = scoreTotal + item.score %}
+{% endfor %}
+
+<p class="govuk-body">You have been awarded a grant of <strong>{{ grantTotal | currency }}</strong> for the items:</p>
+
+<!-- TABLE CONTENT -->
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Items summary</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Item</th>
+      <th scope="col" class="govuk-table__header">Code</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;">Quantity</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;">Grant amount</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    {% for item in data['selected-items'] %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">{{ item.title }}</td>
+        <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
+      </tr>
+    {% endfor %}
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell" style="text-align: right;"></td>
+      <td class="govuk-table__header" style="text-align: right;">{{ grantTotal | currency }}</td>
+    </tr>
+  </tbody>
+</table>

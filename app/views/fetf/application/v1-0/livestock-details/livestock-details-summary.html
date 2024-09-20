@@ -1,0 +1,118 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Livestock details summary {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+<a href="equipment-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Livestock details summary</h1>
+
+    <h2 class="govuk-heading-m" style="float: left;">Bovine animals</h2>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> bovine animal details</span></a>
+    </p>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Below 6 months
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          From 6 months to 2 years old
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Dairy cows
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Other cattle, over 2 years old
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m" style="float: left;">Other animals</h2>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> other animal details</span></a>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sheep and goats
+        </dt>
+        <dd class="govuk-summary-list__value">
+          2
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Pigs (breeding sows over 50kg)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Pigs (other)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Poultry (laying hens)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">County Parish Holding (CPH) number</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          County Parish Holding number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          08 / 123 / 4567
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> County Parish Holding number</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Help" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/ftf-help-triage" method="post">
+
+      
+
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+            {{ govukRadios({
+              name: "whatDoYouNeedHelpWith",
+              fieldset: {
+                legend: {
+                  text: "What do you need help with?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "general help",
+                  text: "General help"
+                },
+                {
+                  value: "report a problem",
+                  text: "Report a problem"
+                },
+                {
+                  value: "request a change to my Grant Funding Agreement",
+                  text: "Request a change to my Grant Funding Agreement"
+                }
+              ]
+            }) }}
+
+            {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+
+
+
+
+   
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}
+
+
+
+

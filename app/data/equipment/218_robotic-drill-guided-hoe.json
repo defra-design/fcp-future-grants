@@ -1,0 +1,21 @@
+{
+  "termName": "Robotic drill",
+  "sectionNumber": "218",
+  "itemCode": "218",
+  "title": "Robotic drill and guided hoe",
+  "summary": "Robotic drill and guided hoe that precisely places seed in the ground.",
+  "category": ["Resource and energy management"],
+  "grantValue": "37,539.60",
+  "grantPercentage": "60",
+  "averageValue": "62,566.00",
+  "score": 90,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a robotic drill and guided hoe",
+    "eligibleBullet02": "precisely place seed in the ground",
+    "eligibleBullet03": "mechanically weed between drilled rows",
+    "eligibleBullet04": "mechanically weed between plants in rows",
+    "eligibleBullet05": "be able to drill and hoe",
+    "eligibleBullet06": "be able to operate autonomously in the field without an operator (apart from refilling the seed hopper)"
+  }
+}

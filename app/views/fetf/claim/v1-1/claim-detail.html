@@ -1,0 +1,151 @@
+{% extends "layouts/main-claim-v1-1.html" %}
+
+
+{% block pageTitle %}
+Check claim details
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+}) }}
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="/fetf/claim/v1-1/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=01a">
+
+        <!-- <span class="govuk-caption-xl">Submit claim</span> -->
+        <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Do you want to submit a claim for all these items?</h1>
+
+      
+
+
+
+
+
+
+
+
+
+        
+        
+        <p class="govuk-body">These are the items on your grant funding agreement.</p>
+        
+        
+        
+        <!-- <span class="content-section">
+         
+        
+        
+        <p class="govuk-body">You can <a href="#">change or remove an item</a> if it's not available as long as your claim total is still between £1,000 and £50,000.</p>
+
+        <p class="govuk-body">You must make any changes before you submit this claim.</p>
+        <p class="govuk-body">You cannot add items.</p> -->
+        
+        <!-- TABLE CONTENT -->
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Items</th>
+              <th scope="col" class="govuk-table__header">Code</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Quantity</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Grant amount</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Bracken roller</td>
+                <td class="govuk-table__cell">FETF414</td>
+                <td class="govuk-table__cell" style="text-align: right;">3</td>
+                <td class="govuk-table__cell" style="text-align: right;">£2,608.20</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Grassland pasture aerator</td>
+                <td class="govuk-table__cell">FETF411</td>
+                <td class="govuk-table__cell" style="text-align: right;">1</td>
+                <td class="govuk-table__cell" style="text-align: right;">£1,749.00</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Variable rate controller for seed drills, sprayers and fertiliser spreaders</td>
+                <td class="govuk-table__cell">FETF50</td>
+                <td class="govuk-table__cell" style="text-align: right;">1</td>
+                <td class="govuk-table__cell" style="text-align: right;">£2,917.80</td>
+              </tr>
+
+              
+          
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell"><strong>Total</strong></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><strong>£7275.00</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <br>
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No, I need to change or remove items
+        </label>
+      </div>
+    
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+
+
+        
+        
+        
+        </span>
+        
+
+        {{govukButton({
+          text: "Save and continue"
+      })}}
+
+
+          {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+
+        </form>
+
+      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- SIDE COLUMN BLOCK -->
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

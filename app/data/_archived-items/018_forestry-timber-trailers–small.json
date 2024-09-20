@@ -1,0 +1,19 @@
+{
+  "termName": "Trailers small",
+  "sectionNumber": "018",
+  "title": "Forestry/timber trailers – small",
+  "summary": "Extract felled timber causing minimal disturbance to soil, flora and fauna.",
+  "category": ["Forestry"],
+  "value": "3,425.00",
+  "averageValue": "12,950.00",
+  "score": 60,
+  "description": {
+    "descriptionText01": "Forestry/timber trailers specifically designed for use in forests and woodland to extract felled timber causing minimal disturbance to soil, flora and fauna."
+  },
+  "eligibility": {
+    "eligibiltyBullet01": "Trailer must have a timber-carrying capacity of at least 2,000kg.",
+    "eligibiltyBullet02": "Trailer must have no floor or sides and be fitted with permanent headboard and permanent bolsters.",
+    "eligibiltyBullet03": "The vehicle must be fitted with low ground pressure tyres or automatic tyre inflation and deflation system.",
+    "eligibiltyBullet04": "Must be fitted with lights to be legal to use on public roads."
+  }
+}

@@ -1,0 +1,182 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Help" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+   
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+    {% set grantTotal = 0 %}
+    {% set scoreTotal = 0 %}
+    {% for item in data['selected-items'] %}
+      {% set grantTotal = grantTotal + item.grantTotal %}
+      {% set scoreTotal = scoreTotal + item.score %}
+    {% endfor %}
+
+    
+    {% if scoreTotal/data['selected-items'].length < 50 %}
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Your score is below the minimum threshold of 55, which makes you ineligiable",
+          href: "#"
+        }
+      ]
+    }) }}
+
+
+    {% elseif grantTotal > 35156 %}
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Your items are above the maximum grant amount of £50,000",
+            href: "#"
+          }
+        ]
+      }) }}
+   
+
+    {% elseif grantTotal >= 1 and grantTotal <= 1000 %}
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Your items do not meet the minimum grant amount of £1,000",
+            href: "#"
+          }
+        ]
+      }) }}
+    {% endif %}
+
+  
+  
+
+
+  
+
+   
+    <h1 class="govuk-heading-l">What do you want to change?</h1>
+    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
+<table class="govuk-table">
+
+
+  <caption class="govuk-table__caption govuk-table__caption--m add-hr" >Items summary</caption>
+  <thead class="govuk-table__head">
+    <tr class=".govuk-table-row-selected-item">
+      <th scope="col" class="govuk-table__header">Item</th>
+      <th scope="col" class="govuk-table__header"id="selected-item" >Code</th>
+      <th scope="col" class="govuk-table__header" id="selected-item">Quantity</th>
+      <th scope="col" class="govuk-table__header" id="selected-item" >Grant amount</th>
+      <th scope="col" class="govuk-table__header" id="selected-item" >Score</th>
+      <th scope="col" class="govuk-table__header" ></th>
+    </tr>
+  </thead>
+    <tbody class="govuk-table__body" >
+
+ <!-- Dummy row -->
+      
+      <tr class="govuk-table__row" id="selected-items__row">
+        <td class="govuk-table__cell add-item" id="selected-item-bold">Electronic tray filling machine</td>
+        <td class="govuk-table__cell add-code" id="selected-item" >FETF1</td>
+        <td class="govuk-table__cell add-quantity" id="selected-item">2&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+        <td class="govuk-table__cell add-grant" id="selected-item">£14,844.00</td>
+        <td class="govuk-table__cell add-score" id="selected-item">65</td>
+        <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+      </tr>
+<!-- End of dummy row -->
+
+
+
+
+
+
+
+      {% set grantTotal = 0 %}
+      {% set scoreTotal = 0 %}
+      {% for item in data['selected-items'] %}
+        {% set grantTotal = grantTotal + item.grantTotal  %}
+        {% set scoreTotal = scoreTotal + item.score %}
+        <tr class="govuk-table__row" id="selected-items__row">
+          <td class="govuk-table__cell add-item" id="selected-item-bold">{{ item.title }}</td>
+          <td class="govuk-table__cell add-code" id="selected-item" >FETF{{ item.itemCode }}</td>
+          <td class="govuk-table__cell add-quantity" id="selected-item">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+          <td class="govuk-table__cell add-grant" id="selected-item">{{ item.grantTotal | currency }}</td>
+          <td class="govuk-table__cell add-score" id="selected-item">{{ item.score }}</td>
+          <td class="govuk-table__cell"><a href="selected-items-no-errors.html" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+        </tr>
+      {% endfor %}
+      <tr class="govuk-table__row" id="selected-items__row">
+        <th scope="row" class="govuk-table__cell" id="mobile-hide"><strong>Total requested grant amount</strong></th>
+        <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> {{ (grantTotal + 14844) | currency }}</strong></td>
+        <td class="govuk-table__cell add-total-score" id="selected-item"><strong>{{ (scoreTotal + 65)/(data['selected-items'].length +1)}}</strong></td>
+      <td class="govuk-table__cell" id="mobile-hide"></td>
+      </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+ 
+
+
+
+
+
+
+  
+
+<div class="govuk-button-group">
+  <a class="govuk-button" href="upload-evidence" >
+    Apply for these items
+  </a>
+  <a class="govuk-button govuk-button--secondary" href="/fetf/change-request/equipment-list">
+    Select more items
+  </a>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</main>
+
+
+
+
+
+
+{% endblock %}

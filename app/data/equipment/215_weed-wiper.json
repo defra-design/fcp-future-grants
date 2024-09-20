@@ -1,0 +1,20 @@
+{
+  "termName": "Weed wiper",
+  "sectionNumber": "215",
+  "itemCode": "215",
+  "title": "Weed wiper 2.4m",
+  "summary": "Tool for selective application of herbicide with a minimum 2.4m working width.",
+  "category": ["Resource and energy management"],
+  "grantValue": "1,980.00",
+  "grantPercentage": "60",
+  "averageValue": "3,300.00",
+  "score": 54,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a weed wiper with a minimum 2.4m working width",
+    "eligibleBullet02": "be a trailed machine",
+    "eligibleBullet03": "have height adjustment",
+    "eligibleBullet04": "have a minimum of one rotating application roller made of carpet, brush or absorbent pad",
+    "eligibleBullet05": "have an electric pump and pump control to regulate herbicide application"
+  }
+}

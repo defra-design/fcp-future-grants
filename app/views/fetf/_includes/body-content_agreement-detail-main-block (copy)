@@ -1,0 +1,73 @@
+<p class="govuk-body-l">Your application for the Farming Equipment and Technology Fund (FETF) Productivity and Slurry 2023 grant has been approved.</p>
+
+<span class="content-section">
+<p class="govuk-body">You have been awarded a grant of <strong>£20,000.00</strong> for the items:</p>
+
+<!-- TABLE CONTENT -->
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Item(s)</th>
+      <th scope="col" class="govuk-table__header">Code</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Quantity</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Grant amount</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Paper pot transplanter</td>
+      <td class="govuk-table__cell">FETF4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£2,000.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Salad leaf harvester</td>
+      <td class="govuk-table__cell">FETF8</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£8,000.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Harvesting head</td>
+      <td class="govuk-table__cell">FETF13</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£3,000.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Slurry separators</td>
+      <td class="govuk-table__cell">FETF27</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£6,000.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Trailing shoe slurry system over 8m</td>
+      <td class="govuk-table__cell">FETF37</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£1,500.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">GPS light bar</td>
+      <td class="govuk-table__cell">FETF46</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£1,500.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell"><strong>Total</strong></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><strong>£20,000.00</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p class="govuk-body">The approval is based on the details in your application and is subject to:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the declaration statements you signed in your application</li>
+  <li>fund-specific conditions of the grant</li>
+  <li>terms and conditions</li>
+</ul>
+
+<p class="govuk-body">If you accept this grant funding agreement (‘the Agreement’), you agree to buy all the items listed in your application (the ‘items’). You must pay for the items in full (this means the funds must have left your bank account), and they must be installed and operational.</p>
+
+</span>

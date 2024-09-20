@@ -1,0 +1,61 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+{{ data['fetf-grant-type'] }}
+{% endblock %}
+
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% include "../../_includes/sub-header_business-applicant-details.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+
+<span class="govuk-caption-xl">{{ data['fetf-grant-type'] }}
+  {% if (data['fetf-status'] == "01c") or (data['fetf-status'] == "01d") or (data['fetf-status'] == "02") or (data['fetf-status'] == "03") %} ({{ data['fetf-project-reference'] }}){% endif %}
+</span>
+<h1 class="govuk-heading-xl">{{ data['fetf-grant-title'] }}</h1>
+
+
+<span class="content-section">
+{% include "../../_includes/activity-list_status-block.html" %}
+</span>
+
+
+<ol class="govuk-prototype-kit-task-list">
+  {% include "../../_includes/activity-list_task-section_apply.html" %}
+  {% include "../../_includes/activity-list_task-section_agreement.html" %}
+  {% include "../../_includes/activity-list_task-section_claim.html" %}
+</ol>
+
+{% if (data['fetf-status'] == "01c") or (data['fetf-status'] == "02") or (data['fetf-status'] == "03") %}
+<p class="govuk-body withdraw-link"><a href="../../../_common/not-testing">Withdraw grant application</a></p>
+{% endif %}
+
+
+<br><br>
+
+<div class="app-contact-panel">
+  <h2 class="app-contact-panel__heading">Need help?</h2>
+  <p class="govuk-body app-contact-panel__body">
+    <a class="govuk-link" href="/fetf/change-request/help-triage">Contact the team</a> if you need help, want to report a problem or want to make a change to your Grant Funding Agreement.
+  </p>
+</div>
+
+</div>
+
+</div>
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{
+  "termName": "Remote soil",
+  "sectionNumber": "213",
+  "itemCode": "213",
+  "title": "Remote soil moisture sensing",
+  "summary": "Remotely measure soil moisture at depths of up to 200mm.",
+  "category": ["Water and irrigation management"],
+  "grantValue": "477.60",
+  "grantPercentage": "60",
+  "averageValue": "796.00",
+  "score": 56,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "remotely measure soil moisture at depths of up to 200mm",
+    "eligibleBullet02": "have an accuracy of at least ± 0.03m3/m3",
+    "eligibleBullet03": "be designed for outside use",
+    "eligibleBullet04": "be easily inserted and removed from the soil",
+    "eligibleBullet05": "have a remote communication system such as bluetooth to connect with a networked base station or mobile phone",
+    "eligibleText01": "Subscriptions or software are not eligible."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "termName": "Ram pumps",
+  "sectionNumber": "024",
+  "itemCode": "24",
+  "title": "Hydraulic ram pumps – water",
+  "summary": "Hydraulic ram pump using hydraulic pressure to raise clean water.",
+  "category": ["Livestock"],
+  "grantValue": "2,620.80",
+  "grantPercentage": "60",
+  "averageValue": "4,368.00",
+  "score": 53,
+  "eligible": {
+    "eligibleBullet01": "be a hydraulic ram pump",
+    "eligibleBullet02": "use hydraulic pressure to raise clean water - systems using electric pumps are not eligible",
+    "eligibleBullet03": "have a 20L per minute flow at a 3m head",
+    "eligibleBullet04": "have a lift of minimum 10m",
+    "eligibleBullet05": "have a ram pump",
+    "eligibleBullet06": "have a sediment chamber",
+    "eligibleBullet07": "have a pump chamber",
+    "eligibleBullet08": "have a drive pipe",
+    "eligibleBullet09": "have a return pipe",
+    "eligibleBullet10": "have a header tank with minimum 5000L capacity"
+  }
+}

@@ -1,0 +1,80 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Items details summary {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+ 
+    
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="equipment-summary" method="post">
+      
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Livestock items</h1>
+      <p class="govuk-body">Because you selected livestock items, we need to verify your livestock information.</p>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="bovine-animals">
+            Total number of animals
+          </label>
+        </h2>
+        <input class="govuk-input govuk-input--width-10" id="bovine-animals" name="bovineAnimals" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+<br><br><br>
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="account-number">
+            County parish holding number
+          </label>
+        </h2>
+        <div id="account-number-hint" class="govuk-hint">
+          Enter the county parish holding (CPH) number where you record animal movements (for example 08/123/4567)
+        </div>
+        <div class="govuk-form-group">
+        
+          <input class="govuk-input govuk-input--width-2" id="account-number" name="accountNumber1" type="text">
+        / 
+       
+          
+          <input class="govuk-input govuk-input--width-3" id="account-number" name="accountNumber2" type="text">
+        /
+       
+          
+          <input class="govuk-input govuk-input--width-4" id="account-number" name="accountNumber3" type="text">
+        </div>
+
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

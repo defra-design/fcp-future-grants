@@ -1,0 +1,457 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+  Task list – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Claim for a FETF Grant</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        Upload claim evidence
+      </h1>
+
+      <div class="govuk-inset-text">
+        The RPA aims to pay complete claims within 30 days.
+      </div>
+
+      <h2 class="govuk-heading-l" style="margin-bottom: 20px;">
+        Claim evidence
+      </h2>
+
+      <p class="govuk-body">Add supporting evidence for the items you wish to claim.</p>
+
+      <br>
+
+      <p class="govuk-body"><strong>Item description</strong></p>
+
+ 
+
+
+      <ol class="govuk-prototype-kit-task-list">
+        
+        <li style="list-style: none; margin: 0; padding: 0;">
+          <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
+           
+          {% if (data['upload'] == "01-no") %}
+
+          
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+
+            {% elif (data['fetf-claim-upload'] == "01a") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+
+
+            {% elif (data['fetf-claim-upload'] == "02") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+
+
+
+            {% elif (data['fetf-claim-upload'] == "03") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+
+            {% elif (data['fetf-claim-upload'] == "04") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+
+            {% elif (data['fetf-claim-upload'] == "05") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Not yet started
+            </div>
+            </li>
+
+
+            {% elif (data['fetf-claim-upload'] == "06") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="paper-pot?fetf-claim-item-sn=yes" aria-describedby="application-details-2-status">Paper pot transplanter</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Salad leaf harvester</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Harvesting head</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Slurry separators</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">GPS light bar</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                Completed
+            </div>
+            </li>
+
+            {% endif %}
+
+
+
+          </ul>
+      </ol>
+
+
+      <a href="/ftf/application/v3-0/letters/upload10?10=complete">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+  {% include "../../_includes/details-block_claim-questions-contact.html" %}
+
+  <br><br>
+
+    </div>
+  </div>
+
+</main>
+
+
+
+{% endblock %}

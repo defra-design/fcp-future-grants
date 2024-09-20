@@ -1,0 +1,164 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %}
+Upload2
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Salad leaf harvester (FETF8)</span>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        What is the serial number for this item?
+      </h1>
+
+      
+
+
+   
+
+
+
+
+<script>
+function showFilesAddedSection() {
+  const filesAddedContainer = document.getElementById('filesAddedContainer');
+  filesAddedContainer.style.display = 'block';
+}
+
+function showVisualEvidenceSection() {
+  const visualEvidenceContainer = document.getElementById('visualEvidenceContainer');
+  visualEvidenceContainer.style.display = 'block';
+}
+</script>
+
+
+
+<body>
+
+
+
+
+  <p class="govuk-body">Explain here what is required.</p>
+  <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
+
+
+  <div id="filesAddedContainer" style="display: none;">
+      <p class="govuk-label govuk-label--s">Files added</p><br>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link" style="margin-bottom: 0;">Invoice 1.pdf</a>, 3MB</p>
+          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Remove</a></p>
+      </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link" style="margin-bottom: 0;">Invoice 2.pdf</a>, 3MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Remove</a></p>
+    </div>
+      <hr style="margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link" style="margin-bottom: 0;">Invoice 3.pdf</a>, 3MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Remove</a></p>
+    </div>
+      <hr style="margin: 20px 0;">
+      <br>
+  </div>
+
+  <p class="govuk-label govuk-label--s">Upload a file</p>
+  <div class="container">
+      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
+  </div>
+</div>
+</div>
+<br><br>
+
+<br><br><br>
+
+
+
+
+
+
+
+
+     <a href="salad-visual">
+        <button class="govuk-button">
+          Save and continue
+        </button>
+      </a>
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
+
+
+
+
+
+
