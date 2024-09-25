@@ -20,13 +20,32 @@
 <main class="govuk-main-wrapper">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      {% if data.grantTotal %}
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Your basket
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading"></p>
+      <p>
+<strong>Requesetd grant total</strong>: {{ data.grantTotal | currency }} of maximum £50,000<br><strong>Item quantity</strong>: {{ data.itemTotal }} <span class="govuk-!-margin-left-3"><strong>Item score</strong></span>: {{ data.scoreTotal }} </p>
+<p>
+      
+      <a class="govuk-notification-banner__link" href="selected-items">View your current items</a>.
+    </p>
+  </div>
+</div>
+      {% endif  %}
       <span class="govuk-caption-l">Apply</span>
-      <h1 class="govuk-heading-l" style="margin-bottom:30px;">Select items</h1>
+
+      <h1 class="govuk-heading-l" style="margin-bottom:30px;">Select {% if data.grantTotal %}more {% endif  %}items</h1>
 
 
  
 
-      <p>The filters you have applied are: <strong>{{ data['category'] }}</strong> <span class="govuk-!-margin-left-4"><a href="which-item-types">Change filters</a></p>
+      <p><strong>Your applied filters</strong>: {{ data['category'] }} <span class="govuk-!-margin-left-4"><a href="which-item-types">Change filters</a></p>
       <div class="govuk-inset-text">
         The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.
       </div>
