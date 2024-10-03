@@ -5,7 +5,11 @@
 
 {% block beforeContent %}
 {% include "../../_includes/phase-banner_alpha.html" %}
-  <a href="equipment-list" class="govuk-back-link">Back</a>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
   <!-- <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">

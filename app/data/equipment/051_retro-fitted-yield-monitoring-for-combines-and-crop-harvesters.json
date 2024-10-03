@@ -1,0 +1,39 @@
+{
+  "termName": "Yield monitoring",
+  "sectionNumber": "051",
+  "itemCode": "51",
+  "title": "Retro fitted yield monitoring for combines and crop harvesters",
+  "summary": "A retro fitted yield monitoring sysem for combines and crop harvesters",
+  "category": ["Arable"],
+  "grantValue": "1,840.80",
+  "grantPercentage": "60",
+  "averageValue": "3,068.00",
+  "score": 59,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a retrofitted yield monitoring for combines and crop harvesters",
+    "eligibleBullet02": "be fitted to the combine or crop harvester (including forage harvester)",
+    "eligibleBullet03": "monitor crop yield during harvest",
+    "eligibleBullet04": "provide information on harvesting rate, with total and partial area (field) yield of crop",
+    "eligibleBullet05": "have a yield sensor for combine or forage harvestert",
+    "eligibleBullet06": "have an in-cab display or ISOBUS connection and software for downloading data to your computer"
+  },
+  "notEligible": {
+    "notEligibleBullet01": "software or activation codes for existing sensors and displays",
+    "notEligibleBullet02": "purchase of in-cab displays and software only"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+{
+  "termName": "Forestry grab",
+  "sectionNumber": "016",
+  "itemCode": "16",
+  "title": "Forestry grab or grapple",
+  "summary": "A forestry grab or grapple able to hold trees and logs up to 900mm in diameter",
+  "category": ["Forestry"],
+  "grantValue": "1,295.00",
+  "grantPercentage": "50",
+  "averageValue": "2,590.00",
+  "score": 45,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a forestry grab or grapple",
+    "eligibleBullet02": "be designed for handling felled trees",
+    "eligibleBullet03": "safely pick up and hold trees and saw logs up to 900mm in diameter",
+    "eligibleBullet04": "open to at least 1.3m when fully opened"
+  }
+}

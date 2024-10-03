@@ -13,6 +13,12 @@
 
 {% block content %}
 
+
+
+{% set data = allData %}
+
+
+<form action="/itemSearch1" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -28,7 +34,16 @@
     Search for the item
       </h1>
     </legend>
-    <input class="govuk-input" id="event-name" name="eventName" type="text">
+    <div class="govuk-form-group">
+<p>start typing in the search box and we will list the closest match
+  <select class="govuk-select" id="country" name="fetfNo"
+    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+    <option value="" selected disabled>Select an option</option>
+    {% for item in data %}
+      <option value="{{ item.itemCode }}">{{ item.title }} (FETF{{ item.itemCode }})</option>
+    {% endfor %}
+  </select>
+</div>
   </fieldset>
 </div>
           

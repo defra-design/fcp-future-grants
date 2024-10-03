@@ -1,0 +1,20 @@
+{
+  "termName": "Harvesting heads",
+  "sectionNumber": "406",
+  "itemCode": "406",
+  "title": "Harvesting head (small)",
+  "summary": "A harvesting head able to fell and cut trees of at least 200mm in diameter",
+  "category": ["Forestry"],
+  "grantValue": "25,200.00",
+  "grantPercentage": "60",
+  "averageValue": "42,000.00",
+  "score": 58,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a harvesting head",
+    "eligibleBullet02": "be able to fell and de-limb",
+    "eligibleBullet03": "be able to cut timber to required lengths",
+    "eligibleBullet04": "fell and cut trees of at least 200mm in diameter",
+    "eligibleBullet05": "have a feed speed of at least 2m per second"
+  }
+}

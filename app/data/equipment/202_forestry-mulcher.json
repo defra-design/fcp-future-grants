@@ -1,0 +1,23 @@
+{
+  "termName": "Forestry mulcher",
+  "sectionNumber": "202",
+  "itemCode": "202",
+  "title": "Forestry mulcher",
+  "summary": "A PTO or hydraulically powered forestry mulcher, capable of shredding branches up to 7.5cm in diameter",
+  "category": ["Forestry"],
+  "grantValue": "6,738.60",
+  "grantPercentage": "60",
+  "averageValue": "11,231.00",
+  "score": 56,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a forestry mulcher",
+    "eligibleBullet02": "be tractor or skid steer mounted",
+    "eligibleBullet03": "be PTO or hydraulically powered",
+    "eligibleBullet04": "shred branches up to 7.5cm in diameter",
+    "eligibleBullet05": "shred material down to 25mm below ground",
+    "eligibleBullet06": "have a minimum 1.8m working width",
+    "eligibleText01": "Grass flail mowers are not eligible.",
+    "eligibleText02": "For an alternative mulcher, see item FETF200P - Tractor mounted flail mulcher for orchards and vineyards."
+  }
+}

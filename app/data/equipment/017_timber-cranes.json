@@ -1,0 +1,24 @@
+{
+  "termName": "Timber cranes",
+  "sectionNumber": "017",
+  "itemCode": "17",
+  "title": "Timber cranes",
+  "summary": "A timber crane, designed for extracting timber from woodland, and either cab or timber trailer mounted",
+  "category": ["Forestry"],
+  "grantValue": "7,100.00",
+  "grantPercentage": "50",
+  "averageValue": "14,200.00",
+  "score": 50,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a timber crane",
+    "eligibleBullet02": "be either cab mounted, mountable using 3-point linkage to a tractor, or fit on to a timber trailer",
+    "eligibleBullet03": "be designed for extracting timber from woodland",
+    "eligibleBullet04": "be fitted to existing tractors or forestry trailers",
+    "eligibleBullet05": "have a reach of at least 6m",
+    "eligibleBullet06": "have a lift capacity of at least 500kg at 6m reach",
+    "eligibleBullet07": "have a rotator, and grab and valve block",
+    "eligibleText01": "Other forms of cranes are not eligible under this item.",
+    "eligibleText02": "You must not apply for this item if you’re applying for a forwarder where the crane is included."
+  }
+}

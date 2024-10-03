@@ -1,0 +1,19 @@
+{
+  "termName": "InterRow weeder",
+  "sectionNumber": "005",
+  "itemCode": "5",
+  "title": "Inter row weeders 1.8m",
+  "summary": "An Inter row weeder that can automatically distinguish between the crop plants and weeds in the crop row.",
+  "category": ["Horticulture"],
+  "grantValue": "36,208.80",
+  "grantPercentage": "60",
+  "averageValue": "60,348.00",
+  "score": 88,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be an inter row weeder",
+    "eligibleBullet02": "automatically distinguish between the crop plants and weeds in the crop row using camera recognition",
+    "eligibleBullet03": "remove weeds from between the individual plants in the crop row, not just between crop rows",
+    "eligibleBullet04": "have a minimum 1.8m working width"
+  }
+}

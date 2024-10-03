@@ -1,0 +1,35 @@
+{
+  "termName": "Weed reduction",
+  "sectionNumber": "410",
+  "itemCode": "410",
+  "title": "Combine mounted weed seed reduction system",
+  "summary": "A combine mounted weed seed reduction system which processes weed seeds in the chaff to make them unviable",
+  "category": ["Arable"],
+  "grantValue": "35,548.80",
+  "grantPercentage": "60",
+  "averageValue": "59,248.00",
+  "score": 70,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a combine mounted weed seed reduction system",
+    "eligibleBullet02": "be mounted on the combine",
+    "eligibleBullet03": "process weed seeds in the chaff to make them unviable",
+    "eligibleBullet04": "use milling, grinding, smashing or cracking of the weed seeds to make them unviable",
+    "eligibleBullet05": "able to be retrofitted to combines"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

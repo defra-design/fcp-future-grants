@@ -1,0 +1,33 @@
+{
+  "termName": "Stubble rake6",
+  "sectionNumber": "208",
+  "itemCode": "208",
+  "title": "Tractor mounted stubble rake 6m",
+  "summary": "A tractor mounted stubble rake with 6m working width",
+  "category": ["Arable"],
+  "grantValue": "8,400.00",
+  "grantPercentage": "50",
+  "averageValue": "16,800.00",
+  "score": 61,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a tractor mounted stubble rake",
+    "eligibleBullet02": "have a minimum 6m working width",
+    "eligibleBullet03": "have tines to agitate the soil surface and spread crop residues evenly across the field",
+    "eligibleBullet04": "break up damp mats of straw"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
