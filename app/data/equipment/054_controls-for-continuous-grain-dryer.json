@@ -1,0 +1,33 @@
+{
+  "termName": "Controls dryer",
+  "sectionNumber": "054",
+  "itemCode": "54",
+  "title": "Controls for continuous grain dryer",
+  "summary": "Controls to continuously monitor and analyse the grain dryers, controlled remotely using a mobile phone or tablet",
+  "category": ["Arable"],
+  "grantValue": " 2,945.80",
+  "grantPercentage": "50",
+  "averageValue": " 5,890.00",
+  "score": 50,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be controls for a continuous grain dryer",
+    "eligibleBullet02": "continuously monitor and analyse the grain dryer",
+    "eligibleBullet03": "send the information to a mobile phone or tablet",
+    "eligibleBullet04": "be accessed and controlled remotely using a mobile phone or tablet"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

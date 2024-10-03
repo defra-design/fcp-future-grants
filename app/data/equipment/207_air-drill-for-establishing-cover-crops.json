@@ -1,0 +1,37 @@
+{
+  "termName": "Air drill",
+  "sectionNumber": "207",
+  "itemCode": "207",
+  "title": "Air drill for establishing cover crops",
+  "summary": "a pneumatic (air) drill designed to be mounted on existing drills.",
+  "category": ["Arable"],
+  "grantValue": "1,890.00",
+  "grantPercentage": "60",
+  "averageValue": "3,150.00",
+  "score": 68,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a pneumatic (air) drill",
+    "eligibleBullet02": "be designed to be mounted on existing drills or soil tillage equipment",
+    "eligibleBullet03": "have electronic metering",
+    "eligibleBullet04": "be able to drill small cover crop seeds",
+    "eligibleBullet05": "use either pipes, coulters or spreader plates to place the seed",
+    "eligibleBullet06": "have a minimum 3m drilling width",
+    "eligibleBullet07": "have a seed hopper with a minimum 300L capacity"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
