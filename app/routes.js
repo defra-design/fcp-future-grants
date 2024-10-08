@@ -709,7 +709,7 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
 router.get('/moreItems1', function (req, res) {
 
   if (req.session.data.addAnother === 'Yes') {
-    res.redirect('/fetf/rewrite/select-items/which-item-types');
+    res.redirect('/fetf/rewrite/select-items/item-search-or-list');
     }
   else 
     if (req.session.data.grantTotal > 25000){
