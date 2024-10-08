@@ -1,0 +1,22 @@
+{
+  "termName": "Aircurtain burner",
+  "sectionNumber": "407",
+  "itemCode": "407",
+  "title": "Mobile air curtain burner for use in forestry",
+  "summary": "A harvesting head able to fell and cut trees of at least 200mm in diameter",
+  "category": ["Forestry"],
+  "grantValue": "40,800.00",
+  "grantPercentage": "60",
+  "averageValue": "68,000.00",
+  "score": 57,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a be mobile air curtain burner for use in forestry",
+    "eligibleBullet02": "have a a capacity of at least 15m3",
+    "eligibleBullet03": "deliver controlled burning at 1000°C",
+    "eligibleBullet04": "have segmented ceramic liner panels",
+    "eligibleBullet05": "have a high velocity airflow over the top of the burning chamber",
+    "eligibleText01": "Items that use fossil fuel in the combustion process are not eligible.",
+    "eligibleText02": "This item is only available to forestry owners and forestry contractors."    
+  }
+}

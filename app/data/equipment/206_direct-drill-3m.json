@@ -1,0 +1,49 @@
+{
+  "termName": "Direct dril3",
+  "sectionNumber": "206",
+  "itemCode": "206",
+  "title": "Direct drill with fertiliser placement 3m",
+  "summary": "Seed drill with fertiliser placement and a 3m drilling width.",
+  "category": ["Arable"],
+  "grantValue": "40,800.00",
+  "grantPercentage": "60",
+  "averageValue": "68,000.00",
+  "score": 68,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a direct drill with fertiliser placement",
+    "eligibleBullet02": "use either tines or discs to produce the seeding slot",
+    "eligibleBullet03": "have a 2.9m minimum drilling width",
+    "eligibleBullet04": "have no cultivation or seed bed preparation equipment in front of the seeding slot mechanism except where part of the fertiliser placement.",
+    "eligibleBullet05": "place the seed in the seeding slot",
+    "eligibleBullet06": "place the fertiliser below or to the side of the seed in the seeding slot",
+    "eligibleBullet07": "drill through an established growing cover crop of at least 15cm",
+    "eligibleBullet08": "have separate seed and fertiliser hoppers",
+    "eligibleBullet09": "have precision metering",
+    "eligibleBullet10": "drill the full range of arable and cover crops including cereals"
+  },
+  "notEligible": {
+    "notEligibleBullet01": "drills with cultivation or seed bed preparation equipment in front of the seeding slot, unless this is part of the fertiliser placement equipment",
+    "notEligibleBullet02": "drills that broadcast fertiliser on the surface rather than place the fertiliser in the soil below or to the side of the seed",
+    "notEligibleBullet03": "cultivators with over-seeders",
+    "notEligibleBullet04": "cultivators with broadcasters",
+    "notEligibleBullet05": "minimum till drills",
+    "notEligibleBullet06": "strip till drills",
+    "notEligibleBullet07": "grassland over-seeders",
+    "notEligibleBullet08": "grassland broadcasters"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

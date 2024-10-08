@@ -1,0 +1,21 @@
+{
+  "termName": "Forestry mounder",
+  "sectionNumber": "011",
+  "itemCode": "11",
+  "title": "Forestry mounder to aid tree planting",
+  "summary": "A forestry mounder able produce a discontinuous mounding with no more than 1m of bare soil before a break of 1m",
+  "category": ["Forestry"],
+  "grantValue": "18,420.00",
+  "grantPercentage": "60",
+  "averageValue": "30,700.00",
+  "score": 59,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a forestry mounder",
+    "eligibleBullet02": "be able to fell and de-limb",
+    "eligibleBullet03": "produce a discontinuous mounding with no more than 1m of bare soil before a break of 1m to reduce risk of run off",
+    "eligibleBullet04": "create a bare area on the mound to allow direct planting into bare ground",
+    "eligibleBullet05": "fully invert the soil to bury surface vegetation",
+    "eligibleText01": "Forestry mulchers are not eligible under this item."
+  }
+}

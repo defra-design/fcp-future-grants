@@ -1,0 +1,20 @@
+{
+  "termName": "Selfpropelled forwarders",
+  "sectionNumber": "012",
+  "itemCode": "12",
+  "title": "Smaller self-propelled forwarders",
+  "summary": "A smaller self-propelled forwarder with an enclosed cab and a payload of at least 2 tonnes",
+  "category": ["Forestry"],
+  "grantValue": "30,583.50",
+  "grantPercentage": "50",
+  "averageValue": "61,167.00",
+  "score": 54,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a smaller self-propelled forwarder",
+    "eligibleBullet02": "have an enclosed cab for roll over protection, operator protection and falling object protection",
+    "eligibleBullet03": "have a payload of at least 2 tonnes and maximum of 6 tonnes",
+    "eligibleBullet04": "have low ground pressure tyres",
+    "eligibleBullet05": "have a crane with a reach of at least 3.5m and a lift capacity of at least 300kg at 3.5m reach"
+  }
+}

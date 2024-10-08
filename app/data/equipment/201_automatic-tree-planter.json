@@ -1,0 +1,18 @@
+{
+  "termName": "Automatic planter",
+  "sectionNumber": "201",
+  "itemCode": "201",
+  "title": "Automatic tree planter",
+  "summary": "An excavator mountable, all in one automatic tree planter",
+  "category": ["Forestry"],
+  "grantValue": "35,597.40",
+  "grantPercentage": "60",
+  "averageValue": "59,329.00",
+  "score": 58,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be an automatic tree planter",
+    "eligibleBullet02": "be excavator mountable",
+    "eligibleBullet03": "prepare a planting hole, insert a small tree, and water it in one operation"
+  }
+}

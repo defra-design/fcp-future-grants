@@ -36,9 +36,11 @@
     <tbody class="govuk-table__body" >
       {% set grantTotal = 0 %}
       {% set scoreTotal = 0 %}
+      {% set itemTotal = 0 %}
       {% for item in data['selected-items'] %}
         {% set grantTotal = grantTotal + item.grantTotal %}
         {% set scoreTotal = scoreTotal + item.score %}
+        {% set itemTotal = itemTotal + item.quantity %}
         <tr class="govuk-table__row" id="selected-items__row">
           <td class="govuk-table__cell add-item" id="selected-item-bold">{{ item.title }}</td>
           <td class="govuk-table__cell add-code" id="selected-item" >{{ item.itemCode }}</td>
@@ -54,8 +56,8 @@
         <td class="govuk-table__cell" id="mobile-hide"></td>
         <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> {{ grantTotal | currency }}</strong><input type="hidden" name="grantTotal" value="{{ grantTotal }}"></td>
 
-        <td class="govuk-table__cell add-total-score" id="selected-item"><strong>{{ scoreTotal/data['selected-items'].length}}</strong></td>
-      <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell add-total-score" id="selected-item"><strong>{{ scoreTotal/data['selected-items'].length}}</strong><input type="hidden" name="scoreTotal" value="{{ scoreTotal/data['selected-items'].length }}"></td>
+      <td class="govuk-table__cell" id="mobile-hide"><input type="hidden" name="itemTotal" value="{{ itemTotal }}"></td>
       </tr>
     </tbody>
 </table>

@@ -1,0 +1,27 @@
+{
+  "termName": "Companion drill6",
+  "sectionNumber": "210",
+  "itemCode": "210",
+  "title": "Inter row companion drills 6m",
+  "summary": "Inter row companion drill which uses either tines or discs to produce the seeding slot.",
+  "category": ["Arable"],
+  "grantValue": "13,335.00",
+  "grantPercentage": "60",
+  "averageValue": "22,225.00",
+  "score": 66,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be an inter row companion drill",
+    "eligibleBullet02": "use either tines or discs to produce the seeding slot",
+    "eligibleBullet03": "have a drilling width of at least 5.9m",
+    "eligibleBullet05": "place the seed in the seeding slot",
+    "eligibleBullet06": "drill between the rows of an established growing crop",
+    "eligibleBullet07": "be able to vary widths between coulters",
+    "eligibleBullet08": "have minimum inter row spacing between coulters of 45cm",
+    "eligibleBullet09": "drill the full range of arable and cover crops including cereals"
+  },
+  "notEligible": {
+    "notEligibleBullet01": "drills that use broadcasting or over seeding to place the seed in the seed bed",
+    "notEligibleBullet02": "drills with cultivation or seed bed preparation equipment in front of the seeding slot"
+  }
+}

@@ -15,6 +15,7 @@ function getData() {
                 const json = JSON.parse(file)
                 json.filename = filename
                 data.push(json)
+                console.log('Can\'t read file: ',filename)
             } catch(err) {
                 console.log('Can\'t read file: ',filename)
             }

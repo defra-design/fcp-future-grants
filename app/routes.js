@@ -616,7 +616,12 @@ router.get('/checkTaskComplete1', function (req, res) {
 
 router.post('/searchFindItems1', function(req, res) {
   if (req.session.data.searchFind === 'Yes'){
-      res.redirect("/fetf/rewrite/select-items/item-search")
+      const sortedData = _.sortBy(data, 'principleTitle')
+      const groupedData = _.groupBy(sortedData, 'sectionNumber')
+      const allData = _.sortBy(data, 'sectionNumber')
+      // console.log(allData)
+
+      res.render('/fetf/rewrite/select-items/item-search', { groupedData, sortedData, allData });
   } else {
       res.redirect("/fetf/rewrite/select-items/which-item-types")
   }
@@ -672,6 +677,8 @@ router.get('/fetf/rewrite/select-items/items/:termName', (req, res) => {
     const { termName } = req.params
     const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
     res.render('fetf/rewrite/select-items/equipment.html', { item })
+    console.log(item)
+    console.log(termName)
 })
 
 
@@ -713,6 +720,54 @@ router.get('/moreItems1', function (req, res) {
 
 });
 
+router.post('/itemSearch1', (req, res) => {
+  if (req.session.data.clearFilters == "true") {
+    req.session.data.section = ""
+    req.session.data.role = ""
+    req.session.data.disciplines = ""
+    req.session.data.filteredResults = ""
+    req.session.data.clearFilters = ""
+  } else {
+
+  console.log('success test')
+  
+  const allData = _.sortBy(data, 'sectionNumber')
+  console.log(data.length)
+  // console.log(allData)
+
+  // let filteredResults = ''
+  // console.log(filteredResults)
+
+//filters
+let itemNumber = req.session.data.fetfNo
+
+//set global scope of filtered results
+let filteredResults = [];
+
+//loop through each of the objects
+for (i of allData) {
+  // console.log(i.disciplines);
+  //if the object contains a matching value from the filter then add it to the filtered results array
+
+  if (typeof itemNumber === 'undefined') {
+    itemNumber= ""
+ }  
+     console.log(itemNumber)
+    console.log(i.itemCode)
+  if (i.itemCode === itemNumber) {
+    filteredResults.push(i);
+  }
+}
+
+console.log(itemNumber);
+  
+  req.session.data.filteredResults = filteredResults
+  
+}
+  res.redirect('/fetf/rewrite/select-items/equipment-list') 
+})
+
+
 // About FETF items
 
 
@@ -735,6 +790,8 @@ if (req.session.data.addAnotherFin === 'Yes') {
   res.redirect('/fetf/rewrite/task-list');
 
 });
+
+
 
 
 
@@ -956,4 +1013,6 @@ router.post('/fetf/claim/v1-1/item2/check-statement2-answer', function(request, 
   
   
 })
+
+
 

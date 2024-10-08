@@ -1,0 +1,22 @@
+{
+  "termName": "Harvesting headb",
+  "sectionNumber": "408",
+  "itemCode": "408",
+  "title": "Harvesting head with bark stripping",
+  "summary": "A harvesting head with bark stripping, able to fell, de-limb and cut timber to required lengths",
+  "category": ["Forestry"],
+  "grantValue": "49,980.00",
+  "grantPercentage": "60",
+  "averageValue": "83,300.00",
+  "score": 70,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a harvesting head with bark stripping",
+    "eligibleBullet02": "be able to fell and de-limb",
+    "eligibleBullet03": "be able to cut timber to required lengths",
+    "eligibleBullet04": "shear cut trees of at least 300mm in diameter",
+    "eligibleBullet05": "remove all the bark from the trunk during delimbing",
+    "eligibleBullet06": "fell and cut trees of minimum 150mm in diameter",
+    "eligibleBullet07": "have a feed speed of at least 2m per second"
+  }
+}

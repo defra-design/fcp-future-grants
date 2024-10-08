@@ -1,0 +1,24 @@
+{
+  "termName": "Timber winches",
+  "sectionNumber": "020",
+  "itemCode": "20",
+  "title": "Timber winches",
+  "summary": "A remotely controllable, tractor or forwarder mountable, timber winch",
+  "category": ["Forestry"],
+  "grantValue": "4,250.50",
+  "grantPercentage": "50",
+  "averageValue": "8,501.00",
+  "score": 41,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a timber winch",
+    "eligibleBullet02": "be either tractor or forwarder mountable",
+    "eligibleBullet03": "have no floor or sides",
+    "eligibleBullet04": "have automatic safety braking",
+    "eligibleBullet05": "be controllable remotely using an electric cable or radio control device",
+    "eligibleBullet06": "have a pulling force of 65kN or more",
+    "eligibleBullet07": "come with at least 9m of wire rope",
+    "eligibleBullet08": "have a logging plate",
+    "eligibleBullet09": "have a protection guard to protect driver when seated in tractor cab"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "termName": "Grain stirrers",
+  "sectionNumber": "055",
+  "itemCode": "55",
+  "title": "Grain stirrers",
+  "summary": "A grain stirrer installed in a flat store.",
+  "category": ["Arable"],
+  "grantValue": "10,842.50",
+  "grantPercentage": "50",
+  "averageValue": "21,685.00",
+  "score": 40,
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "be a grain stirrer",
+    "eligibleBullet02": "be installed in a flat store, not a bin",
+    "eligibleBullet03": "move automatically across the store on a gantry"
+  }
+}
+
+
+
+
+
+
+
