@@ -731,6 +731,7 @@ router.get('/removeItems1/:itemCode', (req, res) => {
     res.redirect("/fetf/rewrite/select-items/item-search-or-list");
 })
 
+
 router.post('/itemSearch1', (req, res) => {
   if (req.session.data.clearFilters == "true") {
     req.session.data.section = ""
@@ -771,6 +772,7 @@ for (i of allData) {
 }
 
 console.log(filteredResults);
+
   
   req.session.data.filteredResults = filteredResults
   
