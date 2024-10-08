@@ -47,9 +47,11 @@
           <td class="govuk-table__cell add-quantity" id="selected-item">{{ item.quantity }}&nbsp;&nbsp;</td>
           <td class="govuk-table__cell add-grant" id="selected-item">{{ item.grantTotal | currency }}</td>
           <td class="govuk-table__cell add-score" id="selected-item">{{ item.score }}</td>
-          <td class="govuk-table__cell"><a href="edit" class="govuk-!-padding-left-7">Change</a> | <a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+          <td class="govuk-table__cell"><a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link govuk-!-padding-left-7">Change</a> | <a href="/removeItems1/{{ item.itemCode }}"  style="text-align: right;">Remove</a></td>
         </tr>
+        
       {% endfor %}
+      {{ data.selected-items | log }}
       <tr class="govuk-table__row" id="selected-items__row">
         <th scope="row" class="govuk-table__cell" id="mobile-hide"><strong>Total requested grant amount</strong></th>
         <td class="govuk-table__cell" id="mobile-hide"></td>

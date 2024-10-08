@@ -692,7 +692,7 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
   for (var selectedItem of request.session.data['selected-items']){
     if (selectedItem.termName == termName) {
       itemExists = true
-      selectedItem.quantity += quantity
+      selectedItem.quantity = quantity
       selectedItem.grantTotal = Number(selectedItem.quantity) * Number(selectedItem.grantValue.replace(',',''))
     }
   }
@@ -707,9 +707,8 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
 })
 
 router.get('/moreItems1', function (req, res) {
-
   if (req.session.data.addAnother === 'Yes') {
-    res.redirect('/fetf/rewrite/select-items/which-item-types');
+    res.redirect('/fetf/rewrite/select-items/item-search-or-list');
     }
   else 
     if (req.session.data.grantTotal > 25000){
@@ -719,6 +718,19 @@ router.get('/moreItems1', function (req, res) {
     res.redirect('/fetf/rewrite/task-list');
 
 });
+
+router.get('/removeItems1/:itemCode', (req, res) => {
+  const { itemCode } = req.params;
+  var selectedItems = req.session.data['selected-items'];
+  console.log(selectedItems);
+  selectedItems = selectedItems.filter(item => item.itemCode !== itemCode);
+  req.session.data['selected-items'] = selectedItems;
+  if (req.session.data['selected-items'].length)
+    res.redirect("/fetf/rewrite/select-items/selected-items");
+  else 
+    res.redirect("/fetf/rewrite/select-items/item-search-or-list");
+})
+
 
 router.post('/itemSearch1', (req, res) => {
   if (req.session.data.clearFilters == "true") {
@@ -759,7 +771,8 @@ for (i of allData) {
   }
 }
 
-console.log(itemNumber);
+console.log(filteredResults);
+
   
   req.session.data.filteredResults = filteredResults
   
