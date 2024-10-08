@@ -30,7 +30,7 @@
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading"></p>
       <p>
-<strong>Requesetd grant total</strong>: {{ data.grantTotal | currency }} of maximum £50,000<br><strong>Item quantity</strong>: {{ data.itemTotal }} <span class="govuk-!-margin-left-3"><strong>Item score</strong></span>: {{ data.scoreTotal }} </p>
+<strong>Requesetd grant total</strong>: {{ data.grantTotal | currency }} <span class="govuk-!-margin-left-3"><strong>Item score</strong></span>: {{ data.scoreTotal }} </p>
 <p>
       
       <a class="govuk-notification-banner__link" href="selected-items">View your current items</a>.
@@ -60,104 +60,77 @@
 
 {% if data.filteredResults.length %}
 
-{% set data = data.filteredResults %}
+{% set results = data.filteredResults %}
 
 {% else %}
 
-{% set data = allData %}
+{% set results = allData %}
 
 {% endif %}
 
-<h2 class="govuk-heading-m">{{data.length}} results found</h2>
+<h2 class="govuk-heading-m">{{results.length}} results found</h2>
   <hr style="margin-bottom: 20px;">
 
-{% for item in data %}
+  {{ data.category | log }}
 
-<span style="clear: both; display: inline-block;">
-<h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
-  <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
-</h3>
+{% if data.category.length %}
+  {% for item in data.category %}
+    <h2 class="govuk-heading-l govuk-!-margin-top-7">{{item}} items</h2>
+    {% set categoryThis = item %}
 
-<p class="govuk-body">{{ item.summary }}</p>
-<span style="display: inline-block;">
-<span class="govuk-caption-m">Grant amount per item:</span>
-<p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
-</span>
-<span style="display: inline-block; margin-left: 40px;">
-<span class="govuk-caption-m">Item score:</span>
-<p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
-</span>
+    {% for item in results %}
 
-<!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
+      {% if  (item.category == categoryThis) %}
+        <span style="clear: both; display: inline-block;">
+        <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
+          <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
+        </h3>
 
-</span>
+        <p class="govuk-body">{{ item.summary }}</p>
+        <span style="display: inline-block;">
+        <span class="govuk-caption-m">Grant amount per item:</span>
+        <p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
+        </span>
+        <span style="display: inline-block; margin-left: 40px;">
+        <span class="govuk-caption-m">Item score:</span>
+        <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
+        </span>
 
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+        <!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
 
-{% endfor %}
+        </span>
 
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+      {% endif %}
 
-  <!--
+    {% endfor %}
 
-<nav class="govuk-pagination" role="navigation" aria-label="Pagination">
-  <div class="govuk-pagination__prev">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-      </svg>
-      <span class="govuk-pagination__link-title">Previous<span class="govuk-visually-hidden"> page</span></span></a>
-  </div>
+  {% endfor %}
+{% else %}
+  {% for item in results %}
+    <span style="clear: both; display: inline-block;">
+    <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
+      <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
+    </h3>
 
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-        1
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-        2
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-        3
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 4">
-        4
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 5">
-        5
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">
-        6
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7">
-        7
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
-        8
-      </a>
-    </li>
-  </ul>
-  <div class="govuk-pagination__next">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-      </svg></a>
-  </div>
-</nav>
+    <p class="govuk-body">{{ item.summary }}</p>
+    <span style="display: inline-block;">
+    <span class="govuk-caption-m">Grant amount per item:</span>
+    <p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
+    </span>
+    <span style="display: inline-block; margin-left: 40px;">
+    <span class="govuk-caption-m">Item score:</span>
+    <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
+    </span>
 
--->
+    <!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
+
+    </span>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+  {% endfor %}
+{% endif %}
+
 </div>
 
 </main>
