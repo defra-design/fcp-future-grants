@@ -70,7 +70,6 @@
 
 <h2 class="govuk-heading-m">{{results.length}} results found</h2>
   <hr style="margin-bottom: 20px;">
-
 {% if (data.searchFind == 'Yes') %}
   {% for item in results %}
     <span style="clear: both; display: inline-block;">
@@ -96,7 +95,6 @@
   {% endfor %}
 
 {% else %}
-
 
   {% for item in data.category %}
     <h2 class="govuk-heading-l govuk-!-margin-top-7">{{item}} items</h2>
