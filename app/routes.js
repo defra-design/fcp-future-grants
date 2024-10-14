@@ -818,10 +818,7 @@ router.get('/aboutComplete1', function (req, res) {
 
 
 router.get('/finComplete1', function (req, res) {
-if (req.session.data.addAnotherFin === 'Yes') {
-    res.redirect('/fetf/rewrite/upload-evidence/upload');
-    }
-  else 
+
   req.session.data.evComplete = 'Yes';
   res.redirect('/fetf/rewrite/task-list');
 
