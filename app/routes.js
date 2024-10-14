@@ -800,6 +800,7 @@ for (i of allData) {
     console.log(i.itemCode)
   if (i.itemCode === itemNumber) {
     filteredResults.push(i);
+    item = i
   }
 }
 
@@ -808,7 +809,8 @@ console.log(filteredResults);
   req.session.data.filteredResults = filteredResults
   
 }
-  res.redirect('/fetf/rewrite/select-items/equipment-list') 
+  // res.redirect('/fetf/rewrite/select-items/equipment-list') 
+res.render('fetf/rewrite/select-items/equipment1.html', { item })
 })
 
 
