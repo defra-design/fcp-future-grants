@@ -70,7 +70,34 @@
 
 <h2 class="govuk-heading-m">{{results.length}} results found</h2>
   <hr style="margin-bottom: 20px;">
-{% if data.category.length %}
+
+{% if (data.searchFind == 'Yes') %}
+  {% for item in results %}
+    <span style="clear: both; display: inline-block;">
+    <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
+      <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
+    </h3>
+
+    <p class="govuk-body">{{ item.summary }}</p>
+    <span style="display: inline-block;">
+    <span class="govuk-caption-m">Grant amount per item:</span>
+    <p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
+    </span>
+    <span style="display: inline-block; margin-left: 40px;">
+    <span class="govuk-caption-m">Item score:</span>
+    <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
+    </span>
+
+    <!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
+
+    </span>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+  {% endfor %}
+
+{% else %}
+
+
   {% for item in data.category %}
     <h2 class="govuk-heading-l govuk-!-margin-top-7">{{item}} items</h2>
     {% set categoryThis = item %}
@@ -94,29 +121,7 @@
         {% endif %}
       {% endfor %}
   {% endfor %}
-{% else %}
-  {% for item in results %}
-    <span style="clear: both; display: inline-block;">
-    <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
-      <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
-    </h3>
 
-    <p class="govuk-body">{{ item.summary }}</p>
-    <span style="display: inline-block;">
-    <span class="govuk-caption-m">Grant amount per item:</span>
-    <p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
-    </span>
-    <span style="display: inline-block; margin-left: 40px;">
-    <span class="govuk-caption-m">Item score:</span>
-    <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
-    </span>
-
-    <!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
-
-    </span>
-
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
-  {% endfor %}
 {% endif %}
 
   <!--
