@@ -3,7 +3,7 @@
 {% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
 
 {% block beforeContent %}
-{% include "../../../_includes/phase-banner_alpha.html" %}
+{% include "../../_includes/phase-banner_alpha.html" %}
 {{ govukBackLink({
   text: "Back",
   href: "javascript:history.back()"
@@ -17,7 +17,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="../check-your-business-type" method="post">
+    <form action="check-applicant-personal-details" method="post">
 
       <span class="govuk-caption-l">Apply</span>
       <h1 class="govuk-heading-l">Applicant type</h1>
@@ -55,17 +55,7 @@
             </div>
           </fieldset>
 
-<br><br>
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="employees-number">
-            Number of employees
-          </label>
-        </h2>
-        <div id="employees-number-hint" class="govuk-hint">
-          Full-time employees, including the owner
-        </div>
-        <input class="govuk-input govuk-input--width-5" id="employees-number" name="employeesNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['employeesNumber'] }}">
-      </div>
+<br>
 
 
     <button type="submit" class="govuk-button" data-module="govuk-button">

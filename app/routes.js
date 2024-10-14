@@ -561,23 +561,47 @@ router.get('/selectBusinessAddress1', function (req, res) {
     res.redirect('/fetf/rewrite/check-details/select-business-address');
 });
 
+router.get('/selectAgentAddress1', function (req, res) {
+  if (req.session.data.aNameNo !== '') {
+    res.redirect('/fetf/rewrite/check-details/confirm-agent-address');
+    }
+  else 
+    res.redirect('/fetf/rewrite/check-details/select-agent-address');
+});
+
+router.get('/agentApplies', function (req, res) {
+  req.session.data.agent = 'Yes';
+  res.redirect('/fetf/rewrite/how-to-apply-for-a-farming-equipment-and-technology-fund-fetf-2024-grant');
+});
+
+router.get('/farmerApplies', function (req, res) {
+  req.session.data.agent = 'No';
+  res.redirect('/fetf/rewrite/how-to-apply-for-a-farming-equipment-and-technology-fund-fetf-2024-grant');
+});
+
 router.get('/dataSetPrepop1', function (req, res) {
 
+  req.session.data.agentName = 'Sally Wiston';
+  req.session.data.agentEmail = 'sally.wiston@wistonlandagents.co.uk';
+  req.session.data.agentNumber = '01273 333000';
+  req.session.data.aBusName = 'Wiston Land Agents Ltd';
+  req.session.data.aNameNo = '1';
+  req.session.data.aPostcode = 'RH11 3RA';
 
-  req.session.data.busName = 'Penywell Farm';
+  req.session.data.busName = 'Plumpton Farm Ltd';
   req.session.data.bNumber = '01674775345';
   req.session.data.sbi = '272727276';
   req.session.data.vatNo = 'GB123456789';
   req.session.data.chNumber = '09876543';
   req.session.data.cIncNo = '01234567';
   req.session.data.legalStatus = 'Limited company';
-  req.session.data.nameNo1 = 'Penywell Farm';
-  req.session.data.postcode1 = 'SH45 1YH';
+  req.session.data.nameNo1 = 'North Farmstead';
+  req.session.data.postcode1 = 'BN5 93B';
 
-  req.session.data.yourName = 'John Smith';
-  req.session.data.email = 'john.smith@gmail.com';
+  req.session.data.yourName = 'Christopher Hart';
+  req.session.data.email = 'plumpton.farm@me.com';
   req.session.data.mNumber = '07701234567';
-  req.session.data.lNumber = '01674775377';
+  req.session.data.lNumber = '01273726304';
 
   req.session.data.structure = 'Landowner';
   req.session.data.employeesNumber = '12';
@@ -826,7 +850,7 @@ router.post('/fetf/fetf-items-contracting1', function(req, res) {
   if (req.session.data.forContracting === 'Yes'){
       res.redirect("/fetf/rewrite/about-items/equipment-contractor-details")
   } else {
-      res.redirect("/fetf/rewrite/about-items/livestock-information")
+      res.redirect("/fetf/rewrite/about-items/equipment-summary")
   }
 })
 

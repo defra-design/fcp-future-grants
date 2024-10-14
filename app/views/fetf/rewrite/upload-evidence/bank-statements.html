@@ -16,30 +16,33 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="evidence-type" method="post">
+    <form action="upload" method="post">
     
     <span class="govuk-caption-l">Upload finanacial evidence</span>
-    <h1 class="govuk-heading-l">Check what financial evidence you can use</h1>
+    <h1 class="govuk-heading-l">Bank statements</h1>
 
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
     
-    <p class="govuk-body">As you are applying for more than £25,000, we need to check:</p>
+    <p class="govuk-body">The statements must be from a <strong>{{ data['busName'] }}</strong> business account or credit card. You can either use:</p>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>you can cover the cost of each item until the grant is claimed</li>
+      <li>screenshots from an online account showing payment details and bank or building society logos</li>
 
-      <li>your organisation is financially viable</li>
+      <li>a certified report printed from a banking system</li>
     </ul>
    
 
-    <h1 class="govuk-heading-m">Evidence you can use</h1>
+    <h1 class="govuk-heading-m">Statement rules</h1>
 
-    <p>You can use a: </p>
+    <div class="govuk-inset-text">You can remove personal information that is not needed from the statements.</div> 
+
+    <p>Statements must show the:</p>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>evidence of a personal or private loan, or a bank or building society statement, email or letter</li>
-      <li>financial accounts for the most recent 3 years of trading</li>
+      <li>bank or building society’s name and logo</li>
+      <li>account holder name in full</li>
+      <li>account number</li>
     </ul>
 
 

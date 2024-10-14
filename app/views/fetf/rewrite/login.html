@@ -78,7 +78,7 @@
       <br>
 
 
-      <a href="task-list">
+      <a href="{%  if (data.agent == 'Yes') %}which-org{% else %}task-list{% endif %}">
         <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
           Continue
         </button>

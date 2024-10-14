@@ -7,7 +7,11 @@
 
 {% block beforeContent %}
 {% include "../_includes/phase-banner_alpha.html" %}
-{% include "../_includes/sub-header_business-applicant-details.html" %}
+{% if (data.agent == 'Yes') %}
+  {% include "../_includes/sub-header_business-agent-details.html" %}
+{% else %}
+  {% include "../_includes/sub-header_business-applicant-details.html" %}
+{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -20,16 +24,14 @@
 
 
 
-<span class="govuk-caption-xl">{{ data['fetf-grant-type'] }}
-  {% if (data['fetf-status'] == "01c") or (data['fetf-status'] == "01d") or (data['fetf-status'] == "02") or (data['fetf-status'] == "03") %} ({{ data['fetf-project-reference'] }}){% endif %}
+<span class="govuk-caption-xl">Farming Equipment and Technology Fund 2025
 </span>
-<h1 class="govuk-heading-xl">{{ data['fetf-grant-title'] }}</h1>
+<h1 class="govuk-heading-xl">Apply for help to buy farming productivity items</h1>
 
 
-<span class="content-section">
-{% include "../_includes/activity-list_status-block.html" %}
-</span>
-
+<div class="govuk-inset-text">
+    Application closing dae is <strong>17 April 2025</strong>.
+  </div>
 
 
     <h2 class="govuk-prototype-kit-task-list__section">
@@ -37,18 +39,20 @@
     </h2>
     <ul class="govuk-task-list">
 
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Check before you start</h3>
+
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
 
         {% if (data.checkComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="check-details/check-your-details-mini" aria-describedby="application-details-2-status">Check your details</a>
+            <a class="govuk-link govuk-task-list__link" href="check-details/check-your-details-mini" aria-describedby="application-details-2-status">Check application details</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
            Completed
           </div>
         {% else %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="check-details/check-your-personal-details" aria-describedby="application-details-2-status">Check your details</a>
+            <a class="govuk-link govuk-task-list__link" href="check-details/check-start" aria-describedby="application-details-2-status">Check application details</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             <strong class="govuk-tag govuk-tag--blue">
@@ -57,6 +61,7 @@
           </div>
         {% endif %}
     </li>
+<h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">Prepare your application</h3>
 
 
 
@@ -64,7 +69,7 @@
 
         {% if (data.selectComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="select-items/selected-items" aria-describedby="application-details-2-status">Select your items</a>
+            <a class="govuk-link govuk-task-list__link" href="select-items/selected-items" aria-describedby="application-details-2-status">Add items</a>
 
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
@@ -72,7 +77,7 @@
           </div>
         {% else %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="select-items/item-search-or-list" aria-describedby="application-details-2-status">Select your items</a>
+            <a class="govuk-link govuk-task-list__link" href="select-items/item-search-or-list" aria-describedby="application-details-2-status">Add items</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             <strong class="govuk-tag govuk-tag--blue">
@@ -84,7 +89,7 @@
   
 
 
-            <li class="govuk-task-list__item ">
+    <li class="govuk-task-list__item ">
         {% if (data.aboutItemsComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
             <a class="govuk-link govuk-task-list__link" href="about-items/equipment-summary" aria-describedby="application-details-2-status">About your items</a>
@@ -111,6 +116,7 @@
             
           </div>
         {% endif %}
+      </li>
 
   
     {% if (data.uploadFin == 'Yes') %}
@@ -135,7 +141,7 @@
       </li>
     {% endif %}
     
-
+<h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">Submit application</h3>
     <li class="govuk-task-list__item">
       {% if ((data.uploadFin === 'Yes') and (data.evComplete === 'Yes') and (data.aboutItemsComplete === 'Yes')) or ((data.evComplete === 'No') and (data.aboutItemsComplete === 'Yes')) %}
         <div class="govuk-task-list__name-and-hint">

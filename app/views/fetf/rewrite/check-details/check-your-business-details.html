@@ -1,6 +1,6 @@
 {% extends "layouts/main-fetf.html" %}
 
-{% block pageTitle %} Check your business and contact details {% endblock %}
+{% block pageTitle %} Check your Organisation and contact details {% endblock %}
 
 {% block beforeContent %}
 {% include "../../_includes/phase-banner_alpha.html" %}
@@ -19,113 +19,156 @@
     <form action="check-your-business-type" method="post">
     
       <span class="govuk-caption-l">Apply</span>
-    <h1 class="govuk-heading-l">Check your details</h1>
+    <h1 class="govuk-heading-l">Check organisation details are correct</h1>
 
-    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+    <p class="govuk-body">This is the organisation that will receive the grant if successful.</p> 
 
     
 
 
 
 
-    <h2 class="govuk-heading-m">Business details</h2>
+    <h2 class="govuk-heading-m">Organisation name</h2>
     
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Business name
+          Organisation name
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['busName'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
+    </dl>
+
+      <h2 class="govuk-heading-m">Single Business Identifier (SBI)</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Single Business Identifier (SBI)
+          SBI
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['sbi'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+          <a class="govuk-link" href="company-sbi">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
-      </div>
+      </div> 
+    </dl>
 
+      <h2 class="govuk-heading-m">Organisation contact details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Business phone number
+          Organisation email
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['bNumber'] }}
+          {{ data['email'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+          <a class="govuk-link" href="organisation-contact-details">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Business legal status
+          Mobile phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['mNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-contact-details">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Landline phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['lNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-contact-details">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+      <h2 class="govuk-heading-m">Organisation’s address</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['nameNo1'] }}<br>
+          Princes Lane<br>
+          Hassocks<br>
+          {{ data['postcode1'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-business-address">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Organisation type</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Organisation type
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['legalStatus'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
+    </dl>
+
+      <h2 class="govuk-heading-m">Registration numbers</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Companies House number
+          Company registration number
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['chNumber'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          VAT number
+          VAT registration number
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['vatNo'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Certificate of incorporation reference number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['cIncNo'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Business address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['nameNo1'] }}<br>
-          Rotary Lane<br>
-          Yaptin<br>
-          Shappshire<br>
-          {{ data['postcode1'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="what-is-your-business-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
+      <h2 class="govuk-heading-m">Number of employees</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of full-time employees
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['employeesNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="employees">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
 
+    </dl>
+ <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue

@@ -16,40 +16,12 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="check-your-details-mini" method="post">
+    <form action="/checkTaskComplete1" method="post">
       <span class="govuk-caption-l">Apply</span>
-    <h1 class="govuk-heading-l">Confirm your business activity details</h1>
+    <h1 class="govuk-heading-l">Check land details are correct</h1>
 
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
-    <h2 class="govuk-heading-m">Business structure</h2>
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Who is applying?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['structure'] }} 
-          
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-type/business-structure">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Number of employees
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['employeesNumber'] }}
-
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="business-type/business-structure">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-    </dl>
 
 
     <h2 class="govuk-heading-m">Land details</h2>
@@ -124,6 +96,7 @@
         </dd>
       </div>
     </dl>
+    <!--
 
         <h2 class="govuk-heading-m">Livestock on farm</h2>
 
@@ -165,6 +138,7 @@
 
 
 
+
     <h2 class="govuk-heading-m">Livestock health schemes</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-3">
       <div class="govuk-summary-list__row">
@@ -181,8 +155,10 @@
     </dl>
       <p class="govuk-!-margin-bottom-7"><a href="business-type/livestock-schemes-add">Add or remove livestock schemes</a></p>
 
+  -->
 
-
+<h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue
