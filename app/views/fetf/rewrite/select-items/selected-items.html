@@ -18,7 +18,7 @@
   <div class="govuk-grid-column-full">
     <span class="govuk-caption-l">Apply</span>
     <h1 class="govuk-heading-l">Selected items</h1>
-    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
+    <div class="govuk-inset-text">You can apply for £1,000 to £50,000</div>
 <table class="govuk-table">
 
 
@@ -43,11 +43,11 @@
         {% set itemTotal = itemTotal + item.quantity %}
         <tr class="govuk-table__row" id="selected-items__row">
           <td class="govuk-table__cell add-item" id="selected-item-bold">{{ item.title }}</td>
-          <td class="govuk-table__cell add-code" id="selected-item" >{{ item.itemCode }}</td>
+          <td class="govuk-table__cell add-code" id="selected-item" >FETF{{ item.itemCode }}</td>
           <td class="govuk-table__cell add-quantity" id="selected-item">{{ item.quantity }}&nbsp;&nbsp;</td>
           <td class="govuk-table__cell add-grant" id="selected-item">{{ item.grantTotal | currency }}</td>
           <td class="govuk-table__cell add-score" id="selected-item">{{ item.score }}</td>
-          <td class="govuk-table__cell"><a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link govuk-!-padding-left-7">Change</a> | <a href="/removeItems1/{{ item.itemCode }}"  style="text-align: right;">Remove</a></td>
+          <td class="govuk-table__cell"><a href="/fetf/rewrite/select-items/items/1/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link govuk-!-padding-left-7">Change</a> | <a href="/removeItems1/{{ item.itemCode }}"  style="text-align: right;">Remove</a></td>
         </tr>
       {% endfor %}
       <tr class="govuk-table__row" id="selected-items__row">

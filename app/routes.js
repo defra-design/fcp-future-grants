@@ -700,6 +700,14 @@ console.log(categoryFilter);
 router.get('/fetf/rewrite/select-items/items/:termName', (req, res) => {
     const { termName } = req.params
     const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+    res.render('fetf/rewrite/select-items/equipment1.html', { item })
+    console.log(item)
+    console.log(termName)
+})
+
+router.get('/fetf/rewrite/select-items/items/1/:termName', (req, res) => {
+    const { termName } = req.params
+    const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
     res.render('fetf/rewrite/select-items/equipment.html', { item })
     console.log(item)
     console.log(termName)
