@@ -1,6 +1,6 @@
 {% extends "layouts/main-fetf.html" %}
 
-{% block pageTitle %} Items details summary {% endblock %}
+{% block pageTitle %} Check your business and contact details {% endblock %}
 
 {% block beforeContent %}
 {% include "../../_includes/phase-banner_alpha.html" %}
@@ -16,104 +16,69 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-l">Apply</span>
+    <form action="/finComplete1" method="post">
+      <span class="govuk-caption-l">Apply</span>
+    <h1 class="govuk-heading-l">Check your financial evidence</h1>
 
-    <form action="/aboutComplete1" method="post">
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
-    <h1 class="govuk-heading-l">Items summary</h1>
-
-    
-
-    <h2 class="govuk-heading-m">Item location</h2>
+  <h2 class="govuk-heading-m" >Uploaded supporting financial evidence</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Stored at main address
+          Bank statement
         </dt>
         <dd class="govuk-summary-list__value">
-        {{ data['stored-business-address'] }}
+          <a class="govuk-link govuk-!-margin-left-5" href="">Financial evidence 1.pdf</a>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
         </dd>
       </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Where will the items be stored?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {%  if (data['itemsPostcode']) %}
-            {{ data['itemsPostcode'] }}
-          {%  else %} 
-            {{ data['postcode1'] }}
-          {%  endif  %}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
-        </dd>
-      </div>
-
 
     </dl>
 
-
-    <h2 class="govuk-heading-m">Contracting</h2>
+      <h2 class="govuk-heading-m" >Uploaded supporting full accounts</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Used for contracting
+          Full accounts
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['forContracting'] }}
+          <a class="govuk-link govuk-!-margin-left-5" href="">Financial evidence 1.pdf</a>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
         </dd>
       </div>
-      {% if (data.forContracting == 'Yes') %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Type of contracting work
+          Full accounts
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['contractingWork'] }}
+          <a class="govuk-link govuk-!-margin-left-5" href="">Financial evidence 2.pdf</a>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Full accounts
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link govuk-!-margin-left-5" href="">Financial evidence 3.pdf</a>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
         </dd>
       </div>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Are you are a member of a professional organisation for contractors?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['contract'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
-        </dd>
-      </div>
-      {% if (data.contract == 'Yes') %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name of professional organisation
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['contractingProfessionalOrganisation'] }} 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
-          </dd>
-        </div>
-        {% endif %}
-        {% endif %}
     </dl>
-
-
 
 
 
