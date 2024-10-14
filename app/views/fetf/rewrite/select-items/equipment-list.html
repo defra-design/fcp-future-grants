@@ -30,7 +30,7 @@
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading"></p>
       <p>
-<strong>Requesetd grant total</strong>: {{ data.grantTotal | currency }} of maximum £50,000<br><strong>Item quantity</strong>: {{ data.itemTotal }} <span class="govuk-!-margin-left-3"><strong>Item score</strong></span>: {{ data.scoreTotal }} </p>
+<strong>Requesetd grant total</strong>: {{ data.grantTotal | currency }} <span class="govuk-!-margin-left-3"><strong>Item score</strong></span>: {{ data.scoreTotal }} </p>
 <p>
       
       <a class="govuk-notification-banner__link" href="selected-items">View your current items</a>.
@@ -60,42 +60,67 @@
 
 {% if data.filteredResults.length %}
 
-{% set data = data.filteredResults %}
+{% set results = data.filteredResults %}
 
 {% else %}
 
-{% set data = allData %}
+{% set results = allData %}
 
 {% endif %}
 
-<h2 class="govuk-heading-m">{{data.length}} results found</h2>
+<h2 class="govuk-heading-m">{{results.length}} results found</h2>
   <hr style="margin-bottom: 20px;">
+{% if (data.searchFind == 'Yes') %}
+  {% for item in results %}
+    <span style="clear: both; display: inline-block;">
+    <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
+      <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
+    </h3>
 
-{% for item in data %}
+    <p class="govuk-body">{{ item.summary }}</p>
+    <span style="display: inline-block;">
+    <span class="govuk-caption-m">Grant amount per item:</span>
+    <p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
+    </span>
+    <span style="display: inline-block; margin-left: 40px;">
+    <span class="govuk-caption-m">Item score:</span>
+    <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
+    </span>
 
-<span style="clear: both; display: inline-block;">
-<h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
-  <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
-</h3>
+    <!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
 
-<p class="govuk-body">{{ item.summary }}</p>
-<span style="display: inline-block;">
-<span class="govuk-caption-m">Grant amount per item:</span>
-<p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
-</span>
-<span style="display: inline-block; margin-left: 40px;">
-<span class="govuk-caption-m">Item score:</span>
-<p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
-</span>
+    </span>
 
-<!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+  {% endfor %}
 
-</span>
+{% else %}
 
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+  {% for item in data.category %}
+    <h2 class="govuk-heading-l govuk-!-margin-top-7">{{item}} items</h2>
+    {% set categoryThis = item %}
+      {% for item in results %}
+        {% if  (item.category == categoryThis) %}
+          <span style="clear: both; display: inline-block;">
+            <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
+              <a href="items/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
+            </h3>
+            <p class="govuk-body">{{ item.summary }}</p>
+            <span style="display: inline-block;">
+              <span class="govuk-caption-m">Grant amount per item:</span>
+              <p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
+            </span>
+            <span style="display: inline-block; margin-left: 40px;">
+              <span class="govuk-caption-m">Item score:</span>
+              <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
+            </span>
+          </span>
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
+        {% endif %}
+      {% endfor %}
+  {% endfor %}
 
-{% endfor %}
-
+{% endif %}
 
   <!--
 

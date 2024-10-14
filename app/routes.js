@@ -561,23 +561,47 @@ router.get('/selectBusinessAddress1', function (req, res) {
     res.redirect('/fetf/rewrite/check-details/select-business-address');
 });
 
+router.get('/selectAgentAddress1', function (req, res) {
+  if (req.session.data.aNameNo !== '') {
+    res.redirect('/fetf/rewrite/check-details/confirm-agent-address');
+    }
+  else 
+    res.redirect('/fetf/rewrite/check-details/select-agent-address');
+});
+
+router.get('/agentApplies', function (req, res) {
+  req.session.data.agent = 'Yes';
+  res.redirect('/fetf/rewrite/how-to-apply-for-a-farming-equipment-and-technology-fund-fetf-2024-grant');
+});
+
+router.get('/farmerApplies', function (req, res) {
+  req.session.data.agent = 'No';
+  res.redirect('/fetf/rewrite/how-to-apply-for-a-farming-equipment-and-technology-fund-fetf-2024-grant');
+});
+
 router.get('/dataSetPrepop1', function (req, res) {
 
+  req.session.data.agentName = 'Sally Wiston';
+  req.session.data.agentEmail = 'sally.wiston@wistonlandagents.co.uk';
+  req.session.data.agentNumber = '01273 333000';
+  req.session.data.aBusName = 'Wiston Land Agents Ltd';
+  req.session.data.aNameNo = '1';
+  req.session.data.aPostcode = 'RH11 3RA';
 
-  req.session.data.busName = 'Penywell Farm';
+  req.session.data.busName = 'Plumpton Farm Ltd';
   req.session.data.bNumber = '01674775345';
   req.session.data.sbi = '272727276';
   req.session.data.vatNo = 'GB123456789';
   req.session.data.chNumber = '09876543';
   req.session.data.cIncNo = '01234567';
   req.session.data.legalStatus = 'Limited company';
-  req.session.data.nameNo1 = 'Penywell Farm';
-  req.session.data.postcode1 = 'SH45 1YH';
+  req.session.data.nameNo1 = 'North Farmstead';
+  req.session.data.postcode1 = 'BN5 93B';
 
-  req.session.data.yourName = 'John Smith';
-  req.session.data.email = 'john.smith@gmail.com';
+  req.session.data.yourName = 'Christopher Hart';
+  req.session.data.email = 'plumpton.farm@me.com';
   req.session.data.mNumber = '07701234567';
-  req.session.data.lNumber = '01674775377';
+  req.session.data.lNumber = '01273726304';
 
   req.session.data.structure = 'Landowner';
   req.session.data.employeesNumber = '12';
@@ -692,7 +716,7 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
   for (var selectedItem of request.session.data['selected-items']){
     if (selectedItem.termName == termName) {
       itemExists = true
-      selectedItem.quantity += quantity
+      selectedItem.quantity = quantity
       selectedItem.grantTotal = Number(selectedItem.quantity) * Number(selectedItem.grantValue.replace(',',''))
     }
   }
@@ -709,7 +733,7 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
 router.get('/moreItems1', function (req, res) {
 
   if (req.session.data.addAnother === 'Yes') {
-    res.redirect('/fetf/rewrite/select-items/which-item-types');
+    res.redirect('/fetf/rewrite/select-items/item-search-or-list');
     }
   else 
     if (req.session.data.grantTotal > 25000){
@@ -719,6 +743,18 @@ router.get('/moreItems1', function (req, res) {
     res.redirect('/fetf/rewrite/task-list');
 
 });
+
+router.get('/removeItems1/:itemCode', (req, res) => {
+  const { itemCode } = req.params;
+  var selectedItems = req.session.data['selected-items'];
+  console.log(selectedItems);
+  selectedItems = selectedItems.filter(item => item.itemCode !== itemCode);
+  req.session.data['selected-items'] = selectedItems;
+  if (req.session.data['selected-items'].length)
+    res.redirect("/fetf/rewrite/select-items/selected-items");
+  else 
+    res.redirect("/fetf/rewrite/select-items/item-search-or-list");
+})
 
 router.post('/itemSearch1', (req, res) => {
   if (req.session.data.clearFilters == "true") {
@@ -759,7 +795,7 @@ for (i of allData) {
   }
 }
 
-console.log(itemNumber);
+console.log(filteredResults);
   
   req.session.data.filteredResults = filteredResults
   
@@ -782,10 +818,7 @@ router.get('/aboutComplete1', function (req, res) {
 
 
 router.get('/finComplete1', function (req, res) {
-if (req.session.data.addAnotherFin === 'Yes') {
-    res.redirect('/fetf/rewrite/upload-evidence/upload');
-    }
-  else 
+
   req.session.data.evComplete = 'Yes';
   res.redirect('/fetf/rewrite/task-list');
 
@@ -814,7 +847,7 @@ router.post('/fetf/fetf-items-contracting1', function(req, res) {
   if (req.session.data.forContracting === 'Yes'){
       res.redirect("/fetf/rewrite/about-items/equipment-contractor-details")
   } else {
-      res.redirect("/fetf/rewrite/about-items/livestock-information")
+      res.redirect("/fetf/rewrite/about-items/equipment-summary")
   }
 })
 

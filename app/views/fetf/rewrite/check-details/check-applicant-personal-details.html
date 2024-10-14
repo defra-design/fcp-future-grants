@@ -19,15 +19,13 @@
     <form action="check-your-business-details" method="post">
     
       <span class="govuk-caption-l">Apply</span>
-    <h1 class="govuk-heading-l">Check your details</h1>
+    <h1 class="govuk-heading-l">Check  {% if (data.agent == 'Yes') %}applicant{% else %}your{% endif %} details are correct</h1>
 
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
     
-   
-
-    <h2 class="govuk-heading-m">Applicant details</h2>
-   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Applicant name
@@ -53,12 +51,12 @@
     </dl>
 
 
-
-    
+     <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
 
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
-  Save and continue
+  Confirm and continue
 </button>
 
 </form>

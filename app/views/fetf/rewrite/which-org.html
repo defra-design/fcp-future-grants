@@ -3,7 +3,7 @@
 {% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
 
 {% block beforeContent %}
-{% include "../../_includes/phase-banner_alpha.html" %}
+{% include "../_includes/phase-banner_alpha.html" %}
 {{ govukBackLink({
   text: "Back",
   href: "javascript:history.back()"
@@ -12,43 +12,40 @@
 
 
 {% block content %}
-
+<form action="task-list" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-  <form action="bank-statements" method="post">
 
-      <span class="govuk-caption-l">Upload finanacial evidence</span>
+
+      <span class="govuk-caption-l">Apply</span>
      
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    What financial evidence will you use?
+    Do you know the name or FETF number of the item you want?
       </h1>
     </legend>
-    <div id="changedName-hint" class="govuk-hint">
-      
-    </div>
-     <p><strong>Total cost to cover</strong>: {{ data['grantTotal'] | currency }}</p>
-    <div class="govuk-radios " data-module="govuk-radios">
+
+    <div class="govuk-radios" data-module="govuk-radios"> 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Bluebell Wood Organic Farm Ltd">
         <label class="govuk-label govuk-radios__label" for="changedName">
-          Bank or building society email or letter
+          Bluebell Wood Organic Farm Ltd
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
-          Bank or building society statement
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="North Sussex Weald Dairy Farm Ltd">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          North Sussex Weald Dairy Farm Ltd
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
-          Personal or private loan
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Plumpton Farm Ltd">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Plumpton Farm Ltd
         </label>
       </div>
     </div>
