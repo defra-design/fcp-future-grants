@@ -36,14 +36,14 @@
     
     
     <span class="govuk-caption-xl">Code: FETF{{ item.itemCode }}</span> 
-    <h1 class="govuk-heading-l">{{ item.title }}</h1>
+    <h1 class="govuk-heading-l">Check item eligibility rules</h1>
 
 
 
 
 {% if item.eligible %}
 
-<h2 class="govuk-heading-m">Items must:</h2>
+<h2 class="govuk-heading-m">{{ item.title }} must:</h2>
 <ul class="govuk-list govuk-list--bullet">
   {% if item.eligible.eligibleBullet01 %}<li>{{ item.eligible.eligibleBullet01 }}</li>{% endif %}
   {% if item.eligible.eligibleBullet02 %}<li>{{ item.eligible.eligibleBullet02 }}</li>{% endif %}
