@@ -824,7 +824,7 @@ router.get('/aboutComplete1', function (req, res) {
 
 });
 
-// Finanacial details
+// financial details
 
 
 router.get('/finComplete1', function (req, res) {
