@@ -1,0 +1,56 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="livestock-schemes-add" method="post">
+
+      <span class="govuk-caption-l">Apply</span>
+      
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="livestock-schemes">
+            Do you belong to a livestock health or disease prevention scheme? (optional)
+          </label>
+        </h2>
+        <div id="livestock-schemes-hint" class="govuk-hint">
+          Enter any schemes. We use this information to help develop grant schemes.
+        </div>
+        <input class="govuk-input" id="livestock-schemes" name="livestockSchemes" aria-describedby="livestock-schemes-hint" type="text" value="{{ data['livestockSchemes'] }}">
+        <br><br>
+
+      </div>
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+    <a  class="govuk-link" href="#">Skip</a>
+    </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

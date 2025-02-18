@@ -1,0 +1,72 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-your-personal-details" method="post">
+
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Confirm your details</h1>
+
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Your name
+          </label>
+            <input class="govuk-input govuk-input--width-20" id="full-name" name="yourName" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['yourName'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Email address
+          </label>
+            <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['email'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mobileNumber">
+            Mobile phone numnber
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="mobileNumber" name="mNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['mNumber'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="landline">
+            Landline phone number
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="landline" name="lNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['lNumber'] }}">
+        </div>
+      </div>
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

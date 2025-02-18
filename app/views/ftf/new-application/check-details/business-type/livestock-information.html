@@ -1,0 +1,115 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+
+ 
+    
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../check-your-business-type" method="post">
+      
+      <span class="govuk-caption-l">Apply</span>
+      <h1 class="govuk-heading-l">Do you have any livestock?</h1>
+      
+
+      <div class="govuk-radios" data-module="govuk-radios">
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="animals-2" name="animals" type="radio" value="Yes" data-aria-controls="conditional-animals-2" {{ checked("animals", "Yes") }}>
+          <label class="govuk-label govuk-radios__label" for="animals-2">
+            Yes
+          </label>
+        </div>
+
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-animals-2">
+         
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="bovine-animals">
+            Total number of animals
+          </label>
+        </h2>
+        <input class="govuk-input govuk-input--width-10" id="bovine-animals" name="animalsNo" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric" value="{{ data['animalsNo'] }}">
+<br><br><br>
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--s" for="account-number">
+            County parish holding number
+          </label>
+        </h2>
+        <div id="account-number-hint" class="govuk-hint">
+          Enter the county parish holding (CPH) number where you record animal movements (for example 08/123/4567)
+        </div>
+        <div class="govuk-form-group">
+        
+          <input class="govuk-input govuk-input--width-2" id="account-number" name="accountNumber1" type="text" value="{{ data['accountNumber1'] }}">
+        / 
+       
+          
+          <input class="govuk-input govuk-input--width-3" id="account-number" name="accountNumber2" type="text" value="{{ data['accountNumber2'] }}">
+        /
+       
+          
+          <input class="govuk-input govuk-input--width-4" id="account-number" name="accountNumber3" type="text" value="{{ data['accountNumber3'] }}">
+        </div>
+
+      </div>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="animals" name="animals" type="radio" value="No" data-aria-controls="conditional-animals" {{ checked("animals", "No") }}>
+          <label class="govuk-label govuk-radios__label" for="animals">
+            No
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-animals">
+          
+        </div>
+        
+        
+        
+        
+      </div>
+
+
+
+
+
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </form>
+    
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}
+
+
+

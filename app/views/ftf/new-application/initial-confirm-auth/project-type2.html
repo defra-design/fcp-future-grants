@@ -1,0 +1,82 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<form action="check-start" method="post">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    Details of project 2
+      </h1>
+    </legend>
+        <div class="govuk-form-group">
+      <label class="govuk-label" for="width-20">
+       Project name
+      </label>
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="pName2" type="text">
+    </div>
+
+    <div class="govuk-radios" data-module="govuk-radios"> 
+      <label class="govuk-label" for="width-20">
+       Project purpose
+      </label>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="projectType2" type="radio" value="Add a veranda to a building">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Add a veranda to a building
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="projectType2" type="radio" value="Refurbish an existing building">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+         Refurbish an existing building
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="projectType2" type="radio" value="Replace an existing building with a new oned">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Replace an existing building with a new one
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+          
+
+
+
+
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

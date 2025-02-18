@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Select business address – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+      <div class="govuk-form-group  {% if error %} govuk-form-group--error {% endif %} ">
+        <fieldset class="govuk-fieldset">
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+     
+
+      <h1 class="govuk-heading-xl">
+        Select your address
+      </h1>
+</legend>
+      <p><a href="business-address-manual">Enter the address manually</a></p>
+
+
+     
+      <form class="form" action="confirm-agent-address" method="post">
+
+
+
+
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="aNameNo" name="aNameNo" type="radio" value="1">
+            <label class="govuk-label govuk-radios__label" for="agentNameNo">
+            1, North Road, Haywards Heath, West Sussex, {{ data['aPostcode'] }}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="aNameNo-2" name="aNameNo" type="radio" value="2">
+            <label class="govuk-label govuk-radios__label" for="aNameNo-2">
+              2, North Road, Haywards Heath, West Sussex, {{ data['aPostcode'] }}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="aNameNo-3" name="aNameNo" type="radio" value="3">
+            <label class="govuk-label govuk-radios__label" for="aNameNo-3">
+              3, North Road, Haywards Heath, West Sussex, {{ data['aPostcode'] }}
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="aNameNo-4" name="aNameNo" type="radio" value="3a">
+            <label class="govuk-label govuk-radios__label" for="aNameNo-4">
+             3a, North Road, Haywards Heath, West Sussex, {{ data['aPostcode'] }}
+            </label>
+          </div>
+        </div>
+
+
+      </div>
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+  </fieldset>
+
+    </div>
+  </div>
+
+{% endblock %}

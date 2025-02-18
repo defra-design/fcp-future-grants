@@ -1,0 +1,83 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="login" method="post">
+    
+
+    <h1 class="govuk-heading-l">Apply for a grant to buy slurry stores, covers and items</h1>
+
+
+
+
+    <p class="govuk-body">Use this service to apply for a grant to buy:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>slurry stores</li>
+      <li>slurry covers</li>
+      <li>slurry items and accessories</li>
+    </ul>
+    <p>You’re eligible if your organisation is based in England, your farming system already produces slurry, and you farm pigs, beef or dairy cattle.</p>
+
+
+
+    <p class="govuk-body"><strong>Application closing date</strong>: 17 April 2025, midday</p>
+    
+    <h1 class="govuk-heading-m">Before you apply</h1>
+
+     <p class="govuk-body">You must have <a class="govuk-link" href="https://www.gov.uk/guidance/rural-payments-service-registering-and-updating-your-details">registered with the Rural Payments service</a> to apply.</p>
+
+     <p class="govuk-body">You can apply for someone else if they've given you permission to apply on their behalf in the Rural Payments service.</p>
+
+     <p class="govuk-body">You can check the <a class="govuk-link" href="https://www.gov.uk/government/publications/farming-equipment-and-technology-fund-2024/productivity-items-and-specifications-farming-equipment-and-technology-fund-fetf-2024">slurry grant guidance</a> to see which stores, covers and items you can apply for and how much you could get.</p>
+
+
+    <h1 class="govuk-heading-m">What you’ll need</h1>
+
+    <p>You’ll need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>a copy of your full planning permission for the slurry storage</li>
+
+      <li>details of your current and planned slurry stores, including capacity</li>
+
+      <li>full accounts for the last 3 years, or your latest tax returns or management accounts if you’ve been trading for less than 3 years</li>
+
+      <li>project funding evidence</li>
+
+      <li>slurry storage design declaration form and drawings</li>
+    </ul>
+<p>If applicable to your organisation and project, you’ll also need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>an Environmental Permitting Regulations permit variation document</li>
+
+      <li>slurry acidification equipment and techniques evidence</li>
+
+      <li>tenancy agreement information and landlord consent confirmation</li>
+    </ul>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Start now
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

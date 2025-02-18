@@ -1,0 +1,130 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../check-your-business-type" method="post">
+
+      
+      <div class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Apply</span>
+            <h1 class="govuk-fieldset__heading">
+              What do you use your land for?
+            </h1>
+          </legend>
+
+          <p class="govuk-body">We check your land use against the items you select.</p>
+          <div id="contact-hint" class="govuk-hint">
+            Select all that apply. Enter approximate hectares in whole numbers.
+          </div>
+          
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact" name="useLand" type="checkbox" value="Agriculture" data-aria-controls="conditional-contact" {{ checked("useLand", "Agriculture") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="contact">
+                Agriculture
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Area of farm
+                </label>
+                <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="agriculture-hectares" name="agricultureHectares" type="text" spellcheck="false" inputmode="numeric"value="{{ data['agricultureHectares'] }}">
+                  <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
+                </div>
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact-2" name="useLand" type="checkbox" value="Horticulture" data-aria-controls="conditional-contact-2" {{ checked("useLand", "Horticulture") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                Horticulture
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Area of nursery
+                </label>
+                <div class="govuk-input__wrapper">
+                  <input class="govuk-input govuk-input--width-5" id="horticulture-hectares" name="horticultureHectares" type="text" spellcheck="false" inputmode="numeric" value="{{ data['horticultureHectares'] }}">
+                  <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
+                </div>
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact-3" name="useLand" type="checkbox" value="Forestry message" data-aria-controls="conditional-contact-3" {{ checked("useLand", "Forestry") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                Forestry
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Area of woodland
+                </label>
+                <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="forestry-hectares" name="forestryHectares" type="text" spellcheck="false" inputmode="numeric" value="{{ data['forestryHectares'] }}">
+                  <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
+                </div>
+                <br>
+               
+              </h2>
+              <br>
+              
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="width-4">
+                  Enter relevant land parcel IDs, for example 3903, 5067
+                </label>
+                <input class="govuk-input govuk-input--width-4" id="landParcelId" name="landParcelId" type="text">
+                
+              </div>
+
+            </div>
+          </div>
+          <br>
+        </fieldset>
+      </div>
+
+      
+
+    
+
+
+
+
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

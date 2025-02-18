@@ -1,0 +1,134 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your Organisation and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="spot-success" method="post">
+    
+      <span class="govuk-caption-l">Apply</span>
+    <h1 class="govuk-heading-l">Check organisation details are correct</h1>
+
+    <p class="govuk-body">This is the organisation that will receive the grant if successful.</p> 
+
+    
+
+
+
+
+    <h2 class="govuk-heading-m">Organisation name</h2>
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Organisation name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['busName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+          <h2 class="govuk-heading-m">Organisation’s address</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['nameNo1'] }}<br>
+          Princes Lane<br>
+          Hassocks<br>
+          {{ data['postcode1'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-business-address">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+
+
+    <h2 class="govuk-heading-m">Organisation type</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Organisation type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['legalStatus'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+      <h2 class="govuk-heading-m">Registration numbers</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company registration number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['chNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          VAT registration number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['vatNo'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+            <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          CPH number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['cphNo'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-cph">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    </dl>
+ <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

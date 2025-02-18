@@ -1,0 +1,68 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<form action="solar-pv" method="post">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="solarPanels-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    Are you planning to add solar panels to the roof of the housing?
+      </h1>
+    </legend>
+
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="solarPanels" name="solarPanels" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="solarPanels">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="solarPanels-2" name="solarPanels" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="solarPanels-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+          
+
+
+
+
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

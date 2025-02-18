@@ -1,0 +1,128 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+      <span class="govuk-caption-l">Apply</span>
+     
+
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="itemType-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+               <h1 class="govuk-heading-l">What slurry stores do you have now?</h1>
+            </legend>
+            <div id="itemType-hint" class="govuk-hint">
+              Select all that apply. 
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  Above ground steele slurry stores
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    Current capacity
+                  </label>
+                   <div class="govuk-input__wrapper">
+                     <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false" value="{{ item.quantity }}">
+                    <div class="govuk-input__suffix" aria-hidden="true">m<sup>3</sup></div>
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact2">
+                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  Earth bank lagoons with synthetic liner
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    Current capacity
+                  </label>
+                  <div class="govuk-input__wrapper">
+                     <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false" value="{{ item.quantity }}">
+                    <div class="govuk-input__suffix" aria-hidden="true">m<sup>3</sup></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact3">
+                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  Earth bank lagoons without synthetic liner
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    Current capacity
+                  </label>
+                  <div class="govuk-input__wrapper">
+                     <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false" value="{{ item.quantity }}">
+                    <div class="govuk-input__suffix" aria-hidden="true">m<sup>3</sup></div>
+                  </div>
+                </div>
+              </div>              
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="itemType-5" name="itemType" type="checkbox" value="Livestock" {{ checked("itemType", "Livestock") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="itemType-5">
+                  Large volume supported slurry bags
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="itemType" name="itemType" type="checkbox" value="Resource and energy management"{{ checked("itemType", "Resource and energy management") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="itemType">
+                  Precast circular concrete slurry stores
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="itemType-6" name="itemType" type="checkbox" value="Water and irrigation management" {{ checked("itemType", "Water and irrigation management") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="itemType-6">
+                  Stores using precast rectangular concrete panels
+                </label>
+              </div>              
+            </div>
+          </fieldset>
+
+      </div>
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

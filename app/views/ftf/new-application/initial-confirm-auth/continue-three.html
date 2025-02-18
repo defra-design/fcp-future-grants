@@ -1,0 +1,66 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  {% if (data.agent == 'Yes') %}
+    <form action="agent-check-your-details-mini" method="post">
+  {% else %}    
+    <form action="check-your-personal-details" method="post">
+  {% endif %}
+
+    <h1 class="govuk-heading-l">Alignment of the project with the grant's aims</h1>
+
+
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+
+    
+    <p class="govuk-body">In considering all applications and which to take forward, your application will be awarded a score against a set opf criteria which are considered to align with the grants stated purposes of:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>supporting sustainable practice in UK farmint</li>
+      <li>improving farming efficientcy</li>
+      <li>aligning with animal welfare best practice</li>
+    </ul>
+
+    <p class="govuk-body">It is likely that the total grant fund will be oversubscribed and so to give your application the best chance you should:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>thing 1</li>
+      <li>thing 2</li>
+      <li>thing 3</li>
+    </ul>
+
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+ 
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     I wish to continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    End application
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}
