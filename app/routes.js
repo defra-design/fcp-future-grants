@@ -604,7 +604,7 @@ router.get('/dataSetPrepop1', function (req, res) {
   req.session.data.lNumber = '01273726304';
 
   req.session.data.structure = 'Landowner';
-  req.session.data.employeesNumber = '12';
+  req.session.data.employeesNumber = '3';
   req.session.data.agricultureHectares = '22';
   req.session.data.horticultureHectares = '5';
   req.session.data.forestryHectares = '';
@@ -1057,5 +1057,68 @@ router.post('/fetf/claim/v1-1/item2/check-statement2-answer', function(request, 
   
 })
 
+
+// FTF new laying hen flow
+
+router.get('/dataSetPrepopHens1', function (req, res) {
+
+  req.session.data.agentName = 'Sally Wiston';
+  req.session.data.agentEmail = 'sally.wiston@wistonlandagents.co.uk';
+  req.session.data.agentNumber = '01273 333000';
+  req.session.data.aBusName = 'Wiston Land Agents Ltd';
+  req.session.data.aNameNo = '1';
+  req.session.data.aPostcode = 'RH11 3RA';
+
+  req.session.data.busName = 'Plumpton Farm Ltd';
+  req.session.data.bNumber = '01674775345';
+  req.session.data.cphNo = '272 7272 76';
+  req.session.data.vatNo = 'GB123456789';
+  req.session.data.chNumber = '09876543';
+  req.session.data.cIncNo = '01234567';
+  req.session.data.legalStatus = 'Limited company';
+  req.session.data.nameNo1 = 'North Farmstead';
+  req.session.data.postcode1 = 'BN5 93B';
+
+  req.session.data.yourName = 'Christopher Hart';
+  req.session.data.email = 'plumpton.farm@me.com';
+  req.session.data.mNumber = '07701234567';
+  req.session.data.lNumber = '01273726304';
+  req.session.data.structure = 'Landowner';
+
+  req.session.data.authComplete = 'No';
+  req.session.data.orgComplete = 'No';
+  req.session.data.p1Complete = 'No';
+  req.session.data.p2Complete = 'No';
+; 
+
+  res.redirect('/ftf/new-application/service-start');
+  
+}); 
+
+router.get('/authComplete1', function (req, res) {
+
+  req.session.data.authComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+
+router.get('/orgComplete1', function (req, res) {
+
+  req.session.data.orgComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+
+
+
+router.get('/selectBusinessAddress2', function (req, res) {
+  if (req.session.data.nameNo1 !== '') {
+    res.redirect('/ftf/new-application//organisation/confirm-business-address');
+    }
+  else 
+    res.redirect('/ftf/new-application//organisation/select-business-address');
+});
 
 

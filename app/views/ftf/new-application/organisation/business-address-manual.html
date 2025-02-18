@@ -1,0 +1,109 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Enter manual business address – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    
+        <h1 class="govuk-heading-xl">Enter business address</h1>
+</legend>
+     
+
+
+        {% if error %}
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-enter-your-details" tabindex="-1">
+            <h2 class="heading-medium error-summary-heading" id="error-summary-enter-your-details">
+                There is a problem
+            </h2>
+
+            <ul class="error-summary-list">
+                <li><a href="#">Enter first line of address</a></li>
+                <li><a href="#">Enter town or city of the address</a></li>
+            </ul>
+        </div>
+  {% endif %}
+
+
+
+  <form class="form" action="check-your-answer" method="post">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-form-group {% if error %} govuk-form-group--error {% endif %} ">
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="addressLine3">
+                          Organisation (optional)
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="address-line-3" name="organisation-1" type="text">
+      </div>
+
+                    <div class="govuk-form-group">
+            <label class="govuk-label" for="addressLine1">
+                            Address line 1
+            </label>
+                        {% if error %}
+                        <span class="error-message">Enter first line of address</span>
+            {% endif %}
+            <input class="govuk-input {% if error %} govuk-input--error {% endif %} govuk-input--width-20" id="address-line-1" name="addressLine1-1" type="text">
+        </div>
+
+                    <div class="govuk-form-group">
+            <label class="govuk-label" for="addressLine2">
+                            Address line 2 (optional)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="address-line-2" name="addressLine2-1" type="text">
+        </div>
+
+                    <div class="govuk-form-group">
+            <label class="govuk-label" for="addressLine3">
+                            Address line 3 (optional)
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="address-line-3" name="addressLine3-1" type="text">
+        </div>
+
+                    <div class="govuk-form-group {% if error %} govuk-input--error {% endif %}">
+            <label class="govuk-label" for="townCity">
+                            Town/City
+            </label>
+                        {% if error %}
+                        <span class="error-message">Enter town or city of the address</span>
+            {% endif %}
+            <input class="govuk-input govuk-input--width-20 {% if error %} govuk-input--error {% endif %}" id="town-city-1" name="townCity" type="text">
+        </div>
+
+                    <div class="govuk-form-group">
+            <label class="govuk-label" for="postcode">
+                            Postcode (optional)
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode-1" type="text">
+        </div>
+
+      </div>
+
+    </fieldset>
+
+ 
+
+ 
+
+       
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

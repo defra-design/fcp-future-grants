@@ -1,0 +1,52 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="ventilation-systems" method="post">
+    <h1 class="govuk-heading-l">Rooftop solar PV checklist</h1>
+
+    
+    <p class="govuk-body">Lots of information about Rooftop solar PV and can you meet these criteria</p>
+
+    <p>will your project support: </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>criteria one</li>
+      <li>criteria two</li>      
+      <li>criteria three</li>
+      <li>criteria four</li>
+      <li>criteria five</li>
+      <li>criteria six</li>
+    </ul>
+
+
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     I wish to continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    End application
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

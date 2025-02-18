@@ -1,0 +1,42 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="org-activity" method="post">
+
+
+    <h1 class="govuk-heading-l">You can continue applying</h1>
+
+<h2 class="govuk-heading-m">Due diligence checks</h2>
+
+<p>Our due diligence checks have shown that [org name] has the financial capacity to meet the agreement requirements.</p>
+    
+
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

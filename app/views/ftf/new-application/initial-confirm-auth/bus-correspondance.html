@@ -1,0 +1,116 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-your-business-details" method="post">
+    
+
+    <h1 class="govuk-heading-l">Confirm {{ data['yourOrg'] }}'s contact details</h1>
+
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+
+    
+   
+
+<h2 class="govuk-heading-m">
+          Contact details
+        </h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Business correspondence name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['yfirstName'] }} {{data['ymiddleName'] }} {{ data['ylastName'] | default('Liz Jones')}}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="your-id">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Corrrespondence address
+            </dt>
+{%  if (data['address-line-1']) %}
+            <dd class="govuk-summary-list__value">
+              {{data['address-line-1']}}<br>
+              {%  if (data['address-line-2']) %}{{data['address-line-2']}}<br>{% endif %}
+              {%  if (data['address-line-3']) %}{{data['address-line-3']}}<br>{% endif %}
+              {{data['address-town']}}<br>
+              {{data['address-postcode']}}<br>
+              {{data['address-county']}}
+            </dd>
+            {% else %}
+            
+            <dd class="govuk-summary-list__value">
+              Flat 3 <br>
+              75 Norten Grove <br>
+              Manchester <br>
+              M20 2JL
+            </dd>
+           {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="address-foriegn">
+                Change<span class="govuk-visually-hidden"> contact information</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Correspondence  details
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{data['phone'] | default('07990222111')}}</p>
+              <p class="govuk-body">{{data['email'] | default('liz.jones@gmail.com')}}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="contact-prefs">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+
+          
+          
+        </dl>
+        <div>
+          <p>Check the details for this section then continue.</p>
+        </div>
+
+        <button type="submit" class="govuk-button">Continue</button>
+        <br>
+        <a href="/save_return-you">Save and come back later</a> 
+
+
+
+    
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

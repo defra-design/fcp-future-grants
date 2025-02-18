@@ -1,0 +1,106 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="bus-start-date" method="post">
+
+      <h1 class="govuk-heading-l">Your financial details</h1>
+
+      <div class="govuk-form-group">
+
+
+<p>We use these details to...
+
+
+
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Balance sheet total
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="bst" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['bst'] }}">
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="fye-hint">
+            <legend class="govuk-fieldset__legend ">
+              <h1 class="govuk-fieldset__heading">
+                Financial year end date
+              </h1>
+            </legend>
+            <div id="fye-hint" class="govuk-hint">
+              For example, 27 3 2007
+            </div>
+            <div class="govuk-date-input" id="fye">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="fye-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="fye-day" name="fye-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="fye-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="fye-month" name="fye-month" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="fye-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="fye-year" name="fye-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Turnover
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="turn" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['turn'] }}">
+        </div>
+
+
+
+
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

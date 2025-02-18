@@ -1,0 +1,68 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  {% if (data.agent == 'Yes') %}
+    <form action="agent-check-your-details-mini" method="post">
+  {% else %}    
+    <form action="check-your-personal-details" method="post">
+  {% endif %}
+
+    <h1 class="govuk-heading-l">Before you start</h1>
+
+
+    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
+
+    
+    <p class="govuk-body">We’ll ask you to check and confirm the following details from the Rural Payments service:</p>
+
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>agent details (if you’re applying on someone’s behalf)</li>
+
+      <li>applicant details</li>
+
+      <li>organisation name, address and contact details</li>
+
+      <li>organisation type - for example, a limited company</li>
+
+      <li>registration numbers like <a class="govuk-link" href="https://find-and-update.company-information.service.gov.uk/">company registration number</a> and VAT registration number</li>
+
+      <li>land details including size of your land in hectares</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">How we use this information</h2>
+
+    <p>We use this information to:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>identify you and your organisation</li>
+
+      <li>do due diligence checks and prevent fraud</li>
+    </ul>
+
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}
