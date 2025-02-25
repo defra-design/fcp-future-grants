@@ -15,15 +15,18 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+{% if (data.applicantContact == 'yes') %}
+    <form action="contact-prefs-app" method="post">
+{% else %}
+    <form action="/authComplete1" method="post">
+{% endif %}
+    <h1 class="govuk-heading-l">Check your agent contact details</h1>
+"govuk-heading-l">Check your agent details are correct</h1>
 
-    <form action="contact-prefs" method="post">
-
-    <h1 class="govuk-heading-l">Check your agent details are correct</h1>
 
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
 
-      <h2 class="govuk-heading-m">Your agent contact details</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -36,6 +39,11 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+
+
+
+      {% if data.contactPrefa | includes("email") %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Email address
@@ -47,6 +55,9 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+      {% endif %}
+      {% if data.contactPrefa | includes("phone")  %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Phone number
@@ -58,25 +69,14 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+       {% endif %}
+
     </dl>
   
 
 
-    <h2 class="govuk-heading-m">Agent business details</h2>
-    
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Business name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['aBusName'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-    </dl>
+
+{% if data.contactPrefa | includes("post") %}
 
 
     <h2 class="govuk-heading-m">Agent business address</h2>
@@ -96,6 +96,8 @@
         </dd>
       </div>
     </dl>
+  {% endif %}
+
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 

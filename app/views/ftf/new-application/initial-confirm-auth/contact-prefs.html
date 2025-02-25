@@ -17,65 +17,40 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="check-your-auth-details" method="post">
+    <form action="agent-contact-details" method="post">
 
 
-      <h1 class="govuk-heading-l">Contacts for this application</h1>
-      <p>During the course of this application we may need to contact you to ask for further information, you may also wish us to keep your client informed of progress
+      <h1 class="govuk-heading-l">How can we contact you about this application?</h1>
 
       <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="business-contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                How would you like us to contact you?
-              </h2>
-              <p>We will use these contact details to ask for further information, should we need it and also update you on status of the application</p>
-            </legend>
+
             <div id="business-contact-hint" class="govuk-hint">
               Select all that apply
             </div>
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">  
+
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="contact" name="contactPrefa" type="checkbox" value="email" {{ checked("contactPrefa", "email") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="contactPrefa">
                   email
                 </label>
-              </div>
+
+              </div>    
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact-2" name="contactPrefa" type="checkbox" value="phone" {{ checked("contactPrefa", "phone") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="contactPrefa-2">
+                  phone
+                </label>
+              </div> 
+
+
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="contact-2" name="contactPrefa" type="checkbox" value="post" {{ checked("contactPrefa", "post") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="contactPrefa-2">
                   post
                 </label>
-              </div>              
-            </div>
-          </fieldset>
-          <br>
-                    <fieldset class="govuk-fieldset" aria-describedby="business-contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                How would you like us to contact {{ data['yourOrg'] }}?
-              </h2>
-              <p>We will send the same alaerts as we send to you.</p>
-            </legend>
-            <div id="business-contact-hint" class="govuk-hint">
-              Select all that apply
-            </div>
-              <div class="govuk-form-group">
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="contact" name="contactPref" type="checkbox" value="email" {{ checked("contactPref", "email") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="contactPref">
-                  email
-                </label>
-              </div>
-            
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="contact-2" name="contactPref" type="checkbox" value="post" {{ checked("contactPref", "post") }}>
-                  <label class="govuk-label govuk-checkboxes__label" for="contactPref-2">
-                    post
-                  </label>
-                </div>      
-              </div>        
+              </div>           
             </div>
           </fieldset>
 

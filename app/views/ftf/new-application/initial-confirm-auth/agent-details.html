@@ -16,14 +16,12 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="check-applicant-personal-details" method="post">
+    <form action="applicant-name" method="post">
+
     <h1 class="govuk-heading-l">Check your agent details</h1>
 
 
-    <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
-
-
-      <h2 class="govuk-heading-m">Your agent contact details</h2>
+     
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -36,35 +34,9 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Email address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['agentEmail'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Phone number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['agentNumber'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-    </dl>
-  
 
 
-    <h2 class="govuk-heading-m">Agent business details</h2>
-    
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Business name
@@ -73,14 +45,11 @@
           {{ data['aBusName'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
-    </dl>
 
 
-    <h2 class="govuk-heading-m">Agent business address</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Business address
@@ -96,6 +65,8 @@
         </dd>
       </div>
     </dl>
+
+
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 
