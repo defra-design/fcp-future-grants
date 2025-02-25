@@ -15,23 +15,21 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-{% if (data.applicantContact == 'yes') %}
-    <form action="contact-prefs-app" method="post">
-{% else %}
+
     <form action="/authComplete1" method="post">
-{% endif %}
-    <h1 class="govuk-heading-l">Check your agent contact details</h1>
+
+    <h1 class="govuk-heading-l">Check  applicant conact details</h1>
 
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
-
+      <h2 class="govuk-heading-m">Your applicant contact details </h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['agentName'] }}
+          {{ data['applicantName'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
@@ -39,26 +37,26 @@
       </div>
 
 
-      {% if data.contactPrefa | includes("email") %}
+      {% if data.contactPref | includes("email") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Email address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['agentEmail'] }}
+          {{ data['applicantContactEmail'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
       {% endif %}
-      {% if data.contactPrefa | includes("phone")  %}
+      {% if data.contactPref | includes("phone") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Phone number
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['agentNumber'] }}
+          {{ data['applicantContactNumber'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
@@ -69,7 +67,7 @@
   
 
 
-{% if data.contactPrefa | includes("post") %}
+{% if data.contactPref | includes("post") %}
 
     <h2 class="govuk-heading-m">Agent business address</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -78,10 +76,10 @@
           Business address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['aNameNo'] }} North Road<br>
+          {{ data['applicantContactNameNo'] }} North Road<br>
           Haywards Heath<br>
           West Sussex<br>
-          {{ data['aPostcode'] }}
+          {{ data['applicantContactPostcode'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>

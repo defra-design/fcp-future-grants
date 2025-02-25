@@ -12,72 +12,60 @@
 
 
 {% block content %}
-<form action="avian-systems" method="post">
+<form action="project-number" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
+
      
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    Project details
+    What will you do with {{ data['housingName'] }}?
       </h1>
     </legend>
-    <p>We’ll use these details to identify the project and check what features will need to be included. </p>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="width-20">
-       Project name
-      </label>
-      <input class="govuk-input govuk-input--width-20" id="width-20" name="pName1" type="text">
-    </div>
 
     <div class="govuk-radios" data-module="govuk-radios"> 
-      <label class="govuk-label" for="width-20">
-       Project type
-      </label>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="projectType" type="radio" value="Add a veranda to a building">
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Demolish">
         <label class="govuk-label govuk-radios__label" for="changedName">
-          Add a veranda to a building
+          Demolish
         </label>
+
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="projectType" type="radio" value="Refurbish an existing building">
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Keep for another use">
         <label class="govuk-label govuk-radios__label" for="changedName">
-         Refurbish an existing building
+          Keep for another use
         </label>
+>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="projectType" type="radio" value="Replace an existing building with a new oned">
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Keep for hen housing">
         <label class="govuk-label govuk-radios__label" for="changedName">
-          Replace an existing building with a new one
+           Keep for hen housing
         </label>
+
       </div>
-    </div>
-    <br>
-    <div class="govuk-form-group">
-    <label class="govuk-label" for="width-20">
-    Poultry type to be housed
-    </label>
-    <div class="govuk-radios" data-module="govuk-radios"> 
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="henType" type="radio" value="Add a veranda to a building">
+            <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Refurbish">
         <label class="govuk-label govuk-radios__label" for="changedName">
-          Laying hens
+         Refurbish
         </label>
+
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="henType" type="radio" value="Refurbish an existing building">
+        <input class="govuk-radios__input" id="changedName" name="yourOrg" type="radio" value="Sell">
         <label class="govuk-label govuk-radios__label" for="changedName">
-         Pullets
+          Sell
         </label>
+
       </div>
     </div>
   </fieldset>
 </div>
-
-
           
 
 

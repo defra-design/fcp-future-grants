@@ -16,57 +16,34 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/orgComplete1" method="post">
+    <form action="start-autochecks" method="post">
     
 
-    <h1 class="govuk-heading-l">Check organisation details are correct</h1>
+    <h1 class="govuk-heading-l">Check existing and planned housing capacity answers</h1>
 
-    <p class="govuk-body">This is the organisation that will receive the grant if successful.</p> 
-
-    
-
-
-<h2 class="govuk-heading-m">Business details</h2>
-
- <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Organisation name
+          How many existing buildings will you replace
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['busName'] }}
+          {{ data['noBuild'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['nameNo1'] }}<br>
-          Princes Lane<br>
-          Hassocks<br>
-          {{ data['postcode1'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="what-is-your-business-address">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-    </dl>
-
+    <h2 class="govuk-heading-m">Existing housing details</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Type (legal status)
+         Housing name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['legalStatus'] }}
+          {{ data['housingName'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
@@ -78,10 +55,10 @@
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Company registration number
+          Reference
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['chNumber'] }}
+          {{ data['housingRef'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
@@ -89,59 +66,90 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          VAT registration number
+          Total house stocking capacity
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['vatNo'] }}
+          {{ data['totalHousingCap'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-    </dl>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Number of full-time employees
+          Total usable floor area of housing
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['employNo'] | default (3) }}
+          {{ data['usableArea'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usable area at floor level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaFL'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Intention for {{ data['housingName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingIntent'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
-    <h2 class="govuk-heading-m">Business activity</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Main business
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['activity'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-    </dl>
-    <h2 class="govuk-heading-m">Financial details</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Turnover
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['turn'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-    </dl>
-    
+    <h2 class="govuk-heading-m">Total housing capacity when the project is complete</h2>
 
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total house stocking capacity
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingCap'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total usable floor area of housing
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaC'] }} m2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usable area at floor level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaFLC'] }} m2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    </dl>
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 

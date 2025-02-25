@@ -46,6 +46,92 @@
         </dd>
       </div>
     </dl>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Should applicants receive correspondence?
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['applicantContact'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>      
+    </dl>
+{% if (data.applicantContact == 'yes') %}
+    <h2 class="govuk-heading-m">Applicant contact preferences</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact method for {{ data['busName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['contactPref'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Your applicant contact details</h2>
+     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    {% if data.contactPref | includes("email") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['applicantContactEmail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.contactPref | includes("phone") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['applicantContactNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+       {% endif %}
+    </dl>
+
+  
+
+
+    {% if data.contactPref | includes("post") %}
+
+    <h2 class="govuk-heading-m">Agent business address</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['applicantContactNameNo'] }} North Road<br>
+          Haywards Heath<br>
+          West Sussex<br>
+          {{ data['applicantContactPostcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    {% endif %}
+  {% endif %}
 
 
     <h2 class="govuk-heading-m">Project planned</h2>
@@ -84,43 +170,10 @@
           <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Project 2 name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['pName2'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Project 2 purpose
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['projectType2'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Hen type
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['henType'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="what-is-your-business-address">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-    </dl>
 
-    <h2 class="govuk-heading-m">Your agent contact details</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    </dl>
+    <h2 class="govuk-heading-m">Your agent  details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Name
@@ -132,6 +185,40 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aBusName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Your agent contact details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact method for {{ data['aBusName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['contactPrefa'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    
+      {% if data.contactPrefa | includes("email") %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Email address
@@ -143,6 +230,8 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+      {% endif %}
+      {% if data.contactPrefa | includes("phone")  %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Phone number
@@ -154,26 +243,13 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+       {% endif %}
     </dl>
   
-    <h2 class="govuk-heading-m">Agent business details</h2>
-    
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Business name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['aBusName'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-    </dl>
 
 
-    <h2 class="govuk-heading-m">Agent business address</h2>
+{% if data.contactPrefa | includes("post") %}
+
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -191,33 +267,11 @@
       </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Contact preferences</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Contact method for {{ data['aBusName'] }}
-        </dt>
-        <dd class="govuk-summary-list__value">
+  {% endif %}
+  
 
-          {{ data['contactPrefa'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Contact method for {{ data['yourOrg'] }}
-        </dt>
-        <dd class="govuk-summary-list__value">
 
-          {{ data['contactPref'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
-        </dd>
-      </div>
-    </dl>
+
 
 
 

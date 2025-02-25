@@ -16,19 +16,19 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="spot-success" method="post">
-    
-      <span class="govuk-caption-l">Apply</span>
-    <h1 class="govuk-heading-l">Check organisation details are correct</h1>
-
-    <p class="govuk-body">This is the organisation that will receive the grant if successful.</p> 
-
+    <form action="start-autochecks" method="post">
     
 
+    <h1 class="govuk-heading-l">Check organisation details</h1>
+
+    <div class="govuk-inset-text">We'll use these details to do due diligence and fraud prevention checks.</div>
+
+    
 
 
 
-    <h2 class="govuk-heading-m">Organisation name</h2>
+
+
     
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -43,7 +43,7 @@
         </dd>
       </div>
     </dl>
-          <h2 class="govuk-heading-m">Organisation’s address</h2>
+
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -62,14 +62,10 @@
     </dl>
 
 
-
-
-
-    <h2 class="govuk-heading-m">Organisation type</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Organisation type
+          Type (legal status)
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['legalStatus'] }}
@@ -80,7 +76,7 @@
       </div>
     </dl>
 
-      <h2 class="govuk-heading-m">Registration numbers</h2>
+
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -104,15 +100,17 @@
             <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-            <div class="govuk-summary-list__row">
+    </dl>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          CPH number
+          Number of full-time employees
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['cphNo'] }}
+          {{ data['employNo'] | default (3) }}
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="company-cph">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
