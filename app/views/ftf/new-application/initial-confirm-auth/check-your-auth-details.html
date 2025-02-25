@@ -180,12 +180,12 @@
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['agentName'] }}
+
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
-
 
 
       <div class="govuk-summary-list__row">
@@ -209,12 +209,14 @@
         <dd class="govuk-summary-list__value">
 
           {{ data['contactPrefa'] }}
+
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
     </dl>
+
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
     
       {% if data.contactPrefa | includes("email") %}
@@ -260,18 +262,15 @@
           Haywards Heath<br>
           West Sussex<br>
           {{ data['aPostcode'] }}
+
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
     </dl>
-
   {% endif %}
   
-
-
-
 
 
 
