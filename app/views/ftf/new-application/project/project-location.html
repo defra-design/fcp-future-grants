@@ -12,35 +12,31 @@
 
 
 {% block content %}
-
-<form action="applicant-contact" method="post">
-
+<form action="project-type" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-
-
      
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="applicantName-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="locationYN-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    Which applicant are you applying for?
+    Will the project be located at BN5 93B?
       </h1>
     </legend>
+    
 
-    <div class="govuk-radios" data-module="govuk-radios"> 
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="applicantName" name="applicantName" type="radio" value="Christopher Hart">
-        <label class="govuk-label govuk-radios__label" for="applicantName">
-          Christopher Hart
+        <input class="govuk-radios__input" id="locationYN" name="locationYN" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="locationYN">
+          Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="applicantName" name="applicantName" type="radio" value="Helen Hart">
-        <label class="govuk-label govuk-radios__label" for="applicantName">
-         Helen Hart
+        <input class="govuk-radios__input" id="locationYN-2" name="locationYN" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="locationYN-2">
+          No
         </label>
       </div>
     </div>

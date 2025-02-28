@@ -47,7 +47,6 @@
           <div class="govuk-task-list__name-and-hint">
 
             <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/check-your-auth-details" aria-describedby="application-details-2-status">Check authorisation and communication details</a>
-
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
            Completed
@@ -71,10 +70,7 @@
 
         {% if (data.orgComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-
             <a class="govuk-link govuk-task-list__link" href="organisation/check-your-business-details-final" aria-describedby="application-details-2-status">About the organisation</a>
-
-
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
            Completed
@@ -105,9 +101,7 @@
           </div>
         {% elseif (data.authComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-
             <a class="govuk-link govuk-task-list__link" href="about-items/equipment-address" aria-describedby="application-details-2-status">About your project</a>
-
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             <strong class="govuk-tag govuk-tag--blue">
@@ -117,7 +111,6 @@
         {% else %}
           <div class="govuk-task-list__name-and-hint">
             About your project
-
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             
@@ -126,9 +119,7 @@
           </div>
         {% endif %}
       </li>
-
- 
-<h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">Submit application</h3>
+      <h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">Submit application</h3>
     <li class="govuk-task-list__item">
       {% if ((data.uploadFin === 'Yes') and (data.evComplete === 'Yes') and (data.aboutItemsComplete === 'Yes')) or ((data.evComplete === 'No') and (data.aboutItemsComplete === 'Yes')) %}
         <div class="govuk-task-list__name-and-hint">

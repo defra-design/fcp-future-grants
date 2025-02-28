@@ -15,14 +15,21 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
     <form action="start-autochecks" method="post">
     
 
-    <h1 class="govuk-heading-l">Check business details</h1>
+    <h1 class="govuk-heading-l">Check organisation details</h1>
 
     <div class="govuk-inset-text">We'll use these details to do due diligence and fraud prevention checks.</div>
 
-    <h2 class="govuk-heading-m">Business contact details</h2>
+    
+
+
+
+
+
+    
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -32,6 +39,7 @@
           {{ data['busName'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
@@ -48,60 +56,29 @@
           {{ data['postcode1'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-
-
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Telephone
-        </dt>
-        <dd class="govuk-summary-list__value">
-          01632 960000
-        <dd class="govuk-summary-list__actions">
-
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Mobile
-        </dt>
-        <dd class="govuk-summary-list__value">
-          07700 900 967
-        <dd class="govuk-summary-list__actions">
-
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Email address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          plumptonfarm@gmail.com
-        <dd class="govuk-summary-list__actions">
-
-
+          <a class="govuk-link" href="what-is-your-business-address">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
 
 
-
-
-    <h2 class="govuk-heading-m">Reference numbers</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Single business identifier (SBI)
+          Type (legal status)
         </dt>
         <dd class="govuk-summary-list__value">
-          357951123
+          {{ data['legalStatus'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
-      </div>      <div class="govuk-summary-list__row">
+      </div>
+    </dl>
 
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Company registration number
         </dt>
@@ -109,7 +86,7 @@
           {{ data['chNumber'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -120,44 +97,25 @@
           {{ data['vatNo'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
-
-
-
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of full-time employees
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['employNo'] | default (3) }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
 
-
-
-    <h2 class="govuk-heading-m">Additional details</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Legal status
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['legalStatus'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Business type
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Farmer
-        </dd>
-        <dd class="govuk-summary-list__actions">
-
-        </dd>
-      </div>
     </dl>
-
-If you need to make changes, you can <a href="">view and update your business details</a> in your account. 
-
-
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 
