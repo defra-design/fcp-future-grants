@@ -22,6 +22,7 @@
 {% endif %}
     <h1 class="govuk-heading-l">Check your agent contact details</h1>
 
+
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
 
@@ -39,7 +40,9 @@
       </div>
 
 
+
       {% if data.contactPrefa | includes("email") %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Email address
@@ -53,6 +56,7 @@
       </div>
       {% endif %}
       {% if data.contactPrefa | includes("phone")  %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Phone number
@@ -65,11 +69,11 @@
         </dd>
       </div>
        {% endif %}
+
     </dl>
   
-
-
 {% if data.contactPrefa | includes("post") %}
+
 
     <h2 class="govuk-heading-m">Agent business address</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -89,7 +93,9 @@
       </div>
     </dl>
 
+
   {% endif %}
+
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 

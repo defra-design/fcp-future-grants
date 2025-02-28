@@ -186,8 +186,6 @@
         </dd>
       </div>
 
-
-
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Business name
@@ -207,7 +205,6 @@
           Contact method for {{ data['aBusName'] }}
         </dt>
         <dd class="govuk-summary-list__value">
-
           {{ data['contactPrefa'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -215,6 +212,7 @@
         </dd>
       </div>
     </dl>
+
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
     
       {% if data.contactPrefa | includes("email") %}
@@ -266,15 +264,7 @@
         </dd>
       </div>
     </dl>
-
   {% endif %}
-  
-
-
-
-
-
-
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 
