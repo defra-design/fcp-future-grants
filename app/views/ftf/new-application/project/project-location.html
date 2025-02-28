@@ -12,40 +12,43 @@
 
 
 {% block content %}
-<form action="contact-prefs" method="post">
+<form action="project-type" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
      
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="applicantContact-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="locationYN-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    Who we can contact
+    Will the project be located at BN5 93B?
       </h1>
     </legend>
-    <p class="govuk-inset-text">As you are an agent, we will send communicaions to you by default.</p>
+    
 
-    <h2 class="govuk-heading-m">Can we also contact {{ data['applicantName'] }}?</h2>
-<p>We will send them updates and requests for infomation as well those sent as to you.</p>
     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="applicantContact" name="applicantContact" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="applicantContact">
+        <input class="govuk-radios__input" id="locationYN" name="locationYN" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="locationYN">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="applicantContact-2" name="applicantContact" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="applicantContact-2">
+        <input class="govuk-radios__input" id="locationYN-2" name="locationYN" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="locationYN-2">
           No
         </label>
       </div>
     </div>
   </fieldset>
 </div>
+          
 
-        
+
+
+
+
+
       <div class="govuk-button-group">
     <button type="submit" class="govuk-button" data-module="govuk-button">
       Save and continue

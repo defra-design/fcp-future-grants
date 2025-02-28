@@ -1,0 +1,79 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="spot-success" method="post">
+
+
+    <h1 class="govuk-heading-l">Non grant-funded costs</h1>
+
+
+<p>There are some costs that you cannot claim funding for.</p>
+
+<p>Details: Costs the grant cannot pay for.</p>
+
+<p>The following costs are not eligible for grant funding (this list is not exhaustive):</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>agricultural production rights and payment entitlements costs</li>
+  <li>ongoing ‘consumable’ costs (such as wood shavings or poultry feed)</li>
+</ul>
+    
+<h2 class="govuk-heading-m">Equipment and items</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li>equipment relating to egg quality, packing or processing</li>
+  <li>items not directly associated with the funded building</li>
+  <li>moveable items not in the minimum design specification</li>
+  <li>standard agricultural equipment and inputs (like farm vehicles and poultry)</li>
+  <li>work involving, or items located within, the range (like pond removal, tree planting or artificial shelters)</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">Facilities and housing</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li>manure storage facilities</li>
+  <li>mobile housing</li>
+  <li>non-permanent structure not included in the minimum design specification</li>
+</ul>
+
+<h2 class="govuk-heading-m">Systems</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li>automated vehicle washing systems</li>
+  <li>combi-cage systems</li>
+  <li>high-pressure cooling (misting) systems</li>
+  <li>solar PV systems for installation on the range, or on roofs that face only north or are fully shaded</li>
+</ul>
+
+<h2 class="govuk-heading-m">Non grant-funded project costs</h2>
+
+[£100,000]
+
+<br>
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}
