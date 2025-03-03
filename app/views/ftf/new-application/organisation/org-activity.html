@@ -1,0 +1,82 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="financial-details" method="post">
+
+      <h1 class="govuk-heading-l">What are {{ data['busName'] }}'s business activities?</h1>
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-activity-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+            </legend>
+            <div id="business-activity-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="activity" name="activity" type="checkbox" value="Arable farming" {{ checked("activity", "Arable farming") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="activity">
+                  Arable farming
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="activity-2" name="activity" type="checkbox" value="Dairy farming" {{ checked("activity", "Dairy farming") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="activity-2">
+                  Dairy farming
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="activity-3" name="activity" type="checkbox" value="Horticulture" {{ checked("activity", "Horticulture") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="activity-3">
+                  Horticulture
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="activity-3" name="activity" type="checkbox" value="Livestock" {{ checked("activity", "Livestock") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="activity-3">
+                  Livestock
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="activity-3" name="activity" type="checkbox" value="Processing" {{ checked("activity", "Processing") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="activity-3">
+                  Processing
+                </label>
+              </div>
+              
+            </div>
+          </fieldset>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

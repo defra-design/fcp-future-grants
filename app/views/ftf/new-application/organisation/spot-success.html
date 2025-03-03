@@ -1,0 +1,63 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="org-activity" method="post">
+
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Due diligence checks passed
+    </h3>
+
+  </div>
+</div>
+
+<p>Plumpton Farm Ltd meets the due diligence rules for applying for this grant.</p>
+
+
+<h2 class="govuk-heading-m">Result reason</h2>
+
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>The organisation has not gone bankrupt previously</li>
+  <li>There are no convictions against directors</li>
+  <li>There are no County Court judgements</li>
+  <li>There are no disqualified directors</li>
+</ul>
+    
+<br>    
+
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

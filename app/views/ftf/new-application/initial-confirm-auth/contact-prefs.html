@@ -1,0 +1,69 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="agent-contact-details" method="post">
+
+
+      <h1 class="govuk-heading-l">How can we contact you about this application?</h1>
+
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-contact-hint">
+
+            <div id="business-contact-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">  
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contactPrefa" type="checkbox" value="Email" {{ checked("contactPrefa", "Email") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="contactPrefa">
+                  Email
+                </label>
+              </div>    
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact-2" name="contactPrefa" type="checkbox" value="Phone" {{ checked("contactPrefa", "Phone") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="contactPrefa-2">
+                  Phone
+                </label>
+              </div> 
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact-2" name="contactPrefa" type="checkbox" value="Post" {{ checked("contactPrefa", "Post") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="contactPrefa-2">
+                  Post
+                </label>
+              </div>           
+            </div>
+          </fieldset>
+<br> <br>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

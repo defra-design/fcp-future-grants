@@ -1,0 +1,98 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<form action="project-type" method="post">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    How many existing buildings will you replace in this project?
+      </h1>
+    </legend>
+    
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        Housing name
+      </label>
+
+      <input class="govuk-input govuk-input--width-10"  name="housingName" type="text" inputmode="numeric" value="{{ data['housingName'] }}">
+    </div>
+
+        <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        Reference
+      </label>
+
+      <input class="govuk-input govuk-input--width-10"  name="housingRef" type="text" inputmode="numeric" value="{{ data['housingRef'] }}">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        Total house stocking capacity
+      </label>
+
+      <input class="govuk-input govuk-input--width-10"  name="totalHousingCap" type="text" inputmode="numeric" value="{{ data['totalHousingCap'] }}">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        Total usable floor area of housing
+      </label>
+
+      
+    <div class="govuk-input__wrapper">
+      <input class="govuk-input govuk-input--width-5" id="weight" name="usableArea" type="text" value="{{ data['usableArea'] }}">
+      <div class="govuk-input__suffix" aria-hidden="true">m2</div>
+    </div>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        Usable area at floor level
+      </label>
+
+        <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input--width-5" id="weight" name="usableAreaFL" type="text" value="{{ data['usableAreaFL'] }}">
+    <div class="govuk-input__suffix" aria-hidden="true">m2</div>
+  </div>
+    </div>
+  </fieldset>
+</div>
+          
+
+
+
+
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,184 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-applicant-personal-details" method="post">
+      <span class="govuk-caption-l">Apply</span>
+    <h1 class="govuk-heading-l">Check your slurry store details are correct</h1>
+
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Your grant details
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading"></p>
+      <p>Eligible expenditure</strong>: £46,000 <br>
+    <strong>Ineligible expenditure</strong>: £7,000 <br>
+    <strong>Total grant amount</strong> £46,000 </p>
+  </div>
+</div>
+
+
+
+
+
+    <h2 class="govuk-heading-m">New store capacity you are building</h2>
+
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          New slurry  types
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ol class="govuk-list govuk-list--number">
+            <li>Above ground slurry stores</li>
+            <li>Precast circular concrete slurry stores</li>
+            <li>Earth bank lagoons with synthetic liner</li>
+          </ol>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+  
+
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Above ground steel slurry stores
+        </dt>
+        <dd class="govuk-summary-list__value">
+          300m3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>   
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Precast circular concrete slurry stores
+        </dt>
+        <dd class="govuk-summary-list__value">
+          200m3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Earth bank lagoons with synthetic liner
+        </dt>
+        <dd class="govuk-summary-list__value">
+          500m3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total future storage capacity
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1,400m3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          
+        </dd>
+      </div>
+    </dl>
+        <h2 class="govuk-heading-m">Capacity you need for 6 months</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          6-month capacity
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1400 m3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Stores and covers</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of new stores you are adding
+        </dt>
+        <dd class="govuk-summary-list__value">
+          5
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total number of fixed flexible covers 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total number of floating fixed covers 
+        <dd class="govuk-summary-list__value">
+          2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="agent-name">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+ <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Confirm and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

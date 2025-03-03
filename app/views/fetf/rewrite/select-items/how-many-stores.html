@@ -1,0 +1,102 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} {{ item.title }} {% endblock %}
+
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+  <!-- <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="equipment-list">Items</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">{{ item.title }}
+      </li>
+    </ol>
+  </div> -->
+
+{% endblock %}
+
+
+{% block content %}
+
+    <form action="/fetf-add-to-selected-items1" method="post">
+      <input type="hidden" name="termName" value="{{ item.termName }}">
+
+
+    <!-- <span class="govuk-caption-xl">{{ item.section }}</span> -->
+
+    
+    
+   
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     <h1 class="govuk-heading-l">How many slurry stores do you have now?</h1>
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-form-group">
+  <h2 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--s" for="quantity">
+    Total number of stores
+    </label>
+  </h2>
+
+  <div class="govuk-input__wrapper">
+     <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false" value="{{ item.quantity }}">
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+<div class="govuk-button-group">
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+<br>
+
+</form>
+
+
+
+ <a class="govuk-button govuk-button--secondary" href="equipment-list">
+
+    Cancel
+  
+  </a>
+</div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+{% endblock %}

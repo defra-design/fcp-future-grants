@@ -1,0 +1,231 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your Organisation and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/contactComplete1" method="post">
+
+    <h1 class="govuk-heading-l">Check your project and communication details are correct</h1>
+
+
+    
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can we contact {{ data['applicantName'] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['applicantContact'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>      
+    </dl>
+{% if (data.applicantContact == 'yes') %}
+    <h2 class="govuk-heading-m">Applicant contact preferences</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact method for {{ data['busName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['contactPref'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Your applicant contact details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">  
+    {% if data.contactPref | includes("Email") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          the.harts@gmail.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.contactPref | includes("Phone") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Telephone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          01273 726300
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Mobile 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['applicantContactNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+       {% endif %}
+    </dl>
+
+  
+
+
+    {% if data.contactPref | includes("Post") %}
+
+    <h2 class="govuk-heading-m">Business address</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          North Farmstead<br>
+          Princes Lane<br>
+          Hassocks<br>
+          BN5 93B
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    {% endif %}
+  {% endif %}
+
+
+    <h2 class="govuk-heading-m">Your agent  details</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aBusName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Your agent contact details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact method for {{ data['aBusName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['contactPrefa'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    
+      {% if data.contactPrefa | includes("Email") %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentEmail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.contactPrefa | includes("Phone")  %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+       {% endif %}
+    </dl>
+  
+
+
+{% if data.contactPrefa | includes("Post") %}
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aNameNo'] }} North Road<br>
+          Haywards Heath<br>
+          West Sussex<br>
+          {{ data['aPostcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+  {% endif %}
+ <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

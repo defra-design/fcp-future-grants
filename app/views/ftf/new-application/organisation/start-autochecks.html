@@ -1,0 +1,50 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="spot-success" method="post">
+
+
+    <h1 class="govuk-heading-l">Start checks</h1>
+
+
+<p>We’ll now do due diligence checks on Plumpton Farm Ltd.</p>
+
+<p>We’ll check the following information as part of the checks:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>bankruptcies</li>
+  <li>convictions against directors and failed directorships</li>
+  <li>County Court judgements</li>
+  <li>disqualified directorships</li>
+</ul>
+    
+<br>
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

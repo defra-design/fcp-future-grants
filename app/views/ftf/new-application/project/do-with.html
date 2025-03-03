@@ -1,0 +1,94 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<form action="project-number" method="post">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    What will you do with {{ data['housingName'] }}?
+      </h1>
+    </legend>
+
+    <div class="govuk-radios" data-module="govuk-radios"> 
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent" type="radio" value="Demolish">
+
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Demolish
+        </label>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent" type="radio" value="Keep for another use">
+
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Keep for another use
+        </label>
+>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent" type="radio" value="Keep for hen housing">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+           Keep for hen housing
+        </label>
+
+      </div>
+            <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent" type="radio" value="Refurbish">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+         Refurbish
+        </label>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent" type="radio" value="Sell">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Sell
+        </label>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+          
+
+
+
+
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../check-your-business-type" method="post">
+
+      
+      <div class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+      <span class="govuk-caption-l">Upload financial evidence</span>
+            <h1 class="govuk-fieldset__heading">
+              Planning permission details
+            </h1>
+          </legend>
+
+          <p class="govuk-body">We may use these details to check the planning documents.</p>
+          <div id="contact-hint" class="govuk-hint">
+            Select all that apply. Enter approximate hectares in whole numbers.
+          </div>
+          
+
+              <div class="govuk-form-group">
+                <h3 class="govuk-heading-s">
+                  Local planning authority name
+                </h3>
+                <p>You can <a href="https://www.planningportal.co.uk/find-your-local-planning-authority" class="govuk-link">find your local planning authority</a> on the Planning Portal</p>
+
+                <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="agriculture-hectares" name="agricultureHectares" type="text" spellcheck="false" inputmode="numeric"value="{{ data['agricultureHectares'] }}">
+
+                </div>
+              </div>
+
+              <div class="govuk-form-group">
+                <h3 class="govuk-heading-s">
+                Planning reference approval number
+                </h3>
+                <div class="govuk-input__wrapper">
+                  <input class="govuk-input govuk-input--width-5" id="horticulture-hectares" name="horticultureHectares" type="text" spellcheck="false" inputmode="numeric" value="{{ data['horticultureHectares'] }}">
+
+                </div>
+              </div>
+                      </div>
+          <br>
+        </fieldset>
+      </div>
+
+      
+
+    
+
+
+
+
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

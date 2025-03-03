@@ -1,0 +1,54 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="check-your-business-details-final" method="post">
+
+      <h1 class="govuk-heading-l">{{ data['busName'] }}'s annual business turnover</h1>
+
+      <div class="govuk-form-group">
+      <p>We use this information to check the financial health of the business.</p>
+
+        <div class="govuk-form-group">
+
+          <label class="govuk-label" for="bName">
+            Turnover
+          </label>
+              <div class="govuk-input__wrapper">
+                <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                   <input class="govuk-input govuk-input--width-10" id="employees-number" name="turn" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['turn'] }}">
+                </div>
+              </div>
+
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

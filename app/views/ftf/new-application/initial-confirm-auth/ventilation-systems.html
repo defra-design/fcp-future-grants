@@ -1,0 +1,58 @@
+ {% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="veranda-features" method="post">
+    <h1 class="govuk-heading-l">Check ventilation features</h1>
+
+    
+    <p class="govuk-body">Lots of information about Rooftop solar PV and can you meet these criteria</p>
+
+    <p>The housing must include or provide all of the following ventilation features:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Air speed of 1 metre per second over the birds.</li>
+      <li>Alarm system to detect and commute excessive high or low temperatures and system failure, with a power supply independent of mains electricity.</li>
+      <li>Control system to automatically measure and record daily temperature, humidity and CO2 levels.</li>
+      <li>Emergency power supply - for example, a high-capacity generator.</li>
+      <li>Maximum ventilation rate (MXVR) of 10,800m3 per hour per 1000 birds (up to 2.5 kg body mass).</li>
+      <li>Mechanical ventilation system.</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Confirm your project will have these features</h2>
+
+    <p>By continuing, you confirm your project will have all these ventilation features.</p>
+
+    <div class="govuk-inset-text">If your project does not have all these ventilation features, you will not be eligible for this grant.</div>
+
+
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Confirm and continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    End application
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

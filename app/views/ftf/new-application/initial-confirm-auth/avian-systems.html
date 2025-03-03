@@ -1,0 +1,50 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="building-features" method="post">
+    <h1 class="govuk-heading-l">Check aviary system features</h1>
+
+    
+    <p class="govuk-body">It must be a high welfare aviary system and have <strong>all the following</strong>:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Integrated manure removal belts.</li>
+      <li>Non-flicker LED lighting at each level (and under the system) that can automatically simulate dawn and dusk.</li>      
+      <li>Ramps and platforms if the hens need to jump or fly more than one metre to move between levels.</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">Confirm the project will have these features</h2>
+    <p>By continuing, you confirm the project will have all these features.</p>
+
+    <div class="govuk-inset-text">If your project does not have all these features, you will not be eligible for this grant.</div>
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Confirm and continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Exit application
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

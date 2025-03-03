@@ -1,0 +1,83 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="applicant-name" method="post">
+
+    <h1 class="govuk-heading-l">Check your agent details</h1>
+
+
+     
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aBusName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aNameNo'] }} North Road<br>
+          Haywards Heath<br>
+          West Sussex<br>
+          {{ data['aPostcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+ <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Confirm and continue
+</button>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

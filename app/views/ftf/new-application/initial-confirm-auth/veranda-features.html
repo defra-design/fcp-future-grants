@@ -1,0 +1,70 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="check-your-eligibility-details" method="post">
+    <h1 class="govuk-heading-l">Check veranda features</h1>
+
+    <p>You only need to add a veranda if you have the outside space for it. The veranda must either be:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>4 metres wide along the length of the housing area</li>
+      <li>30% of the indoor housing area footprint</li>
+    </ul>
+
+    <h2 class="govuk-heading-s">Veranda</h2>
+    <p class="govuk-body">If you add a veranda, it must have <strong>all the following</strong>:</p>
+    <ol class="govuk-list govuk-list--number">
+      <li>Dimmable LED lighting system (0 lux to 60 lux).</li>
+      <li>Mesh roller screen running under the roof length, that fits securely against the wall when you roll it down.</li>
+      <li>Perimeter wall at least 1m high, with biosecure entrance for cleaning access.</li>
+      <li>Solid concrete floor.</li>
+      <li>Waterproof insulated roof.</li>
+    </ol>
+
+    <h2 class="govuk-heading-s">Pop holes</h2>
+    <p>The veranda also meet all the pop hole requirements:</p>
+    <ol class="govuk-list govuk-list--number">
+      <li>All pop holes bases are less than 30cm from floor level, or have access ramps as wide as the pop holes.</li>
+      <li>Closable pop holes in the perimeter wall, unless the veranda is part of an indoor barn system.</li>
+      <li>Internal access along the hen house wall length through closable pop holes are at least 35cm high and 40cm wide.</li>
+      <li>No perches in front of pop holes.</li>
+      <li>Width of pop hole openings along the internal hen house wall length adds up to a total of 2 metres for every 1,000 hens in the building.</li>
+    </ol>
+
+
+    <h2 class="govuk-heading-m">Confirm the project will have these features</h2>
+    <p>By continuing, you confirm the project will have all these features.</p>
+
+    <div class="govuk-inset-text">If your project does not have all these features, you will not be eligible for this grant.</div>
+
+
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Confirm and continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Exit application
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

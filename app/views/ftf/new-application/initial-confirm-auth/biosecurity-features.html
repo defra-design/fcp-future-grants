@@ -1,0 +1,61 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="ventilation-systems" method="post">
+    <h1 class="govuk-heading-l">Check biosecurity features</h1>
+    <h2 class="govuk-heading-m">Housing</h2>  
+    <p class="govuk-body">The housing must have <strong>all the following</strong>:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Continuous concrete apron surrounding it, unless the birds need a gap to directly access a range.</li>
+      <li>Designated on-site area to wash and disinfect vehicles with a concrete surface at least 3 metres wide, and soiled water drainage system and storage tanks.</li>  
+      <li>Direct external access to the egg store (must be separate from main entrance lobby and connected changing area).</li>
+
+    </ol>
+        <h2 class="govuk-heading-m">Changing area</h2>  
+    <p class="govuk-body">It must also have a biosecurity changing area at each external pedestrian access point. Each area must have <strong>all the following</strong>:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Changing facilities, with step-over barrier between outer and inner areas.</li>
+      <li>Inner area: footbath and indoor clothes and boots storage.</li>      
+      <li>Outer area: handwashing facilities with running water and outdoor clothes and boots storage.</li>
+    </ol>
+
+    <h2 class="govuk-heading-m">Confirm the project will have these features</h2>
+    <p>By continuing, you confirm the project will have all these features.</p>
+
+    <div class="govuk-inset-text">If your project does not have all these features, you will not be eligible for this grant.</div>
+
+
+
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Confirm and continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Exit application
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}
