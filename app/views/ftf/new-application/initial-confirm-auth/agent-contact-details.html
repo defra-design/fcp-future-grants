@@ -18,7 +18,7 @@
 {% if (data.applicantContact == 'yes') %}
     <form action="contact-prefs-app" method="post">
 {% else %}
-    <form action="/authComplete1" method="post">
+    <form action="check-your-contact-details" method="post">
 {% endif %}
     <h1 class="govuk-heading-l">Check your agent contact details</h1>
 
@@ -38,10 +38,21 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aBusName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
 
 
 
-      {% if data.contactPrefa | includes("email") %}
+      {% if data.contactPrefa | includes("Email") %}
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -55,7 +66,7 @@
         </dd>
       </div>
       {% endif %}
-      {% if data.contactPrefa | includes("phone")  %}
+      {% if data.contactPrefa | includes("Phone")  %}
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -72,7 +83,7 @@
 
     </dl>
   
-{% if data.contactPrefa | includes("post") %}
+{% if data.contactPrefa | includes("Post") %}
 
 
     <h2 class="govuk-heading-m">Agent business address</h2>

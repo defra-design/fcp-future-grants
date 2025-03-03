@@ -16,40 +16,17 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/authComplete1" method="post">
+    <form action="/contactComplete1" method="post">
 
     <h1 class="govuk-heading-l">Check your project and communication details are correct</h1>
 
-    <h2 class="govuk-heading-m">The applicant</h2>
+
     
+
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Organisation applying
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['yourOrg'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Applicant's name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['applicantName'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-    </dl>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Should applicants receive correspondence?
+          Can we contact {{ data['applicantName'] }}?
         </dt>
         <dd class="govuk-summary-list__value">
 
@@ -78,24 +55,35 @@
     </dl>
 
     <h2 class="govuk-heading-m">Your applicant contact details</h2>
-     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-    {% if data.contactPref | includes("email") %}
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">  
+    {% if data.contactPref | includes("Email") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Email address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['applicantContactEmail'] }}
+          the.harts@gmail.com
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
       {% endif %}
-      {% if data.contactPref | includes("phone") %}
+      {% if data.contactPref | includes("Phone") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Phone number
+          Telephone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          01273 726300
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Mobile 
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['applicantContactNumber'] }}
@@ -110,19 +98,19 @@
   
 
 
-    {% if data.contactPref | includes("post") %}
+    {% if data.contactPref | includes("Post") %}
 
-    <h2 class="govuk-heading-m">Agent business address</h2>
+    <h2 class="govuk-heading-m">Business address</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Business address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['applicantContactNameNo'] }} North Road<br>
-          Haywards Heath<br>
-          West Sussex<br>
-          {{ data['applicantContactPostcode'] }}
+          North Farmstead<br>
+          Princes Lane<br>
+          Hassocks<br>
+          BN5 93B
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
@@ -134,44 +122,6 @@
   {% endif %}
 
 
-    <h2 class="govuk-heading-m">Project planned</h2>
-    
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Number of projects
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['noProj'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Project 1 name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['pName1'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Project 1 purpose
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['projectType'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-
-    </dl>
     <h2 class="govuk-heading-m">Your agent  details</h2>
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -215,7 +165,7 @@
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
     
-      {% if data.contactPrefa | includes("email") %}
+      {% if data.contactPrefa | includes("Email") %}
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -229,7 +179,7 @@
         </dd>
       </div>
       {% endif %}
-      {% if data.contactPrefa | includes("phone")  %}
+      {% if data.contactPrefa | includes("Phone")  %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Phone number
@@ -246,7 +196,7 @@
   
 
 
-{% if data.contactPrefa | includes("post") %}
+{% if data.contactPrefa | includes("Post") %}
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">

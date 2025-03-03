@@ -1100,13 +1100,27 @@ router.get('/dataSetPrepopHens1', function (req, res) {
   req.session.data.p2Complete = 'No';
 ; 
 
-  res.redirect('/ftf/new-application/service-start');
+  res.redirect('/ftf/new-application/initial-confirm-auth/login');
   
 }); 
 
 router.get('/authComplete1', function (req, res) {
 
   req.session.data.authComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+router.get('/agentAppComplete1', function (req, res) {
+
+  req.session.data.aApComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+router.get('/contactComplete1', function (req, res) {
+
+  req.session.data.contactComplete = 'Yes';
   res.redirect('/ftf/new-application/task-list');
 
 });
