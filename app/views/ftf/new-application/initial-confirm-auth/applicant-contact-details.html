@@ -16,7 +16,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/authComplete1" method="post">
+    <form action="check-your-contact-details" method="post">
     <h1 class="govuk-heading-l">Check  applicant contact details</h1>
 
 
@@ -37,23 +37,34 @@
       </div>
 
 
-      {% if data.contactPref | includes("email") %}
+      {% if data.contactPref | includes("Email") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Email address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['applicantContactEmail'] }}
+          the.harts@gmail.com
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
       {% endif %}
-      {% if data.contactPref | includes("phone") %}
+      {% if data.contactPref | includes("Phone") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Phone number
+          Telephone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          01273 726300
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Mobile 
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['applicantContactNumber'] }}
@@ -67,7 +78,7 @@
   
 
 
-{% if data.contactPref | includes("post") %}
+{% if data.contactPref | includes("Post") %}
 
 
     <h2 class="govuk-heading-m">Applicant address</h2>
@@ -77,10 +88,10 @@
           Address
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['applicantContactNameNo'] }} North Road<br>
-          Haywards Heath<br>
-          West Sussex<br>
-          {{ data['applicantContactPostcode'] }}
+          North Farmstead<br>
+          Princes Lane<br>
+          Hassocks<br>
+          BN5 93B
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>

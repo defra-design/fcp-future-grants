@@ -39,21 +39,21 @@
     </h2>
     <ul class="govuk-task-list">
 
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Who is applying </h3>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">1. Check before you start</h3>
 
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
 
         {% if (data.authComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
 
-            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/check-your-auth-details" aria-describedby="application-details-2-status">Check authorisation and communication details</a>
+            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/check-your-eligibility-details" aria-describedby="application-details-2-status">Check grant requirements</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
            Completed
           </div>
         {% else %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="check-details/check-start" aria-describedby="application-details-2-status">Check authorisation and communication details</a>
+            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/which-org" aria-describedby="application-details-2-status">Check grant requirements</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             <strong class="govuk-tag govuk-tag--blue">
@@ -62,7 +62,32 @@
           </div>
         {% endif %}
     </li>
-<h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">Prepare your application</h3>
+    <BR>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">2. Prepare your application</h3>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+
+        {% if (data.contactComplete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+
+            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/check-your-contact-details" aria-describedby="application-details-2-status">Contact details</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+        {% else %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/applicant-contact" aria-describedby="application-details-2-status">Contact details</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+             Not yet started
+            </strong>
+          </div>
+        {% endif %}
+    </li>
+
 
 
 
@@ -70,14 +95,14 @@
 
         {% if (data.orgComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="organisation/check-your-business-details-final" aria-describedby="application-details-2-status">About the organisation</a>
+            <a class="govuk-link govuk-task-list__link" href="organisation/check-your-business-details-final" aria-describedby="application-details-2-status">Business details</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
            Completed
           </div>
         {% else %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="organisation/check-your-business-details" aria-describedby="application-details-2-status">About the organisation</a>
+            <a class="govuk-link govuk-task-list__link" href="organisation/check-your-business-details" aria-describedby="application-details-2-status">Business details</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             <strong class="govuk-tag govuk-tag--blue">
@@ -88,12 +113,12 @@
     </li>
     <br>
   
-<h3 class="govuk-heading-s govuk-!-margin-bottom-1">Your projects</h3>
+<h3 class="govuk-heading-s govuk-!-margin-bottom-1">3. Provide project information</h3>
 
     <li class="govuk-task-list__item ">
         {% if (data.p1Complete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="about-items/equipment-summary" aria-describedby="application-details-2-status">About your project</a>
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Existing and planned housing capacity</a>
 
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
@@ -101,7 +126,36 @@
           </div>
         {% elseif (data.authComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="about-items/equipment-address" aria-describedby="application-details-2-status">About your project</a>
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Existing and planned housing capacity</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+             Not yet started
+            </strong>
+          </div>
+        {% else %}
+          <div class="govuk-task-list__name-and-hint">
+            Existing and planned housing capacity
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            
+             Cannot start yet
+            
+          </div>
+        {% endif %}
+      </li>
+          <li class="govuk-task-list__item ">
+        {% if (data.p1Complete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Project dates and location</a>
+
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+        {% elseif (data.authComplete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="s" aria-describedby="application-details-2-status">Project dates and location</a>
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
             <strong class="govuk-tag govuk-tag--blue">
@@ -119,7 +173,101 @@
           </div>
         {% endif %}
       </li>
-      <h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">Submit application</h3>
+          <li class="govuk-task-list__item ">
+        {% if (data.p1Complete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Project costs</a>
+
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+        {% elseif (data.authComplete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Project costs</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+             Not yet started
+            </strong>
+          </div>
+        {% else %}
+          <div class="govuk-task-list__name-and-hint">
+            About your project
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            
+             Cannot start yet
+            
+          </div>
+        {% endif %}
+      </li>
+          <li class="govuk-task-list__item ">
+        {% if (data.p1Complete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Health and welfare improvements</a>
+
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+        {% elseif (data.authComplete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="" aria-describedby="application-details-2-status">Health and welfare improvements</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+             Not yet started
+            </strong>
+          </div>
+        {% else %}
+          <div class="govuk-task-list__name-and-hint">
+            About your project
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            
+             Cannot start yet
+            
+          </div>
+        {% endif %}
+      </li>
+      <BR>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">4. Confirm agreement responsibility</h3>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+
+          <div class="govuk-task-list__name-and-hint">
+
+            Grant funding agreement responsibility
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Cannot start yet
+          </div>
+        </li>
+<!--
+        {% if (data.contactComplete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+
+            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/check-your-contact-details" aria-describedby="application-details-2-status">Contact details</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+        {% else %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="initial-confirm-auth/applicant-contact" aria-describedby="application-details-2-status">Contact details</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+             Not yet started
+            </strong>
+          </div>
+        {% endif %}
+    </li>
+          -->
+
+      <h3 class="govuk-heading-s govuk-!-margin-top-6 govuk-!-margin-bottom-1">5. Submit application</h3>
     <li class="govuk-task-list__item">
       {% if ((data.uploadFin === 'Yes') and (data.evComplete === 'Yes') and (data.aboutItemsComplete === 'Yes')) or ((data.evComplete === 'No') and (data.aboutItemsComplete === 'Yes')) %}
         <div class="govuk-task-list__name-and-hint">
@@ -143,9 +291,6 @@
 </ul>
 
 
-
-
-<br><br>
 
 <div class="app-contact-panel">
   <h2 class="app-contact-panel__heading">Need help?</h2>
