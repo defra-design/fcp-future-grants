@@ -1,8 +1,9 @@
 {% extends "layouts/main-fetf.html" %}
 
-{% set pageName="Confirmation" %}
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
 {% block beforeContent %}
-{% include "../../_includes/phase-banner_alpha.html" %}
+{% include "../_includes/phase-banner_alpha.html" %}
 {{ govukBackLink({
   text: "Back",
   href: "javascript:history.back()"
@@ -11,10 +12,8 @@
 
 {% block content %}
 
-
-
-  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-    <div class="govuk-grid-row">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         
         
@@ -50,12 +49,12 @@
         
         <h2 class="govuk-heading-m">What happens next</h2>
         <p class="govuk-body">We’ve sent your application to the Rural Payments Agency (RPA).</p>
-        <p>They will contact you after 17 April 2025 (the application closing date) to tell you if your application has been successful, or to ask for more information</p>
+        <p>They will contact you after 17 May 2025 (the application closing date) to tell you if your application has been successful, or to ask for more information</p>
         <p>It normally takes around 6 weeks after the closing date to process applications.</p>
-        <p>If you’re successful, we’ll send you a grant funding agreement  (GFA) with a list of items you can claim for. 
+        <p>If you’re successful, we’ll send you a grant funding agreement  (GFA) with a list further evidence we require. 
         </p>
 
-        <div class="govuk-inset-text"> Do not buy any of the items until you receive a GFA.</div>
+        <div class="govuk-inset-text"> Do not start the work until you receive a GFA.</div>
 
        
 
@@ -87,8 +86,7 @@
        
  
       </div>
-    </div>
-  </main>
 </div>
+</main>
 
 {% endblock %}

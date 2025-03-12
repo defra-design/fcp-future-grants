@@ -1,0 +1,68 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="pData-in-project" method="post">
+
+      <h1 class="govuk-heading-l">What digital systems to automatically capture data will you use in your project?</h1>
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-digiActivity-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            </legend>
+            <div id="business-digiActivity-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="digiActivity-2" name="digiActivity" type="checkbox" value="Environmental data digital system" {{ checked("digiActivity", "Environmental data digital system") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="digiActivity-2">
+                  Environmental data digital system
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="digiActivity-3" name="digiActivity" type="checkbox" value="Poultry management data digital system" {{ checked("digiActivity", "Poultry management data digital system") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="digiActivity-3">
+                  Poultry management data digital system
+                </label>
+              </div>     
+            </div>
+
+
+
+
+          </fieldset>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

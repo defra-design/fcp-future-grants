@@ -1133,6 +1133,57 @@ router.get('/orgComplete1', function (req, res) {
 
 });
 
+router.get('/housingComplete1', function (req, res) {
+
+  req.session.data.housingComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+router.get('/projDetailsComplete1', function (req, res) {
+
+  req.session.data.projDetailsComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+router.get('/projCostsComplete1', function (req, res) {
+
+  req.session.data.projCostsComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+router.get('/hwiComplete1', function (req, res) {
+
+  req.session.data.hwiComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+router.get('/gfaComplete1', function (req, res) {
+
+  req.session.data.gfaComplete = 'Yes';
+  res.redirect('/ftf/new-application/task-list');
+
+});
+
+
+
+router.get('/selectProjectAddress1', function (req, res) {
+  if (req.session.data.nameNo2 !== '') {
+    res.redirect('/ftf/new-application/project/confirm-project-address');
+    }
+  else 
+    res.redirect('/ftf/new-application//project/select-project-address');
+});
+
+
+
+
+
+
+
 
 
 

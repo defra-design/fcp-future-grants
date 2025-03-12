@@ -1,0 +1,96 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="what-is-your-project-address" method="post">
+      <h1 class="govuk-heading-l">Project site location</h1>
+      <p>Use the details from the Animal and Plant Health Agency (APHA) poultry register</p>
+
+      <div class="govuk-form-group">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Keeper name (optional)
+          </label>
+            <input class="govuk-input govuk-input--width-20" id="keeperName" name="keeperName" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['keeperName'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Keeper ID (optional)
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="keeperID" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['keeperID'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            Location name
+          </label>
+            <input class="govuk-input govuk-input--width-10" id="employees-number" name="location" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['location'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            County Parish Holding Number
+          </label>
+          <div id="account-number-hint" class="govuk-hint">
+            Enter the county parish holding (CPH) number where you record animal movements (for example 08/123/4567)
+          </div>
+          <div class="govuk-form-group">
+          
+            <input class="govuk-input govuk-input--width-2" id="account-number" name="cph1" type="text" value="{{ data['cph1'] }}">
+          / 
+         
+            
+            <input class="govuk-input govuk-input--width-3" id="account-number" name="cph2" type="text" value="{{ data['cph2'] }}">
+          /
+         
+            
+            <input class="govuk-input govuk-input--width-4" id="account-number" name="cph3" type="text" value="{{ data['cph3'] }}">
+          </div>
+        </div>
+       
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="bName">
+            National Grid field number
+          </label>
+
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-10" id="ngfNo" name="ngfNo" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['ngfNo'] }}">
+        </div>
+
+
+      </div>
+      <br> <br>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

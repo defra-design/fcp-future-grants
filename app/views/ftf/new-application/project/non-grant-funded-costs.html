@@ -1,0 +1,90 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="grant-summary" method="post">
+
+      <h1 class="govuk-heading-l">Non grant-funded costs</h1>
+
+      <p>There are some costs that you cannot claim funding for.</p>
+
+      <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Costs the grant cannot pay for.
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>The following costs are not eligible for grant funding (this list is not exhaustive):</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>agricultural production rights and payment entitlements costs</li>
+      <li>ongoing ‘consumable’ costs (such as wood shavings or poultry feed)</li>
+    </ul>
+
+    <h2 class="govuk-heading-s">Equipment and items</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>equipment relating to egg quality, packing or processing</li>
+      <li>items not directly associated with the funded building</li>
+      <li>moveable items not in the minimum design specification</li>
+      <li>standard agricultural equipment and inputs (like farm vehicles and poultry)</li> 
+      <li>work involving, or items located within, the range (like pond removal, tree planting or artificial shelters)</li>
+    </ul>
+
+    <h2 class="govuk-heading-s">Facilities and housing</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>manure storage facilities</li>
+      <li>mobile housing</li>
+      <li>non-permanent structure not included in the minimum design specification</li>
+    </ul>
+
+    <h2 class="govuk-heading-s">Systems</h2>
+
+     <ul class="govuk-list govuk-list--bullet">
+      <li>automated vehicle washing systems</li>
+      <li>combi-cage systems</li>
+      <li>high-pressure cooling (misting) systems</li>
+      <li>solar PV systems for installation on the range, or on roofs that face only north or are fully shaded</li>
+    </ul>
+  </div>
+</details>
+<h2 class="govuk-heading-s">Non grant-funded project costs</h2>
+    <div class="govuk-input__wrapper">
+      <div class="govuk-input__prefix" aria-hidden="true">£</div>
+         <input class="govuk-input govuk-input--width-10" id="employees-number" name="nonProjCost" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric" value="{{ data['nonProjCost'] }}">
+      </div>
+      <br> <br>
+
+
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

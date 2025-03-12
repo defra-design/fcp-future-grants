@@ -1,0 +1,91 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="eSources-in-project" method="post">
+
+      <h1 class="govuk-heading-l">What pollution and biosecurity measures are in your project?</h1>
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-bioActivity-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+            </legend>
+            <div id="business-bioActivity-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="bioActivity" name="bioActivity" type="checkbox" value="Air filtration at inlets" {{ checked("Air filtration at inlets") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="bioActivity">
+                  Air filtration at inlets
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="bioActivity-2" name="bioActivity" type="checkbox" value="Air filtration at outlets" {{ checked("bioActivity", "Air filtration at outlets") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="bioActivity-2">
+                  Air filtration at outlets
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="bioActivity-3" name="bioActivity" type="checkbox" value="Integrated externally accessible storage room with a separate air space" {{ checked("bioActivity", "Integrated externally accessible storage room with a separate air space") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="bioActivity-3">
+                  Integrated externally accessible storage room with a separate air space
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="bioActivity-3" name="bioActivity" type="checkbox" value="Manure drying" {{ checked("bioActivity", "Manure drying") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="bioActivity-3">
+                  Manure drying
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="bioActivity-3" name="bioActivity" type="checkbox" value="Shower facilities in the biosecurity changing area" {{ checked("bioActivity", "Shower facilities in the biosecurity changing area") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="bioActivity-5">
+                  Shower facilities in the biosecurity changing area
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="bioActivity-3" name="bioActivity" type="checkbox" value="Tree shelter belt near air outlets to reduce ammonia" {{ checked("bioActivity", "Tree shelter belt near air outlets to reduce ammoniag") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="bioActivity-6">
+                  Tree shelter belt near air outlets to reduce ammonia
+                </label>
+              </div>     
+            </div>
+
+
+
+
+          </fieldset>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

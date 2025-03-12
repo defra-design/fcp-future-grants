@@ -1,0 +1,98 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/hwiComplete1" method="post">
+
+<div class="govuk-notification-banner" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+     Match result
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Result: Weak match
+    </h3>
+
+  </div>
+</div>
+
+<p>Your project does not closely match our funding priorities and is less likely to be successful for this grant application.</p>
+
+
+<h2 class="govuk-heading-m">Result reasons</h2>
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Funding priority</th>
+      <th scope="col" class="govuk-table__header">Priority included in project</th>
+      <th scope="col" class="govuk-table__header">Evidence</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Reduce keel bone fractures</th>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">No evidence</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Supports transition out of colony cages</th>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">No evidence</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Protect against spread of disease and infection</th>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Manure drying</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Uses renewable energy</th>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Solar PV system</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Uses digital systems</th>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">No evidence</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Captures innovative data</th>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">No evidence</td>
+    </tr>
+  </tbody>
+</table>
+    
+<br>    
+
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

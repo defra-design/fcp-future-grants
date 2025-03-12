@@ -1,0 +1,74 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="digi-in-project" method="post">
+
+      <h1 class="govuk-heading-l">What renewable energy sources will you use in your project?</h1>
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-esActivity-hint">
+            <div id="business-hwiActivity-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-heading-s">High priority improvements</div>
+            <div class="govuk-checkboxesb govuk-!-margin-bottom-5" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="esActivity" name="esActivity" type="checkbox" value="Air filtration at inlets" {{ checked("Air filtration at inlets") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="esActivity">
+                  Heat exchanger
+                </label>
+              </div>
+            </div>
+            <div class="govuk-heading-s">Medium priority energy sources</div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="esActivity-2" name="esActivity" type="checkbox" value="Biomass boiler" {{ checked("esActivity", "Biomass boiler") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="esActivity-2">
+                  Biomass boiler
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="esActivity-3" name="esActivity" type="checkbox" value="Solar PV system" {{ checked("esActivity", "Solar PV system") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="esActivity-3">
+                  Solar PV system
+                </label>
+              </div>     
+            </div>
+
+
+
+
+          </fieldset>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

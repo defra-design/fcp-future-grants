@@ -1,0 +1,680 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your Organisation and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="confirmation" method="post">
+    <h1 class="govuk-heading-l">Check your answers before submitting your application</h1>
+
+      <h2 class="govuk-heading-m">The applicant</h2>
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Organisation applying
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['yourOrg'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Applicant's name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['applicantName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Project planned</h2>
+    
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of projects
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['noProj'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project 1 name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['pName1'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Project 1 purpose
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['projectType'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Minimum project requirements</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Avian systems 
+        <dd class="govuk-summary-list__value">
+          Can meet requirements
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Review<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Building features 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Can meet requirements
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Review<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Biosecurity features 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Can meet requirements
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Review<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Ventilation systems 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Can meet requirements
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Review<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Veranda systems 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Can meet requirements
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Review<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+    </dl>
+   <h2 class="govuk-heading-m">Your contact preferences</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact method for {{ data['aBusName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['contactPrefa'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Your agent contact details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aBusName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+
+    
+      {% if data.contactPrefa | includes("Email") %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentEmail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.contactPrefa | includes("Phone")  %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['agentNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.contactPrefa | includes("Post") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['aNameNo'] }} North Road<br>
+          Haywards Heath<br>
+          West Sussex<br>
+          {{ data['aPostcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+    </dl>
+  
+
+
+    <h2 class="govuk-heading-m">Applicant contact preferences</h2>
+    
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can we contact {{ data['applicantName'] }}?
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['applicantContact'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>      
+
+{% if (data.applicantContact == 'yes') %}
+
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact method for {{ data['busName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+          {{ data['contactPref'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Your applicant contact details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">  
+    {% if data.contactPref | includes("Email") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          the.harts@gmail.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.contactPref | includes("Phone") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Telephone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          01273 726300
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Mobile 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['applicantContactNumber'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+       {% endif %}
+           {% if data.contactPref | includes("Post") %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Business address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          North Farmstead<br>
+          Princes Lane<br>
+          Hassocks<br>
+          BN5 93B
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
+        </dd>
+      </div>
+    {% endif %}
+    </dl>
+  {% endif %}
+
+   
+
+    
+  <h2 class="govuk-heading-m">Check project details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Proposed project start date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['start-day'] }} / {{ data['start-month'] }} / {{ data['start-year'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Will the project be located at BN5 93B?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['locationYN'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+       {% if data.keeperName %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Keeper name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['keeperName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      {% if data.keeperID %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Keeper ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['keeperID'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      {% endif %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['location'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['nameNo2'] }}<br>
+          Princes Lane<br>
+          Hassocks<br>
+          {{ data['postcode2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          County parish holding (CPH) number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['cph1'] }}/{{ data['cph2'] }}/{{ data['cph3'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          National Grid field number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['ngfNo'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Existing and planned housing capacity</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How many existing buildings will you replace
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['noBuild'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Existing housing details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Housing name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingName'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingRef'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total house stocking capacity
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['totalHousingCap'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total usable floor area of housing
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableArea'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usable area at floor level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaFL'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Intention for {{ data['housingName'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingIntent'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">Total housing capacity when the project is complete</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total house stocking capacity
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingCap'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total usable floor area of housing
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaC'] }} m2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usable area at floor level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaFLC'] }} m2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+     <h2 class="govuk-heading-m">Your project costs answers</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Costs eligible for grant funding
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £400,000
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Non grant-funded costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['nonProjCost'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+
+          Total costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['projCost2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Poultry health and welfare improvement</h2>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Poultry health and welfare improvements
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['hwiActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Pollution and biosecurity measures
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['bioActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Renewable energy sources
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['esActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital systems
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['digiActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Poultry data
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['pDataActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+<h2 class="govuk-heading-m">Now submit your application</h2>
+<p>By submitting this application you confirm that you understand and agree with the following statements:</p>
+ <ul class="govuk-list govuk-list--bullet">
+  <li>I have read, understood and accept the <a href="" class="govuk-link">terms and conditions (opens in a new window)</a>and the <a href="" class="govuk-link">privacy policy (opens in a new window)</a></li>
+  <li>the information I have provided is true and correct to the best of my knowledge</li>
+  <li>my information and details might be audited and reviewed, and shared with others to prevent and detect fraud</li>
+  <li>I will tell the Rural Payments Agency if my circumstances change</li>
+</ul>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Confirm and submit
+</button>
+
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+what-is-your-business-address? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<span class="govuk-caption-l govuk-!-margin-top-4">Apply</span>
+      <h1 class="govuk-heading-l">
+      What is your project address?
+      </h1>
+
+      </legend>
+      <form class="form" action="/selectProjectAddress1" method="post">
+
+   
+    
+
+
+
+        <div class="govuk-form-group  {% if error %} govuk-form-group--error {% endif %} ">
+    <label class="govuk-label" for="three-quarters">
+   UK Postcode
+    </label>
+
+
+
+    <input class="govuk-input govuk-input--width-5" id="three-quarters" name="postcode2" type="text" value="{{ data['postcode2'] }}">
+
+
+  </div>
+
+
+        <p class="govuk-body">
+        <a href="business-address-manual" class="govuk-link">Enter the address manually</a>.
+        </p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="propertyname">
+						Property name or number (optional)
+					 </label>
+           <div id="authentication-code-hint" class="govuk-hint">
+ 						For example, The Mill, 116 or Flat 37a
+           </div>
+					<input type="text" class="govuk-input govuk-!-width-three-quarters" id="nameNo2" name="nameNo2" autocomplete="off" value="{{ data['nameNo2'] }}">
+				</div>
+    
+
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+     Find address
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Save and come back later
+    </button>
+  </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

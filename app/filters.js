@@ -41,7 +41,12 @@ module.exports = function (env) {
       }
   
     }
-  
+
+    // Custom filter to remove commas and convert to float
+   filters.removeCommas = function (str) {
+      return parseFloat(str.replace(/,/g, ''));
+    };
+      
     /* ------------------------------------------------------------------
       add your methods to the filters obj below this comment block:
       @example:

@@ -1,0 +1,87 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/projCostsComplete1" method="post">
+
+
+    <h1 class="govuk-heading-l">Grant amount summary</h1>
+
+
+<p>Based on your answers, you want to apply for <strong>£160,000</strong> in grant funding for your project.</p>
+
+    <h2 class="govuk-heading-m">How we worked out your grant amount</h2>
+    <p>Grants cover up to 40% of the eligible project costs.</p>
+
+    <p><strong>Your project costs answers</strong></p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Costs eligible for grant funding
+        </dt>
+
+
+        <dd class="govuk-summary-list__value">
+          £400,000
+        </dd>
+
+
+        <dd class="govuk-summary-list__actions">
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Non grant-funded costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['nonProjCost'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+
+          Total costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['projCost2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+    
+<br>
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

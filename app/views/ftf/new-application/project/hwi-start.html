@@ -1,0 +1,54 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="hwi-in-project" method="post">
+
+
+
+    <h1 class="govuk-heading-l">Improving poultry health and welfare</h1>
+    <p class="govuk-body">As this is a competitive grant, we'll need to check how closely your project matches our funding priorities to improve poultry health and welfare.</p>
+
+    <div class="govuk-heading-m">What you'll need</div>
+    <p>You'll need details of how you plan to do the following in your project:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>improve poultry health and welfare - for example, features to help reduce keel bone fractures</li>
+      <li>reduce pollution and increase biosecurity - for example, adding shower facilities or air outlets</li>      
+      <li>use renewable energy sources</li>
+      <li>use digital systems to capture data automatically</li>
+    </ul>
+
+    <div class="govuk-heading-m">How we assess applications</div>
+    <p>We assess applications based on:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>evidence your project will improve poultry health and welfare</li>
+      <li>value for money</li>      
+      <li>how many applications we receive</li>
+    </ul>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+ Continue
+</button>
+
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

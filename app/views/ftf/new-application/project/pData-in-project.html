@@ -1,0 +1,103 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-your-poultry-hwi-details" method="post">
+
+      <h1 class="govuk-heading-l">What poultry data will you capture?</h1>
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-pDataActivity-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+            </legend>
+            <div id="business-pDataActivity-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity" name="pDataActivity" type="checkbox" value="Bird location" {{ checked("Bird location") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity">
+                  Bird location
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-2" name="pDataActivity" type="checkbox" value="Body weight" {{ checked("pDataActivity", "Body weight") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-2">
+                  Body weight
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-3" name="pDataActivity" type="checkbox" value="Disease detection" {{ checked("pDataActivity", "Disease detection") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-3">
+                  Disease detection
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-3" name="pDataActivity" type="checkbox" value="Egg production parametersg" {{ checked("pDataActivity", "Egg production parameters") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-3">
+                  Egg production parameters
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-3" name="pDataActivity" type="checkbox" value="Feed data or conversion ratios" {{ checked("pDataActivity", "Feed data or conversion ratios") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-5">
+                  Feed data or conversion ratios
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-3" name="pDataActivity" type="checkbox" value="Movement" {{ checked("pDataActivity", "Movement") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-6">
+                  Movement
+                </label>
+              </div> 
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-3" name="pDataActivity" type="checkbox" value="Nest use" {{ checked("pDataActivity", "Nest use") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-7">
+                  Nest use
+                </label>
+              </div> 
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="pDataActivity-3" name="pDataActivity" type="checkbox" value="Sound analysis" {{ checked("pDataActivity", "Sound analysis") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="pDataActivity-8">
+                  Sound analysis
+                </label>
+              </div>     
+            </div>
+
+
+
+
+          </fieldset>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="bio-in-project" method="post">
+
+      <h1 class="govuk-heading-l">Which poultry health and welfare improvements are in your project?</h1>
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="business-hwiActivity-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+            </legend>
+            <div id="business-hwiActivity-hint" class="govuk-hint">
+              Select all that apply
+            </div>
+            <div class="govuk-heading-s">High priority improvements</div>
+            <div class="govuk-checkboxes govuk-!-margin-bottom-5" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity" name="hwiActivity" type="checkbox" value="Consistent housing type for birds between rearing and laying" {{ checked("hwiActivity", "Consistent housing type for birds between rearing and laying") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity">
+                  Consistent housing type for birds between rearing and laying
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity-2" name="hwiActivity" type="checkbox" value="Easy grip perches" {{ checked("hwiActivity", "Easy grip perches") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity-2">
+                  Easy grip perches
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity-3" name="hwiActivity" type="checkbox" value="Replacing colony cages" {{ checked("hwiActivity", "Replacing colony cages") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity-3">
+                  Replacing colony cages
+                </label>
+              </div>     
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity-3" name="hwiActivity" type="checkbox" value="Windows in the indoor housing for natural light" {{ checked("hwiActivity", "Windows in the indoor housing for natural light") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity-3">
+                  Windows in the indoor housing for natural light
+                </label>
+              </div>        
+            </div>
+
+            <div class="govuk-heading-s">Medium priority improvements</div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity" name="hwiActivity" type="checkbox" value="Connecting all aviary system levels using ramps" {{ checked("hwiActivity", "Connecting all aviary system levels using ramps") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity">
+                  Connecting all aviary system levels using ramps
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity-2" name="hwiActivity" type="checkbox" value="Aviary systems with 3 tiers or fewer" {{ checked("hwiActivity", "Aviary systems with 3 tiers or fewer") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity-2">
+                  Aviary systems with 3 tiers or fewer
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hwiActivity-3" name="hwiActivity" type="checkbox" value="Highest tier with direct access to the floor is 2 metres or less" {{ checked("hwiActivity", "Highest tier with direct access to the floor is 2 metres or less") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="hwiActivity-3">
+                  Highest tier with direct access to the floor is 2 metres or less
+                </label>
+              </div>            
+            </div>
+
+
+          </fieldset>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

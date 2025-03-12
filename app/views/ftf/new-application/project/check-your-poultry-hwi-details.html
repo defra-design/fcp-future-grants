@@ -1,0 +1,95 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your Organisation and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="match-weak" method="post">
+    
+
+    <h1 class="govuk-heading-l">Check poultry health and welfare improvement answers</h1>
+
+  <p>We'll use your answers to tell you how closely your project matches our funding priorities. </p>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Poultry health and welfare improvements
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['hwiActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Pollution and biosecurity measures
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['bioActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Renewable energy sources
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['esActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Digital systems
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['digiActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Poultry data
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['pDataActivity'] | default('No improvements added') }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+
+ <h2 class="govuk-heading-m">Confirm and continue</h2>
+ <p>By continuing you confirm these details are correct and up-to-date.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

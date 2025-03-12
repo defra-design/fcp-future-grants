@@ -12,36 +12,39 @@
 
 
 {% block content %}
-<form action="project-site-location" method="post">
+<form action="/gfaComplete1" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
      
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="locationYN-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="gfaResp-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    Will the project be located at BN5 93B?
+    Grant funding agreement responsibility
       </h1>
     </legend>
-    
+    <p>We need to check who will be responsible for the grant funding agreement. </p>
+    <p>Grant funding agreements run for 5 years after the final grant payment has been made.</p>
+    <div class="govuk-heading-s">Does Christopher Hart own the land the project will be on?</div>
 
     <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="locationYN" name="locationYN" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="locationYN">
+        <input class="govuk-radios__input" id="gfaResp" name="gfaResp" type="radio" value="Yes">
+        <label class="govuk-label govuk-radios__label" for="gfaResp">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="locationYN-2" name="locationYN" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="locationYN-2">
-          No
+        <input class="govuk-radios__input" id="gfaResp-2" name="gfaResp" type="radio" value="No, they rent it">
+        <label class="govuk-label govuk-radios__label" for="gfaResp-2">
+          No, they rent it
         </label>
       </div>
     </div>
   </fieldset>
 </div>
+
           
 
 
@@ -51,7 +54,7 @@
 
       <div class="govuk-button-group">
     <button type="submit" class="govuk-button" data-module="govuk-button">
-      Continue
+      Save and continue
     </button>
     
 </div>
