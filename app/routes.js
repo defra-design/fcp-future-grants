@@ -1118,6 +1118,30 @@ router.get('/agentAppComplete1', function (req, res) {
 
 });
 
+router.get('/applicantContact1', function (req, res) {
+
+  if (req.session.data.applicantContact === 'Yes'){
+      res.redirect("/ftf/new-application/initial-confirm-auth/contact-prefs-app")
+  } else {
+      res.redirect("/ftf/new-application/initial-confirm-auth/check-your-contact-details")
+  }
+
+});
+
+router.get('/housingAdd1', function (req, res) {
+
+  if (req.session.data.addAnotherBuilding === 'Yes'){
+      req.session.data.buildingNumber = '2';
+      res.redirect("/ftf/new-application/project/housing-details2")
+  } else {
+      res.redirect("/ftf/new-application/project/housing-capacity")
+  }
+
+});
+
+
+
+
 router.get('/contactComplete1', function (req, res) {
 
   req.session.data.contactComplete = 'Yes';

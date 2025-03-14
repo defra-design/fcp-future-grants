@@ -1,86 +1,127 @@
 //
 // For guidance on how to create filters see:
 // https://prototype-kit.service.gov.uk/docs/filters
-//
+// arb change
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const addFilter = govukPrototypeKit.views.addFilter
 
 // Add your filters here
 
-module.exports = function (env) {
-    /**
-     * Instantiate object used to store the methods registered as a
-     * 'filter' (of the same name) within nunjucks. You can override
-     * gov.uk core filters by creating filter methods of the same name.
-     * @type {Object}
-     */
-    var filters = {}
-  
-  
-    //set colours for status "| tagStatusColour"
-  
-    filters.tagStatusColour = function(e) {
-  
-      if (e == "Content design") {
-  
-        return "govuk-tag--orange"
-  
-      } else if (e == "Interaction design") {
-  
-        return "govuk-tag--blue"
-  
-      } else if (e == "Service design") {
-  
-        return "govuk-tag--purple"
-  
-      } else if (e == "User research") {
-  
-        return "govuk-tag--turquoise"
-  
-      }
-  
-    }
+var filters = {}
 
-    // Custom filter to remove commas and convert to float
-   filters.removeCommas = function (str) {
-      return parseFloat(str.replace(/,/g, ''));
-    };
-      
-    /* ------------------------------------------------------------------
-      add your methods to the filters obj below this comment block:
-      @example:
-  
-      filters.sayHi = function(name) {
-          return 'Hi ' + name + '!'
-      }
-  
-      Which in your templates would be used as:
-  
-      {{ 'Paul' | sayHi }} => 'Hi Paul'
-  
-      Notice the first argument of your filters method is whatever
-      gets 'piped' via '|' to the filter.
-  
-      Filters can take additional arguments, for example:
-  
-      filters.sayHi = function(name,tone) {
-        return (tone == 'formal' ? 'Greetings' : 'Hi') + ' ' + name + '!'
-      }
-  
-      Which would be used like this:
-  
-      {{ 'Joel' | sayHi('formal') }} => 'Greetings Joel!'
-      {{ 'Gemma' | sayHi }} => 'Hi Gemma!'
-  
-      For more on filters and how to write them see the Nunjucks
-      documentation.
-  
-    ------------------------------------------------------------------ */
-  
-    /* ------------------------------------------------------------------
-      keep the following line to return your filters to the app
-    ------------------------------------------------------------------ */
-    return filters
+;(filters.commafy = function (number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+}),
+  (filters.toFixed = function (num, digits) {
+    return parseFloat(num).toFixed(digits).replace(/\.00$/, '')
+  }),
+  (filters.joinArray = function (array) {
+    if (!array || array.length === 0) {
+      return ''
+    }
+    return array.join(', ')
+  })
+
+// Add filter that takes an optional array of items and a value to check if the value is in the array
+filters.isIn = function (value, array) {
+  if (!array || array.length === 0) {
+    return false
   }
-  
+  return array.includes(value)
+}
+
+filters.redirect = function (url) {
+  return '<script> window.location.href ="' + url + '";</script>'
+}
+
+addFilter('inPounds', (input) => {
+  const num = Number(input)
+  if (isNaN(num)) {
+    return '£XX.XX'
+  }
+  if (num >= 1000000 && num < 1000000000 && num % 10000 === 0) {
+    let millionValue = (num / 1000000).toFixed(2)
+    // Remove trailing zeros after decimal point
+    millionValue = parseFloat(millionValue).toString()
+    return `£${millionValue} million`
+  }
+  var returnStr =
+    '£' +
+    num.toLocaleString('en-GB', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })
+  returnStr = returnStr.replace(/\.00$/, '')
+  return returnStr
+})
+
+addFilter('formatNumber', (input) => {
+  const num = Number(input)
+  if (isNaN(num)) {
+    return 'XX'
+  }
+  return num.toLocaleString('en-GB')
+})
+
+addFilter('checkboxAnswersToList', (input, fallback = '') => {
+  var returnStr = '<ul class="govuk-list govuk-list--bullet">'
+  if (input) {
+    if (Array.isArray(input)) {
+      if (input.length) {
+        input.forEach((element) => {
+          returnStr += '<li>' + element + '</li>'
+        })
+      } else if (fallback) {
+        returnStr += '<li>' + fallback + '</li>'
+      }
+    } else {
+      if (fallback) {
+        returnStr += '<li>' + fallback + '</li>'
+      } else {
+        returnStr += '<li>' + input + '</li>'
+      }
+    }
+  } else {
+    returnStr += '<li>' + input + '</li>'
+  }
+  return returnStr + '</ul>'
+})
+
+addFilter('toNumber', (currencyStr) => {
+  if (typeof currencyStr !== 'string') {
+  throw new Error('Input must be a string');
+  }
+  // Remove commas from the string
+  const cleanedStr = currencyStr.replace(/,/g, '');
+  // Convert the cleaned string to a number
+  const number = parseFloat(cleanedStr);
+  return number;
+})
+
+
+
+addFilter('percent', (input, percentage) => {
+  return Number(input) * (Number(percentage) / 100)
+})
+
+// lowerCase, upperCase, sentenceCase, titleCase
+addFilter('lowerCase', (input) => {
+  return input.toLowerCase()
+})
+addFilter('upperCase', (input) => {
+  return input.toUpperCase()
+})
+addFilter('sentenceCase', (input) => {
+  return input.charAt(0).toUpperCase() + input.slice(1)
+})
+addFilter('titleCase', (input) => {
+  return input
+    .toLowerCase()
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+})
+
+// Add the filters using the addFilter function
+Object.entries(filters).forEach(([name, fn]) => addFilter(name, fn))

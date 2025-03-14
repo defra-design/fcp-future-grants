@@ -15,11 +15,9 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-{% if (data.applicantContact == 'yes') %}
-    <form action="contact-prefs-app" method="post">
-{% else %}
-    <form action="check-your-contact-details" method="post">
-{% endif %}
+
+    <form action="applicant-contact" method="post">
+
     <h1 class="govuk-heading-l">Check your agent contact details</h1>
 
 

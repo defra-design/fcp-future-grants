@@ -27,7 +27,7 @@
           Contact method for {{ data['aBusName'] }}
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['contactPrefa'] }}
+          {{ data['contactPrefa']  }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="what-is-your-agent-address">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
@@ -127,7 +127,7 @@
         </dd>
       </div>      
 
-{% if (data.applicantContact == 'yes') %}
+      {% if (data.applicantContact == 'Yes') %}
 
     
       <div class="govuk-summary-list__row">
@@ -182,8 +182,8 @@
           <a class="govuk-link" href="your-agent-details">Change<span class="govuk-visually-hidden"> Change Business name</span></a>
         </dd>
       </div>
-       {% endif %}
-           {% if data.contactPref | includes("Post") %}
+      {% endif %}
+      {% if data.contactPref | includes("Post") %}
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Business address
@@ -199,8 +199,8 @@
         </dd>
       </div>
     {% endif %}
-    </dl>
   {% endif %}
+   </dl>
 
 
 

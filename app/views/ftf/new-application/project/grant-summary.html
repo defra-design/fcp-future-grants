@@ -17,17 +17,24 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="/projCostsComplete1" method="post">
+    {% set projCost = data.projCost2 | toNumber  %}
+    {% set nonProjCost = data.nonProjCost | toNumber  %}
+    {% set sum = projCost - nonProjCost %}
+    {% set funding = sum * 0.4 %}
+
 
 
     <h1 class="govuk-heading-l">Grant amount summary</h1>
 
 
-<p>Based on your answers, you want to apply for <strong>£160,000</strong> in grant funding for your project.</p>
+<p>Based on your answers, you want to apply for <strong>{{ funding | currency(unit="GBP") }}</strong> in grant funding for your project.</p>
 
     <h2 class="govuk-heading-m">How we worked out your grant amount</h2>
     <p>Grants cover up to 40% of the eligible project costs.</p>
 
     <p><strong>Your project costs answers</strong></p>
+
+    <p>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -37,7 +44,7 @@
 
 
         <dd class="govuk-summary-list__value">
-          £400,000
+          {{ sum | currency(unit="GBP") }}
         </dd>
 
 

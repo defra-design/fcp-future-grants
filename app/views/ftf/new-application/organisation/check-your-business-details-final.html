@@ -164,7 +164,7 @@
           Main business
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['activity'] }}
+          {{ data['activity'] | checkboxAnswersToList | safe }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
@@ -179,7 +179,7 @@
           Turnover
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['turn'] }}
+          £{{ data['turn'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>

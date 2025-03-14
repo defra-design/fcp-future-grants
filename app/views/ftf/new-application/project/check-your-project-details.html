@@ -20,7 +20,7 @@
     
 
     <h1 class="govuk-heading-l">Check project date and location details</h1>
-
+    <!--
   <h2 class="govuk-heading-m">Project start date</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -50,7 +50,7 @@
         </dd>
       </div>
     </dl>
-
+    -->
     <h2 class="govuk-heading-m">Project site details</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
        {% if data.keeperName %}
@@ -92,12 +92,9 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Location address
+          Location postcode
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['nameNo2'] }}<br>
-          Princes Lane<br>
-          Hassocks<br>
           {{ data['postcode2'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -128,7 +125,7 @@
       </div>
     </dl>
 
-    </dl>
+
  <h2 class="govuk-heading-m">Confirm and continue</h2>
  <p>By continuing you confirm these details are correct and up-to-date.</p>
 

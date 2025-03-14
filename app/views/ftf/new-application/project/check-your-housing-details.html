@@ -22,25 +22,35 @@
     <h1 class="govuk-heading-l">Check existing and planned housing capacity answers</h1>
 
   
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-form-group">
+    <h2 class="govuk-heading-m">You have told us about {{ data['buildingNumber'] | default('1') }} existing buildings</h2>
+    <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          How many existing buildings will you replace
+        <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+          {{ data['housingName'] }} (will {{ data['housingIntent'] }})
         </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['noBuild'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+
         </dd>
       </div>
+      {% if (data.buildingNumber == '2') %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
+          {{ data['housingName2'] }} (will {{ data['housingIntent2'] }})
+        </dt>
+        <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+
+        </dd>
+      </div>
+      {% endif %}
     </dl>
-    <h2 class="govuk-heading-m">Existing housing details</h2>
+    <p class="govuk-!-margin-bottom-9"><a href="" class="govuk-link-text">Change the number of buildings you want to tell us about</a></p>
+    <h2 class="govuk-heading-m">Existing housing details {% if (data.buildingNumber == '2') %}building one{% endif %} </h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Housing name
+         Housing name /Reference
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingName'] }}
@@ -49,21 +59,7 @@
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-    </dl>
 
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Reference
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['housingRef'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Total house stocking capacity
@@ -81,7 +77,7 @@
           Total usable floor area of housing
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['usableArea'] }}
+          {{ data['usableArea'] }} m2
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
@@ -92,7 +88,7 @@
           Usable area at floor level
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['usableAreaFL'] }}
+          {{ data['usableAreaFL'] }} m2
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
@@ -110,6 +106,70 @@
         </dd>
       </div>
     </dl>
+    {% if (data.buildingNumber == '2') %}
+    <h2 class="govuk-heading-m">Existing housing details building two</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Housing name /Reference
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingName2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total house stocking capacity
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['totalHousingCap2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total usable floor area of housing
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableArea2'] }} m2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usable area at floor level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['usableAreaFL2'] }} m2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Intention for {{ data['housingName2'] }}
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['housingIntent2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+    </dl>
+    {% endif %}
+
     <h2 class="govuk-heading-m">Total housing capacity when the project is complete</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">

@@ -12,7 +12,7 @@
 
 
 {% block content %}
-<form action="do-with" method="post">
+<form action="do-with2" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -21,7 +21,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    About the first building you will replace in this project
+    About the second building you will replace in this project
       </h1>
     </legend>
     
@@ -30,7 +30,7 @@
         Housing name / Reference
       </label>
 
-      <input class="govuk-input govuk-input--width-10"  name="housingName" type="text" inputmode="numeric" value="{{ data['housingName'] }}">
+      <input class="govuk-input govuk-input--width-10"  name="housingName2" type="text" inputmode="numeric" value="{{ data['housingName2'] }}">
     </div>
 
     <div class="govuk-form-group">
@@ -38,7 +38,7 @@
         Total house stocking capacity
       </label>
 
-      <input class="govuk-input govuk-input--width-10"  name="totalHousingCap" type="text" inputmode="numeric" value="{{ data['totalHousingCap'] }}">
+      <input class="govuk-input govuk-input--width-10"  name="totalHousingCap2" type="text" inputmode="numeric" value="{{ data['totalHousingCap2'] }}">
     </div>
 
     <div class="govuk-form-group">
@@ -48,7 +48,7 @@
 
       
     <div class="govuk-input__wrapper">
-      <input class="govuk-input govuk-input--width-5" id="weight" name="usableArea" type="text" value="{{ data['usableArea'] }}">
+      <input class="govuk-input govuk-input--width-5" id="weight" name="usableArea2" type="text" value="{{ data['usableArea2'] }}">
       <div class="govuk-input__suffix" aria-hidden="true">m2</div>
     </div>
     </div>
@@ -58,7 +58,7 @@
       </label>
 
         <div class="govuk-input__wrapper">
-    <input class="govuk-input govuk-input--width-5" id="weight" name="usableAreaFL" type="text" value="{{ data['usableAreaFL'] }}">
+    <input class="govuk-input govuk-input--width-5" id="weight" name="usableAreaFL2" type="text" value="{{ data['usableAreaFL2'] }}">
     <div class="govuk-input__suffix" aria-hidden="true">m2</div>
   </div>
     </div>
