@@ -21,7 +21,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    You have told us about {{ data['buildingNumber'] | default('1') }} existing building {% if (data.buildingNumber == '2') %}s{% endif %}
+    You have told us about {{ data['buildingNumber'] | default('1') }} existing building{% if (data.buildingNumber == '2') %}s{% endif %}
       </h1>
     </legend>
     
