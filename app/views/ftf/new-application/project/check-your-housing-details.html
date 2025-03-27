@@ -19,7 +19,7 @@
     <form action="/housingComplete1" method="post">
     
 
-    <h1 class="govuk-heading-l">Check existing and planned housing capacity answers</h1>
+    <h1 class="govuk-heading-l">Check building answers</h1>
 
   
     <div class="govuk-form-group">
@@ -50,7 +50,7 @@
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Housing name /Reference
+         Building name 
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingName'] }}
@@ -62,7 +62,7 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Total house stocking capacity
+          How many birds can this building house?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['totalHousingCap'] }}
@@ -71,7 +71,7 @@
             <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-
+<!--
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Total usable floor area of housing
@@ -93,7 +93,7 @@
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
-      </div>
+      </div> -->
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Intention for {{ data['housingName'] }}
@@ -112,7 +112,7 @@
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Housing name /Reference
+         Building name
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingName2'] }}
@@ -124,7 +124,7 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Total house stocking capacity
+          How many birds can this building house?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['totalHousingCap2'] }}
@@ -133,7 +133,7 @@
             <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-
+      <!--
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Total usable floor area of housing
@@ -155,7 +155,7 @@
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
-      </div>
+      </div> -->
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Intention for {{ data['housingName2'] }}
@@ -170,12 +170,12 @@
     </dl>
     {% endif %}
 
-    <h2 class="govuk-heading-m">Total housing capacity when the project is complete</h2>
+    <h2 class="govuk-heading-m">New building details</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Total house stocking capacity
+          How many birds can the new building(s) house?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingCap'] }}
@@ -184,7 +184,7 @@
             <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-
+      <!--
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Total usable floor area of housing
@@ -206,7 +206,7 @@
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
-      </div>
+      </div> -->
     </dl>
 
 

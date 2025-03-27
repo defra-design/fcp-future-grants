@@ -12,7 +12,7 @@
 
 
 {% block content %}
-<form action="do-with2" method="post">
+<form action="housing-add-to-list" method="post">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -21,13 +21,13 @@
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    About the second building you will replace in this project
+    Existing details for second building
       </h1>
     </legend>
     
     <div class="govuk-form-group">
       <label class="govuk-label govuk-date-input__label" for="dob-year">
-        Housing name / Reference
+        Building name
       </label>
 
       <input class="govuk-input govuk-input--width-10"  name="housingName2" type="text" inputmode="numeric" value="{{ data['housingName2'] }}">
@@ -35,12 +35,55 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label govuk-date-input__label" for="dob-year">
-        Total house stocking capacity
+        How many birds can this building house? 
       </label>
 
       <input class="govuk-input govuk-input--width-10"  name="totalHousingCap2" type="text" inputmode="numeric" value="{{ data['totalHousingCap2'] }}">
     </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        What will you do with this building when the project is complete?
+      </label>
+      <div class="govuk-radios" data-module="govuk-radios"> 
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingInten2" type="radio" value="Demolish">
 
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Demolish
+        </label>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent2" type="radio" value="Keep for another use">
+
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Keep for another use
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent2" type="radio" value="Keep for hen housing">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+           Keep for hen housing
+        </label>
+
+      </div>
+            <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent2" type="radio" value="Refurbish">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+         Refurbish
+        </label>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent2" type="radio" value="Sell">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Sell
+        </label>
+
+      </div>
+    </div>
+  </div>
+<!--
     <div class="govuk-form-group">
       <label class="govuk-label govuk-date-input__label" for="dob-year">
         Total usable floor area of housing
@@ -61,7 +104,7 @@
     <input class="govuk-input govuk-input--width-5" id="weight" name="usableAreaFL2" type="text" value="{{ data['usableAreaFL2'] }}">
     <div class="govuk-input__suffix" aria-hidden="true">m2</div>
   </div>
-    </div>
+    </div> -->
   </fieldset>
 </div>
           

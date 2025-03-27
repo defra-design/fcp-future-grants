@@ -1098,6 +1098,9 @@ router.get('/dataSetPrepopHens1', function (req, res) {
   req.session.data.orgComplete = 'No';
   req.session.data.p1Complete = 'No';
   req.session.data.p2Complete = 'No';
+  
+  req.session.data.totalHousingCap = '0';
+  req.session.data.totalHousingCap2 = '0';
 ; 
 
   res.redirect('/ftf/new-application/initial-confirm-auth/login');

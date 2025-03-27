@@ -20,23 +20,56 @@
     {% set projCost = data.projCost2 | toNumber  %}
     {% set nonProjCost = data.nonProjCost | toNumber  %}
     {% set sum = projCost - nonProjCost %}
-    {% set funding = sum * 0.4 %}
+    {% set totalHousingCap = data.totalHousingCap | toNumber  %}
+    {% set totalHousingCap2 = data.totalHousingCap2 | toNumber  %}
+    {% set housingCap = data.housingCap | toNumber  %}
+    {% set oldChicSum = totalHousingCap + totalHousingCap2 %}
+    {% if housingCap > oldChicSum %}
+      {% set grantPercent = ((oldChicSum / housingCap) * 0.4) * 100 | round(0) %}
+    {% else %}
+      {% set grantPercent = 40 %}
+    {% endif %}
+
+    {% set funding = sum * grantPercent/100 %}
 
 
 
-    <h1 class="govuk-heading-l">Grant amount summary</h1>
+    <h1 class="govuk-heading-l">Estimated grant funding amount</h1>
 
 
 <p>Based on your answers, you want to apply for <strong>{{ funding | currency(unit="GBP") }}</strong> in grant funding for your project.</p>
 
     <h2 class="govuk-heading-m">How we worked out your grant amount</h2>
-    <p>Grants cover up to 40% of the eligible project costs.</p>
+    <p>Grants cover up to 40% of the eligible project costs,but this can lower if you plan to increase your flock.</p>
 
-    <p><strong>Your project costs answers</strong></p>
+    <p><strong>Your answers</strong></p>
 
     <p>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+
+          Estimated total project costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['projCost2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Estimated non grant-funded costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['nonProjCost'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Costs eligible for grant funding
@@ -54,27 +87,29 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Non grant-funded costs
+
+          Adjustments based on flocks size changes
         </dt>
         <dd class="govuk-summary-list__value">
-          £{{ data['nonProjCost'] }}
+          The grant value is <strong>{{ grantPercent | round(0) }}%</strong> of your eligible costs
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+ 
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
 
-          Total costs
+          Your grant value
         </dt>
         <dd class="govuk-summary-list__value">
-          £{{ data['projCost2'] }}
+          {{ funding | currency(unit="GBP") }}
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+ 
         </dd>
       </div>
+
     </dl>
     
 <br>

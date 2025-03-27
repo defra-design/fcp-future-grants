@@ -1,0 +1,68 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<form action="reg-keeper-updated" method="post">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="keepReg-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    Is {{ data['applicantName'] }} registered as a keeper of 50 or more poultry?
+      </h1>
+    </legend>
+    
+    <p>They must be <a href="https://www.gov.uk/government/publications/poultry-including-game-birds-registration-rules-and-forms">registered as a keeper</a> with the Animal Health and Plant Agency (APHA).</p>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="keepReg" name="keepReg" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="keepReg">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="keepReg-2" name="keepReg" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="keepReg-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+          
+
+
+
+
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}
