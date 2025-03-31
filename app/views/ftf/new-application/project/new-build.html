@@ -1,0 +1,83 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+<form action="check-your-housing-details" method="post">
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="moreThan1-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    Will {{ data['pName1'] }} include building new capacity?
+      </h1>
+    </legend>
+    
+
+
+
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="newBuild" name="newBuild" type="radio" value="Yes" data-aria-controls="conditional-newBuild">
+        <label class="govuk-label govuk-radios__label" for="newBuild">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-newBuild">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-year">
+              How many birds do you plan to house in the new building(s)?
+            </label>
+            <input class="govuk-input govuk-input--width-10"  name="housingCap" type="text" inputmode="numeric" value="{{ data['housingCap'] }}">
+          </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="newBuild-2" name="newBuild" type="radio" value="No" data-aria-controls="conditional-newBuild-2">
+        <label class="govuk-label govuk-radios__label" for="newBuild-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-newBuild-2">
+
+      </div>
+    </div>
+
+
+  </fieldset>
+</div>
+          
+
+
+
+
+
+
+      <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+    
+</div>
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

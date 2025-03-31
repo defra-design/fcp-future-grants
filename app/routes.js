@@ -1137,7 +1137,7 @@ router.get('/housingAdd1', function (req, res) {
       req.session.data.buildingNumber = '2';
       res.redirect("/ftf/new-application/project/housing-details2")
   } else {
-      res.redirect("/ftf/new-application/project/housing-capacity")
+      res.redirect("/ftf/new-application/project/new-build")
   }
 
 });
@@ -1206,7 +1206,13 @@ router.get('/selectProjectAddress1', function (req, res) {
 });
 
 
-
+router.get('/moreThanOne1', function (req, res) {
+  if (req.session.data.moreThan1 === 'Yes') {
+    res.redirect('/ftf/new-application/project/housing-details1');
+    }
+  else 
+    res.redirect('/ftf/new-application//project/housing-details');
+});
 
 
 

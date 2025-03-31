@@ -21,7 +21,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    Existing details for second building
+      Details of the second building included in {{ data['pName1'] }}
       </h1>
     </legend>
     
@@ -38,7 +38,11 @@
         How many birds can this building house? 
       </label>
 
+    {% if data.totalHousingCap2 != '0' %}
       <input class="govuk-input govuk-input--width-10"  name="totalHousingCap2" type="text" inputmode="numeric" value="{{ data['totalHousingCap2'] }}">
+    {% else %}
+      <input class="govuk-input govuk-input--width-10"  name="totalHousingCap2" type="text" inputmode="numeric" >
+    {% endif %}
     </div>
     <div class="govuk-form-group">
       <label class="govuk-label govuk-date-input__label" for="dob-year">
@@ -46,7 +50,7 @@
       </label>
       <div class="govuk-radios" data-module="govuk-radios"> 
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="housingInten2" type="radio" value="Demolish">
+        <input class="govuk-radios__input" id="changedName" name="housingIntent2" type="radio" value="Demolish">
 
         <label class="govuk-label govuk-radios__label" for="changedName">
           Demolish

@@ -326,7 +326,8 @@
    </dl>
    
 
- <div class="govuk-form-group">
+ {% if (data.addAnotherBuilding) %}
+    <div class="govuk-form-group">
     <h2 class="govuk-heading-m">You have told us about {{ data['buildingNumber'] | default('1') }} existing buildings</h2>
     <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
       <div class="govuk-summary-list__row">
@@ -349,12 +350,15 @@
       {% endif %}
     </dl>
     <p class="govuk-!-margin-bottom-9"><a href="" class="govuk-link-text">Change the number of buildings you want to tell us about</a></p>
+    {% endif %}
+
+    
     <h2 class="govuk-heading-m">Existing housing details {% if (data.buildingNumber == '2') %}building one{% endif %} </h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Housing name /Reference
+         Building name 
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingName'] }}
@@ -366,7 +370,7 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Total house stocking capacity
+          How many birds can this building house?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['totalHousingCap'] }}
@@ -376,28 +380,6 @@
         </dd>
       </div>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total usable floor area of housing
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['usableArea'] }} m2
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Usable area at floor level
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['usableAreaFL'] }} m2
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Intention for {{ data['housingName'] }}
@@ -416,7 +398,7 @@
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Housing name /Reference
+         Building name
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingName2'] }}
@@ -428,7 +410,7 @@
 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Total house stocking capacity
+          How many birds can this building house?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['totalHousingCap2'] }}
@@ -437,29 +419,7 @@
             <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total usable floor area of housing
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['usableArea2'] }} m2
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Usable area at floor level
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['usableAreaFL2'] }} m2
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
+ 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Intention for {{ data['housingName2'] }}
@@ -474,12 +434,12 @@
     </dl>
     {% endif %}
 
-    <h2 class="govuk-heading-m">Total housing capacity when the project is complete</h2>
+    <h2 class="govuk-heading-m">New building details</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Total house stocking capacity
+          How many birds can the new building(s) house?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['housingCap'] }}
@@ -489,78 +449,71 @@
         </dd>
       </div>
 
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total usable floor area of housing
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['usableAreaC'] }} m2
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Usable area at floor level
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['usableAreaFLC'] }} m2
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
     </dl>
 
-      <h2 class="govuk-heading-m">Project site details</h2>
+<h2 class="govuk-heading-m">Keeper details</h2>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-       {% if data.keeperName %}
+
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Keeper name
+          First name
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['keeperName'] }}
+          Christopher
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+
         </dd>
       </div>
-      {% endif %}
-      {% if data.keeperID %}
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Surname
+        </dt>
+
+        <dd class="govuk-summary-list__value">
+          Hart
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Keeper ID
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['keeperID'] }}
+          123456
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+
         </dd>
       </div>
-      {% endif %}
+    </dl>
+
+      <h2 class="govuk-heading-m">Location where you keep poultry</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9"> 
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Location name
+          Name of site where you keep poultry
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['location'] }}
+          Plumpton Farm
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Location postcode
+          Address of site where you keep poultry
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['postcode2'] }}
+          North Farmstead<br>
+          Princes Lane<br>
+          Hassocks<br>
+          BN5 93B
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -568,91 +521,137 @@
           County parish holding (CPH) number
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['cph1'] }}/{{ data['cph2'] }}/{{ data['cph3'] }}
+          12/345/6789
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="legal-status">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+
         </dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          National Grid field number
+          Map reference
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['ngfNo'] }}
+          SP 59887 48346
         </dd>
         <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="company-vat">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
         </dd>
       </div>
     </dl>
-    {% set projCost = data.projCost2 | toNumber  %}
+   {% set projCost = data.projCost2 | toNumber  %}
     {% set nonProjCost = data.nonProjCost | toNumber  %}
     {% set sum = projCost - nonProjCost %}
-    {% set funding = sum * 0.4 %}
+    {% set totalHousingCap = data.totalHousingCap | toNumber  %}
+    {% set totalHousingCap2 = data.totalHousingCap2 | toNumber  %}
+    {% set housingCap = data.housingCap | toNumber  %}
+    {% set oldChicSum = totalHousingCap + totalHousingCap2 %}
+    {% set newCapacity = 0 %}
+    {% if data.housingIntent == 'Keep for hen housing'%}
+      {% set newCapacity = totalHousingCap %}
+    {% endif %}>
+    {% if data.housingIntent2 == 'Keep for hen housing'%}
+      {% set newCapacity = newCapacity + totalHousingCap2 %}
+    {% endif %}
+    {% set newCapacity = newCapacity + housingCap %}
+    {% if newCapacity > oldChicSum %}
+      {% set grantPercent = ((oldChicSum / newCapacity) * 0.4) * 100 | round(0) %}
+    {% else %}
+      {% set grantPercent = 40 %}
+    {% endif %}
+    {% set funding = sum * grantPercent/100 %}
      <h2 class="govuk-heading-m">Your project costs answers</h2>
 
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Costs eligible for grant funding
-            </dt>
+     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+
+          Estimated total project costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['projCost2'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Estimated non grant-funded costs
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £{{ data['nonProjCost'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Costs eligible for grant funding
+        </dt>
 
 
-            <dd class="govuk-summary-list__value">
-              {{ sum | currency(unit="GBP") }}
-            </dd>
+        <dd class="govuk-summary-list__value">
+          {{ sum | currency(unit="GBP") }}
+        </dd>
 
 
-            <dd class="govuk-summary-list__actions">
-              
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Non grant-funded costs
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['nonProjCost'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+        <dd class="govuk-summary-list__actions">
+          
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
 
-              Total costs
-            </dt>
-            <dd class="govuk-summary-list__value">
-              £{{ data['projCost2'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-            </dd>
-          </div>
+          Adjustments based on flocks size changes
+        </dt>
+        <dd class="govuk-summary-list__value">
+          The grant value is <strong>{{ grantPercent | round(1) }}%</strong> of your eligible costs
+        </dd>
+        <dd class="govuk-summary-list__actions">
+ 
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
 
-                    <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+          Your grant value
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ funding | currency(unit="GBP") }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+ 
+        </dd>
+      </div>
 
-              Total grant value
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ funding | currency(unit="GBP") }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="company-reg">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-            </dd>
-          </div>
-        </dl>
+    </dl>
 
     <h2 class="govuk-heading-m">Poultry health and welfare improvement</h2>
 
+      <div class="govuk-notification-banner" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+     Funding priority check results
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Result: Strong
+    </h3>
+    <p>Your application is more likely to be successful as your project meets Defra’s funding priorities, based on your answers.
 
+  </div>
+</div>
+    
+
+    
+
+  
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Poultry health and welfare improvements
+          Reduce keel bone fractures and support transition out of colony cages
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['hwiActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -663,7 +662,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Pollution and biosecurity measures
+         Protects against spread of disease and infection
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['bioActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -674,7 +673,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Renewable energy sources
+         Renewable energy use
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['esActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -685,7 +684,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Digital systems
+          Innovative system use
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['digiActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -696,7 +695,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Poultry data
+          Innovative data capture
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['pDataActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -706,20 +705,8 @@
         </dd>
       </div>
     </dl>
-    <h2 class="govuk-heading-m">Grant funding agreement responsibility</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Does Christopher Hart own the land the project will be on?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['gfaResp'] }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="organisation-name">Change<span class="govuk-visually-hidden"> Change Organisation name</span></a>
-        </dd>
-      </div>
-    </dl>
+
+    
 
 <h2 class="govuk-heading-m">Now submit your application</h2>
 <p>By submitting this application you confirm that you understand and agree with the following statements:</p>

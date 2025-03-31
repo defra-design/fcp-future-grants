@@ -16,16 +16,33 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="match-weak" method="post">
+    <form action="/hwiComplete1" method="post">
+
+    <h1 class="govuk-heading-l">Your answers</h1>
+
+      <div class="govuk-notification-banner" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+     Funding priority check results
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Result: Strong
+    </h3>
+    <p>Your application is more likely to be successful as your project meets Defra’s funding priorities, based on your answers.
+
+  </div>
+</div>
     
 
-    <h1 class="govuk-heading-l">Check poultry health and welfare improvement answers</h1>
+    
 
-  <p>We'll use your answers to tell you how closely your project matches our funding priorities. </p>
+  
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Poultry health and welfare improvements
+          Reduce keel bone fractures and support transition out of colony cages
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['hwiActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -36,7 +53,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-         Pollution and biosecurity measures
+         Protects against spread of disease and infection
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['bioActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -47,7 +64,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Renewable energy sources
+         Renewable energy use
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['esActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -58,7 +75,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Digital systems
+          Innovative system use
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['digiActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}
@@ -69,7 +86,7 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Poultry data
+          Innovative data capture
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['pDataActivity'] | checkboxAnswersToList | safe | default('No improvements added') }}

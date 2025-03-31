@@ -18,15 +18,15 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="bio-in-project" method="post">
-
-      <h1 class="govuk-heading-l">Which poultry health and welfare improvements are in your project?</h1>
+      <span class="govuk-caption-l">Reduce keel bone fractures and support transition out of colony cages</span>
+      <h1 class="govuk-heading-l">Which keel bone fracture reduction and colony cage features are in your project?</h1>
       <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="business-hwiActivity-hint">
 
             <div id="business-hwiActivity-hint" class="govuk-hint">
               Select all that apply
             </div>
-            <div class="govuk-heading-s">High priority improvements</div>
+            <div class="govuk-heading-s">High priority features</div>
             <div class="govuk-checkboxes govuk-!-margin-bottom-5" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="hwiActivity" name="hwiActivity" type="checkbox" value="Consistent housing type for birds between rearing and laying" {{ checked("hwiActivity", "Consistent housing type for birds between rearing and laying") }}>
@@ -54,7 +54,7 @@
               </div>        
             </div>
 
-            <div class="govuk-heading-s">Medium priority improvements</div>
+            <div class="govuk-heading-s">Medium priority features</div>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="hwiActivity" name="hwiActivity" type="checkbox" value="Connecting all aviary system levels using ramps" {{ checked("hwiActivity", "Connecting all aviary system levels using ramps") }}>

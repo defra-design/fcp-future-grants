@@ -24,12 +24,19 @@
     {% set totalHousingCap2 = data.totalHousingCap2 | toNumber  %}
     {% set housingCap = data.housingCap | toNumber  %}
     {% set oldChicSum = totalHousingCap + totalHousingCap2 %}
-    {% if housingCap > oldChicSum %}
-      {% set grantPercent = ((oldChicSum / housingCap) * 0.4) * 100 | round(0) %}
+    {% set newCapacity = 0 %}
+    {% if data.housingIntent == 'Keep for hen housing'%}
+      {% set newCapacity = totalHousingCap %}
+    {% endif %}
+    {% if data.housingIntent2 == 'Keep for hen housing'%}
+      {% set newCapacity = newCapacity + totalHousingCap2 %}
+    {% endif %}
+    {% set newCapacity = newCapacity + housingCap %}
+    {% if newCapacity > oldChicSum %}
+      {% set grantPercent = ((oldChicSum / newCapacity) * 0.4) * 100 | round(0) %}
     {% else %}
       {% set grantPercent = 40 %}
     {% endif %}
-
     {% set funding = sum * grantPercent/100 %}
 
 
@@ -37,10 +44,12 @@
     <h1 class="govuk-heading-l">Estimated grant funding amount</h1>
 
 
-<p>Based on your answers, you want to apply for <strong>{{ funding | currency(unit="GBP") }}</strong> in grant funding for your project.</p>
+    <p>You could get <strong>{{ funding | currency(unit="GBP") }}</strong> in funding, based on your answers.</p>
 
-    <h2 class="govuk-heading-m">How we worked out your grant amount</h2>
-    <p>Grants cover up to 40% of the eligible project costs,but this can lower if you plan to increase your flock.</p>
+    <p>This result is an estimate - you’ll be told your exact amount after your application is approved.</p>
+
+    <h2 class="govuk-heading-m">How your grant funding amount is calculated</h2>
+    <p>Grants cover up to 40% of the eligible project costs, but this can lower if you plan to increase your flock.</p>
 
     <p><strong>Your answers</strong></p>
 
@@ -91,7 +100,7 @@
           Adjustments based on flocks size changes
         </dt>
         <dd class="govuk-summary-list__value">
-          The grant value is <strong>{{ grantPercent | round(0) }}%</strong> of your eligible costs
+          The grant value is <strong>{{ grantPercent | round(1) }}%</strong> of your eligible costs
         </dd>
         <dd class="govuk-summary-list__actions">
  
