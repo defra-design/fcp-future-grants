@@ -21,7 +21,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-      Details of the second building included in {{ data['pName1'] }}
+      Second existing building details
       </h1>
     </legend>
     
@@ -35,8 +35,11 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label govuk-date-input__label" for="dob-year">
-        How many birds can this building house? 
+        Current capacity 
       </label>
+      <div id="capacity-hint" class="govuk-hint">
+        Enter total number of birds that can be housed in this building
+      </div>
 
     {% if data.totalHousingCap2 != '0' %}
       <input class="govuk-input govuk-input--width-10"  name="totalHousingCap2" type="text" inputmode="numeric" value="{{ data['totalHousingCap2'] }}">

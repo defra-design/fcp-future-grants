@@ -21,39 +21,54 @@
   <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-    You have told us about {{ data['buildingNumber'] | default('1') }} existing building{% if (data.buildingNumber == '2') %}s{% endif %}
+    {{ data['buildingNumber'] | default('1') }} existing building{% if (data.buildingNumber == '2') %}s{% endif %} added
       </h1>
     </legend>
     
 
 <div class="govuk-form-group">
 
-  <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
-        {{ data['housingName'] }} (will {{ data['housingIntent'] }})
-      </dt>
-      <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
-        <ul class="govuk-summary-list__actions-list">
-          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a></li>
-          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Sydney Russell from the list</span></a></li>
-        </ul>
-      </dd>
-    </div>
-    {% if (data.buildingNumber == '2') %}
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
-        {{ data['housingName2'] }} (will {{ data['housingIntent2'] }})
-      </dt>
-      <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
-        <ul class="govuk-summary-list__actions-list">
-          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Michael Cain</span></a></li>
-          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Michael Cain from the list</span></a></li>
-        </ul>
-      </dd>
-    </div>
-    {% endif %}
-  </dl>
+     <table class="govuk-table">
+        
+        <colgroup>
+          <col style="width: 22%;">
+          <col style="width: 22%;">
+          <col style="width: 31%;">
+          <col style="width: 25%;"> <!-- Sets width for the last column -->
+        </colgroup>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Building name</th>
+            <th scope="col" class="govuk-table__header">Current capacity</th>
+            <th scope="col" class="govuk-table__header">What you’ll do with the building</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">{{ data['housingName'] }}</th>
+            <td class="govuk-table__cell">{{ data['totalHousingCap'] }}</td>
+            <td class="govuk-table__cell">{{ data['housingIntent'] }}</th>
+            <td class="govuk-table__cell">        <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a></li>
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Sydney Russell from the list</span></a></li>
+              </ul></td>
+          </tr>
+          {% if (data.buildingNumber == '2') %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">{{ data['housingName2'] }}</th>
+            <td class="govuk-table__cell">{{ data['totalHousingCap2'] }}</td>
+            <td class="govuk-table__cell">{{ data['housingIntent2'] }}</th>
+            <td class="govuk-table__cell">        <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Sydney Russell</span></a></li>
+                <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Sydney Russell from the list</span></a></li>
+              </ul></td>
+          </tr>
+          {% endif %}        
+        </tbody>
+      </table>
+
+
 
 </div>
 <form method="post" novalidate action="/housingAdd1">

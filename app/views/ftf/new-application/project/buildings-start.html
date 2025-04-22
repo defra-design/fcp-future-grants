@@ -1,0 +1,41 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="more-than-1-building" method="post">
+
+
+
+    <h1 class="govuk-heading-l">Your buildings</h1>
+    <p class="govuk-body">We’ll ask you about the current and future capacity of buildings in your project.</p>
+
+    <p>We use this to check what proportion of your project costs are eligible for funding.</p>
+
+    <p>You can find out more about <a href="https://www.gov.uk/government/publications/laying-hen-housing-for-health-and-welfare-grant-round-1/how-to-submit-a-laying-hen-housing-for-health-and-welfare-grant-round-1-full-application-for-comprehensive-projects-invited-applicants#:~:text=Adjustment%20of%20eligible-,costs,-The%20eligible%20costs">adjustment of eligible costs</a> on GOV.UK.</p>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+ Continue
+</button>
+
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

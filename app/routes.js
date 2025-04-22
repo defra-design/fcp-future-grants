@@ -1229,3 +1229,14 @@ router.get('/selectBusinessAddress2', function (req, res) {
 });
 
 
+// Steel thread laying hens
+
+router.get('/keeper1', function (req, res) {
+  if (req.session.data.regKeeper === 'Yes') {
+    res.redirect('/ftf/steel/project-costs');
+    }
+  else 
+    res.redirect('/ftf/steel/keeper-no');
+});
+
+

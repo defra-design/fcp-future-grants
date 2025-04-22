@@ -1,0 +1,41 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+     
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="regKeeper-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+    You are not a registered keeper
+      </h1>
+    </legend>
+    <p>if you are not a registered keeper of 1000 laying hens or pullets you cannopt apply fgor this grant.</p>
+
+
+  </fieldset>
+</div>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

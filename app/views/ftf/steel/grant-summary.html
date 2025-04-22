@@ -1,0 +1,50 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="check-your-project-details" method="post">
+    {% set projCost = data.projCost | toNumber  %}
+
+    {% set grantPercent = 40 %}
+    
+    {% set funding = projCost * grantPercent/100 %}
+
+
+
+    <h1 class="govuk-heading-l">Funding details</h1>
+
+
+    <p>You can claim {{grantPercent}}% of your total project cost ({{ data.projCost | currency(unit="GBP") }}).</p>
+
+      <p>Your grant amount is <strong>{{ funding | currency(unit="GBP") }}</strong> .</p>
+
+    
+<br>
+</button>
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+  </button>
+</div>
+
+</form>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

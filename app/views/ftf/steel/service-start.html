@@ -1,0 +1,64 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="keeper" method="post">
+    
+
+
+    <h1 class="govuk-heading-l">Apply for a hen housing grant</h1>
+    
+    <p class="govuk-body">Apply for funding to upgrade or replace hen or pullet housing, or to add a veranda.</p>
+
+    <p>To apply, you must:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>be a registered keeper of at least 1000 laying hens or pullets</li>
+      <li>have housed at least 1000 laying hens or pullets on your farm for the last 6 months</li>
+      <li>have not started project work</li>      
+      <li>have planning permission by the grant application deadline, or permitted development rights</li>
+      <li>own the land you’re building on, or have a tenancy agreement for at least 5 years after the project is complete</li>
+    </ul>
+
+    <div class="govuk-inset-text">This grant is for projects in England only.</div>
+
+    <h1 class="govuk-heading-m">What you'll need</h1>
+    <p>You must have registered with the Rural Payments service to apply.</p>
+
+    <p>You'll need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>project specifications</li>
+      <li>business details</li>
+      <li>existing hen housing details</li>
+      <li>estimated project costs</li>      
+    </ul>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Start now
+</button>
+
+</form>
+<p>The Rural Payments Agency will use the information you provide to decide whether to award you grant funding. This includes due diligence and fraud prevention checks.</p>
+
+<p>Find out how the <a clas="govuk-link" href="">Rural Payments Agency will process your information</a>.</p>
+
+</div>
+</div>
+</main>
+
+{% endblock %}

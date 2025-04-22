@@ -1,0 +1,92 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Check your business and contact details {% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner_alpha.html" %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        
+        
+        
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Application submitted
+            </h1>
+         
+          
+          <div class="govuk-panel__body">
+            Your reference number<br><strong>HDJ2123F</strong>
+          </div>
+        </div>
+        
+        
+      
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <p class="govuk-body" style="margin: 0;">We have sent you a confirmation email.</p>
+        
+        </div>
+        
+        <br><br>
+        
+        
+        
+
+
+
+        
+        
+        
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">We’ve sent your application to the Rural Payments Agency (RPA).</p>
+        <p>They will contact you after 17 May 2025 (the application closing date) to tell you if your application has been successful, or to ask for more information</p>
+        <p>It normally takes around 6 weeks after the closing date to process applications.</p>
+        <p>If you’re successful, we’ll send you a grant funding agreement  (GFA) with a list further evidence we require. 
+        </p>
+
+        <div class="govuk-inset-text"> Do not start the work until you receive a GFA.</div>
+
+       
+
+        
+       
+
+
+          <h2 class="govuk-heading-m">Track and manage your application</h2>
+
+
+          <p class="govuk-body">You can sign in to your application at any time to track progress and manage it</p>
+
+          <br>
+
+
+
+
+
+
+
+        {% include "../_includes/details-block_application-questions-contact.html" %}
+
+       <br><br>
+
+
+
+
+
+       
+ 
+      </div>
+</div>
+</main>
+
+{% endblock %}
