@@ -1233,7 +1233,7 @@ router.get('/selectBusinessAddress2', function (req, res) {
 
 router.get('/keeper1', function (req, res) {
   if (req.session.data.regKeeper === 'Yes') {
-    res.redirect('/ftf/steel/project-costs');
+    res.redirect('/ftf/steel/login');
     }
   else 
     res.redirect('/ftf/steel/keeper-no');
