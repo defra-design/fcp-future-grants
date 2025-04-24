@@ -28,9 +28,9 @@
     <h1 class="govuk-heading-l">Funding details</h1>
 
 
-    <p>You can claim {{grantPercent}}% of your total project cost ({{ data.projCost | currency(unit="GBP") }}).</p>
+    <p>You can claim {{grantPercent}}% of your total project cost ({{ data.projCost | inPounds | safe }}).</p>
 
-      <p>Your grant amount is <strong>{{ funding | currency(unit="GBP") }}</strong> .</p>
+      <p>Your grant amount is <strong>{{ funding | inPounds | safe }}</strong></p>
 
     
 <br>
